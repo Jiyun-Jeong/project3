@@ -1,0 +1,62 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 16/06/2017 09:11
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-001-youtube:before { content: "\f100"; }
+.flaticon-002-yahoo:before { content: "\f101"; }
+.flaticon-003-wordpress:before { content: "\f102"; }
+.flaticon-004-whatsapp:before { content: "\f103"; }
+.flaticon-005-vimeo:before { content: "\f104"; }
+.flaticon-006-viber:before { content: "\f105"; }
+.flaticon-007-twitter-1:before { content: "\f106"; }
+.flaticon-008-twitter:before { content: "\f107"; }
+.flaticon-009-tumblr:before { content: "\f108"; }
+.flaticon-010-stumbleupon:before { content: "\f109"; }
+.flaticon-011-soundcloud:before { content: "\f10a"; }
+.flaticon-012-microsoft:before { content: "\f10b"; }
+.flaticon-013-snapchat:before { content: "\f10c"; }
+.flaticon-014-skype:before { content: "\f10d"; }
+.flaticon-015-rss:before { content: "\f10e"; }
+.flaticon-016-reddit:before { content: "\f10f"; }
+.flaticon-017-pinterest:before { content: "\f110"; }
+.flaticon-018-myspace:before { content: "\f111"; }
+.flaticon-019-linkedin:before { content: "\f112"; }
+.flaticon-020-instagram:before { content: "\f113"; }
+.flaticon-021-social-media:before { content: "\f114"; }
+.flaticon-022-flickr:before { content: "\f115"; }
+.flaticon-023-facebook:before { content: "\f116"; }
+.flaticon-024-envato:before { content: "\f117"; }
+.flaticon-025-dropbox:before { content: "\f118"; }
+.flaticon-026-dribbble:before { content: "\f119"; }
+.flaticon-027-badoo:before { content: "\f11a"; }
+.flaticon-028-blogger:before { content: "\f11b"; }
+.flaticon-029-bebo:before { content: "\f11c"; }
+.flaticon-030-behance:before { content: "\f11d"; }
+.flaticon-031-ask:before { content: "\f11e"; }

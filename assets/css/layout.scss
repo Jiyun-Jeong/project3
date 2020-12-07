@@ -1,0 +1,54 @@
+@charset "utf-8";
+@import "_var", "_mixin", "_function";
+
+#wrap { min-width: 20rem;}
+
+//header
+#header {//pc, 태블릿 공통
+    /* position: fixed;  */top: 0; left: 0;height: 90px;width: 100%;background: #000;line-height: 90px;text-align: center;
+    button {margin-top: 29.3px;}
+    .logo {
+        float: left; 
+        a {
+            @include bgSize(cover);
+            display: block; width: 161px; height: 91px;padding-left: 9px;
+        }
+    }
+    .util {
+        float: right; width: 201px; background: blue;height: 90px;line-height: 90px;
+        .bg_white {display: none;} /* 모바일용에서 따로 만들기 잠시 가림 */
+        > div {width: 34px;height: 34px;background: pink;display: inline-block;}
+        > div + div {padding-left: 1.71875vw;/* 33px */}
+        .search {
+            line-height: 90px;
+            .search_wrap {
+                display: none; background: #fff; color: #000; width: 100%;height: 50px;
+            }
+        }
+        .lang {
+            line-height: 90px;
+            ul {display: none;}
+            > ul > li {display: block;width: 100px;height: 50px;line-height: 50px;background: #fff;color: #000;text-align: center;}
+        }
+        .account {
+            line-height: 90px;
+        }
+    }
+    #pcGnb {
+        > ul > li {display: inline; float: left;font-size: 23px;font-weight: 500 !important;}
+        > ul > li + li {padding-left: 4.166666666666667vw;/* 80px -> vw */}
+        > ul > li:first-child {padding-left: 20.859375vw;/* 362.25px vw로 고치기 */}
+        > ul > li:last-child {padding-right: 14.859375vw;}
+        > ul > li:hover > a, > ul > li.on >a, > ul >li:focus > a {
+            @include transition(0.3s);
+            color: $lightblue;
+        }
+        ul li ul {/* display: none; */ width: 100%; background: orange;color: #000;height: 80px;}        
+        ul li ul li {
+            float: left;
+        }
+        ul li ul li + li {padding-left: 90px;}
+    }
+}
+
+#mHeader {display: none;}

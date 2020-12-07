@@ -1,0 +1,71 @@
+@charset "utf-8";
+@import "_mixin", "_function", "_var";
+
+#cnt1 {
+    .swiper-container {
+        position: relative; width: 100%; height: 100vh; color: #fff;/* 제거할 예정 */
+    }
+    .swiper-slide {
+        @include bgSize(cover);
+        background: no-repeat center;
+        &.slide1 {background-image: url();}
+        &.slide2 {background-image: url("../img/main/index1_02_1920.png");}
+        &.slide3 {background-image: url("../img/main/index1_03_1920.png");}
+        > div > p {font-size: 47px;letter-spacing: 1.27px;font-weight: 500;}
+        > div > h3 {font-size: 90px;font-weight: 700;padding-bottom: 68px;}
+        > div > p:nth-child(3) {font-size: 47px;font-weight: 300;padding-bottom: 119px;letter-spacing: 0.75px;}
+        > div > a {font-size: 33px;font-weight: 700;letter-spacing: 0.89px;}
+    }
+    .slide1 {
+        @include bgSize(cover);
+        position: relative;height: 100vh;
+        .txtbox {
+            position: absolute; top: 256px; left: 154px; text-align: left;
+            h3 {padding-bottom: 234px;}
+        }
+    }
+    .slide2 {
+        position: relative;height: 100vh;
+        .txtbox {
+            position: absolute; top: 256px; right: 154px; text-align: right;
+        }
+    }
+    .slide3 {
+        position: relative;height: 100vh;
+        .txtbox {
+            position: absolute; top: 256px; left: 154px; text-align: left;
+            h3 {padding-bottom: 234px;}
+        }
+        .simpleExplan {
+            position: absolute; bottom: 222px; right: 163px; background: #ccc; width: 615px; height: 106px;font-size: 18px;
+            > div + div {padding-left: 76px;}
+            .simpleWrap {
+                float: left;
+            }
+            .cloud {
+                background: blue;
+                svg {width: 116px;padding-left: 60px;}
+            }
+            .discount {
+                background: red;
+                strong {font-size: 48px;text-align: center;}
+            }
+            .cameraChange {
+                background: green;
+            }
+        }
+    }
+    .controller {
+        position: absolute; top: 20%; left: 13%; z-index: 500;width: 100px;height: 50px;
+        .swiper-pagination, .swiper-button-prev, .swiper-button-next {position: static;}
+        .swiper-pagination {
+            font-size: 33px;letter-spacing: 0.2rem;font-weight: 700;
+        }
+    }
+}
+
+
+/* #cnt2 {
+    display: sticky; position: relative; width: 100%;height: 4000px;background: #000;color: #fff;
+    .newbieTxt {position: absolute;}
+} */

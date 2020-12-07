@@ -1,0 +1,131 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Gothic+A1:300,500,700);
+@font-face {
+  font-family: Neuropol;
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/neuropol.eot");
+  src: url("../fonts/neuropol.eot#iefix") format("embedded-opentype"), url("../fonts/neuropol.woff2") format("woff2"), url("../fonts/neuropol.woff") format("woff"), url("../fonts/neuropol.ttf") format("truetype"); }
+/* 태그 초기화 */
+body, div, ul, h1, h2, h3, h4, h5, h6, p, button, form {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%; }
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: inherit; }
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+input, button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  line-height: inherit; }
+
+img {
+  vertical-align: top;
+  border: none; }
+
+img, video {
+  max-width: 100%; }
+
+header, nav, section, footer {
+  display: block; }
+
+/* common class */
+.blind-b {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%); }
+
+.clearfix::before {
+  content: "";
+  display: block;
+  clear: both; }
+
+.p_a {
+  position: absolute; }
+
+.p_r {
+  position: relative; }
+
+.f_l {
+  float: left; }
+
+.f_r {
+  float: right; }
+
+.max1920 {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto; }
+
+.max1440 {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto; }
+
+.discover_btn {
+  display: inline-block;
+  text-align: center;
+  font-weight: 500; }
+  .discover_btn.darkgrey {
+    background: #505050; }
+  .discover_btn.square {
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    width: 430px;
+    height: 95px;
+    line-height: 95px; }
+
+body {
+  font-family: "Gothic A1", "맑은 고딕", "Malgun Gothic";
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
+  word-break: keep-all;
+  line-height: 1.3125; }
+  body * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+#skip a {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  z-index: 1000; }
+  #skip a a:focus {
+    left: 0;
+    width: 100%;
+    background: #00E4F3;
+    text-align: center;
+    font-weight: 500;
+    font-size: 26px;
+    height: 50px;
+    line-height: 50px; }
+
+@media screen and (max-width: 1920px) {
+  .max1920 {
+    max-width: 100%;
+    padding: 0 60px; } }
+@media screen and (max-width: 1440px) {
+  .max1440 {
+    max-width: 100%;
+    padding: 0 60px; } }
+
+/*# sourceMappingURL=common.css.map */
