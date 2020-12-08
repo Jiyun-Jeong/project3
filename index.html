@@ -7,16 +7,41 @@
     <title>GoPro - Be a Hero. Stay home</title>
     <link rel="apple-touch-icon" href="assets/img/common/iphone_icon.png">
     <link rel="shortcut icon" href="assets/img/common/androd_icon.png">
+    <link rel="stylesheet" href="assets/css/fullpage.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css">
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <script src="assets/js/jquery-1.12.4.min.js"></script>
-    <!-- <script src="assets/js/fullpage.min.js"></script> -->
-    <!-- <script src="assets/js/swiper.min.js"></script> -->
+    <script src="assets/js/fullpage.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
     <script src="assets/js/common.js"></script>
-    <script src="assets/js/main.js"></script>
-</head>
+    <!-- <script src="assets/js/main.js"></script> -->
+    <script>
+        $(document).ready(function () {
+            var cnt1Swiper = new Swiper('#cnt1 .swiper-container', {
+        // Optional parameters
+        loop: true,
 
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+            progressbarOpposite: 'false',
+        },
+        /* autoplay: {
+            delay: 19000,
+        }, */
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        });
+    });
+
+    </script>
+</head>
 <body>
     <div id="skip">
         <a href="#fullpage">본문 바로가기</a>
@@ -31,11 +56,11 @@
                     <div class="blind-b">GoPro</div>
                 </a>
             </h1>
-            <div class="util">
+            <div class="util clearfix">
                 <div class="search">
                     <button type="button" class="btn_open">
                         <span class="blind-b">검색창 열기</span>
-                        <!-- svg 아이콘 넣기 -->
+                        <img src="assets/img/icon/search.svg" alt="검색창 열기">
                     </button>
                     <div class="search_wrap">
                         <form action="index.html" id="searchForm">
@@ -53,7 +78,7 @@
                 <div class="lang">
                     <button type="button">
                         <span class="blind-b">언어설정</span>
-                        <!-- svg 아이콘 넣기 -->
+                        <img src="assets/img/icon/language.svg" alt="언어 설정">
                     </button>
                     <ul>
                         <li><a href="" aria-current="page">KOR</a></li>
@@ -64,7 +89,7 @@
                 <div class="account">
                     <button type="button">
                         <span class="blind-b">계정</span>
-                        <!-- svg 아이콘 넣기 -->
+                        <img src="assets/img/icon/account.svg" alt="계정">
                     </button>
                 </div>
             </div>
@@ -231,13 +256,20 @@
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide slide1">
-                            <video src="assets/video/videoplayback1440.webm">
+                            <video id="videoBg" muted autoplay playsinline>
+                                <source src="assets/video/backgroundvideo.mp4" type="video/mp4">
+                                <source src="assets/video/backgroundvideo.webm" type="video/webm">
+                                <source src="assets/video/backgroundvideo.ogg" type="video/ogg">
+                                현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트해주세요.
                             </video>
                             <div class="txtbox">
                                 <p>HERO9 black</p>
                                 <h3>모든 것의 혁신, 혁신의 모든 것</h3>
-                                <a href="">View More +</a>
-                                <img src="" alt=""><!-- 마우스 호버시 -->
+                                <div class="linkWrapper">
+                                    <span class="innerWrapper">
+                                        <a href="" class="viewBtn">View More +</a>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide slide2">
@@ -245,49 +277,37 @@
                                 <p>Only this week</p>
                                 <h3>블랙 프라이데이 통 큰 할인</h3>
                                 <p>32GB SD카드 및 케이스 증정</p>
-                                <a href="">View More +</a>
-                                <img src="" alt=""><!-- 마우스 호버시 -->
+                                <div class="linkWrapper">
+                                    <span class="innerWrapper">
+                                        <a href="" class="viewBtn">View More +</a>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide slide3">
                             <div class="simpleExplan">
                                 <div class="simpleWrap cloud">
-                                    <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                        viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;"
-                                        xml:space="preserve">
-                                        <style type="text/css">
-                                            .st0 {
-                                                fill: #fff;
-                                            }
-                                        </style>
-                                        <g>
-                                            <path class="st0" d="M836.8,467.2c0.2-5.8,0.3-11.1,0.3-15.3c0-69.8-27.2-135.4-76.5-184.8c-49.4-49.4-115-76.5-184.8-76.5
-		c-54.1,0-107.3,18.4-153.8,53.2c-31.8,23.8-58.5,54.1-77.7,87.7c-21.1-11-44.5-16.7-68.7-16.7c-38.8,0-76.1,18-105,50.7
-		c-19.3,21.8-33,48.3-39.7,75.9c-32.7,12.9-61.9,35.1-83,63.5C23.1,538,10,577.4,10,618.8c0,105.1,85.5,190.6,190.6,190.6v-0.5H819
-		v0.3c94.3,0,171-76.7,171-171C990,550.2,922.4,476.7,836.8,467.2z M825.8,769.4L825.8,769.4l-636.9-0.1
-		c-77.8-6-139.3-71.2-139.3-150.6c0-65.5,41.3-123.6,103.2-144.3c0.2-0.1,0.4-0.2,0.6-0.3c6.1-1.7,10.9-6.8,12-13.4
-		c8.8-52.9,54.7-106.4,110.1-106.4c22.7,0,44.4,6.9,62.9,19.9c1.8,1.7,4,3.1,6.6,4l0,0c9.7,3.6,20.5-0.9,24.8-10.3
-		C407.4,287,491.3,230,575.8,230c122.3,0,221.7,99.5,221.7,221.7c0,8.3-0.4,21.3-1.2,32.7c-0.7,10.2,6.4,19.2,16.5,20.9l0,0
-		c1.8,0.3,3.5,0.3,5.2,0.2v0.1c72.5,0,132.4,59.9,132.4,132.4C950.4,708.4,895.1,765.9,825.8,769.4z" />
-                                        </g>
-                                    </svg>
+                                    <img src="assets/img/icon/cloud.svg" alt="클라우드 저장소">
                                     <p>무제한 클라우드 저장소</p>
                                 </div>
                                 <div class="simpleWrap discount">
-                                    <strong>50%</strong>
+                                    <!-- <strong>50%</strong> -->
+                                    <img src="assets/img/icon/discount.svg" alt="50프로 할인">
                                     <p>사이트 내 50% 할인</p>
                                 </div>
                                 <div class="simpleWrap cameraChange">
-                                    <img src="" alt="">
+                                    <img src="assets/img/icon/camera change.svg" alt="카메라 교체">
                                     <p>카메라 무상 교체</p>
                                 </div>
                             </div>
                             <div class="txtbox">
                                 <p>GoPro 구독</p>
                                 <h3>최고의 혜택을 잡으세요</h3>
-                                <a href="">View More +</a>
-                                <img src="" alt=""><!-- 마우스 호버시 or 가상요소로 만들기 -->
+                                <div class="linkWrapper">
+                                    <span class="innerWrapper">
+                                        <a href="" class="viewBtn">View More +</a>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -314,39 +334,41 @@
                 <h2 class="blind-b">GoPro 신제품 HERO9 BLACK 소개</h2>
 
                 <div class="newbie">
-                    <img src="" alt=""><!-- 배경이미지 투명 -->
+                    <img src="assets/img/main/blur_bg.png" alt="">
                     <div class="newbieTxt">
                         <strong>What's<br>NEW</strong>
-                        <div class="newbieDetail">
-                            <h3>더 높아진 해상도</h3>
-                            <p>확대하고 14.7MP 프레임으로 촬영할 때도<br>
-                                디테일을 전혀 놓치지 않는 놀라운 5K 동영상을 촬영하세요.<br>
-                                <br>
-                                4K, 2.7K, 1440p 및 1080p로도 촬영할 수 있습니다</p>
-                        </div>
-                        <div class="newbieDetail">
-                            <h3>Max 렌즈 모듈</h3>
-                            <p>새로운 Max 렌즈 모듈은 흔들림 없는 Max HyperSmooth 안정화 기능과<br>
-                               Max SuperView를 통해 지금껏 없었던 가장 넓은 시야각을 제공합니다.</p>
-                        </div>
-                        <div class="newbieDetail">
-                            <h3>더 많아진 스크린</h3>
-                            <p>새로운 전면 디스플레이의 실시간 미리 보기를 통해 셀카 구도를 쉽게 잡을 수 있으며,<br>
-                               대형 후면 터치스크린을 통해 직관적으로 조작할 수 있습니다.</p>
-                        </div>
-                        <div class="newbieDetail">
-                            <h3>8K 슬로우모션</h3>
-                            <p>HERO9 Black은 놀라운 8x 슬로모션으로 초당 최대 240프레임을 캡처합니다.</p>
-                        </div>
-                        <div class="newbieDetail">
-                            <h3>HindSight</h3>
-                            <p>녹화를 시작하기 전에 최대 30초까지 영상을 캡처할 수 있습니다.<br>
-                               셔터 버튼을 너무 늦게 눌러도 장면을 캡처할 수 있습니다.</p>
-                        </div>
-                        <div class="newbieDetail">
-                            <h3>LiveBurst</h3>
-                            <p>마음에 드는 사진을 찍기 위해 더이상 힘들이지 마세요.<br>
-                               촬영 전후 1.5초를 담아냅니다. 완벽한 사진을 찾거나 짧은 동영상으로 공유하세요.</p>
+                        <div class="detailWrap">
+                            <div class="newbieDetail">
+                                <h3>더 높아진 해상도</h3>
+                                <p>확대하고 14.7MP 프레임으로 촬영할 때도<br>
+                                    디테일을 전혀 놓치지 않는 놀라운 5K 동영상을 촬영하세요.<br>
+                                    <br>
+                                    4K, 2.7K, 1440p 및 1080p로도 촬영할 수 있습니다</p>
+                            </div>
+                            <div class="newbieDetail">
+                                <h3>Max 렌즈 모듈</h3>
+                                <p>새로운 Max 렌즈 모듈은 흔들림 없는 Max HyperSmooth 안정화 기능과<br>
+                                Max SuperView를 통해 지금껏 없었던 가장 넓은 시야각을 제공합니다.</p>
+                            </div>
+                            <div class="newbieDetail">
+                                <h3>더 많아진 스크린</h3>
+                                <p>새로운 전면 디스플레이의 실시간 미리 보기를 통해 셀카 구도를 쉽게 잡을 수 있으며,<br>
+                                대형 후면 터치스크린을 통해 직관적으로 조작할 수 있습니다.</p>
+                            </div>
+                            <div class="newbieDetail">
+                                <h3>8K 슬로우모션</h3>
+                                <p>HERO9 Black은 놀라운 8x 슬로모션으로 초당 최대 240프레임을 캡처합니다.</p>
+                            </div>
+                            <div class="newbieDetail">
+                                <h3>HindSight</h3>
+                                <p>녹화를 시작하기 전에 최대 30초까지 영상을 캡처할 수 있습니다.<br>
+                                셔터 버튼을 너무 늦게 눌러도 장면을 캡처할 수 있습니다.</p>
+                            </div>
+                            <div class="newbieDetail">
+                                <h3>LiveBurst</h3>
+                                <p>마음에 드는 사진을 찍기 위해 더이상 힘들이지 마세요.<br>
+                                촬영 전후 1.5초를 담아냅니다. 완벽한 사진을 찾거나 짧은 동영상으로 공유하세요.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -356,14 +378,14 @@
                 <h2 class="blind-b">최신 카메라</h2>
                 <div class="camerasWrap">
                     <div class="camera" id="camera1">
-                        <img src="" alt="">
+                        <img class="cameras" src="assets/img/main/hero8.png" alt="">
                     </div>
                     <div class="camera" id="camera2">
-                        <img src="" alt="">
+                        <img class="cameras" src="assets/img/main/hero9.png" alt="">
                         <a href="" class="discover_btn">Discover More</a>
                     </div>
                     <div class="camera" id="camera3">
-                        <img src="" alt="">
+                        <img class="cameras" src="assets/img/main/max.png" alt="">
                     </div>
                 </div>
             </section>

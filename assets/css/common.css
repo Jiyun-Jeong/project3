@@ -51,7 +51,7 @@ header, nav, section, footer {
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%); }
 
-.clearfix::before {
+.clearfix::after {
   content: "";
   display: block;
   clear: both; }
@@ -118,6 +118,9 @@ body {
     font-size: 26px;
     height: 50px;
     line-height: 50px; }
+
+#footer {
+  background: #000; }
 
 @media screen and (max-width: 1920px) {
   .max1920 {

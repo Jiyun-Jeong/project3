@@ -3,18 +3,20 @@
 
 #cnt1 {
     .swiper-container {
-        position: relative; width: 100%; height: 100vh; color: #fff;/* 제거할 예정 */
+        position: relative; width: 100%; height: 100vh;
     }
     .swiper-slide {
         @include bgSize(cover);
         background: no-repeat center;
-        &.slide1 {background-image: url();}
+        #videoBg {position: absolute; width: 100%; height: auto; top: 0; left: 0; /* min-width: 100%; */ min-height: auto; z-index: -1; }
         &.slide2 {background-image: url("../img/main/index1_02_1920.png");}
         &.slide3 {background-image: url("../img/main/index1_03_1920.png");}
         > div > p {font-size: 47px;letter-spacing: 1.27px;font-weight: 500;}
         > div > h3 {font-size: 90px;font-weight: 700;padding-bottom: 68px;}
         > div > p:nth-child(3) {font-size: 47px;font-weight: 300;padding-bottom: 119px;letter-spacing: 0.75px;}
-        > div > a {font-size: 33px;font-weight: 700;letter-spacing: 0.89px;}
+        > .txtbox > .linkWrapper > .innerWrapper > a {
+            position: relative; font-size: 33px;font-weight: 700;letter-spacing: 0.89px;           
+        }
     }
     .slide1 {
         @include bgSize(cover);
@@ -22,6 +24,57 @@
         .txtbox {
             position: absolute; top: 256px; left: 154px; text-align: left;
             h3 {padding-bottom: 234px;}
+            .linkWrapper {
+                position: relative;
+                .innerWrapper {
+                    position: relative;
+                
+                &::before {
+                    @include transform(scaleY(0));
+                    @include transition(transform(0.2s));
+                    content: ""; position: absolute; bottom: 0; left: 0; width: 2px; height: 100%;background-color: $lightblue; transform-origin: bottom left; 
+                }
+                &::after {
+                    @include transform(scaleY(0));
+                    @include transition(transform(0.2s));
+                    content: ""; position: absolute; top: 0; right: 0; width: 2px; height: 100%;background-color: $lightblue; transform-origin: top right; 
+                }
+                .viewBtn {
+                    padding: 5px;
+                    &::before {
+                        @include transform(scaleX(0));
+                        @include transition(transform(0.2s 0.3s));
+                        content:""; position: absolute; top: 0; left: 0; width: 2px; height: 100%;background-color: $lightblue; transform-origin: top left;
+                    }
+                    &::after {
+                        @include transition(transform(0.2s 0.1s));
+                        @include transform(scaleX(0));
+                        content:""; position: absolute; bottom: 0; right: 0; width: 2px; height: 100%;background-color: $lightblue; transform-origin: top left;
+                    }
+                }
+                &:hover {
+                    &:before {
+                        @include transform(scaleY(1));
+                        @include transition(transform(0.2s 0.3s));
+                    }
+                    &:after {
+                        @include transform(scaleY(1));
+                        @include transition(transform(0.2s 0.1s));
+                    }
+                    .viewBtn {
+                        &:before {
+                            @include transform(scaleX(1));
+                            @include transition(transform(0.2s));
+                        }
+                        &:after {
+                            @include transform(scaleX(1));
+                            @include transition(transform(0.2s 0.2s));
+                        }
+                    }
+                }
+            } 
+            }
+            
         }
     }
     .slide2 {
@@ -37,35 +90,112 @@
             h3 {padding-bottom: 234px;}
         }
         .simpleExplan {
-            position: absolute; bottom: 222px; right: 163px; background: #ccc; width: 615px; height: 106px;font-size: 18px;
-            > div + div {padding-left: 76px;}
+            position: absolute; background: #ccc; bottom: 222px; right: 192px; width: 615px; height: 106px;font-size: 18px; text-align: center;
             .simpleWrap {
-                float: left;
+                float: left;background: no-repeat center;width: 168px;height: 103px;display: inline-block;
             }
             .cloud {
-                background: blue;
-                svg {width: 116px;padding-left: 60px;}
+                img {width: 88px; height: 62px;}
+                p {margin-top: 23px;width: 181px;}
             }
             .discount {
-                background: red;
-                strong {font-size: 48px;text-align: center;}
+                padding-left: 89px;
+                /* strong {font-size: 58px;} */
+                img {width: 119px; height: 58px;}
+                p {margin-top: 23px;width: 153px;}
             }
             .cameraChange {
-                background: green;
+                padding-left: 89px;
+                img {width: 116px;height: 73px;}
+                p {width: 129px;}
             }
+
         }
     }
     .controller {
-        position: absolute; top: 20%; left: 13%; z-index: 500;width: 100px;height: 50px;
+        position: absolute;bottom: 20%; left: 7%; z-index: 500;width: 500px;height: 87px;
         .swiper-pagination, .swiper-button-prev, .swiper-button-next {position: static;}
         .swiper-pagination {
-            font-size: 33px;letter-spacing: 0.2rem;font-weight: 700;
+            position: absolute; top: -729px; left: 0; font-size: 33px;letter-spacing: 0.2rem;font-weight: 700;width: auto; height: auto;
+        }
+        .swiper-button-prev, .swiper-button-next, .play_stop {
+            /* @include bgSize(cover); */
+            background: no-repeat center; display: inline-block;width: 87px; height: 87px;
+        }
+        .swiper-button-next:after, .swiper-button-prev:after {display: none;}
+        .swiper-button-prev, .swiper-button-next {
+            @include border-radius(50px);
+            float: left; display: block; padding: 3px;border: 3px solid #fff;
+        }
+        .swiper-button-next {margin-left: 196px;}
+        .swiper-button-prev {
+            background-image: url("../img/icon/prev.svg");}
+        .swiper-button-next {
+            background-image: url("../img/icon/next.svg");}
+        .play_stop {position: absolute; right: 270px; bottom: 20px; }
+        .pause {background-image: url("../img/icon/pause.svg");}
+        .autoplay {display: none; background-image: url("../img/icon/play.svg");}
+    }
+}
+
+#cnt2 {
+    &::-webkit-scrollbar{width: 12px;}
+    &::-webkit-scrollbar-track {background-color:#c2c2c2;border-radius: 10px; box-shadow: inset 0px 0px 5px #fff;}
+    &::-webkit-scrollbar-thumb {background-color: #555; border-radius: 10px;background-clip: padding-box; border: 2px solid transparent;}
+    &::-webkit-scrollbar-thumb:hover {
+        background: #00E4F3;
+    }
+    position: relative; width: 100%;height: auto;background: #000;color: #fff; overflow: auto;
+    .newbie {
+        position: relative; 
+        /* img {
+            위치 조정
+        } */
+        .newbieTxt {
+            > strong {
+                position: absolute; top: 272px; left: 141px; font-size: 60px;font-weight: 700;line-height: 83px;
+            }
+            .detailWrap {
+
+                position: absolute; top: 403px; left: 725px; width: 1200px;height: auto;overflow: auto;
+                .newbieDetail {
+                    display: block; 
+                    > h3 {
+                        position: relative; font-size: 90px; font-weight: 700;line-height: 122px;padding-bottom: 102px;margin-top: 124.5px;
+                        &::before {content: ""; position: absolute; top: 242.5px;right: 0; height: 2px;width: 1290px; }
+                    }
+                    > p {
+                        font-size: 26px;font-weight: 300;line-height: 35px;padding-bottom: 148.5px;
+                        &::after {content: ""; position: absolute; top: 300px; right: 0; height: 2px; width: 1290px;}
+                    }
+                }
+                
+            }
         }
     }
 }
 
+#cnt3 {
+    position: relative; overflow: hidden; height: 100vh;width: 100%;color: #000;
+    .camerasWrap {
+        position: absolute; width: 100%;left: 0; overflow: hidden; transform: skewY(-10deg);
+        
+    }
+    .cameras {
+        position: absolute; top: 50%; width: 100%; transform: skewY(10deg) transflateY(-50%);
+    }
+    #camera1 {background-image: url("../img/main/camera_bg1.jpg");}
+    #camera2 {background-image: url("../img/main/camera_bg2.jpg");}
+    #camera3 {background-image: url("../img/main/camera_bg3.jpg");}
+    
 
-/* #cnt2 {
-    display: sticky; position: relative; width: 100%;height: 4000px;background: #000;color: #fff;
-    .newbieTxt {position: absolute;}
-} */
+}
+#cnt4 {
+    color: #000;
+}
+#cnt5 {
+    color: #000;
+}
+#cnt6 {
+    color: #000;
+}

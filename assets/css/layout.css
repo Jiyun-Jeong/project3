@@ -3,7 +3,7 @@
   min-width: 20rem; }
 
 #header {
-  /* position: fixed;  */
+  position: sticky;
   top: 0;
   left: 0;
   height: 90px;
@@ -11,10 +11,10 @@
   background: #000;
   line-height: 90px;
   text-align: center; }
-  #header button {
-    margin-top: 29.3px; }
   #header .logo {
-    float: left; }
+    position: absolute;
+    left: 9px;
+    top: 0; }
     #header .logo a {
       -webkit-background-size: cover !important;
       -moz-background-size: cover !important;
@@ -24,72 +24,78 @@
       height: 91px;
       padding-left: 9px; }
   #header .util {
-    float: right;
+    position: absolute;
+    top: 29px;
+    right: 30px;
     width: 201px;
-    background: blue;
-    height: 90px;
-    line-height: 90px;
+    height: 34px;
+    line-height: 34px;
     /* 모바일용에서 따로 만들기 잠시 가림 */ }
     #header .util .bg_white {
       display: none; }
     #header .util > div {
-      width: 34px;
-      height: 34px;
-      background: pink;
       display: inline-block; }
     #header .util > div + div {
       padding-left: 1.71875vw;
       /* 33px */ }
     #header .util .search {
-      line-height: 90px; }
+      position: absolute;
+      left: 0;
+      top: 0; }
       #header .util .search .search_wrap {
         display: none;
         background: #fff;
         color: #000;
         width: 100%;
         height: 50px; }
-    #header .util .lang {
-      line-height: 90px; }
-      #header .util .lang ul {
-        display: none; }
-      #header .util .lang > ul > li {
-        display: block;
-        width: 100px;
-        height: 50px;
-        line-height: 50px;
-        background: #fff;
-        color: #000;
-        text-align: center; }
-    #header .util .account {
-      line-height: 90px; }
-  #header #pcGnb > ul > li {
-    display: inline;
-    float: left;
-    font-size: 23px;
-    font-weight: 500 !important; }
-  #header #pcGnb > ul > li + li {
-    padding-left: 4.166666666666667vw;
-    /* 80px -> vw */ }
-  #header #pcGnb > ul > li:first-child {
-    padding-left: 20.859375vw;
-    /* 362.25px vw로 고치기 */ }
-  #header #pcGnb > ul > li:last-child {
-    padding-right: 14.859375vw; }
-  #header #pcGnb > ul > li:hover > a, #header #pcGnb > ul > li.on > a, #header #pcGnb > ul > li:focus > a {
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
-    color: #00E4F3; }
-  #header #pcGnb ul li ul {
-    /* display: none; */
+        #header .util .search .search_wrap img {
+          width: 34px;
+          height: 34px; }
+    #header .util .lang > ul > li {
+      display: none;
+      width: 80px;
+      height: 44px;
+      line-height: 44px;
+      background: #fff;
+      color: #000;
+      text-align: center; }
+  #header #pcGnb {
+    position: relative;
+    text-align: center;
+    z-index: 800; }
+    #header #pcGnb ul li {
+      display: inline-block; }
+    #header #pcGnb > ul > li {
+      font-size: 23px;
+      font-weight: 500 !important; }
+      #header #pcGnb > ul > li:hover > a, #header #pcGnb > ul > li.on > a, #header #pcGnb > ul > li:focus > a {
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        transform: translateY(-100%);
+        color: #00E4F3; }
+      #header #pcGnb > ul > li + li {
+        padding-left: 4.166666666666667vw;
+        /* 80px -> vw */ }
+  #header .dep2wrap {
+    position: absolute;
+    top: 90px;
+    left: 0;
     width: 100%;
-    background: orange;
+    height: 80px;
+    background: #fff;
     color: #000;
-    height: 80px; }
-  #header #pcGnb ul li ul li {
-    float: left; }
-  #header #pcGnb ul li ul li + li {
+    line-height: 80px; }
+    #header .dep2wrap > li {
+      float: left;
+      font-size: 20px;
+      font-weight: 700; }
+  #header ul li ul li + li {
     padding-left: 90px; }
 
 #mHeader {

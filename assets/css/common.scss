@@ -26,7 +26,7 @@ header, nav, section, footer {display: block;}
 
 /* common class */
 .blind-b {width: 1px; height: 1px; overflow: hidden; position: absolute; clip: rect(1px, 1px, 1px, 1px); clip-path: inset(50%);}
-.clearfix::before {content: "";display: block; clear: both;}
+.clearfix::after {content: "";display: block; clear: both;}
 .p_a {position: absolute;}
 .p_r {position: relative;}
 .f_l {float: left;}
@@ -54,6 +54,12 @@ body {
     position: absolute; top: 0; left: -9999px; z-index: 1000; 
     a:focus {left: 0; width: 100%;  background: $lightblue; text-align: center; font-weight: 500;font-size: 26px;height: 50px;line-height: 50px;}
 }
+
+//footer
+#footer {
+    background: #000;
+}
+
 @media screen and (max-width: 1920px) {
     .max1920 {max-width: 100%; padding: 0 60px;}
 }

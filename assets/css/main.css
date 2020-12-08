@@ -2,16 +2,21 @@
 #cnt1 .swiper-container {
   position: relative;
   width: 100%;
-  height: 100vh;
-  color: #fff;
-  /* 제거할 예정 */ }
+  height: 100vh; }
 #cnt1 .swiper-slide {
   -webkit-background-size: cover !important;
   -moz-background-size: cover !important;
   background-size: cover !important;
   background: no-repeat center; }
-  #cnt1 .swiper-slide.slide1 {
-    background-image: url(); }
+  #cnt1 .swiper-slide #videoBg {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    /* min-width: 100%; */
+    min-height: auto;
+    z-index: -1; }
   #cnt1 .swiper-slide.slide2 {
     background-image: url("../img/main/index1_02_1920.png"); }
   #cnt1 .swiper-slide.slide3 {
@@ -29,7 +34,8 @@
     font-weight: 300;
     padding-bottom: 119px;
     letter-spacing: 0.75px; }
-  #cnt1 .swiper-slide > div > a {
+  #cnt1 .swiper-slide > .txtbox > .linkWrapper > .innerWrapper > a {
+    position: relative;
     font-size: 33px;
     font-weight: 700;
     letter-spacing: 0.89px; }
@@ -46,6 +52,124 @@
     text-align: left; }
     #cnt1 .slide1 .txtbox h3 {
       padding-bottom: 234px; }
+    #cnt1 .slide1 .txtbox .linkWrapper {
+      position: relative; }
+      #cnt1 .slide1 .txtbox .linkWrapper .innerWrapper {
+        position: relative; }
+        #cnt1 .slide1 .txtbox .linkWrapper .innerWrapper::before {
+          -webkit-transform: scaleY(0);
+          -moz-transform: scaleY(0);
+          -o-transform: scaleY(0);
+          -ms-transform: scaleY(0);
+          transform: scaleY(0);
+          -webkit-transition: transform(0.2s);
+          -moz-transition: transform(0.2s);
+          -o-transition: transform(0.2s);
+          transition: transform(0.2s);
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 2px;
+          height: 100%;
+          background-color: #00E4F3;
+          transform-origin: bottom left; }
+        #cnt1 .slide1 .txtbox .linkWrapper .innerWrapper::after {
+          -webkit-transform: scaleY(0);
+          -moz-transform: scaleY(0);
+          -o-transform: scaleY(0);
+          -ms-transform: scaleY(0);
+          transform: scaleY(0);
+          -webkit-transition: transform(0.2s);
+          -moz-transition: transform(0.2s);
+          -o-transition: transform(0.2s);
+          transition: transform(0.2s);
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 2px;
+          height: 100%;
+          background-color: #00E4F3;
+          transform-origin: top right; }
+        #cnt1 .slide1 .txtbox .linkWrapper .innerWrapper .viewBtn {
+          padding: 5px; }
+          #cnt1 .slide1 .txtbox .linkWrapper .innerWrapper .viewBtn::before {
+            -webkit-transform: scaleX(0);
+            -moz-transform: scaleX(0);
+            -o-transform: scaleX(0);
+            -ms-transform: scaleX(0);
+            transform: scaleX(0);
+            -webkit-transition: transform(0.2s 0.3s);
+            -moz-transition: transform(0.2s 0.3s);
+            -o-transition: transform(0.2s 0.3s);
+            transition: transform(0.2s 0.3s);
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background-color: #00E4F3;
+            transform-origin: top left; }
+          #cnt1 .slide1 .txtbox .linkWrapper .innerWrapper .viewBtn::after {
+            -webkit-transition: transform(0.2s 0.1s);
+            -moz-transition: transform(0.2s 0.1s);
+            -o-transition: transform(0.2s 0.1s);
+            transition: transform(0.2s 0.1s);
+            -webkit-transform: scaleX(0);
+            -moz-transform: scaleX(0);
+            -o-transform: scaleX(0);
+            -ms-transform: scaleX(0);
+            transform: scaleX(0);
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background-color: #00E4F3;
+            transform-origin: top left; }
+        #cnt1 .slide1 .txtbox .linkWrapper .innerWrapper:hover:before {
+          -webkit-transform: scaleY(1);
+          -moz-transform: scaleY(1);
+          -o-transform: scaleY(1);
+          -ms-transform: scaleY(1);
+          transform: scaleY(1);
+          -webkit-transition: transform(0.2s 0.3s);
+          -moz-transition: transform(0.2s 0.3s);
+          -o-transition: transform(0.2s 0.3s);
+          transition: transform(0.2s 0.3s); }
+        #cnt1 .slide1 .txtbox .linkWrapper .innerWrapper:hover:after {
+          -webkit-transform: scaleY(1);
+          -moz-transform: scaleY(1);
+          -o-transform: scaleY(1);
+          -ms-transform: scaleY(1);
+          transform: scaleY(1);
+          -webkit-transition: transform(0.2s 0.1s);
+          -moz-transition: transform(0.2s 0.1s);
+          -o-transition: transform(0.2s 0.1s);
+          transition: transform(0.2s 0.1s); }
+        #cnt1 .slide1 .txtbox .linkWrapper .innerWrapper:hover .viewBtn:before {
+          -webkit-transform: scaleX(1);
+          -moz-transform: scaleX(1);
+          -o-transform: scaleX(1);
+          -ms-transform: scaleX(1);
+          transform: scaleX(1);
+          -webkit-transition: transform(0.2s);
+          -moz-transition: transform(0.2s);
+          -o-transition: transform(0.2s);
+          transition: transform(0.2s); }
+        #cnt1 .slide1 .txtbox .linkWrapper .innerWrapper:hover .viewBtn:after {
+          -webkit-transform: scaleX(1);
+          -moz-transform: scaleX(1);
+          -o-transform: scaleX(1);
+          -ms-transform: scaleX(1);
+          transform: scaleX(1);
+          -webkit-transition: transform(0.2s 0.2s);
+          -moz-transition: transform(0.2s 0.2s);
+          -o-transition: transform(0.2s 0.2s);
+          transition: transform(0.2s 0.2s); }
 #cnt1 .slide2 {
   position: relative;
   height: 100vh; }
@@ -66,45 +190,190 @@
       padding-bottom: 234px; }
   #cnt1 .slide3 .simpleExplan {
     position: absolute;
-    bottom: 222px;
-    right: 163px;
     background: #ccc;
+    bottom: 222px;
+    right: 192px;
     width: 615px;
     height: 106px;
-    font-size: 18px; }
-    #cnt1 .slide3 .simpleExplan > div + div {
-      padding-left: 76px; }
+    font-size: 18px;
+    text-align: center; }
     #cnt1 .slide3 .simpleExplan .simpleWrap {
-      float: left; }
-    #cnt1 .slide3 .simpleExplan .cloud {
-      background: blue; }
-      #cnt1 .slide3 .simpleExplan .cloud svg {
-        width: 116px;
-        padding-left: 60px; }
+      float: left;
+      background: no-repeat center;
+      width: 168px;
+      height: 103px;
+      display: inline-block; }
+    #cnt1 .slide3 .simpleExplan .cloud img {
+      width: 88px;
+      height: 62px; }
+    #cnt1 .slide3 .simpleExplan .cloud p {
+      margin-top: 23px;
+      width: 181px; }
     #cnt1 .slide3 .simpleExplan .discount {
-      background: red; }
-      #cnt1 .slide3 .simpleExplan .discount strong {
-        font-size: 48px;
-        text-align: center; }
+      padding-left: 89px;
+      /* strong {font-size: 58px;} */ }
+      #cnt1 .slide3 .simpleExplan .discount img {
+        width: 119px;
+        height: 58px; }
+      #cnt1 .slide3 .simpleExplan .discount p {
+        margin-top: 23px;
+        width: 153px; }
     #cnt1 .slide3 .simpleExplan .cameraChange {
-      background: green; }
+      padding-left: 89px; }
+      #cnt1 .slide3 .simpleExplan .cameraChange img {
+        width: 116px;
+        height: 73px; }
+      #cnt1 .slide3 .simpleExplan .cameraChange p {
+        width: 129px; }
 #cnt1 .controller {
   position: absolute;
-  top: 20%;
-  left: 13%;
+  bottom: 20%;
+  left: 7%;
   z-index: 500;
-  width: 100px;
-  height: 50px; }
+  width: 500px;
+  height: 87px; }
   #cnt1 .controller .swiper-pagination, #cnt1 .controller .swiper-button-prev, #cnt1 .controller .swiper-button-next {
     position: static; }
   #cnt1 .controller .swiper-pagination {
+    position: absolute;
+    top: -729px;
+    left: 0;
     font-size: 33px;
     letter-spacing: 0.2rem;
-    font-weight: 700; }
+    font-weight: 700;
+    width: auto;
+    height: auto; }
+  #cnt1 .controller .swiper-button-prev, #cnt1 .controller .swiper-button-next, #cnt1 .controller .play_stop {
+    /* @include bgSize(cover); */
+    background: no-repeat center;
+    display: inline-block;
+    width: 87px;
+    height: 87px; }
+  #cnt1 .controller .swiper-button-next:after, #cnt1 .controller .swiper-button-prev:after {
+    display: none; }
+  #cnt1 .controller .swiper-button-prev, #cnt1 .controller .swiper-button-next {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    float: left;
+    display: block;
+    padding: 3px;
+    border: 3px solid #fff; }
+  #cnt1 .controller .swiper-button-next {
+    margin-left: 196px; }
+  #cnt1 .controller .swiper-button-prev {
+    background-image: url("../img/icon/prev.svg"); }
+  #cnt1 .controller .swiper-button-next {
+    background-image: url("../img/icon/next.svg"); }
+  #cnt1 .controller .play_stop {
+    position: absolute;
+    right: 270px;
+    bottom: 20px; }
+  #cnt1 .controller .pause {
+    background-image: url("../img/icon/pause.svg"); }
+  #cnt1 .controller .autoplay {
+    display: none;
+    background-image: url("../img/icon/play.svg"); }
 
-/* #cnt2 {
-    display: sticky; position: relative; width: 100%;height: 4000px;background: #000;color: #fff;
-    .newbieTxt {position: absolute;}
-} */
+#cnt2 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: #000;
+  color: #fff;
+  overflow: auto; }
+  #cnt2::-webkit-scrollbar {
+    width: 12px; }
+  #cnt2::-webkit-scrollbar-track {
+    background-color: #c2c2c2;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px #fff; }
+  #cnt2::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent; }
+  #cnt2::-webkit-scrollbar-thumb:hover {
+    background: #00E4F3; }
+  #cnt2 .newbie {
+    position: relative;
+    /* img {
+        위치 조정
+    } */ }
+    #cnt2 .newbie .newbieTxt > strong {
+      position: absolute;
+      top: 272px;
+      left: 141px;
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 83px; }
+    #cnt2 .newbie .newbieTxt .detailWrap {
+      position: absolute;
+      top: 403px;
+      left: 725px;
+      width: 1200px;
+      height: auto;
+      overflow: auto; }
+      #cnt2 .newbie .newbieTxt .detailWrap .newbieDetail {
+        display: block; }
+        #cnt2 .newbie .newbieTxt .detailWrap .newbieDetail > h3 {
+          position: relative;
+          font-size: 90px;
+          font-weight: 700;
+          line-height: 122px;
+          padding-bottom: 102px;
+          margin-top: 124.5px; }
+          #cnt2 .newbie .newbieTxt .detailWrap .newbieDetail > h3::before {
+            content: "";
+            position: absolute;
+            top: 242.5px;
+            right: 0;
+            height: 2px;
+            width: 1290px; }
+        #cnt2 .newbie .newbieTxt .detailWrap .newbieDetail > p {
+          font-size: 26px;
+          font-weight: 300;
+          line-height: 35px;
+          padding-bottom: 148.5px; }
+          #cnt2 .newbie .newbieTxt .detailWrap .newbieDetail > p::after {
+            content: "";
+            position: absolute;
+            top: 300px;
+            right: 0;
+            height: 2px;
+            width: 1290px; }
+
+#cnt3 {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  color: #000; }
+  #cnt3 .camerasWrap {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    overflow: hidden;
+    transform: skewY(-10deg); }
+  #cnt3 .cameras {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: skewY(10deg) transflateY(-50%); }
+  #cnt3 #camera1 {
+    background-image: url("../img/main/camera_bg1.jpg"); }
+  #cnt3 #camera2 {
+    background-image: url("../img/main/camera_bg2.jpg"); }
+  #cnt3 #camera3 {
+    background-image: url("../img/main/camera_bg3.jpg"); }
+
+#cnt4 {
+  color: #000; }
+
+#cnt5 {
+  color: #000; }
+
+#cnt6 {
+  color: #000; }
 
 /*# sourceMappingURL=main.css.map */
