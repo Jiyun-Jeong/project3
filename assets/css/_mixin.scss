@@ -21,3 +21,7 @@
     -o-transition: $value;
     transition: $value;
 }
+@mixin filter($value...) {
+    -webkit-filter: $value;
+    filter: $value;
+}

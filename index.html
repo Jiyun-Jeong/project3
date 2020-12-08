@@ -19,7 +19,37 @@
     <!-- <script src="assets/js/main.js"></script> -->
     <script>
         $(document).ready(function () {
-            var cnt1Swiper = new Swiper('#cnt1 .swiper-container', {
+/*             var timer = 0;
+            $(window).on('resize', function () {
+                clearTimeout(timer);
+
+                timer = setTimeout(function () {
+                    if($(this).width() > 1024) createFullpage();
+                    else fullpage_api.destory('all');
+                }, 50);
+            });
+
+            $(window).trigger('resize');
+
+            function createFullpage() {
+                $('#fullpage').fullpage({
+                    navigation: true,
+                    navigationPosition: 'left',
+                    navigationTooltips: ['GoPro 소개', '신제품 소개', '카메라 비교', '카테고리', '뉴스', '동영상', '인스타그램'],
+                    afterRender: function() {
+                        $('#fp-nav .fp-tooltip').attr('aria-hidden', true);
+                    },
+                    onLeave: function(origin, destination, direction) {
+                        if (origin.index === 1 && destination.index === 0 && direction === 'up') {
+                            $('#pcHeader').removeClass('on active');
+                        } else {
+                            $('#pcHeader').addClass('on active');
+                        }
+                    }
+                });
+            } */
+
+        var cnt1Swiper = new Swiper('#cnt1 .swiper-container', {
         // Optional parameters
         loop: true,
 
@@ -38,6 +68,8 @@
             prevEl: '.swiper-button-prev',
         },
         });
+
+
     });
 
     </script>
@@ -334,7 +366,7 @@
                 <h2 class="blind-b">GoPro 신제품 HERO9 BLACK 소개</h2>
 
                 <div class="newbie">
-                    <img src="assets/img/main/blur_bg.png" alt="">
+                    <img src="assets/img/main/newbie_bg.jpg" alt="GoPro HERO9 BLACK 상세 설명">
                     <div class="newbieTxt">
                         <strong>What's<br>NEW</strong>
                         <div class="detailWrap">
@@ -378,14 +410,14 @@
                 <h2 class="blind-b">최신 카메라</h2>
                 <div class="camerasWrap">
                     <div class="camera" id="camera1">
-                        <img class="cameras" src="assets/img/main/hero8.png" alt="">
+                        <img class="cameras" src="assets/img/main/hero8.png" alt="HERO8 BLACK 뒷면">
                     </div>
                     <div class="camera" id="camera2">
-                        <img class="cameras" src="assets/img/main/hero9.png" alt="">
-                        <a href="" class="discover_btn">Discover More</a>
+                        <img class="cameras" src="assets/img/main/hero9.png" alt="HERO9 BLACK 전면">
+                        <a href="#" class="discover_btn">Discover More</a>
                     </div>
                     <div class="camera" id="camera3">
-                        <img class="cameras" src="assets/img/main/max.png" alt="">
+                        <img class="cameras" src="assets/img/main/max.png" alt="MAX 측면">
                     </div>
                 </div>
             </section>
@@ -396,46 +428,58 @@
                 <div class="category">
                     <p>당신의 GoPro를 더욱 빛나게 할</p>
                     <strong>OTHERS</strong>
-                    <p>GoPro</p>
+                    <span>GoPro</span>
                     <div class="categoryWrap" id="acc">
-                        <img src="" alt="">
-                        <img src="" alt="">
+                        <div class="otherWrap">
+                            <img src="assets/img/main/other_1_acc.png" alt="악세사리">
+                            <img src="" alt="">
+                        </div>
                         <h4>악세사리</h4>
                         <p>소중한 내 GoPro! 더욱 다양하게 사용해보고 싶다면?<br>
                             GoPro 전용 악세사리로 여러 환경에서 즐겨보세요.</p>
                     </div>
                     <div class="categoryWrap" id="lifeStyle">
-                        <img src="" alt="">
-                        <img src="" alt="">
+                        <div class="otherWrap">
+                            <img src="assets/img/main/other_2_lifeStyleGear.png" alt="라이프 스타일 기어">
+                            <img src="" alt="">
+                        </div>
                         <h4>라이프 스타일 기어</h4>
                         <p>프리미엄 소재와 스포츠에서 영감을 받은 디자인의<br> 
                             백팩과 GoPro만의 굿즈를 만나보세요.</p>
                     </div>
                     <div class="categoryWrap" id="light">
-                        <img src="" alt="">
-                        <img src="" alt="">
+                        <div class="otherWrap">
+                            <img src="assets/img/main/other_3_light.png" alt="조명">
+                            <img src="" alt="">
+                        </div>
                         <h4>조명</h4>
                         <p>어두운 환경에서도 빛을 발하는 GoPro용 조명으로<br>
                             GoPro 카메라를 더욱 활용도 있게 사용해보세요.</p>
                     </div>
                     <div class="categoryWrap" id="subs">
-                        <img src="" alt="">
-                        <img src="" alt="">
+                        <div class="otherWrap">
+                            <img src="assets/img/main/other_4_subscribe.png" alt="구독">
+                            <img src="" alt="">
+                        </div>
                         <h4>구독</h4>
                         <p>소중한 내 GoPro! 더욱 다양하게 사용해보고 싶다면?<br>
                             GoPro 전용 악세사리로 여러 환경에서 즐겨보세요.</p>
                     </div>
                     <div class="categoryWrap" id="app">
-                        <img src="" alt="">
-                        <img src="" alt="">
+                        <div class="otherWrap">
+                            <img src="assets/img/main/other_5_app.png" alt="어플리케이션">
+                            <img src="" alt="">
+                        </div>
                         <h4>어플리케이션</h4>
                         <p>GoPro를 더욱 활용적으로 즐길 수 있는 가장 간단한<br>
                             방법! 간편한 자동 편집으로 누구든 멋진 동영상 제작이<br>
                             가능합니다.</p>
                     </div>
                     <div class="categoryWrap" id="cloth">
-                        <img src="" alt="">
-                        <img src="" alt="">
+                        <div class="otherWrap">
+                            <img src="assets/img/main/other_6_clothes.png" alt="의류">
+                            <img src="" alt="">
+                        </div>
                         <h4>의류</h4>
                         <p>어디서든 즐길 수 있는 GoPro만의 기능성 의류로 더욱<br>
                            활동적인 샷을 노려보세요!</p>
@@ -448,29 +492,31 @@
                 <div class="news">
                     <div class="newsWrap">
                         <strong>NEWS</strong>
-                        <a href="" class="underline_btn">더보기</a>
-                        <div class="newsCnt">
-                            <p>뉴스</p>
-                            <h5>FUSION + MACOS 사용자를 위한 알림</h5>
-                            <span>Big Sur와 같은 기능을 사용하고자 하는 Fusion 사용자이십니까? 최근 Apple은 macOS 업데이트 Big Sur를<br>
-                                공개하고 Mac 사용자에게 많은 혜택을 제공했지만 GoPro Fusion 사용자로서 그 혜택을 누릴 수는 없습니다. <br>
-                                GoPro는 360 Fusion 카메라 생산을 중단했지만 해당 장치의 사용자가 콘텐츠를 편집하려면…</span>
-                            <p>2020-11-25</p>
-                            <img src="" alt="">
-                        </div>
-                        <div class="newsCnt">
-                            <p>뉴스</p>
-                            <h5>HERO9 BLACK: 몇 가지 유용한 업데이트</h5>
-                            <span></span>
-                            <p>2020-11-18</p>
-                            <img src="" alt="">
-                        </div>
-                        <div class="newsCnt">
-                            <p>뉴스</p>
-                            <h5>GOPRO AWARDS 5주년을 기념하며</h5>
-                            <span></span>
-                            <p>2020-10-15</p>
-                            <img src="" alt="">
+                        <a href="#" class="underline_btn">더보기</a>
+                        <div class="newsCntWrap">
+                            <div class="newsCnt first" aria-current="page">
+                                <p>뉴스</p>
+                                <h5>FUSION + MACOS 사용자를 위한 알림</h5>
+                                <span>Big Sur와 같은 기능을 사용하고자 하는 Fusion 사용자이십니까? 최근 Apple은 macOS 업데이트 Big Sur를<br>
+                                    공개하고 Mac 사용자에게 많은 혜택을 제공했지만 GoPro Fusion 사용자로서 그 혜택을 누릴 수는 없습니다. <br>
+                                    GoPro는 360 Fusion 카메라 생산을 중단했지만 해당 장치의 사용자가 콘텐츠를 편집하려면…</span>
+                                <p>2020-11-25</p>
+                                <img src="" alt="">
+                            </div>
+                            <div class="newsCnt">
+                                <p>뉴스</p>
+                                <h5>HERO9 BLACK: 몇 가지 유용한 업데이트</h5>
+                                <span></span>
+                                <p>2020-11-18</p>
+                                <img src="" alt="">
+                            </div>
+                            <div class="newsCnt last">
+                                <p>뉴스</p>
+                                <h5>GOPRO AWARDS 5주년을 기념하며</h5>
+                                <span></span>
+                                <p>2020-10-15</p>
+                                <img src="" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
