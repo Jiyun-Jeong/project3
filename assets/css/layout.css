@@ -30,35 +30,34 @@
     width: 201px;
     height: 34px;
     line-height: 34px;
-    /* 모바일용에서 따로 만들기 잠시 가림 */ }
-    #header .util .bg_white {
-      display: none; }
+    /*.bg_white {background: #fff;}  모바일용에서 따로 만들기 잠시 가림 */ }
     #header .util > div {
-      display: inline-block; }
+      float: left; }
     #header .util > div + div {
-      padding-left: 1.71875vw;
-      /* 33px */ }
-    #header .util .search {
-      position: absolute;
-      left: 0;
-      top: 0; }
-      #header .util .search .search_wrap {
-        display: none;
-        background: #fff;
-        color: #000;
-        width: 100%;
-        height: 50px; }
-        #header .util .search .search_wrap img {
-          width: 34px;
-          height: 34px; }
-    #header .util .lang > ul > li {
+      padding-left: 1.45vw; }
+    #header .util .search .search_wrap {
       display: none;
-      width: 80px;
-      height: 44px;
-      line-height: 44px;
       background: #fff;
       color: #000;
-      text-align: center; }
+      width: 100%;
+      height: 50px; }
+      #header .util .search .search_wrap img {
+        width: 34px;
+        height: 34px; }
+    #header .util .lang > ul {
+      margin-top: 27px; }
+      #header .util .lang > ul li {
+        /* display: none; */
+        width: 80px;
+        height: 44px;
+        line-height: 44px;
+        background: #fff;
+        color: #000;
+        text-align: center;
+        font-weight: 500;
+        border: 1px solid #c2c2c2; }
+        #header .util .lang > ul li:hover, #header .util .lang > ul li:focus {
+          background-color: #00E4F3; }
   #header #pcGnb {
     position: relative;
     text-align: center;

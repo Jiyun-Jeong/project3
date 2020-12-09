@@ -18,7 +18,7 @@
     <script src="assets/js/common.js"></script>
     <!-- <script src="assets/js/main.js"></script> -->
     <script>
-        $(document).ready(function () {
+         $(document).ready(function () {
 /*             var timer = 0;
             $(window).on('resize', function () {
                 clearTimeout(timer);
@@ -50,28 +50,37 @@
             } */
 
         var cnt1Swiper = new Swiper('#cnt1 .swiper-container', {
-        // Optional parameters
-        loop: true,
+            // Optional parameters
+            loop: true,
 
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'fraction',
-            progressbarOpposite: 'false',
-        },
-        autoplay: {
-            delay: 16000,
-        },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+                progressbarOpposite: 'false',
+            },
+            autoplay: {
+                delay: 16000,
+            },
 
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            //현재 이벤트에 특정 이벤트를 넣고 싶은 경우
+            on: {
+                slideChangeTransitionStart: function (swiper) { 
+                    //활성화된 슬라이드에 사용자지정속성인 data-swiper-slide-index를 가져와서 오른쪽 위치만 지정한다
+                    var tgIdx = $('#cnt1 .swiper-slide-active').data("swiper-slide-index");
+                    console.log(tgIdx);  //0,1,2
+                    if (tgIdx === 1) $('#cnt1').addClass('right');
+                    else $('#cnt1').removeClass('right');
+                },
+            },
         });
 
 
     });
-
     </script>
 </head>
 <body>
@@ -83,7 +92,7 @@
         <!-- pc용과 태블릿용 헤더 -->
         <header id="header" class="header">
             <h1 class="logo">
-                <a href="">
+                <a href="index.html">
                     <img src="assets/img/common/GoPro_logo_white.svg" alt="GoPro 로고">
                     <div class="blind-b">GoPro</div>
                 </a>
@@ -113,9 +122,9 @@
                         <img src="assets/img/icon/language.svg" alt="언어 설정">
                     </button>
                     <ul>
-                        <li><a href="" aria-current="page">KOR</a></li>
-                        <li><a href="">ENG</a></li>
-                        <li><a href="">JAP</a></li>
+                        <li><a href="#" aria-current="page">KOR</a></li>
+                        <li><a href="#">ENG</a></li>
+                        <li><a href="#">JAP</a></li>
                     </ul>
                 </div>
                 <div class="account">
@@ -194,11 +203,11 @@
                     <div class="mgnb_wrap">
                     <!-- 닫기 버튼을 누르기 전까지 포커스는 .mgnb_wrap 내부에 머물러야 함, 스크립트 제어하기 쉽도록 첫번째 .first / 마지막 .last 추가함 -->
                         <div class="bg_white">
-                            <a href="" class="first"><!-- account -->
-                                <svg></svg>
+                            <a href="#" class="first">
+                                <img src="assets/img/icon/account.svg" alt="계정 바로가기 아이콘">
                             </a>
-                            <a href=""><!-- shopping cart -->
-                                <svg></svg>
+                            <a href="#">
+                                <img src="assets/img/icon/shopping-cart.svg" alt="장바구니 아이콘">
                             </a>
                         </div>
                         <nav id="mGnb">
@@ -284,7 +293,6 @@
             <section class="section" id="cnt1">
                 <h2 class="blind-b">GoPro 신규 제품 소개</h2>
 
-
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide slide1">
@@ -344,9 +352,8 @@
                         </div>
                     </div>
 
+                    <div class="swiper-pagination"></div>
                     <div class="controller">
-                        <div class="swiper-pagination"></div>
-
                         <div class="swiper-button-wrap">
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-button-next"></div>
@@ -428,95 +435,122 @@
                 <div class="category">
                     <p>당신의 GoPro를 더욱 빛나게 할</p>
                     <strong>OTHERS</strong>
-                    <span>GoPro</span>
                     <div class="categoryWrap" id="acc">
                         <div class="otherWrap">
                             <img src="assets/img/main/other_1_acc.png" alt="악세사리">
-                            <img src="" alt="">
-                        </div>
-                        <h4>악세사리</h4>
-                        <p>소중한 내 GoPro! 더욱 다양하게 사용해보고 싶다면?<br>
+                            <img class="hoverImg" src="assets/img/main/other_1_1_acc.png" alt="악세사리 컷 이미지">
+                            <h4>악세사리</h4>
+                            <p>소중한 내 GoPro! 더욱 다양하게 사용해보고 싶다면?<br>
                             GoPro 전용 악세사리로 여러 환경에서 즐겨보세요.</p>
+                        </div>
                     </div>
                     <div class="categoryWrap" id="lifeStyle">
                         <div class="otherWrap">
                             <img src="assets/img/main/other_2_lifeStyleGear.png" alt="라이프 스타일 기어">
-                            <img src="" alt="">
-                        </div>
-                        <h4>라이프 스타일 기어</h4>
-                        <p>프리미엄 소재와 스포츠에서 영감을 받은 디자인의<br> 
+                            <img class="hoverImg" src="assets/img/main/other_2_1_lifeStyleGear.png" alt="라이프 스타일 기어 컷 이미지">
+                            <h4>라이프 스타일 기어</h4>
+                            <p>프리미엄 소재와 스포츠에서 영감을 받은 디자인의<br> 
                             백팩과 GoPro만의 굿즈를 만나보세요.</p>
+                        </div>
                     </div>
                     <div class="categoryWrap" id="light">
                         <div class="otherWrap">
                             <img src="assets/img/main/other_3_light.png" alt="조명">
-                            <img src="" alt="">
-                        </div>
-                        <h4>조명</h4>
-                        <p>어두운 환경에서도 빛을 발하는 GoPro용 조명으로<br>
+                            <img class="hoverImg" src="assets/img/main/other_3_1_light.png" alt="조명 컷 이미지">
+                            <h4>조명</h4>
+                            <p>어두운 환경에서도 빛을 발하는 GoPro용 조명으로<br>
                             GoPro 카메라를 더욱 활용도 있게 사용해보세요.</p>
+                        </div>
                     </div>
                     <div class="categoryWrap" id="subs">
                         <div class="otherWrap">
                             <img src="assets/img/main/other_4_subscribe.png" alt="구독">
-                            <img src="" alt="">
-                        </div>
-                        <h4>구독</h4>
-                        <p>소중한 내 GoPro! 더욱 다양하게 사용해보고 싶다면?<br>
+                            <img class="hoverImg" src="assets/img/main/other_4_1_subscribe.png" alt="구독 아이콘 이미지">
+                            <h4>구독</h4>
+                            <p>소중한 내 GoPro! 더욱 다양하게 사용해보고 싶다면?<br>
                             GoPro 전용 악세사리로 여러 환경에서 즐겨보세요.</p>
+                        </div>
                     </div>
                     <div class="categoryWrap" id="app">
                         <div class="otherWrap">
                             <img src="assets/img/main/other_5_app.png" alt="어플리케이션">
-                            <img src="" alt="">
-                        </div>
-                        <h4>어플리케이션</h4>
-                        <p>GoPro를 더욱 활용적으로 즐길 수 있는 가장 간단한<br>
+                            <img class="hoverImg" src="assets/img/main/other_5_1_app.png" alt="어플리케이션 아이콘 이미지">
+                            <h4>어플리케이션</h4>
+                            <p>GoPro를 더욱 활용적으로 즐길 수 있는 가장 간단한<br>
                             방법! 간편한 자동 편집으로 누구든 멋진 동영상 제작이<br>
                             가능합니다.</p>
+                        </div>
                     </div>
                     <div class="categoryWrap" id="cloth">
                         <div class="otherWrap">
                             <img src="assets/img/main/other_6_clothes.png" alt="의류">
-                            <img src="" alt="">
-                        </div>
-                        <h4>의류</h4>
-                        <p>어디서든 즐길 수 있는 GoPro만의 기능성 의류로 더욱<br>
+                            <img class="hoverImg" src="assets/img/main/other_6_1_clothes.png" alt="의류 컷 이미지">
+                            <h4>의류</h4>
+                            <p>어디서든 즐길 수 있는 GoPro만의 기능성 의류로 더욱<br>
                            활동적인 샷을 노려보세요!</p>
+                        </div>
                     </div>
                 </div> 
             </section>
 
             <section class="section" id="cnt5">
                 <h2 class="blind-b">최신뉴스</h2>
-                <div class="news">
+                <div class="news" id="news" role="accorion">
                     <div class="newsWrap">
                         <strong>NEWS</strong>
                         <a href="#" class="underline_btn">더보기</a>
                         <div class="newsCntWrap">
                             <div class="newsCnt first" aria-current="page">
                                 <p>뉴스</p>
-                                <h5>FUSION + MACOS 사용자를 위한 알림</h5>
-                                <span>Big Sur와 같은 기능을 사용하고자 하는 Fusion 사용자이십니까? 최근 Apple은 macOS 업데이트 Big Sur를<br>
+                                <h5 class="tit">
+                                    <button type="button" id="nHeader1" class="newsheader first" aria-controls="nPanel1">
+                                        <span class="blind-b">뉴스 제목</span>
+                                        FUSION + MACOS 사용자를 위한 알림
+                                    </button>
+                                </h5>
+                                <div id="nPanel1" class="newspanel" role="region" aria-labelledby="nHeader1">
+                                    <span class="blind-b">내용</span>
+                                    <span>Big Sur와 같은 기능을 사용하고자 하는 Fusion 사용자이십니까? 최근 Apple은 macOS 업데이트 Big Sur를<br>
                                     공개하고 Mac 사용자에게 많은 혜택을 제공했지만 GoPro Fusion 사용자로서 그 혜택을 누릴 수는 없습니다. <br>
                                     GoPro는 360 Fusion 카메라 생산을 중단했지만 해당 장치의 사용자가 콘텐츠를 편집하려면…</span>
-                                <p>2020-11-25</p>
-                                <img src="" alt="">
+                                    <p>2020-11-25</p>
+                                    <img src="assets/img/main/news_cnt1x2.png" alt="산 정산에서 고프로를 사용하는 유저의 모습">
+                                </div>
                             </div>
-                            <div class="newsCnt">
+                            <div class="newsCnt" aria-current="page">
                                 <p>뉴스</p>
-                                <h5>HERO9 BLACK: 몇 가지 유용한 업데이트</h5>
-                                <span></span>
-                                <p>2020-11-18</p>
-                                <img src="" alt="">
+                                <h5 class="tit">
+                                    <button type="button" id="nHeader2" class="newsheader first" aria-controls="nPanel2">
+                                        <span class="blind-b">뉴스 제목</span>
+                                        HERO9 BLACK: 몇 가지 유용한 업데이트
+                                    </button>
+                                </h5>
+                                <div id="nPanel2" class="newspanel" role="region" aria-labelledby="nHeader2">
+                                    <span class="blind-b">내용</span>
+                                    <span>GoPro에서는 HERO9 Black이 전 세계 모든 곳에서 사랑받고 있다는 사실을 느끼고 있습니다. HyperSmooth<br>
+                                    3.0부터 5K 촬영까지 GoPro에서는 흥분되는 리뷰, 언박싱 그리고 기사를 확인했습니다.</span>
+                                    <p>2020-11-18</p>
+                                    <img src="assets/img/main/news_cnt2x2.png" alt="GoPro HERO9 BLACK의 제품 사진">
+                                </div>
                             </div>
-                            <div class="newsCnt last">
-                                <p>뉴스</p>
-                                <h5>GOPRO AWARDS 5주년을 기념하며</h5>
-                                <span></span>
-                                <p>2020-10-15</p>
-                                <img src="" alt="">
+                            <div class="newsCnt last" aria-current="page">
+                                <p>나만의 도구</p>
+                                <h5 class="tit">
+                                    <button type="button" id="nHeader1" class="newsheader first" aria-controls="nPanel1">
+                                        <span class="blind-b">뉴스 제목</span>
+                                        GOPRO를 웹캠으로 사용하는 방법
+                                    </button>
+                                </h5>
+                                <div id="nPanel1" class="newspanel" role="region" aria-labelledby="nHeader1">
+                                    <span class="blind-b">내용</span>
+                                    <span>요즘에는 필요한 화상 회의 형태가 저마다 다릅니다. 이제 HERO8 Black은 고화질 웹캠으로 작동하므로<br>
+                                    홈스쿨링과 미술 교사부터 열정적인 요리사와 피트니스 강사에 이르기까지 자신의 작품을 보다 잘 보여주는<br>
+                                    다양한 관점을 손쉽게 공유할 수 있습니다. 또한 단지 고성능 웹캠을 찾고 있다면…</span>
+                                    <p>2020-10-07</p>
+                                    <img src="assets/img/main/news_cnt3x2.png" alt="산 정산에서 고프로를 사용하는 유저의 모습">
+                                </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -531,7 +565,6 @@
                     <div class="videoWrap">
                         <strong>VIDEO</strong>
                         <a href="" class="underline_btn">더보기</a>
-                        <!-- 비디오 링크 -->
                         <div class="iframe">
                             <iframe width="673" height="377" src="https://www.youtube.com/embed/dFITY0dsFO4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             <iframe width="325" height="182" src="https://www.youtube.com/embed/ghzDZfRnrp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -547,14 +580,14 @@
                 <div class="insta">
                     <strong>INSTAGRAM</strong>
                     <div class="instaWrap">
-                        <a href="" target="_blank" aria-label="고프로 코리아 인스타그램 게시물 링크이동"><img src="assets/img/main/insta_1.jpg" alt=""></a>
-                        <a href="" target="_blank" aria-label="고프로 코리아 인스타그램 게시물 링크이동"><img src="assets/img/main/insta_2.jpg" alt=""></a>
-                        <a href="" target="_blank" aria-label="고프로 코리아 인스타그램 게시물 링크이동"><img src="assets/img/main/insta_3.jpg" alt=""></a>
-                        <a href="" target="_blank" aria-label="고프로 코리아 인스타그램 게시물 링크이동"><img src="assets/img/main/insta_4.jpg" alt=""></a>
-                        <a href="" target="_blank" aria-label="고프로 코리아 인스타그램 게시물 링크이동"><img src="assets/img/main/insta_5.jpg" alt=""></a>
-                        <a href="" target="_blank" aria-label="고프로 코리아 인스타그램 게시물 링크이동"><img src="assets/img/main/insta_6.jpg" alt=""></a>
-                        <a href="" target="_blank" aria-label="고프로 코리아 인스타그램 게시물 링크이동"><img src="assets/img/main/insta_7.jpg" alt=""></a>
-                        <a href="" target="_blank" aria-label="고프로 코리아 인스타그램 게시물 링크이동"><img src="assets/img/main/insta_8.jpg" alt=""></a>
+                            <a href="" target="_blank" aria-label="고프로 코리아 인스타그램 게시물 링크이동"><img src="assets/img/main/insta_1.jpg" alt=""></a>
+                            <a href="" target="_blank" aria-label="고프로 코리아 인스타그램 게시물 링크이동"><img src="assets/img/main/insta_2.jpg" alt=""></a>
+                            <a href="" target="_blank" aria-label="고프로 코리아 인스타그램 게시물 링크이동"><img src="assets/img/main/insta_3.jpg" alt=""></a>
+                            <a href="" target="_blank" aria-label="고프로 코리아 인스타그램 게시물 링크이동"><img src="assets/img/main/insta_4.jpg" alt=""></a>
+                            <a href="" target="_blank" aria-label="고프로 코리아 인스타그램 게시물 링크이동"><img src="assets/img/main/insta_5.jpg" alt=""></a>
+                            <a href="" target="_blank" aria-label="고프로 코리아 인스타그램 게시물 링크이동"><img src="assets/img/main/insta_6.jpg" alt=""></a>
+                            <a href="" target="_blank" aria-label="고프로 코리아 인스타그램 게시물 링크이동"><img src="assets/img/main/insta_7.jpg" alt=""></a>
+                            <a href="" target="_blank" aria-label="고프로 코리아 인스타그램 게시물 링크이동"><img src="assets/img/main/insta_8.jpg" alt=""></a>
                     </div>
                 </div>
             </section>
@@ -563,48 +596,48 @@
                 <div class="max1920">
                     <div class="foot">
                         <div class="brandInfo">
-                            <div class="Info">
-                                <span><strong>GoPro 소개</strong></span>
-                                <span>회사 소개</span>
-                                <span>뉴스</span>
-                                <span>채용</span>
-                                <span>GoPro와 연결</span>
-                                <span>투자자 관계</span>
-                                <span>유통업체</span>
-                                <span>공급업체 책임</span>
-                                <span>이용 약관</span>
-                                <span>개인정보 보호정책</span>
+                            <div class="info brandInfo">
+                                <a href=""><strong>GoPro 소개</strong></a>
+                                <a href="">회사 소개</a> 
+                                <a href="">뉴스</a>
+                                <a href="">채용</a> 
+                                <a href="">GoPro와 연결</a> 
+                                <a href="">투자자 관계</a> 
+                                <a href="">유통업체</a> 
+                                <a href="">공급업체 책임</a> 
+                                <a href="">이용 약관</a> 
+                                <a href="">개인정보 보호정책</a> 
                             </div>
-                            <div class="Info">
-                                <span><strong>계정</strong></span>
-                                <span>GoPro 설정</span>
-                                <span>주문 상태</span>
+                            <div class="info accountInfo">
+                                <a href=""><strong>계정</strong></a>
+                                <a href="">GoPro 설정</a>
+                                <a href="">주문 상태</a>
                             </div>
-                            <div class="Info">
-                                <span><strong>판매 + 지원</strong></span>
-                                <span>문의처</span>
-                                <span>피드백</span>
-                                <span>GoPro 지원</span>
+                            <div class="info supportInfo">
+                                <a href=""><strong>판매 + 지원</strong></a> 
+                                <a href="">문의처</a> 
+                                <a href="">피드백</a> 
+                                <a href="">GoPro 지원</a> 
                             </div>
-                            <div class="Info">
-                                <span><strong>기기</strong></span>
-                                <span>카메라 소프트웨어 업데이트</span>
-                                <span>클리어런스 + 리퍼 매장</span>
+                            <div class="info deviceInfo">
+                                <a href=""><strong>기기</strong></a>
+                                <a href="">카메라 소프트웨어 업데이트</a>   
+                                <a href="">클리어런스 + 리퍼 매장</a>   
                             </div>
-                            <div class="Info">
-                                <span><strong>프로그램</strong></span>
-                                <span>구독</span>
-                                <span>GoPro TradeUp</span>
-                                <span>GoPro Awards</span>
-                                <span>GoPro for a Cause</span>
-                                <span>제휴 프로그램</span>
-                                <span>보안 취약성 제출</span>
+                            <div class="info programInfo">
+                                <a href=""><strong>프로그램</strong></a>
+                                <a href="">구독</a>
+                                <a href="">GoPro TradeUp</a>
+                                <a href="">GoPro Awards</a>
+                                <a href="">GoPro for a Cause</a>
+                                <a href="">제휴 프로그램</a>
+                                <a href="">보안 취약성 제출</a>
                             </div>
                         </div>
                         <div class="closest">
-                            <a href="">
-                                <!-- svg -->
-                                가까운 매장 찾기
+                            <a href="https://gopro.com/ko/kr/store-locator">
+                                <img src="assets/img/icon/location-pin.svg" alt="매장찾기 아이콘">
+                                <p>가까운 매장 찾기</p>
                             </a>
                         </div>
                         <p class="copyright"> © 2020 GoPro, Inc. All rights reserved.</p>
@@ -613,86 +646,38 @@
                                 <li>
                                     <button type="button" class="footerIcon">
                                         <div class="blind-b">인스타그램</div>
-                                        <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                            viewBox="0 0 2500 2498.6" style="enable-background:new 0 0 2500 2498.6;"
-                                            xml:space="preserve">
-                                            <image style="overflow:visible;enable-background:new    ;" width="2486"
-                                                height="2485" id="레이어_1_2_" xlink:href="A659A959.png"
-                                                transform="matrix(0.9999 0 0 0.9999 7.1626 6.8112)">
-                                            </image>
-                                        </svg>
+                                        <a href=""><img src="assets/img/icon/instagram.svg" alt="인스타그램"></a>
                                     </button>
                                 </li>
                                 <li>
                                     <button type="button" class="footerIcon">
                                         <div class="blind-b">페이스북</div>
-                                        <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                            viewBox="0 0 2113 2113" style="enable-background:new 0 0 2113 2113;"
-                                            xml:space="preserve">
-                                            <image style="overflow:visible;enable-background:new    ;" width="2101"
-                                                height="2101" id="레이어_1_2_" xlink:href="C6BE759A.png"
-                                                transform="matrix(1 0 0 1 6 6)">
-                                            </image>
-                                        </svg>
+                                        <a href=""><img src="assets/img/icon/facebook.svg" alt="페이스북 아이콘"></a>
                                     </button>
                                 </li>
                                 <li>
                                     <button type="button" class="footerIcon">
                                         <div class="blind-b">유튜브</div>
-                                        <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                            viewBox="0 0 2113 2113" style="enable-background:new 0 0 2113 2113;"
-                                            xml:space="preserve">
-                                            <image style="overflow:visible;enable-background:new    ;" width="2101"
-                                                height="2101" id="레이어_1_2_" xlink:href="E763C38B.png"
-                                                transform="matrix(1 0 0 1 6 6)">
-                                            </image>
-                                        </svg>
+                                        <a href=""><img src="assets/img/icon/youtube.svg" alt="유튜브 아이콘"></a>
                                     </button>
                                 </li>
                                 <li>
                                     <button type="button" class="footerIcon">
                                         <div class="blind-b">트위터</div>
-                                        <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                            viewBox="0 0 2114 2113" style="enable-background:new 0 0 2114 2113;"
-                                            xml:space="preserve">
-                                            <image style="overflow:visible;enable-background:new    ;" width="2102"
-                                                height="2101" id="레이어_1_2_" xlink:href="46AD8222.png"
-                                                transform="matrix(1 0 0 1 6 6)">
-                                            </image>
-                                        </svg>
+                                        <a href=""><img src="assets/img/icon/twitter.svg" alt="트위터 아이콘"></a>
                                     </button>
                                 </li>
                                 <li>
                                     <button type="button" class="footerIcon">
                                         <div class="blind-b">핀터레스트</div>
-                                        <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                            viewBox="0 0 2113 2113" style="enable-background:new 0 0 2113 2113;"
-                                            xml:space="preserve">
-                                            <image style="overflow:visible;enable-background:new    ;" width="2101"
-                                                height="2101" id="레이어_1_2_" xlink:href="FC6C3FAE.png"
-                                                transform="matrix(1 0 0 1 6 6)">
-                                            </image>
-                                        </svg>
+                                        <a href=""><img src="assets/img/icon/pinterest.svg" alt=""></a>
                                     </button>
                                 </li>
                                 <li>
                                     <button type="button" class="footerIcon">
                                         <div class="blind-b">네이버 블로그</div>
                                         <a href="">
-                                            <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                viewBox="0 0 2499.3 2499.3" style="enable-background:new 0 0 2499.3 2499.3;"
-                                                xml:space="preserve">
-                                                <image style="overflow:visible;enable-background:new    ;" width="2490"
-                                                    height="2490" id="레이어_1_2_" xlink:href="9419A77.png"
-                                                    transform="matrix(1.0001 0 0 1.0001 4.4992 4.4992)">
-                                                </image>
-                                            </svg>
+                                        <img src="assets/img/icon/naver.svg" alt="">
                                         </a>
                                     </button>
                                 </li>

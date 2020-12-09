@@ -7,23 +7,20 @@
     }
     .swiper-slide {
         @include bgSize(cover);
-        background: no-repeat center;
+        position: relative;height: 100vh;background: no-repeat center;
         #videoBg {position: absolute; width: 100%; height: auto; top: 0; left: 0; /* min-width: 100%; */ min-height: auto; z-index: -1; }
         &.slide2 {background-image: url("../img/main/index1_02_1920.png");}
         &.slide3 {background-image: url("../img/main/index1_03_1920.png");}
-        > div > p {font-size: 47px;letter-spacing: 1.27px;font-weight: 500;}
-        > div > h3 {font-size: 90px;font-weight: 700;padding-bottom: 68px;}
-        > div > p:nth-child(3) {font-size: 47px;font-weight: 300;padding-bottom: 119px;letter-spacing: 0.75px;}
+        .txtbox{position: absolute;top: 256px;left: 7%;text-align: left;}
+        .txtbox p {font-size: 47px;letter-spacing: 1.27px;font-weight: 500;}
+        .txtbox h3 {font-size: 90px;font-weight: 700;padding-bottom: 68px;}
+        .txtbox p:nth-child(3) {font-size: 47px;font-weight: 300;padding-bottom: 119px;letter-spacing: 0.75px;}
         > .txtbox > .linkWrapper > .innerWrapper > a {
             position: relative; font-size: 33px;font-weight: 700;letter-spacing: 0.89px;           
         }
     }
     .slide1 {
-        @include bgSize(cover);
-        position: relative;height: 100vh;
         .txtbox {
-            position: absolute; top: 256px; left: 154px; text-align: left;
-            h3 {padding-bottom: 234px;}
             .linkWrapper {
                 position: relative;
                 .innerWrapper {
@@ -78,17 +75,8 @@
         }
     }
     .slide2 {
-        position: relative;height: 100vh;
-        .txtbox {
-            position: absolute; top: 256px; right: 154px; text-align: right;
-        }
     }
     .slide3 {
-        position: relative;height: 100vh;
-        .txtbox {
-            position: absolute; top: 256px; left: 154px; text-align: left;
-            h3 {padding-bottom: 234px;}
-        }
         .simpleExplan {
             position: absolute; background: #ccc; bottom: 222px; right: 192px; width: 615px; height: 106px;font-size: 18px; text-align: center;
             .simpleWrap {
@@ -100,7 +88,6 @@
             }
             .discount {
                 padding-left: 89px;
-                /* strong {font-size: 58px;} */
                 img {width: 119px; height: 58px;}
                 p {margin-top: 23px;width: 153px;}
             }
@@ -109,15 +96,18 @@
                 img {width: 116px;height: 73px;}
                 p {width: 129px;}
             }
-
         }
     }
+    .swiper-pagination{
+        position: absolute; top: 100px; left: 7%; bottom: auto; font-size: 33px;letter-spacing: 0.2rem;font-weight: 700;width: auto; height: auto;
+    }
+    
     .controller {
         position: absolute;bottom: 20%; left: 7%; z-index: 500;width: 500px;height: 87px;
-        .swiper-pagination, .swiper-button-prev, .swiper-button-next {position: static;}
-        .swiper-pagination {
-            position: absolute; top: -600px; left: 20px; font-size: 33px;letter-spacing: 0.2rem;font-weight: 700;width: auto; height: auto;
-        }
+        .swiper-button-prev, .swiper-button-next {position: static;}
+
+        
+        .swiper-button-wrap{position: relative;z-index: 20;background: grey;}
         .swiper-button-prev, .swiper-button-next, .play_stop {
             /* @include bgSize(cover); */
             background: no-repeat center; display: inline-block;width: 87px; height: 87px;
@@ -125,16 +115,20 @@
         .swiper-button-next:after, .swiper-button-prev:after {display: none;}
         .swiper-button-prev, .swiper-button-next {
             @include border-radius(50px);
-            float: left; display: block; padding: 3px;border: 3px solid #fff;
+            float: left; display: block; padding: 3px;border: 3px solid #fff;margin-top: 0;
         }
         .swiper-button-next {margin-left: 196px;}
         .swiper-button-prev {
             background-image: url("../img/icon/prev.svg");}
         .swiper-button-next {
             background-image: url("../img/icon/next.svg");}
-        .play_stop {position: absolute; right: 270px; bottom: 20px; }
+        .play_stop {position: absolute; right: 270px; bottom: -1px;z-index: 200; }
         .pause {background-image: url("../img/icon/pause.svg");}
         .autoplay {display: none; background-image: url("../img/icon/play.svg");}
+    }
+    &.right{
+        .swiper-slide .txtbox {left: auto; right: 7%;text-align: right;}
+        .swiper-pagination{right: 7%;left: auto;}
     }
 }
 
@@ -185,7 +179,7 @@
 }
 
 #cnt3 {
-    position: relative; overflow: hidden; height: 100vh;width: 100%;
+    position: relative; overflow: hidden; height: 100vh;width: 100vw;
     .camerasWrap {
         position: absolute; width: 115%;height:100vh; left: -98px;top: 0; overflow: hidden;
         
@@ -213,7 +207,11 @@
         a {
             @include transform(skewX(10deg));
             @include border-radius(7px);
+            @include transition(all 0.3s);
             position: absolute;/* 형제요소인 img에 포지션 relative를 줄수는 없는건지.. 크기가 커졌을때 위치가 이상해짐 */bottom: 150px; left: 236.8px; width: 430px;height: 95px;background-color: $darkgrey;line-height: 95px;font-size: 35px;z-index: 300;
+            &:hover, &:focus {
+                @include linearGradient((#12C2E9, #096A8A, #000000));
+            }
         }
     }
     #camera3 {
@@ -223,18 +221,22 @@
 }
 
 #cnt4 {
-    color: #000;width: 100%;background-color: #ebebeb;height: 109.375vw;
+    color: #000;width: 100%;background-color: #ebebeb;height: 2100px;
     .category {
-        width: 1700px; height: 1923px;/* padding-left: 7.291666666666667vw 140px; padding-right: 7.291666666666667vw; */ text-align: center;
+        position: relative; width: 1649px; height: 100%;text-align: center; margin: 0 auto; background: url("../img/main/GoProtxt.svg") no-repeat fixed center;background-size: 55.46875vw;
         > p {color: #8e8e8e; font-size: 31px;font-weight: 700; padding-bottom: 15px;padding-top: 90px; }
-        > strong { font-size: 60px;font-weight: 700;}
-        > span {font-size: 260px;color: rgba(25,25,25,.2);font-family: Neuropol, sans-serif; display: block;}
+        > strong { display: block; font-size: 60px;font-weight: 700;}
         .categoryWrap {
-            display: block; float: left;text-align: left;
+            position: relative; display: block; float: left; text-align: left; padding-top: 68px;
             .otherWrap {
+                padding-right: 90px;
                 img{ 
                     @include border-radius(7px);
-                    padding-bottom: 24.5px;
+                    margin-bottom: 24.5px; 
+                }
+                .hoverImg {
+                    @include border-radius(7px);
+                    display: none;margin-bottom: 24.5px; 
                 }
             }
             h4 {
@@ -243,27 +245,33 @@
             p {
                 font-size: 21px;line-height: 29px;font-weight: 500;
             }
-            /* & + div {padding-left: 91px;} */
-            &:nth-child(4) {padding-top: 186px;}
-            &:nth-child(5) {padding-top: 186px;}
-            &:nth-child(6) {padding-top: 186px;}
+            &:first-child > div {padding-right: 90px;}
+            &:nth-of-type(2),&:nth-of-type(5) {padding-top: 196px;}
+            &:nth-of-type(3),&:nth-of-type(6) {padding-top: 81.5px;}
+
+            &:nth-of-type(3n) > div {padding-right: 0;}
         }
+        
     }
 }
 
 #cnt5 {
-    color: #000;background-color: #FCFCFC;height: 100vh;
+    color: #000;background-color: #FCFCFC;height: 100vh;margin: 0 auto;text-align: center;
     .newsWrap {
-        font-weight: 700;
+        font-weight: 700;margin: 0 auto;
         > strong { font-size: 60px;}
         > a {font-size: 18px;}
         .newsCntWrap {
-            border-top: 1px solid #707070; border-bottom: 1px solid #707070; width: 1454.5px;text-align: left;color: #333;
+            position: relative; border-top: 1px solid #707070; border-bottom: 1px solid #707070; width: 1454.5px;height: 746px;text-align: left;color: #333;padding: 0 40px; 
             .newsCnt {
-                p {font-size: 22px;color: &lightblue; font-weight: 700;}
-                h5 {font-size: 32px;font-weight: 700;}
+                border-bottom: 1px solid #707070; position: relative;
+                p:first-child {font-size: 22px;color: &lightblue; font-weight: 700;color: $lightblue;padding-bottom: 15px;padding-top: 73.5px;}
+                h5 {font-size: 32px;font-weight: 700;padding-bottom: 37px;}
                 span {font-weight: 300;letter-spacing: 1.3125;}
-                &:nth-child(4) {font-size: 15px;font-weight: 300;}
+                .newspanel {
+                    p {font-size: 15px;font-weight: 300;padding-top: 65px;padding-bottom: 27px;}
+                    img {width: 575px; height: 372px; position:absolute;top: 0;right: 0;}
+                }
             }
 
         }
@@ -272,12 +280,12 @@
 #cnt6 {
     background-color: #000;width: 100%;height: 100vh;
     .video {
-        overflow: hidden;/* display: table; */
+        overflow: hidden;margin: 0 auto;
         p {font-family: Helvetica, sans-serif;font-size: 150px;display: inline;font-weight: 900;}
         p + p {padding-left: 82px;}
         .videoWrap {
             @include border-radius(63px);
-            border: 8px solid #707070;width: 1292px;height: 674px;text-align: center;/* display: table-cell; vertical-align: middle; */
+            border: 8px solid #707070;width: 1292px;height: 674px;text-align: center;
             > strong { font-size: 60px;font-weight: 700;}
             a {text-decoration: underline;font-size: 18px;font-weight: 700;}
             .iframe {
@@ -289,24 +297,20 @@
 #cnt7 {
     .insta {
         @include linearGradient(#12C2E9, #096A8A, #000000);
-        width: 100%;height: 100vh;padding-top: 134px;
+        width: 100%;height: 100vh;padding-top: 134px;margin: 0 auto;
         strong {font-size: 60px;font-weight: 700;padding-left: 147px;}
         .instaWrap {
             position:relative;
-            &::after {
-                content:""; position: absolute; width: 85%;height: 1px;background-color: #fff;text-align: center;bottom: 0; left: 5.859375vw;
-            }
-
-            a + a {padding-left: 38px;}
             a {
-                display: inline-block;padding-top: 59px; 
+                display: inline-block;padding-top: 59px; padding-right: 38px;position: relative;
                 &:first-child {padding-left: 198.5px;}
-
+                &:nth-child(4n) {padding-right: 0;}
+                &:nth-child(5n) {padding-left: 198.5px;}
             }
             img {
                 width: 346px;height: 346px;
+                &::after {content:""; position: absolute; top: 0; left: 0;background-color: rgba(0,0,0,.55);width: 100%;height: 100%;}
             }
-        
         }
     }
 }
