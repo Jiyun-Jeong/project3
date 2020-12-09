@@ -25,3 +25,10 @@
     -webkit-filter: $value;
     filter: $value;
 }
+@mixin linearGradient($value...) {
+    -webkit-background: linear-gradient($value);
+    -moz-background: linear-gradient($value);
+    -o-background: linear-gradient($value);
+    -ms-background: linear-gradient($value);
+    background: linear-gradient($value);
+}
