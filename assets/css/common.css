@@ -213,10 +213,10 @@ body {
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
   position: fixed;
-  bottom: 25px;
+  bottom: 60px;
   right: 35px;
   width: 129px;
-  height: 112px; }
+  height: 100px; }
   .fixedBtn .goUpBtn {
     position: absolute;
     /* opacity: 0; */
@@ -249,7 +249,6 @@ body {
     position: relative;
     width: 88.3854166667vw;
     height: 34.7395833333vw;
-    /* background: grey; */
     text-align: center; }
     #footer .foot a {
       display: block;
@@ -264,7 +263,7 @@ body {
     #footer .foot .brandInfo::after {
       content: "";
       position: absolute;
-      width: 88.3333333333vw;
+      width: 81.5625vw;
       height: 1px;
       background-color: #fff;
       text-align: center;
@@ -277,9 +276,12 @@ body {
       padding-left: 10.208333vw;
       position: relative;
       padding-top: 60.5px;
-      width: 1442px;
+      width: 1700px;
       height: 337px;
       margin: 0; }
+    #footer .foot .programInfo {
+      right: 0;
+      top: 0; }
     #footer .foot .bottomMenu {
       margin-top: 630px; }
     #footer .foot .closest {

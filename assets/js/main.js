@@ -104,10 +104,19 @@ $(document).ready(function(){
     });
 
     //cnt6
+    var windowH = $(window).height();
     $(window).on('scroll', function () {
         var scrollT = $(this).scrollTop();
+
+        if (scrollY === 0) {
+            $('#header').css({position: 'fixed', top: 'auto', bottom: 0});
+        } else if (scrollY < $(window).height()) {
+            $('#header').css({absolute: 'absolute', top: windowH-scrollY, bottom: 'auto'});
+        } else {
+            $('#header').css({absolute: 'fixed', top: 0, bottom: 'auto'});
+        }
         
-        //brandStory 내부의 텍스트 marquee 효과 나타나기
+        //텍스트 marquee 효과
         if (scrollT > $('.marquee').offset().top - 300) {
             $('.marquee').animate().attr({left: -500});
         }

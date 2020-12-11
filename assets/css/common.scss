@@ -84,7 +84,7 @@ body {
 //고정 버튼
 .fixedBtn {
     @include transition(opacity 0.3s);
-    position: fixed; bottom: 25px; right: 35px;width: 129px;height: 112px;
+    position: fixed; bottom: 60px; right: 35px;width: 129px;height: 100px;
     
     //Top 버튼
     .goUpBtn {
@@ -102,19 +102,22 @@ body {
 #footer {
     background: #000;height: 842px;width: 100%;padding-top:80px;
     .foot {
-        position: relative; width: 88.38541666666667vw/* 1697px */;height: 34.73958333333333vw/* 667px */;/* background: grey; */text-align: center;
+        position: relative; width: 88.38541666666667vw/* 1697px */;height: 34.73958333333333vw/* 667px */;text-align: center;
         a {display: block;font-size: 14px;padding-bottom: 1.09375vw/* 21px */;}
         strong {font-size: 16px;}
         p {text-align: center;}
         .brandInfo {
             div.info + div.info {padding-left: 10.41666666666667vw/* 200px */;}
             &::after {
-                content:""; position: absolute; width: 88.33333333333333vw/* 1696px */;height: 1px;background-color: #fff;text-align: center;top: 0; left: 5.859375vw;
+                content:""; position: absolute; width: 81.5625vw/* 1566px */;height: 1px;background-color: #fff;text-align: center;top: 0; left: 5.859375vw;
             }
         }
         .info {float: left; text-align: left;}
         .brandInfo {
-            padding-left: 10.208333vw/* 100px */;position: relative;padding-top: 60.5px;width: 1442px;height: 337px;margin: 0;
+            padding-left: 10.208333vw/* 100px */;position: relative;padding-top: 60.5px;width: 1700px;height: 337px;margin: 0;
+        }
+        .programInfo {
+            right: 0; top: 0;
         }
         .bottomMenu {margin-top: 630px;}
         .closest {
