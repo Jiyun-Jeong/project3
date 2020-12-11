@@ -180,41 +180,6 @@ header, nav, section, footer {
     -ms-transform: scale(1);
     transform: scale(1); }
 
-.fixedBtn {
-  -webkit-transition: opacity 0.3s;
-  -moz-transition: opacity 0.3s;
-  -o-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-  position: fixed;
-  bottom: 25px;
-  right: 35px;
-  width: 129px;
-  height: 112px;
-  background: pink; }
-  .fixedBtn .goUpBtn {
-    position: absolute;
-    opacity: 0;
-    z-index: 1300;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 50px;
-    height: 50px; }
-  .fixedBtn #btnTop.active {
-    opacity: 1; }
-  .fixedBtn .chattingbtn {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
-    z-index: 1300;
-    padding-top: 12px;
-    width: 123px;
-    height: 50px;
-    padding-top: 12px; }
-  .fixedBtn #chattingbtn.active {
-    opacity: 1; }
-
 body {
   font-family: "Gothic A1", "맑은 고딕", "Malgun Gothic";
   font-size: 16px;
@@ -241,6 +206,39 @@ body {
     font-size: 26px;
     height: 50px;
     line-height: 50px; }
+
+.fixedBtn {
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  position: fixed;
+  bottom: 25px;
+  right: 35px;
+  width: 129px;
+  height: 112px; }
+  .fixedBtn .goUpBtn {
+    position: absolute;
+    /* opacity: 0; */
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    z-index: 1300; }
+  .fixedBtn #btnTop.active {
+    opacity: 1; }
+  .fixedBtn .chattingBtn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* opacity: 0; */
+    padding-top: 12px;
+    width: 123px;
+    height: 50px;
+    padding-top: 12px;
+    z-index: 1300; }
+  .fixedBtn #chattingbtn.active {
+    opacity: 1; }
 
 #footer {
   background: #000;

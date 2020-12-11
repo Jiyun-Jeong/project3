@@ -10,7 +10,8 @@
   width: 100%;
   background: #000;
   line-height: 90px;
-  text-align: center; }
+  text-align: center;
+  z-index: 1000; }
   #header .logo {
     position: absolute;
     left: 9px;
@@ -65,7 +66,7 @@
     #header #pcGnb ul li {
       display: inline-block; }
     #header #pcGnb > ul > li {
-      font-size: 23px;
+      font-size: 21px;
       font-weight: 500 !important; }
       #header #pcGnb > ul > li:hover > a, #header #pcGnb > ul > li.on > a, #header #pcGnb > ul > li:focus > a {
         -webkit-transition: 0.3s;
@@ -83,17 +84,31 @@
         /* 80px -> vw */ }
   #header .dep2wrap {
     position: absolute;
-    top: 90px;
+    bottom: 90px;
     left: 0;
     width: 100%;
-    height: 80px;
     background: #fff;
     color: #000;
-    line-height: 80px; }
+    height: 70px;
+    line-height: 70px; }
     #header .dep2wrap > li {
       float: left;
-      font-size: 20px;
-      font-weight: 700; }
+      font-size: 17px;
+      font-weight: 700;
+      position: relative; }
+      #header .dep2wrap > li::after {
+        -webkit-transition: all 0.2px;
+        -moz-transition: all 0.2px;
+        -o-transition: all 0.2px;
+        transition: all 0.2px;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: #00E4F3;
+        opacity: 0; }
+      #header .dep2wrap > li:hover, #header .dep2wrap > li:focus {
+        opacity: 1; }
   #header ul li ul li + li {
     padding-left: 90px; }
 

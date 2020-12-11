@@ -5,7 +5,7 @@
 
 //header
 #header {//pc, 태블릿 공통
-    position: fixed; bottom: 0; left: 0; height: 90px;width: 100%;background: #000;line-height: 90px;text-align: center;
+    position: fixed; bottom: 0; left: 0; height: 90px;width: 100%;background: #000;line-height: 90px;text-align: center;z-index: 1000;
     .logo {
         position: absolute; left: 9px; top: 0;
         a {
@@ -41,7 +41,7 @@
         position: relative; text-align: center;z-index: 800;
         ul li {display: inline-block;}
         > ul > li {
-            font-size: 23px;font-weight: 500 !important;
+            font-size: 21px;font-weight: 500 !important;
             &:hover > a, &.on >a, &:focus > a {
                 @include transition(0.3s);
                 @include transform( translateY(-100%) );
@@ -52,10 +52,16 @@
         }
         
         .dep2wrap {
-            position: absolute; top: 90px; left: 0; width: 100%;height: 80px; background: #fff; color: #000;line-height: 80px; 
+            position: absolute; bottom: 90px; left: 0; width: 100%;background: #fff; color: #000;height: 70px; line-height: 70px; 
             > li {
-                float: left;font-size: 20px;font-weight: 700;
-                
+                float: left;font-size: 17px;font-weight: 700;position: relative;
+                &::after {
+                    @include transition(all 0.2px);
+                    content:"";position: absolute; width: 100%;height: 1px;background-color: $lightblue;opacity: 0;
+                }
+                &:hover, &:focus {
+                    opacity: 1;
+                }
             }
         }        
         ul li ul li + li {padding-left: 90px;}
