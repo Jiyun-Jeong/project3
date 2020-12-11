@@ -59,18 +59,21 @@ body {
 #footer {
     background: #000;height: 842px;width: 100%;padding-top:80px;
     .foot {
-        position: relative; width: 88.38541666666667vw/* 1697px */;height: 34.73958333333333vw/* 667px */;/* background: grey; */text-align: center;padding-top: 57px;
+        position: relative; width: 88.38541666666667vw/* 1697px */;height: 34.73958333333333vw/* 667px */;/* background: grey; */text-align: center;
         a {display: block;font-size: 14px;padding-bottom: 1.09375vw/* 21px */;}
         strong {font-size: 16px;}
         p {text-align: center;}
         .brandInfo {
             div.info + div.info {padding-left: 10.41666666666667vw/* 200px */;}
             &::after {
-                content:""; position: absolute; width: 85%;height: 1px;background-color: #fff;text-align: center;top: 0; left: 5.859375vw;
+                content:""; position: absolute; width: 88.33333333333333vw/* 1696px */;height: 1px;background-color: #fff;text-align: center;top: 0; left: 5.859375vw;
             }
         }
         .info {float: left; text-align: left;}
-        .brandInfo {padding-left: 5.208333333333333vw/* 100px */;position: relative;}
+        .brandInfo {
+            padding-left: 10.208333vw/* 100px */;position: relative;padding-top: 60.5px;width: 1442px;height: 337px;margin: 0;
+        }
+        .bottomMenu {margin-top: 630px;}
         .closest {
             position: absolute; bottom: 0; left: 0;padding-left: 113px;
             img {width: 31px;height: 31px;}
