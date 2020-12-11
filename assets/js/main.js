@@ -39,7 +39,7 @@ $(document).ready(function(){
                     type: 'fraction',
                 },
                 autoplay: {
-                    delay: 1600,
+                    delay: 16000,
                 },
     
                 // Navigation arrows

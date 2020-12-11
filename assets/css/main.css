@@ -166,7 +166,6 @@
       transition: transform(0.2s 0.2s); }
 #cnt1 .slide3 .simpleExplan {
   position: absolute;
-  background: #ccc;
   bottom: 222px;
   right: 140px;
   width: 615px;
