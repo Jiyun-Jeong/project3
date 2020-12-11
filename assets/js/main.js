@@ -112,6 +112,7 @@ $(document).ready(function(){
             $('#header').css({position: 'fixed', top: 'auto', bottom: 0});
         } else if (scrollY < $(window).height()) {
             $('#header').css({absolute: 'absolute', top: windowH-scrollY, bottom: 'auto'});
+            $('#pcGnb > ul > li > ul').css({bottom: 0, top: 90});
         } else {
             $('#header').css({absolute: 'fixed', top: 0, bottom: 'auto'});
         }
