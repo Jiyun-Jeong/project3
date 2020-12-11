@@ -154,7 +154,8 @@ body {
       float: left;
       text-align: left; }
     #footer .foot .brandInfo {
-      padding-left: 5.2083333333vw; }
+      padding-left: 5.2083333333vw;
+      position: relative; }
     #footer .foot .closest {
       position: absolute;
       bottom: 0;
@@ -177,12 +178,19 @@ body {
       font-weight: 500;
       font-size: 14px; }
     #footer .foot .foot_icon {
-      float: right;
-      background: orange; }
-      #footer .foot .foot_icon a {
-        padding-right: 9px;
-        display: block; }
-        #footer .foot .foot_icon a img {
+      position: absolute;
+      height: 31px;
+      width: 231px;
+      bottom: 0;
+      right: 113px; }
+      #footer .foot .foot_icon ul li {
+        display: inline; }
+      #footer .foot .foot_icon ul button {
+        width: 31px; }
+      #footer .foot .foot_icon ul a {
+        padding-right: 9px; }
+        #footer .foot .foot_icon ul a img {
+          display: inline-block;
           width: 31px;
           height: 31px; }
 

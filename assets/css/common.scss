@@ -70,7 +70,7 @@ body {
             }
         }
         .info {float: left; text-align: left;}
-        .brandInfo {padding-left: 5.208333333333333vw/* 100px */;}
+        .brandInfo {padding-left: 5.208333333333333vw/* 100px */;position: relative;}
         .closest {
             position: absolute; bottom: 0; left: 0;padding-left: 113px;
             img {width: 31px;height: 31px;}
@@ -79,13 +79,18 @@ body {
         .copyright {
             position: absolute;display: inline-block;bottom: 0; left: calc(50% - 126px);color: #c2c2c2;font-weight: 500;font-size: 14px; }
         .foot_icon {
-            float: right; background: orange;
-            a {
-                padding-right: 9px;display: block;
-                img {
-                    width: 31px; height: 31px;
+            position: absolute; height: 31px;width: 231px;bottom: 0;right:113px;
+            ul {
+                li {display: inline;}
+                button {width: 31px; }
+                a {
+                    padding-right: 9px;
+                    img {
+                        display: inline-block; width: 31px; height: 31px;
+                    }
                 }
             }
+
         }
     }
 }
