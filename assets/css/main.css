@@ -394,23 +394,23 @@
       top: 30%;
       width: 100%; }
       #cnt3 .camera .cameras.cameraR {
-        -webkit-transform: skewX(5deg) translateX(-50%) translateX(-80px);
-        -moz-transform: skewX(5deg) translateX(-50%) translateX(-80px);
-        -o-transform: skewX(5deg) translateX(-50%) translateX(-80px);
-        -ms-transform: skewX(5deg) translateX(-50%) translateX(-80px);
-        transform: skewX(5deg) translateX(-50%) translateX(-80px); }
+        -webkit-transform: skewX(5deg) translateX(-50%);
+        -moz-transform: skewX(5deg) translateX(-50%);
+        -o-transform: skewX(5deg) translateX(-50%);
+        -ms-transform: skewX(5deg) translateX(-50%);
+        transform: skewX(5deg) translateX(-50%); }
       #cnt3 .camera .cameras.cameraL {
-        -webkit-transform: skewX(5deg) translateX(-50%) translateX(80px);
-        -moz-transform: skewX(5deg) translateX(-50%) translateX(80px);
-        -o-transform: skewX(5deg) translateX(-50%) translateX(80px);
-        -ms-transform: skewX(5deg) translateX(-50%) translateX(80px);
-        transform: skewX(5deg) translateX(-50%) translateX(80px); }
+        -webkit-transform: skewX(5deg) translateX(-50%);
+        -moz-transform: skewX(5deg) translateX(-50%);
+        -o-transform: skewX(5deg) translateX(-50%);
+        -ms-transform: skewX(5deg) translateX(-50%);
+        transform: skewX(5deg) translateX(-50%); }
       #cnt3 .camera .cameras.cameraD {
-        -webkit-transform: skewX(5deg) translateX(-50%) translateY(-80px);
-        -moz-transform: skewX(5deg) translateX(-50%) translateY(-80px);
-        -o-transform: skewX(5deg) translateX(-50%) translateY(-80px);
-        -ms-transform: skewX(5deg) translateX(-50%) translateY(-80px);
-        transform: skewX(5deg) translateX(-50%) translateY(-80px); }
+        -webkit-transform: skewX(5deg) translateX(-50%);
+        -moz-transform: skewX(5deg) translateX(-50%);
+        -o-transform: skewX(5deg) translateX(-50%);
+        -ms-transform: skewX(5deg) translateX(-50%);
+        transform: skewX(5deg) translateX(-50%); }
   #cnt3 #camera1 {
     top: 0;
     left: 0;

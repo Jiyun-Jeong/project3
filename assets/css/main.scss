@@ -198,13 +198,13 @@
             @include transform(skewX(5deg) translateX(-50%));
             position: absolute; top: 30%; width: 100%;
             &.cameraR {
-                @include transform(skewX(5deg) translateX(-50%) translateX(-80px));
+                @include transform(skewX(5deg) translateX(-50%)/*  translateX(-80px)*/);
             }
             &.cameraL {
-                @include transform(skewX(5deg) translateX(-50%) translateX(80px));
+                @include transform(skewX(5deg) translateX(-50%)/*  translateX(80px) */);
             }
             &.cameraD {
-                @include transform(skewX(5deg) translateX(-50%) translateY(-80px));
+                @include transform(skewX(5deg) translateX(-50%)/*  translateY(-80px) */);
             }
         }
     }
