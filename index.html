@@ -18,69 +18,7 @@
     <script src="assets/js/common.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-         $(document).ready(function () {
-/*             var timer = 0;
-            $(window).on('resize', function () {
-                clearTimeout(timer);
 
-                timer = setTimeout(function () {
-                    if($(this).width() > 1024) createFullpage();
-                    else fullpage_api.destory('all');
-                }, 50);
-            });
-
-            $(window).trigger('resize');
-
-            function createFullpage() {
-                $('#fullpage').fullpage({
-                    navigation: true,
-                    navigationPosition: 'left',
-                    navigationTooltips: ['GoPro 소개', '신제품 소개', '카메라 비교', '카테고리', '뉴스', '동영상', '인스타그램'],
-                    afterRender: function() {
-                        $('#fp-nav .fp-tooltip').attr('aria-hidden', true);
-                    },
-                    onLeave: function(origin, destination, direction) {
-                        if (origin.index === 1 && destination.index === 0 && direction === 'up') {
-                            $('#pcHeader').removeClass('on active');
-                        } else {
-                            $('#pcHeader').addClass('on active');
-                        }
-                    }
-                });
-            } */
-
-        var cnt1Swiper = new Swiper('#cnt1 .swiper-container', {
-            // Optional parameters
-            loop: true,
-
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'fraction',
-                progressbarOpposite: 'false',
-            },
-            autoplay: {
-                delay: 16000,
-            },
-
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            //현재 이벤트에 특정 이벤트를 넣고 싶은 경우
-            on: {
-                slideChangeTransitionStart: function (swiper) { 
-                    //활성화된 슬라이드에 사용자지정속성인 data-swiper-slide-index를 가져와서 오른쪽 위치만 지정한다
-                    var tgIdx = $('#cnt1 .swiper-slide-active').data("swiper-slide-index");
-                    console.log(tgIdx);  //0,1,2
-                    if (tgIdx === 1) $('#cnt1').addClass('right');
-                    else $('#cnt1').removeClass('right');
-                },
-            },
-        });
-
-
-    });
     </script>
 </head>
 <body>
@@ -112,7 +50,8 @@
                             </div>
                         </form>
                         <button type="button" class="btn_close">
-                            <img src="#" alt="검색창 닫기">
+                            <span class="blind-b">검색창 닫기</span>
+                            <img src="assets/img/icon/close_btn.svg" alt="검색창 닫기">
                         </button>
                     </div>
                 </div>
@@ -416,14 +355,14 @@
                 <h2 class="blind-b">최신 카메라</h2>
                 <div class="camerasWrap">
                     <div class="camera" id="camera1">
-                        <img class="cameras" src="assets/img/main/hero8.png" alt="HERO8 BLACK 뒷면">
+                        <img class="cameras fade right" src="assets/img/main/hero8.png" alt="HERO8 BLACK 뒷면">
                     </div>
                     <div class="camera" id="camera2">
-                        <img class="cameras" src="assets/img/main/hero9.png" alt="HERO9 BLACK 전면">
+                        <img class="cameras fade down" src="assets/img/main/hero9.png" alt="HERO9 BLACK 전면">
                         <a href="https://gopro.com/ko/kr/shop/cameras" class="discover_btn">Discover More</a>
                     </div>
                     <div class="camera" id="camera3">
-                        <img class="cameras" src="assets/img/main/max.png" alt="MAX 측면">
+                        <img class="cameras fade left" src="assets/img/main/max.png" alt="MAX 측면">
                     </div>
                 </div>
             </section>
@@ -434,9 +373,9 @@
                 <div class="category">
                     <p>당신의 GoPro를 더욱 빛나게 할</p>
                     <strong>OTHERS</strong>
-                    <div class="categoryWrap" id="acc">
+                    <div class="categoryWrap " id="acc">
                         <div class="otherWrap">
-                            <a href="https://gopro.com/ko/kr/shop/mounts-accessories" >
+                            <a href="https://gopro.com/ko/kr/shop/mounts-accessories"  >
                                 <img class="beforeHover" src="assets/img/main/other_1_acc.png" alt="악세사리">
                                 <img class="hoverImg" src="assets/img/main/other_1_1_acc.png" alt="악세사리 컷 이미지">
                             </a>
@@ -505,63 +444,47 @@
 
             <section class="section" id="cnt5">
                 <h2 class="blind-b">최신뉴스</h2>
-                <div class="news" id="news" role="accorion">
+                <div class="news" id="news">
                     <div class="newsWrap">
                         <strong>NEWS</strong>
-                        <a href="https://gopro.com/ko/kr/news" class="underline_btn">더보기</a>
                         <div class="newsCntWrap">
-                            <div class="newsCnt first " aria-current="page">
-                                <p>뉴스</p>
-                                <h5 class="tit">
-                                    <button type="button" id="nHeader1" class="newsheader first" aria-controls="nPanel1">
-                                        <span class="blind-b">뉴스 제목</span>
-                                        FUSION + MACOS 사용자를 위한 알림
-                                    </button>
-                                </h5>
-                                <div id="nPanel1" class="newspanel" role="region" aria-labelledby="nHeader1">
-                                    <span class="blind-b">내용</span>
-                                    <span>Big Sur와 같은 기능을 사용하고자 하는 Fusion 사용자이십니까? 최근 Apple은 macOS 업데이트 Big Sur를<br>
-                                    공개하고 Mac 사용자에게 많은 혜택을 제공했지만 GoPro Fusion 사용자로서 그 혜택을 누릴 수는 없습니다. <br>
-                                    GoPro는 360 Fusion 카메라 생산을 중단했지만 해당 장치의 사용자가 콘텐츠를 편집하려면…</span>
-                                    <p>2020-11-25</p>
-                                    <img src="assets/img/main/news_cnt1x2.png" alt="산 정산에서 고프로를 사용하는 유저의 모습">
-                                </div>
-                            </div>
-                            <div class="newsCnt" aria-current="page">
-                                <p>뉴스</p>
-                                <h5 class="tit">
-                                    <button type="button" id="nHeader2" class="newsheader first" aria-controls="nPanel2">
-                                        <span class="blind-b">뉴스 제목</span>
-                                        HERO9 BLACK: 몇 가지 유용한 업데이트
-                                    </button>
-                                </h5>
-                                <div id="nPanel2" class="newspanel" role="region" aria-labelledby="nHeader2">
-                                    <span class="blind-b">내용</span>
-                                    <span>GoPro에서는 HERO9 Black이 전 세계 모든 곳에서 사랑받고 있다는 사실을 느끼고 있습니다. HyperSmooth<br>
-                                    3.0부터 5K 촬영까지 GoPro에서는 흥분되는 리뷰, 언박싱 그리고 기사를 확인했습니다.</span>
-                                    <p>2020-11-18</p>
-                                    <img src="assets/img/main/news_cnt2x2.png" alt="GoPro HERO9 BLACK의 제품 사진">
-                                </div>
-                            </div>
-                            <div class="newsCnt last" aria-current="page">
-                                <p>나만의 도구</p>
-                                <h5 class="tit">
-                                    <button type="button" id="nHeader1" class="newsheader first" aria-controls="nPanel1">
-                                        <span class="blind-b">뉴스 제목</span>
-                                        GOPRO를 웹캠으로 사용하는 방법
-                                    </button>
-                                </h5>
-                                <div id="nPanel1" class="newspanel" role="region" aria-labelledby="nHeader1">
-                                    <span class="blind-b">내용</span>
-                                    <span>요즘에는 필요한 화상 회의 형태가 저마다 다릅니다. 이제 HERO8 Black은 고화질 웹캠으로 작동하므로<br>
-                                    홈스쿨링과 미술 교사부터 열정적인 요리사와 피트니스 강사에 이르기까지 자신의 작품을 보다 잘 보여주는<br>
-                                    다양한 관점을 손쉽게 공유할 수 있습니다. 또한 단지 고성능 웹캠을 찾고 있다면…</span>
-                                    <p>2020-10-07</p>
-                                    <img src="assets/img/main/news_cnt3x2.png" alt="산 정산에서 고프로를 사용하는 유저의 모습">
-                                </div>
-                            </div>
-
+                            <ul>
+                                <li>
+                                    <a href="" class="on">
+                                        <p class="category">뉴스</p>
+                                        <h5 class="tit">FUSION + MACOS 사용자를 위한 알림</h5>
+                                        <p class="txt">Big Sur와 같은 기능을 사용하고자 하는 Fusion 사용자이십니까? 최근 Apple은 macOS 업데이트 Big Sur를 <br>공개하고 Mac 사용자에게 많은 혜택을 제공했지만 GoPro Fusion 사용자로서 그 혜택을 누릴 수는 없습니다. <br>GoPro는 360 Fusion 카메라 생산을 중단했지만 해당 장치의 사용자가 콘텐츠를 편집하려면…</p>
+                                        <p class="date">2020-11-25</p>
+                                        <div class="img">
+                                            <img src="assets/img/main/news_cnt1x2.png" alt="">
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <p class="category">뉴스</p>
+                                        <h5 class="tit">HERO9 BLACK: 몇 가지 유용한 업데이트</h5>
+                                        <p class="txt">GoPro에서는 HERO9 Black이 전 세계 모든 곳에서 사랑받고 있다는 사실을 느끼고 있습니다. HyperSmooth <br>3.0부터 5K 촬영까지 GoPro에서는 흥분되는 리뷰, 언박싱 그리고 기사를 확인했습니다.</p>
+                                        <p class="date">2020-11-18</p>
+                                        <div class="img">
+                                            <img src="assets/img/main/news_cnt2x2.png" alt="">
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <p class="category">뉴스</p>
+                                        <h5 class="tit">GOPRO를 웹캠으로 사용하는 방법</h5>
+                                        <p class="txt">요즘에는 필요한 화상 회의 형태가 저마다 다릅니다. 이제 HERO8 Black은 고화질 웹캠으로 작동하므로 <br>홈스쿨링과 미술 교사부터 열정적인 요리사와 피트니스 강사에 이르기까지 자신의 작품을 보다 잘 보여주는 <br>다양한 관점을 손쉽게 공유할 수 있습니다. 또한 단지 고성능 웹캠을 찾고 있다면…</p>
+                                        <p class="date">2020-10-07</p>
+                                        <div class="img">
+                                            <img src="assets/img/main/news_cnt3x2.png" alt="">
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
+                        <a href="https://gopro.com/ko/kr/news" class="underline_btn">더보기</a>
                     </div>
                 </div>
             </section>
@@ -570,15 +493,18 @@
                 <h2 class="blind-b">유튜브 영상</h2>
 
                 <div class="video">
-                    <P>Go Pro, Be a HERO</P>
-                    <!-- <P>Go Pro, Be a HERO</P> -->
+                    <div class="marquee">
+                        <p>Go Pro, Be a HERO <span>Go Pro, Be a HERO</span></p>
+                    </div>
                     <div class="videoWrap">
-                        <strong>VIDEO</strong>
-                        <a href="" class="underline_btn">더보기</a>
-                        <div class="iframe clearfix">
-                            <iframe width="673" height="377" src="https://www.youtube.com/embed/dFITY0dsFO4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <iframe width="325" height="182" src="https://www.youtube.com/embed/ghzDZfRnrp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <iframe width="325" height="182" src="https://www.youtube.com/embed/VC7rgeGGjmc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="videoInner">
+                            <strong>VIDEO</strong>
+                            <a href="" class="underline_btn">더보기</a>
+                            <div class="iframe clearfix">
+                                <iframe width="673" height="377" src="https://www.youtube.com/embed/dFITY0dsFO4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="325" height="182" src="https://www.youtube.com/embed/ghzDZfRnrp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="325" height="182" src="https://www.youtube.com/embed/VC7rgeGGjmc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -606,7 +532,7 @@
                 <div class="max1920">
                     <div class="foot">
                         <div class="brandInfo">
-                            <div class="info brandInfo">
+                            <div class="info brandInfomation">
                                 <a href=""><strong>GoPro 소개</strong></a>
                                 <a href="">회사 소개</a> 
                                 <a href="">뉴스</a>
@@ -644,53 +570,55 @@
                                 <a href="">보안 취약성 제출</a>
                             </div>
                         </div>
-                        <div class="closest">
-                            <a href="https://gopro.com/ko/kr/store-locator">
-                                <img src="assets/img/icon/location-pin.svg" alt="매장찾기 아이콘">
-                                <p>가까운 매장 찾기</p>
-                            </a>
-                        </div>
-                        <p class="copyright"> © 2020 GoPro, Inc. All rights reserved.</p>
-                        <div class="foot_icon">
-                            <ul class="sns">
-                                <li>
-                                    <button type="button" class="footerIcon">
-                                        <div class="blind-b">인스타그램</div>
-                                        <a href="https://www.instagram.com/goprokr/"><img src="assets/img/icon/instagram.svg" alt="인스타그램"></a>
-                                    </button>
-                                </li>
-                                <li>
-                                    <button type="button" class="footerIcon">
-                                        <div class="blind-b">페이스북</div>
-                                        <a href="https://www.facebook.com/goprokr/"><img src="assets/img/icon/facebook.svg" alt="페이스북 아이콘"></a>
-                                    </button>
-                                </li>
-                                <li>
-                                    <button type="button" class="footerIcon">
-                                        <div class="blind-b">유튜브</div>
-                                        <a href="https://www.youtube.com/c/GoPro"><img src="assets/img/icon/youtube.svg" alt="유튜브 아이콘"></a>
-                                    </button>
-                                </li>
-                                <li>
-                                    <button type="button" class="footerIcon">
-                                        <div class="blind-b">트위터</div>
-                                        <a href="https://twitter.com/gopro"><img src="assets/img/icon/twitter.svg" alt="트위터 아이콘"></a>
-                                    </button>
-                                </li>
-                                <li>
-                                    <button type="button" class="footerIcon">
-                                        <div class="blind-b">핀터레스트</div>
-                                        <a href="https://www.pinterest.co.kr/GoPro/"><img src="assets/img/icon/pinterest.svg" alt=""></a>
-                                    </button>
-                                </li>
-                                <li>
-                                    <button type="button" class="footerIcon">
-                                        <div class="blind-b">네이버 블로그</div>
-                                        <a href="https://post.naver.com/goprokr"><img src="assets/img/icon/naver.svg" alt="">
-                                        </a>
-                                    </button>
-                                </li>
-                            </ul>
+                        <div class="bottomMenu">
+                            <div class="closest">
+                                <a href="https://gopro.com/ko/kr/store-locator">
+                                    <img src="assets/img/icon/location-pin.svg" alt="매장찾기 아이콘">
+                                    <p>가까운 매장 찾기</p>
+                                </a>
+                            </div>
+                            <p class="copyright"> © 2020 GoPro, Inc. All rights reserved.</p>
+                            <div class="foot_icon">
+                                <ul class="sns">
+                                    <li>
+                                        <button type="button" class="footerIcon">
+                                            <div class="blind-b">인스타그램</div>
+                                            <a href="https://www.instagram.com/goprokr/"><img src="assets/img/icon/instagram.svg" alt="인스타그램"></a>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="footerIcon">
+                                            <div class="blind-b">페이스북</div>
+                                            <a href="https://www.facebook.com/goprokr/"><img src="assets/img/icon/facebook.svg" alt="페이스북 아이콘"></a>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="footerIcon">
+                                            <div class="blind-b">유튜브</div>
+                                            <a href="https://www.youtube.com/c/GoPro"><img src="assets/img/icon/youtube.svg" alt="유튜브 아이콘"></a>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="footerIcon">
+                                            <div class="blind-b">트위터</div>
+                                            <a href="https://twitter.com/gopro"><img src="assets/img/icon/twitter.svg" alt="트위터 아이콘"></a>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="footerIcon">
+                                            <div class="blind-b">핀터레스트</div>
+                                            <a href="https://www.pinterest.co.kr/GoPro/"><img src="assets/img/icon/pinterest.svg" alt=""></a>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="footerIcon">
+                                            <div class="blind-b">네이버 블로그</div>
+                                            <a href="https://post.naver.com/goprokr"><img src="assets/img/icon/naver.svg" alt="">
+                                            </a>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

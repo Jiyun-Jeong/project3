@@ -1,62 +1,99 @@
 $(document).ready(function(){
-/*     $('.categoryWrap > .otherWrap > a').on('mouseenter', function () {
-        e.prevenDefault();
-        $(this).find("> img:first-child").stop().fadeOut();
-        $(this).find("> .hoverImg").stop().fadeIn();
-    });
-    $('.categoryWrap > .otherWrap > a').on('mouseleave', function () {
-        $(this).find("> .hoverImg").stop().fadeOut();
-        $(this).find("> img:first-child").stop().fadeIn();
-    }); */
+    /* 
+            var timer = 0;
+            $(window).on('resize', function () {
+                clearTimeout(timer);
+
+                timer = setTimeout(function () {
+                    if($(this).width() > 1024) createFullpage();
+                    else fullpage_api.destory('all');
+                }, 50);
+            });
+
+            $(window).trigger('resize');
+
+            function createFullpage() {
+                $('#fullpage').fullpage({
+                    navigation: true,
+                    navigationPosition: 'left',
+                    navigationTooltips: ['GoPro 소개', '신제품 소개', '카메라 비교', '카테고리', '뉴스', '동영상', '인스타그램'],
+                    afterRender: function() {
+                        $('#fp-nav .fp-tooltip').attr('aria-hidden', true);
+                    },
+                    onLeave: function(origin, destination, direction) {
+                        if (origin.index === 1 && destination.index === 0 && direction === 'up') {
+                            $('#pcHeader').removeClass('on active');
+                        } else {
+                            $('#pcHeader').addClass('on active');
+                        }
+                    }
+                });
+            } */
+
+            var cnt1Swiper = new Swiper('#cnt1 .swiper-container', {
+                // Optional parameters
+                loop: true,
+    
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
+                },
+                autoplay: {
+                    delay: 1000,
+                },
+    
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                //현재 이벤트에 특정 이벤트를 넣고 싶은 경우
+                on: {
+                    slideChangeTransitionStart: function (swiper) { 
+                        //활성화된 슬라이드에 사용자지정속성인 data-swiper-slide-index를 가져와서 오른쪽 위치만 지정한다
+                        var tgIdx = $('#cnt1 .swiper-slide-active').data("swiper-slide-index");
+                        console.log(tgIdx);  //0,1,2
+                        if (tgIdx === 1) $('#cnt1').addClass('right');
+                        else $('#cnt1').removeClass('right');
+                    },
+                },
+                //접근성
+                a11y: {
+                    prevSlideMessage: '이전 슬라이드 보기',
+                    nextSlideMessage: '다음 슬라이드 보기',
+                    firstSlideMessage: '첫번째 슬라이드',
+                    lastSlideMessage: '마지막 슬라이드',
+                }
+            });
+
+            //일시정지 클릭
+            $('#cnt1 .controller .autoplay').on('click', function (){
+                $(this).hide().siblings().show();
+                cnt1Swiper.autoplay.stop();
+                return false;
+            });
+            //자동실행 클릭
+            $('#cnt1 .controller .pause').on('click', function () {
+                $(this).hide().siblings().show();
+                cnt1Swiper.autoplay.start();
+                return false;
+            });
+
 
 
 
     //cnt5
-    var _acco = $('.newsWrap');
-
-    //로딩 설정 : .tit 첫번째에 .on추가, 바로뒤 형제 아코디언패널 보여지게, 포커스 갈수 있도록 tabIndex 추가 , aria의 state 설정
-    _acco.find('.tit:first').addClass('on').next().show().attr('tabIndex', 0);
-    _acco.find('.tit:first .newsheader').attr({'aria-expanded': true, 'aria-disabled': true}).parent().siblings('.tit').children().attr('aria-expanded', false);
-
-    //2) 아코디언 헤더에 keydown 이벤트 - 키보드제어 : 아래방향키(40), 위방향키(38), home(36), end(35), enter(13), space bar(32) 제어 => switch case문
-    _acco.find('.newsheader').on('keydown', function (e) {
-        var key = e.keyCode;
-        console.log(key);
-        switch (key) {
-            case 40: //아래 방향키
-                if ($(this).hasClass('last')) {
-                    $(this).closest('.newsWrap').find('.tit .first').focus();
-                } else {
-                    $(this).parent().next().next().children().focus();
-                }
-                break;
-            case 38: //위 방향키
-                if($(this).hasClass('first')) {
-                    $(this).closest('.newsWrap').find('.tit .last').focus();
-                } else {
-                    $(this).parent().prev().prev().children().focus();
-                }
-                break;
-            case 36: //home
-                e.preventDefault();
-                $(this).closest('.newsWrap').find('.tit .first').focus();
-                break;
-            case 35: //end
-                e.preventDefault();
-                $(this).closest('.newsWrap').find('.tit .last').focus();
-                break;
-            case 13: //enter
-            case 21: //space bar
-                $(this).trigger('click');
-                break;
-        }
+    $('#cnt5 .newsCntWrap ul li a').on('mouseenter focus', function () {
+        $(this).addClass('on').parent().siblings().children().removeClass('on');
     });
 
-    //3) 아코디언 헤더 click 이벤트: 열려지지 않은 패널만 제어 - 마우스
-    _acco.find('.newsWrap').on('click', function () {
-        if ( !$(this).parent().hasClass('on')) {
-            $(this).attr({'aria-expanded': true, 'aria-disabled': true}).parent().addClass('on').siblings('.tit.on').removeClass('on').children().attr('aria-expanded', false).removeAttr('aria-disabled');
-            $(this).parent().next().stop().slideDown('fast').attr('tabIndex', 0).siblings('.newspanel').stop().slideUp('fast').attr('tabIndex' -1);
+    //cnt6
+    $(window).on('scroll', function () {
+        var scrollT = $(this).scrollTop();
+        
+        //brandStory 내부의 텍스트 marquee 효과 나타나기
+        if (scrollT > $('.marquee').offset().top - 300) {
+            $('.marquee').animate().attr({left: -500});
         }
     });
-});
+}); 
