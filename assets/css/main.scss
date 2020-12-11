@@ -188,37 +188,46 @@
     }
     .camera {
         @include bgSize(cover);
-        @include transform(skewX(-10deg));
+        @include transform(skewX(-5deg));
         position: absolute; background: no-repeat center; height: 100vh; width: 39.0625vw/* 750px */;
         &::before {
             @include filter(blur(3px));
             content: ""; position: absolute; top: 0; left: 0; bottom: 0; right: 0;background: inherit;
         }
         .cameras {
-            @include transform(skewX(10deg));
+            @include transform(skewX(5deg) translateX(-50%));
             position: absolute; top: 30%; width: 100%;
+            &.cameraR {
+                @include transform(skewX(5deg) translateX(-50%) translateX(-80px));
+            }
+            &.cameraL {
+                @include transform(skewX(5deg) translateX(-50%) translateX(80px));
+            }
+            &.cameraD {
+                @include transform(skewX(5deg) translateX(-50%) translateY(-80px));
+            }
         }
     }
     #camera1 {
-        top: 0; left: -23px; background-image: url("../img/main/camera_bg1.jpg");
-        img {width: 469px;height: 469px;left: calc(50% - 222.5px);}
+        top: 0; left: 0; background-image: url("../img/main/camera_bg1.jpg");
+        img {width: 469px;height: 469px;left: 50%;}
     }
     #camera2 {
-        top: 0; left: 653.3333333333333px; background-image: url("../img/main/camera_bg2.jpg");
-        img {width: 578px;height: 408px;left: calc(50% - 289px);}
+        top: 0; left: 34.333333vw/* 640px */; background-image: url("../img/main/camera_bg2.jpg");
+        img {width: 578px;height: 408px;left: 50%;}
         a {
-            @include transform(skewX(10deg));
+            @include transform(skewX(5deg) translateX(-50%));
             @include border-radius(7px);
             @include transition(all 0.3s);
-            position: absolute;/* 형제요소인 img에 포지션 relative를 줄수는 없는건지.. 크기가 커졌을때 위치가 이상해짐 */bottom: 150px; left: 236.8px; width: 430px;height: 95px;background-color: $darkgrey;line-height: 95px;font-size: 35px;z-index: 300;
+            position: absolute;/* 형제요소인 img에 포지션 relative를 줄수는 없는건지.. 크기가 커졌을때 위치가 이상해짐 */bottom: 150px; left: 50%; width: 430px;height: 95px;background-color: $darkgrey;line-height: 95px;font-size: 35px;z-index: 300;
             &:hover, &:focus {
                 @include linearGradient((#12C2E9, #096A8A, #000000));
             }
         }
     }
     #camera3 {
-        top: 0; left: 63.6665%; background-image: url("../img/main/camera_bg3.jpg");
-        img {width: 370px;height: 435px;left: calc(50% - 225px);}
+        top: 0; left: 71.666667vw; background-image: url("../img/main/camera_bg3.jpg");
+        img {width: 370px;height: 435px;left: 50%;}
     }
 }
 
@@ -244,9 +253,6 @@
                     }
                     &:hover .hoverImg, &:focus .hoverImg {opacity: 1;}
                 }
-
-
-
             }
             h4 {
                 font-weight: 700;font-size: 26px;padding-bottom: 17.5px;
@@ -256,7 +262,7 @@
             }
             &:first-child > div {padding-right: 90px;}
             &:nth-of-type(2),&:nth-of-type(5) {padding-top: 196px;}
-            &:nth-of-type(3),&:nth-of-type(6) {padding-top: 81.5px;}
+            &:nth-of-type(3),&:nth-of-type(6) {padding-top: 110px;}
 
             &:nth-of-type(3n) > div {padding-right: 0;}
         }

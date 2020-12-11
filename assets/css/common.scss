@@ -41,6 +41,46 @@ header, nav, section, footer {display: block;}
         width: 430px;height: 95px;line-height: 95px;
     } 
 }
+.fade {
+    @include transition(all 0.8s);
+    opacity: 0;
+    //수직은 translateY => 기준 아래는 +, 기준 위는 -
+    &.up {@include transform(translateY(40px));}
+    &.down{@include transform(translateY(-40px));}
+    //수평은 translateX => 기준 오른쪽 +, 기준 왼쪽-
+    &.left {@include transform(translateX(40px));}
+    &.right{@include transform(translateX(-40px));}
+    //커지기
+    &.smaller {@include transform(scale(1.5));}
+    &.bigger {@include transform(scale(0.7));}
+
+    &.cameraR {@include transform(translateX(-80px));}
+    &.cameraL {@include transform(translateX(80px));}
+    &.cameraD {@include transform(translateY(-80px));}
+    &.moreBigger {@include transform(scale(0.5));}
+}
+.fade.on {
+    opacity: 1;
+    &.up, &.down {@include transform(translateY(0px));}
+    &.left, &.right{@include transform(translateX(0px));}
+    &.smaller, &.bigger {@include transform(scale(1));}
+}
+
+.fixedBtn {
+    @include transition(opacity 0.3s);
+    position: fixed; bottom: 25px; right: 35px;width: 129px;height: 112px;background: pink;
+    //Top 버튼
+    .goUpBtn {
+        position: absolute;opacity: 0;z-index: 1300;position: absolute;right: 0; top: 0; width: 50px; height: 50px;
+    }
+    #btnTop.active {opacity: 1;}
+
+//채팅상담하기 버튼
+    .chattingbtn {
+        position: absolute; bottom: 0; right: 0; opacity: 0;z-index: 1300;padding-top: 12px;width: 123px; height: 50px; padding-top: 12px;
+    }
+    #chattingbtn.active {opacity: 1;}
+}
 
 
 //body

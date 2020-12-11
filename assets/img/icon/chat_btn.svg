@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="129" height="50" viewBox="0 0 129 50">
+  <g id="그룹_42" data-name="그룹 42" transform="translate(-1742 -1014)">
+    <rect id="사각형_33" data-name="사각형 33" width="123" height="50" rx="25" transform="translate(1742 1014)" fill="#fff"/>
+    <circle id="타원_7" data-name="타원 7" cx="25" cy="25" r="25" transform="translate(1821 1014)" fill="#242424"/>
+    <path id="다각형_1" data-name="다각형 1" d="M5.188,1.468a1,1,0,0,1,1.725,0l4.3,7.326a1,1,0,0,1-.862,1.506H1.747A1,1,0,0,1,.885,8.794Z" transform="translate(1864.891 1050.34) rotate(140)" fill="#fff"/>
+    <circle id="타원_8" data-name="타원 8" cx="15.5" cy="15.5" r="15.5" transform="translate(1831 1024)" fill="#fff"/>
+    <g id="그룹_41" data-name="그룹 41" transform="translate(-1)">
+      <g id="타원_9" data-name="타원 9" transform="translate(1841 1036)" fill="#707070" stroke="#707070" stroke-width="1">
+        <ellipse cx="1.5" cy="3.5" rx="1.5" ry="3.5" stroke="none"/>
+        <ellipse cx="1.5" cy="3.5" rx="1" ry="3" fill="none"/>
+      </g>
+      <g id="타원_10" data-name="타원 10" transform="translate(1850 1036)" fill="#707070" stroke="#707070" stroke-width="1">
+        <ellipse cx="1.5" cy="3.5" rx="1.5" ry="3.5" stroke="none"/>
+        <ellipse cx="1.5" cy="3.5" rx="1" ry="3" fill="none"/>
+      </g>
+    </g>
+    <text id="채팅_상담" data-name="채팅 상담" transform="translate(1787 1044)" fill="#1a1a1a" font-size="15" font-family="KoreanGD17-R, KoreanGD17R"><tspan x="-28.597" y="0">채팅 상담</tspan></text>
+  </g>
+</svg>

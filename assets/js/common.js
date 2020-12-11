@@ -1,5 +1,22 @@
 $(document).ready(function (){  
-    //pc
+    var scrollY;
+    var timer = 0;
+
+    var _gnb = $('#gnb')
+
+    $(window).on('scroll', function () {
+        clearTimeout(timer);
+
+        timer = setTimeout(function () {
+            scrollT = $(this).scrollTop();
+            
+            $('.fade').each(function () {
+                if(scrollT > $(this).offset().top - 600) $(this).addClass('on');
+            });
+        }, 50);
+    });
+
+        //pc
     //1) #pcGnb 네비
     var _pcGnb = $('#pcGnb > ul');
 
@@ -18,6 +35,4 @@ $(document).ready(function (){
             if( !$('#pcGnb a').is(':focus') ) _pcGnb.mouseleave();
         }, 10);
     });
-
-
 });

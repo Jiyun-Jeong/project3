@@ -366,11 +366,11 @@
     -webkit-background-size: cover !important;
     -moz-background-size: cover !important;
     background-size: cover !important;
-    -webkit-transform: skewX(-10deg);
-    -moz-transform: skewX(-10deg);
-    -o-transform: skewX(-10deg);
-    -ms-transform: skewX(-10deg);
-    transform: skewX(-10deg);
+    -webkit-transform: skewX(-5deg);
+    -moz-transform: skewX(-5deg);
+    -o-transform: skewX(-5deg);
+    -ms-transform: skewX(-5deg);
+    transform: skewX(-5deg);
     position: absolute;
     background: no-repeat center;
     height: 100vh;
@@ -386,36 +386,54 @@
       right: 0;
       background: inherit; }
     #cnt3 .camera .cameras {
-      -webkit-transform: skewX(10deg);
-      -moz-transform: skewX(10deg);
-      -o-transform: skewX(10deg);
-      -ms-transform: skewX(10deg);
-      transform: skewX(10deg);
+      -webkit-transform: skewX(5deg) translateX(-50%);
+      -moz-transform: skewX(5deg) translateX(-50%);
+      -o-transform: skewX(5deg) translateX(-50%);
+      -ms-transform: skewX(5deg) translateX(-50%);
+      transform: skewX(5deg) translateX(-50%);
       position: absolute;
       top: 30%;
       width: 100%; }
+      #cnt3 .camera .cameras.cameraR {
+        -webkit-transform: skewX(5deg) translateX(-50%) translateX(-80px);
+        -moz-transform: skewX(5deg) translateX(-50%) translateX(-80px);
+        -o-transform: skewX(5deg) translateX(-50%) translateX(-80px);
+        -ms-transform: skewX(5deg) translateX(-50%) translateX(-80px);
+        transform: skewX(5deg) translateX(-50%) translateX(-80px); }
+      #cnt3 .camera .cameras.cameraL {
+        -webkit-transform: skewX(5deg) translateX(-50%) translateX(80px);
+        -moz-transform: skewX(5deg) translateX(-50%) translateX(80px);
+        -o-transform: skewX(5deg) translateX(-50%) translateX(80px);
+        -ms-transform: skewX(5deg) translateX(-50%) translateX(80px);
+        transform: skewX(5deg) translateX(-50%) translateX(80px); }
+      #cnt3 .camera .cameras.cameraD {
+        -webkit-transform: skewX(5deg) translateX(-50%) translateY(-80px);
+        -moz-transform: skewX(5deg) translateX(-50%) translateY(-80px);
+        -o-transform: skewX(5deg) translateX(-50%) translateY(-80px);
+        -ms-transform: skewX(5deg) translateX(-50%) translateY(-80px);
+        transform: skewX(5deg) translateX(-50%) translateY(-80px); }
   #cnt3 #camera1 {
     top: 0;
-    left: -23px;
+    left: 0;
     background-image: url("../img/main/camera_bg1.jpg"); }
     #cnt3 #camera1 img {
       width: 469px;
       height: 469px;
-      left: calc(50% - 222.5px); }
+      left: 50%; }
   #cnt3 #camera2 {
     top: 0;
-    left: 653.3333333333333px;
+    left: 34.333333vw;
     background-image: url("../img/main/camera_bg2.jpg"); }
     #cnt3 #camera2 img {
       width: 578px;
       height: 408px;
-      left: calc(50% - 289px); }
+      left: 50%; }
     #cnt3 #camera2 a {
-      -webkit-transform: skewX(10deg);
-      -moz-transform: skewX(10deg);
-      -o-transform: skewX(10deg);
-      -ms-transform: skewX(10deg);
-      transform: skewX(10deg);
+      -webkit-transform: skewX(5deg) translateX(-50%);
+      -moz-transform: skewX(5deg) translateX(-50%);
+      -o-transform: skewX(5deg) translateX(-50%);
+      -ms-transform: skewX(5deg) translateX(-50%);
+      transform: skewX(5deg) translateX(-50%);
       -webkit-border-radius: 7px;
       -moz-border-radius: 7px;
       border-radius: 7px;
@@ -426,7 +444,7 @@
       position: absolute;
       /* 형제요소인 img에 포지션 relative를 줄수는 없는건지.. 크기가 커졌을때 위치가 이상해짐 */
       bottom: 150px;
-      left: 236.8px;
+      left: 50%;
       width: 430px;
       height: 95px;
       background-color: #505050;
@@ -441,12 +459,12 @@
         background: linear-gradient(#12C2E9, #096A8A, #000000); }
   #cnt3 #camera3 {
     top: 0;
-    left: 63.6665%;
+    left: 71.666667vw;
     background-image: url("../img/main/camera_bg3.jpg"); }
     #cnt3 #camera3 img {
       width: 370px;
       height: 435px;
-      left: calc(50% - 225px); }
+      left: 50%; }
 
 #cnt4 {
   color: #000;
@@ -518,7 +536,7 @@
       #cnt4 .category .categoryWrap:nth-of-type(2), #cnt4 .category .categoryWrap:nth-of-type(5) {
         padding-top: 196px; }
       #cnt4 .category .categoryWrap:nth-of-type(3), #cnt4 .category .categoryWrap:nth-of-type(6) {
-        padding-top: 81.5px; }
+        padding-top: 110px; }
       #cnt4 .category .categoryWrap:nth-of-type(3n) > div {
         padding-right: 0; }
 

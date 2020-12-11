@@ -69,18 +69,34 @@ $(document).ready(function(){
             //일시정지 클릭
             $('#cnt1 .controller .autoplay').on('click', function (){
                 $(this).hide().siblings().show();
-                cnt1Swiper.autoplay.stop();
-                return false;
+                cnt1Swiper.autoplay.start();
             });
             //자동실행 클릭
             $('#cnt1 .controller .pause').on('click', function () {
                 $(this).hide().siblings().show();
-                cnt1Swiper.autoplay.start();
-                return false;
+                cnt1Swiper.autoplay.stop();
             });
 
 
-
+    //cnt2 마우스, 키보드 제어로 클래스 추가
+    $('#cnt2 .newbie .newbieTxt > strong').attr('tabIndex', 0);
+    $('#cnt2 .newbie .newbieTxt > strong').on({
+        'mouseenter focusin': function () {
+        $(this).addClass('on');
+        },
+        'mouseleave focusout': function () {
+        $(this).removeClass('on');
+        }
+    });
+    $('#cnt2 .newbie .newbieTxt > strong > newbieDetail').attr('tabIndex', 0);
+    $('#cnt2 .newbie .newbieTxt > strong > newbieDetail').on({
+        'mouseenter focusin': function () {
+        $(this).addClass('on');
+        },
+        'mouseleave focusout': function () {
+        $(this).removeClass('on');
+        }
+    });
 
     //cnt5
     $('#cnt5 .newsCntWrap ul li a').on('mouseenter focus', function () {
