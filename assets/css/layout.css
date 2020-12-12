@@ -80,8 +80,7 @@
         transform: translateY(-100%);
         color: #00E4F3; }
       #header #pcGnb > ul > li + li {
-        padding-left: 4.166666666666667vw;
-        /* 80px -> vw */ }
+        padding-left: 80px; }
   #header .dep2wrap {
     position: absolute;
     bottom: 90px;
@@ -114,5 +113,173 @@
 
 #mHeader {
   display: none; }
+
+#footer {
+  background: #000;
+  height: 842px;
+  width: 100%;
+  padding-top: 80px; }
+  #footer .foot {
+    position: relative;
+    width: 1697px;
+    height: 667px;
+    text-align: center; }
+    #footer .foot a {
+      display: block;
+      font-size: 14px;
+      padding-bottom: 21px; }
+    #footer .foot strong {
+      font-size: 16px; }
+    #footer .foot p {
+      text-align: center; }
+    #footer .foot .brandInfo div.info + div.info {
+      padding-left: 200px; }
+    #footer .foot .brandInfo::after {
+      content: "";
+      position: absolute;
+      width: 1566px;
+      height: 1px;
+      background-color: #fff;
+      text-align: center;
+      top: 0;
+      left: 112.5px; }
+    #footer .foot .info {
+      float: left;
+      text-align: left; }
+    #footer .foot .brandInfo {
+      padding-left: 200px;
+      position: relative;
+      padding-top: 60.5px;
+      width: 1700px;
+      height: 337px;
+      margin: 0; }
+    #footer .foot .programInfo {
+      right: 0;
+      top: 0; }
+    #footer .foot .bottomMenu {
+      margin-top: 630px; }
+    #footer .foot .closest {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding-left: 113px; }
+      #footer .foot .closest img {
+        width: 31px;
+        height: 31px; }
+      #footer .foot .closest p {
+        padding-top: 5px;
+        bottom: 0;
+        left: 0;
+        text-align: center; }
+    #footer .foot .copyright {
+      position: absolute;
+      display: inline-block;
+      bottom: 0;
+      left: calc(50% - 126px);
+      color: #c2c2c2;
+      font-weight: 500;
+      font-size: 14px; }
+    #footer .foot .foot_icon {
+      position: absolute;
+      height: 31px;
+      width: 231px;
+      bottom: 0;
+      right: 75px; }
+      #footer .foot .foot_icon ul li {
+        display: inline; }
+      #footer .foot .foot_icon ul button {
+        width: 31px; }
+      #footer .foot .foot_icon ul a {
+        padding-right: 9px; }
+        #footer .foot .foot_icon ul a img {
+          display: inline-block;
+          width: 31px;
+          height: 31px; }
+
+@media screen and (max-width: 1770) {
+  #footer .foot {
+    width: 1655px; }
+    #footer .foot .brandInfo div.info + div.info {
+      padding-left: 190px; }
+    #footer .foot .brandInfo::after {
+      width: 1590px;
+      left: 30.5px; }
+    #footer .foot .brandInfo {
+      padding-left: 170px;
+      width: 1470px;
+      height: 428px; }
+    #footer .foot .closest {
+      padding-left: 28px;
+      bottom: -20px; }
+    #footer .foot .foot_icon {
+      height: 31px;
+      width: 231px;
+      right: 80px; } }
+@media screen and (max-width: 1520px) {
+  #footer .foot {
+    width: 1403px; }
+    #footer .foot a {
+      padding-bottom: 20px; }
+    #footer .foot .brandInfo div.info + div.info {
+      padding-left: 170px; }
+    #footer .foot .brandInfo::after {
+      width: 1386px;
+      left: 16.5px; }
+    #footer .foot .brandInfo {
+      padding-left: 95px;
+      padding-top: 50.5px;
+      width: 1315px;
+      height: 428px; }
+    #footer .foot .closest {
+      padding-left: 27px;
+      bottom: -18px; }
+    #footer .foot .copyright {
+      left: calc(50% - 124.745px); }
+    #footer .foot .foot_icon {
+      height: 31px;
+      width: 231px;
+      right: 0; }
+      #footer .foot .foot_icon ul button {
+        width: 34px; }
+      #footer .foot .foot_icon ul a {
+        padding-right: 9px; }
+        #footer .foot .foot_icon ul a img {
+          width: 34px;
+          height: 34px; } }
+@media screen and (max-width: 1440px) {
+  #footer {
+    height: 750px; }
+    #footer .foot {
+      width: 1200px;
+      height: 650px; }
+      #footer .foot a {
+        padding-bottom: 19px; }
+      #footer .foot .brandInfo div.info + div.info {
+        padding-left: 140px; }
+      #footer .foot .brandInfo::after {
+        width: 1300px;
+        left: 36.5px; }
+      #footer .foot .brandInfo {
+        padding-left: 98px;
+        padding-top: 47.5px; }
+      #footer .foot .closest {
+        padding-left: 20px; }
+        #footer .foot .closest img {
+          width: 27px;
+          height: 27px; }
+      #footer .foot .copyright {
+        left: calc(50% - 124.745px); }
+      #footer .foot .foot_icon {
+        height: 36px;
+        width: 261px;
+        right: -124px;
+        bottom: 19px; }
+        #footer .foot .foot_icon ul button {
+          width: 36px; }
+        #footer .foot .foot_icon ul a {
+          padding-right: 9px; }
+          #footer .foot .foot_icon ul a img {
+            width: 36px;
+            height: 36px; } }
 
 /*# sourceMappingURL=layout.css.map */

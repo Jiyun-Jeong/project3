@@ -81,6 +81,15 @@ body {
     a:focus {left: 0; width: 100%;  background: $lightblue; text-align: center; font-weight: 500;font-size: 26px;height: 50px;line-height: 50px;}
 }
 
+@media screen and (max-width: 1520px) {
+    .max1440 {max-width: 100%;padding: 0 50px;}
+}
+@media screen and (max-width: 1440px) {
+    .discover_btn {
+        width: vw-calc(213);height: vw-calc(48);
+    }
+}
+
 //고정 버튼
 .fixedBtn {
     @include transition(opacity 0.3s);
@@ -98,51 +107,7 @@ body {
     }
     #chattingbtn.active {opacity: 1;}
 }
-//footer
-#footer {
-    background: #000;height: 842px;width: 100%;padding-top:80px;
-    .foot {
-        position: relative; width: 88.38541666666667vw/* 1697px */;height: 34.73958333333333vw/* 667px */;text-align: center;
-        a {display: block;font-size: 14px;padding-bottom: 1.09375vw/* 21px */;}
-        strong {font-size: 16px;}
-        p {text-align: center;}
-        .brandInfo {
-            div.info + div.info {padding-left: 10.41666666666667vw/* 200px */;}
-            &::after {
-                content:""; position: absolute; width: 81.5625vw/* 1566px */;height: 1px;background-color: #fff;text-align: center;top: 0; left: 5.859375vw;
-            }
-        }
-        .info {float: left; text-align: left;}
-        .brandInfo {
-            padding-left: 10.208333vw/* 100px */;position: relative;padding-top: 60.5px;width: 1700px;height: 337px;margin: 0;
-        }
-        .programInfo {
-            right: 0; top: 0;
-        }
-        .bottomMenu {margin-top: 630px;}
-        .closest {
-            position: absolute; bottom: 0; left: 0;padding-left: 113px;
-            img {width: 31px;height: 31px;}
-            p {padding-top: 5px;bottom: 0;left: 0;text-align: center;}
-        }
-        .copyright {
-            position: absolute;display: inline-block;bottom: 0; left: calc(50% - 126px);color: #c2c2c2;font-weight: 500;font-size: 14px; }
-        .foot_icon {
-            position: absolute; height: 31px;width: 231px;bottom: 0;right:113px;
-            ul {
-                li {display: inline;}
-                button {width: 31px; }
-                a {
-                    padding-right: 9px;
-                    img {
-                        display: inline-block; width: 31px; height: 31px;
-                    }
-                }
-            }
 
-        }
-    }
-}
 
 @media screen and (max-width: 1920px) {
     .max1920 {max-width: 100%; padding: 0 60px;}

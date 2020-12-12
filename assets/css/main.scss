@@ -23,7 +23,7 @@
         .txtbox {
             .linkWrapper {
                 position: relative;
-                .innerWrapper {
+                /* .innerWrapper {
                     position: relative;
                 
                 &::before {
@@ -69,16 +69,14 @@
                         }
                     }
                 }
-            } 
+            }  */
             }
             
         }
     }
-    .slide2 {
-    }
     .slide3 {
         .simpleExplan {
-            position: absolute; bottom: 222px; right: 140px; width: 615px; height: 106px;font-size: 18px; text-align: center;
+            position: absolute; bottom: 222px; right: 167px; width: 615px; height: 106px;font-size: 18px; text-align: center;
             .simpleWrap {
                 float: left;background: no-repeat center;width: 168px;height: 103px;
             }
@@ -87,21 +85,56 @@
                 p {margin-top: 23px;width: 181px;}
             }
             .discount {
-                padding-left: 89px;
-                img {width: 119px; height: 58px;}
-                p {margin-top: 23px;width: 153px;}
+               margin-left: 55px;
+                img {
+                    @include transform(translateX(-2%));
+                    width: 119px; height: 58px;margin-bottom: 27px;
+                }
             }
             .cameraChange {
-                padding-left: 89px;
-                img {width: 116px;height: 73px;}
-                p {width: 129px;}
+                margin-left: 55px;
+                img {
+                    @include transform(translateX(1%));
+                    width: 116px;height: 73px;margin-bottom: 12px;
+                }
             }
         }
     }
+
     .swiper-pagination{
         position: absolute; top: 100px; left: 7%; bottom: auto; font-size: 33px;letter-spacing: 0.2rem;font-weight: 700;width: auto; height: auto;
     }
-    
+    .loadingWrap {
+        position: relative; width: 240px;height: 2px; 
+        .loadingBar {
+            width: 240px;height: 1px;background-color: #fff;position: absolute; top: 118.5px; left: 180px;
+        }
+        .runningBar {
+            @include border-radius(7px);
+            width: 240px; height: 3px; background-color: #fff; position: absolute; top: 118.5px; left: 180px;
+        }
+        @keyframes runningBar {
+                0% {width: 0;}
+                6% {width: 6%;}
+                13% {width: 13%;}
+                19% {width: 19%;}
+                25% {width: 25%;}
+                31% {width: 31%;}
+                37% {width: 37%;}
+                43% {width: 43%;}
+                49% {width: 48%;}
+                55% {width: 55%;}
+                61% {width: 60.5%;}
+                67% {width: 66.5%;}
+                73% {width: 74%;}
+                79% {width: 81%;}
+                85% {width: 87%;}
+                91% {width: 94%;}
+                100% {width: 100%;}
+            }
+    }
+        
+
     .controller {
         position: absolute;bottom: 20%; left: 7%; z-index: 500;width: 500px;height: 87px;
         .swiper-button-prev, .swiper-button-next {position: static;}

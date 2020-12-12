@@ -88,8 +88,8 @@ $(document).ready(function(){
         $(this).removeClass('on');
         }
     });
-    $('#cnt2 .newbie .newbieTxt > strong > newbieDetail').attr('tabIndex', 0);
-    $('#cnt2 .newbie .newbieTxt > strong > newbieDetail').on({
+    $('#cnt2 .newbie .newbieTxt > strong > newbieDetail > h3').attr('tabIndex', 0);
+    $('#cnt2 .newbie .newbieTxt > strong > newbieDetail > h3').on({
         'mouseenter focusin': function () {
         $(this).addClass('on');
         },
