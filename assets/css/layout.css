@@ -281,5 +281,104 @@
           #footer .foot .foot_icon ul a img {
             width: 36px;
             height: 36px; } }
+@media screen and (max-width: 768px) {
+  #header {
+    height: 60px;
+    line-height: 60px;
+    width: 768px;
+    top: 0; }
+    #header .logo {
+      width: 73px;
+      padding-top: 8px;
+      left: 8px;
+      height: 54px; }
+      #header .logo a {
+        width: 75px;
+        height: 45px;
+        padding-left: 0; }
+    #header .util {
+      top: 19px;
+      right: 15px;
+      width: 105px;
+      height: 34px;
+      line-height: 34px; }
+      #header .util > div + div {
+        padding-left: 8.2px; }
+      #header .util .search button {
+        width: 21.5px;
+        height: 21.5px; }
+      #header .util .search .search_wrap {
+        display: none;
+        width: 100%;
+        height: 50px; }
+        #header .util .search .search_wrap img {
+          width: 21.5px;
+          height: 21.5px; }
+      #header .util .lang button {
+        width: 38.5px; }
+      #header .util .lang > ul {
+        margin-top: 7px; }
+        #header .util .lang > ul li {
+          display: block;
+          font-size: 9px;
+          width: 38.5px;
+          height: 29px;
+          line-height: 29px; }
+      #header .util .account button {
+        width: 21.5px; }
+    #header #pcGnb > ul > li {
+      font-size: 14px; }
+      #header #pcGnb > ul > li + li {
+        padding-left: 19px; }
+    #header .dep2wrap {
+      bottom: 60px;
+      height: 40px;
+      line-height: 40px; }
+    #header ul li ul li + li {
+      padding-left: 90px; }
+
+  #footer {
+    height: 750px; }
+    #footer .foot {
+      position: relative;
+      width: 700px;
+      height: 650px; }
+      #footer .foot position
+      > a {
+        padding-bottom: 17px; }
+      #footer .foot .brandInfo div.info + div.info {
+        padding-left: 76px; }
+      #footer .foot .brandInfo::after {
+        width: 700px;
+        left: -3.5px; }
+      #footer .foot .brandInfo {
+        padding-left: 17px;
+        padding-top: 40.5px;
+        width: 686px;
+        height: 465px; }
+      #footer .foot .programInfo {
+        top: 187px;
+        right: 66px; }
+      #footer .foot .closest {
+        padding-left: 0;
+        left: -20px; }
+        #footer .foot .closest img {
+          width: 27px;
+          height: 27px; }
+      #footer .foot .copyright {
+        left: calc(50% - 124.745px); }
+      #footer .foot .foot_icon {
+        height: 31px;
+        width: 100px;
+        right: 20px;
+        bottom: 32px; }
+        #footer .foot .foot_icon ul button {
+          width: 26.5px;
+          height: 26.5px; }
+        #footer .foot .foot_icon ul a {
+          padding-right: 4px; }
+          #footer .foot .foot_icon ul a img {
+            width: 36px;
+            height: 36px; } }
 
 /*# sourceMappingURL=layout.css.map */

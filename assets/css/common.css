@@ -78,6 +78,11 @@ header, nav, section, footer {
   width: 100%;
   margin: 0 auto; }
 
+.max768 {
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto; }
+
 .discover_btn {
   display: inline-block;
   text-align: center;
@@ -255,6 +260,10 @@ body {
 @media screen and (max-width: 1440px) {
   .max1440 {
     max-width: 100%;
-    padding: 0 60px; } }
+    padding: 0 50px; } }
+@media screen and (max-width: 768px) {
+  .max768 {
+    max-width: 100%;
+    padding: 0 20px; } }
 
 /*# sourceMappingURL=common.css.map */

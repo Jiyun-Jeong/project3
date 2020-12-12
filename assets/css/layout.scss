@@ -189,30 +189,68 @@
 }
 
 //태블릿
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 768px) {
     //header
+#header {
+    height: 60px;line-height: 60px;width: 768px;top:0;
+    .logo {
+        width: 73px; padding-top: 8px; left: 8px; height: 54px;
+        a {width: 75px; height: 45px;padding-left: 0;}
+    }
+    .util {
+        top: 19px; right: 15px; width: 105px; height: 34px;line-height: 34px;
+        > div + div {padding-left: 8.2px;}
+        .search {
+            button {width: 21.5px;height: 21.5px;}
+            .search_wrap {
+                display: none;width: 100%;height: 50px;
+                img {width: 21.5px; height: 21.5px;}
+            }
+        }
+        .lang {
+            button {width: 38.5px;}
+            > ul {margin-top: 7px;
+                li {
+                    display: block;font-size: 9px;width: 38.5px;height: 29px;line-height: 29px;
+                }
+            }
+        }
+        .account {button {width: 21.5px;}
+        }
+    }
+    #pcGnb {
+        > ul > li {
+            font-size: 14px;
+            & + li {padding-left: 19px;}
+            }
+        }
+        .dep2wrap {bottom: 60px; height: 40px; line-height: 40px;}        
+        ul li ul li + li {padding-left: 90px;}
+}
     
     //footer
     #footer {
         height: 750px;
         .foot {
-            width: 1200px;height: 650px;
-            a {padding-bottom: 19px;}
+            position:relative;
+            width: 700px;height: 650px;position
+            > a {padding-bottom: 17px;}
             .brandInfo {
-                div.info + div.info {padding-left: 140px;}
-                &::after {width: 1300px; left: 36.5px;}
+                div.info + div.info {padding-left: 76px;}
+                &::after {width: 700px; left: -3.5px;}
             }
-            .brandInfo {padding-left: 98px;padding-top: 47.5px;}
+            .brandInfo {padding-left: 17px;padding-top: 40.5px;width: 686px; height: 465px;}
+            .programInfo {top: 187px; right: 66px;}
             .closest {
-                padding-left: 20px;
+                padding-left: 0;left: -20px;
                 img {width: 27px;height: 27px;}
             }
             .copyright {left: calc(50% - 124.745px);}
             .foot_icon {
-                height: 36px; width: 261px;right:-124px;bottom: 19px;
+                height: 31px; width: 100px;right: 20px;bottom: 32px;
                 ul {
-                    button {width: 36px; }
-                    a {padding-right: 9px;
+                    button {width: 26.5px;height: 26.5px; }
+                    a {padding-right: 4px;
                         img {width: 36px; height: 36px;}
                     }
                 }
@@ -220,4 +258,10 @@
             }
         }
     }
+}
+
+//모바일(414-360)
+@media screen and (max-width: 360px) {
+    //footer
+
 }

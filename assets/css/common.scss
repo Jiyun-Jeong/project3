@@ -33,6 +33,7 @@ header, nav, section, footer {display: block;}
 .f_r {float: right;}
 .max1920 {max-width: 1920px; width: 100%; margin: 0 auto;}
 .max1440 {max-width: 1440px; width: 100%; margin: 0 auto;}
+.max768 {max-width: 768px; width: 100%; margin: 0 auto;}
 .discover_btn {
     display: inline-block; text-align: center;font-weight: 500;
     &.darkgrey {background: $darkgrey;}   
@@ -113,10 +114,10 @@ body {
     .max1920 {max-width: 100%; padding: 0 60px;}
 }
 @media screen and (max-width: 1440px) {
-    .max1440 {max-width: 100%; padding: 0 60px;}
+    .max1440 {max-width: 100%; padding: 0 50px;}
 }
 @media screen and (max-width: 768px) {
-
+    .max768 {max-width: 100%; padding: 0 20px;}
 }
 @media screen and (max-width: 414px) {
     
