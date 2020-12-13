@@ -191,42 +191,42 @@
 //태블릿
 @media screen and (max-width: 768px) {
     //header
-#header {
-    height: 60px;line-height: 60px;width: 768px;top:0;
-    .logo {
-        width: 73px; padding-top: 8px; left: 8px; height: 54px;
-        a {width: 75px; height: 45px;padding-left: 0;}
-    }
-    .util {
-        top: 19px; right: 15px; width: 105px; height: 34px;line-height: 34px;
-        > div + div {padding-left: 8.2px;}
-        .search {
-            button {width: 21.5px;height: 21.5px;}
-            .search_wrap {
-                display: none;width: 100%;height: 50px;
-                img {width: 21.5px; height: 21.5px;}
-            }
+    #header {
+        height: 60px;line-height: 60px;width: 768px;top:0;
+        .logo {
+            width: 73px; padding-top: 8px; left: 8px; height: 54px;
+            a {width: 75px; height: 45px;padding-left: 0;}
         }
-        .lang {
-            button {width: 38.5px;}
-            > ul {margin-top: 7px;
-                li {
-                    display: block;font-size: 9px;width: 38.5px;height: 29px;line-height: 29px;
+        .util {
+            top: 19px; right: 15px; width: 105px; height: 34px;line-height: 34px;
+            > div + div {padding-left: 8.2px;}
+            .search {
+                button {width: 21.5px;height: 21.5px;}
+                .search_wrap {
+                    display: none;width: 100%;height: 50px;
+                    img {width: 21.5px; height: 21.5px;}
                 }
             }
-        }
-        .account {button {width: 21.5px;}
-        }
-    }
-    #pcGnb {
-        > ul > li {
-            font-size: 14px;
-            & + li {padding-left: 19px;}
+            .lang {
+                button {width: 38.5px;}
+                > ul {margin-top: 7px;
+                    li {
+                        display: block;font-size: 9px;width: 38.5px;height: 29px;line-height: 29px;
+                    }
+                }
+            }
+            .account {button {width: 21.5px;}
             }
         }
-        .dep2wrap {bottom: 60px; height: 40px; line-height: 40px;}        
-        ul li ul li + li {padding-left: 90px;}
-}
+        #pcGnb {
+            > ul > li {
+                font-size: 14px;
+                & + li {padding-left: 19px;}
+                }
+            }
+            .dep2wrap {bottom: 60px; height: 40px; line-height: 40px;}        
+            ul li ul li + li {padding-left: 90px;}
+    }
     
     //footer
     #footer {
@@ -260,7 +260,45 @@
 }
 
 //모바일(414-360)
-@media screen and (max-width: 360px) {
-    //footer
+@media screen and (max-width: 414px) {
+        //header
+        #header {display: none;}
+
+        #mHeader {
+            position: fixed; display: block !important; top: 0; left: 0; height: 50px;width:414px;background: #000;line-height: 50px;text-align: center;z-index: 1000;
+            .logo {
+                position: absolute; left: 9px; top: 0;width: 55.6px; height: 31.3px;padding-top: 8.7px;
+                a {
+                    @include bgSize(cover);
+                    display: block;
+                    img {width: 55.6px; height: 31.3px;}
+                }
+            }
+            button.menu_open {position: absolute; right: 16px; top: 15px; width: 25px; height: 25px;}
+            .mUtil {
+                position: absolute; top: 17px; right: 16px; width: 360px; height: 100%;text-align: right; background-color: #fff;color: #000;
+
+                .mgnb_wrap {
+
+                    .bg_white {
+                        width: 100px; height: 25px;position: absolute; top: 0; right: 0;
+                        .mAccount {width: 25px; height: 25px;}
+                        .mShopping {width: 25px; height: 25px;}
+                    }
+                    #mGnb {
+                        ul > li {
+                            font-size: 30px; font-weight: 700;
+                            > ul > li {font-size: 20px;font-weight: 500;background: lightgrey;}
+                        }
+                        
+                    }
+
+                }
+            }   
+        }
+
+
+                //footer
 
 }
+    

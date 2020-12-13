@@ -378,5 +378,69 @@
           #footer .foot .foot_icon ul a img {
             width: 36px;
             height: 36px; } }
+@media screen and (max-width: 414px) {
+  #header {
+    display: none; }
+
+  #mHeader {
+    position: fixed;
+    display: block !important;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 414px;
+    background: #000;
+    line-height: 50px;
+    text-align: center;
+    z-index: 1000; }
+    #mHeader .logo {
+      position: absolute;
+      left: 9px;
+      top: 0;
+      width: 55.6px;
+      height: 31.3px;
+      padding-top: 8.7px; }
+      #mHeader .logo a {
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        background-size: cover !important;
+        display: block; }
+        #mHeader .logo a img {
+          width: 55.6px;
+          height: 31.3px; }
+    #mHeader button.menu_open {
+      position: absolute;
+      right: 16px;
+      top: 15px;
+      width: 25px;
+      height: 25px; }
+    #mHeader .mUtil {
+      position: absolute;
+      top: 17px;
+      right: 16px;
+      width: 360px;
+      height: 100%;
+      text-align: right;
+      background-color: #fff;
+      color: #000; }
+      #mHeader .mUtil .mgnb_wrap .bg_white {
+        width: 100px;
+        height: 25px;
+        position: absolute;
+        top: 0;
+        right: 0; }
+        #mHeader .mUtil .mgnb_wrap .bg_white .mAccount {
+          width: 25px;
+          height: 25px; }
+        #mHeader .mUtil .mgnb_wrap .bg_white .mShopping {
+          width: 25px;
+          height: 25px; }
+      #mHeader .mUtil .mgnb_wrap #mGnb ul > li {
+        font-size: 30px;
+        font-weight: 700; }
+        #mHeader .mUtil .mgnb_wrap #mGnb ul > li > ul > li {
+          font-size: 20px;
+          font-weight: 500;
+          background: lightgrey; } }
 
 /*# sourceMappingURL=layout.css.map */

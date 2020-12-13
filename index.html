@@ -130,24 +130,29 @@
         <!-- 모바일용 헤더 -->
         <header id="mHeader" class="header">
             <h1 class="logo">
-                <a href="">
+                <a href="index.html">
+                    <img src="assets/img/common/GoPro_logo_white.svg" alt="GoPro 로고">
                     <div class="blind-b">GoPro</div>
                 </a>
             </h1>
-            <div class="util">
-                <div class="menu">
-                    <button type="button" class="menu_open">
-                        <span class="blind-b">메뉴 열기</span>
-                    </button>
-                    <div class="mgnb_wrap">
+            <button type="button" class="menu_open">
+                <img src="assets/img/icon/mMenu.svg" alt="메뉴 열기">
+                <span class="blind-b">메뉴 열기</span>
+            </button>
+            <div class="mUtil">
+                <div class="mgnb_wrap">
                     <!-- 닫기 버튼을 누르기 전까지 포커스는 .mgnb_wrap 내부에 머물러야 함, 스크립트 제어하기 쉽도록 첫번째 .first / 마지막 .last 추가함 -->
                         <div class="bg_white">
-                            <a href="#" class="first">
-                                <img src="assets/img/icon/account.svg" alt="계정 바로가기 아이콘">
-                            </a>
-                            <a href="#">
-                                <img src="assets/img/icon/shopping-cart.svg" alt="장바구니 아이콘">
-                            </a>
+                            <button>
+                                <a href="#" class="first">
+                                    <img class="mAccount" src="assets/img/icon/account.svg" alt="계정 바로가기 아이콘">
+                                </a>
+                            </button>
+                            <button>
+                                <a href="#">
+                                    <img class="mshopping" src="assets/img/icon/shopping-cart.svg" alt="장바구니 아이콘">
+                                </a>
+                            </button>
                         </div>
                         <nav id="mGnb">
                             <ul>
