@@ -340,14 +340,12 @@
   #footer {
     height: 750px; }
     #footer .foot {
-      position: relative;
       width: 700px;
       height: 650px; }
-      #footer .foot position
-      > a {
+      #footer .foot > a {
         padding-bottom: 17px; }
       #footer .foot .brandInfo div.info + div.info {
-        padding-left: 76px; }
+        padding-left: 68px; }
       #footer .foot .brandInfo::after {
         width: 700px;
         left: -3.5px; }

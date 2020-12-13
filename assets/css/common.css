@@ -264,6 +264,17 @@ body {
 @media screen and (max-width: 768px) {
   .max768 {
     max-width: 100%;
-    padding: 0 20px; } }
+    padding: 0 20px; }
+
+  .fixedBtn {
+    bottom: 50px;
+    right: 25px; }
+    .fixedBtn .goUpBtn {
+      width: 44px;
+      height: 44px; }
+    .fixedBtn .chattingBtn {
+      padding-top: 2px;
+      width: 112px;
+      height: 44px; } }
 
 /*# sourceMappingURL=common.css.map */

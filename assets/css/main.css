@@ -726,8 +726,9 @@
       #cnt7 .insta .instaWrap a:nth-child(5n) {
         padding-left: 198.5px; }
     #cnt7 .insta .instaWrap img {
-      width: 18.0208333333vw;
-      height: 18.0208333333vw; }
+      width: 346px;
+      height: 346px;
+      position: relative; }
       #cnt7 .insta .instaWrap img::after {
         content: "";
         position: absolute;
@@ -1047,85 +1048,117 @@
   #cnt5 {
     height: 110vh; }
     #cnt5 .newsWrap {
-      width: 1540px;
-      height: 875px;
-      /* padding-left: 147px; */
-      padding-top: 134px;
-      margin: 0 auto; }
+      width: 765px;
+      height: 860px;
+      /* padding-left: 41.5px; */
+      padding-top: 145.5px; }
       #cnt5 .newsWrap > strong {
-        font-size: 60px;
-        position: absolute;
-        left: 35px;
-        top: 134px;
-        width: 162px;
-        height: 60px; }
+        font-size: 26px;
+        left: 50px;
+        top: 145px;
+        width: 70px;
+        height: 26px; }
       #cnt5 .newsWrap > a {
-        position: absolute;
-        font-size: 18px;
-        top: 177px;
-        right: 134px;
+        top: 140px;
+        right: 70px;
         width: 48px;
-        height: 18px;
-        text-decoration: underline; }
-        #cnt5 .newsWrap > a:hover, #cnt5 .newsWrap > a:focus {
-          color: #00E4F3; }
+        height: 18px; }
       #cnt5 .newsWrap .newsCntWrap {
         position: relative;
         /* border-top: 1px solid #707070; border-bottom: 1px solid #707070;  */
-        width: 1454.5px;
-        height: 746px;
-        text-align: left;
-        color: #333;
+        width: 750px;
+        height: 785px;
         padding: 85px 40px 0; }
-        #cnt5 .newsWrap .newsCntWrap ul li {
-          border-top: 1px solid #707070;
-          border-bottom: 1px solid #707070;
-          position: relative;
-          background: #FCFCFC; }
         #cnt5 .newsWrap .newsCntWrap ul li a {
-          -webkit-transition: all 0.5s;
-          -moz-transition: all 0.5s;
-          -o-transition: all 0.5s;
-          transition: all 0.5s;
-          display: block;
-          height: 198px; }
-          #cnt5 .newsWrap .newsCntWrap ul li a::after {
-            content: "";
-            display: block;
-            clear: both; }
+          height: 181px; }
           #cnt5 .newsWrap .newsCntWrap ul li a .category {
-            font-size: 22px;
-            color: #00E4F3;
-            font-weight: 700;
-            color: #00E4F3;
-            padding-bottom: 15px;
-            padding-top: 73.5px; }
+            font-size: 16px;
+            padding-bottom: 12px;
+            padding-top: 48.5px; }
           #cnt5 .newsWrap .newsCntWrap ul li a h5 {
-            float: left;
-            font-size: 32px;
-            padding-bottom: 37px; }
-          #cnt5 .newsWrap .newsCntWrap ul li a .txt {
-            display: none; }
+            padding-bottom: 34px; }
           #cnt5 .newsWrap .newsCntWrap ul li a .date {
             float: right; }
           #cnt5 .newsWrap .newsCntWrap ul li a .img {
             display: none; }
           #cnt5 .newsWrap .newsCntWrap ul li a.on {
-            height: 372px; }
+            height: 328px; }
             #cnt5 .newsWrap .newsCntWrap ul li a.on .txt {
-              display: block; }
-            #cnt5 .newsWrap .newsCntWrap ul li a.on .txt {
-              clear: left;
-              font-weight: 300;
-              padding-bottom: 65px;
-              letter-spacing: 1.3125; }
+              padding-bottom: 64px;
+              line-height: 25px;
+              width: 643px; }
             #cnt5 .newsWrap .newsCntWrap ul li a.on .date {
-              float: left;
-              font-size: 15px;
-              font-weight: 300;
-              padding-bottom: 27px; }
-            #cnt5 .newsWrap .newsCntWrap ul li a.on .img {
-              height: 372px;
-              opacity: 1; } }
+              font-size: 13px;
+              padding-bottom: 42.5px; }
+
+  #cnt6 {
+    height: 85vh; }
+    #cnt6 .video .marquee {
+      font-size: 57px;
+      margin-bottom: 145px; }
+    #cnt6 .video .marquee p:after {
+      padding-right: 50px; }
+    #cnt6 .video .marquee p {
+      padding-left: 800px; }
+    #cnt6 .video .videoWrap {
+      border: 6px solid #707070;
+      width: 663px;
+      height: 480px; }
+      #cnt6 .video .videoWrap .videoInner {
+        padding-left: 81px;
+        padding-top: 40px; }
+        #cnt6 .video .videoWrap .videoInner > strong {
+          font-size: 27px;
+          padding-right: 370px; }
+        #cnt6 .video .videoWrap .videoInner a {
+          font-size: 10px; }
+        #cnt6 .video .videoWrap .videoInner .iframe {
+          width: 467px;
+          height: 262px;
+          margin-top: 0; }
+          #cnt6 .video .videoWrap .videoInner .iframe iframe {
+            float: left;
+            padding-left: 13px; }
+            #cnt6 .video .videoWrap .videoInner .iframe iframe:first-child {
+              width: 467px; }
+            #cnt6 .video .videoWrap .videoInner .iframe iframe:nth-child(2) {
+              display: none; }
+            #cnt6 .video .videoWrap .videoInner .iframe iframe:nth-child(3) {
+              display: none; }
+
+  #cnt7 {
+    height: 625px; }
+    #cnt7 .insta {
+      -webkit-background: linear-gradient(#12C2E9, #096A8A, #000000);
+      -moz-background: linear-gradient(#12C2E9, #096A8A, #000000);
+      -o-background: linear-gradient(#12C2E9, #096A8A, #000000);
+      -ms-background: linear-gradient(#12C2E9, #096A8A, #000000);
+      background: linear-gradient(#12C2E9, #096A8A, #000000);
+      padding-top: 131px; }
+      #cnt7 .insta strong {
+        font-size: 27px;
+        padding-left: 40px; }
+      #cnt7 .insta .instaWrap a {
+        padding-top: 8.9px;
+        padding-right: 16.9px; }
+        #cnt7 .insta .instaWrap a:first-child {
+          padding-left: 53.8px; }
+        #cnt7 .insta .instaWrap a:nth-child(4n) {
+          padding-right: 0; }
+        #cnt7 .insta .instaWrap a:nth-child(5n) {
+          padding-left: 53.8px; }
+      #cnt7 .insta .instaWrap img {
+        width: 154.2px;
+        height: 154.2px;
+        position: relative; }
+        #cnt7 .insta .instaWrap img::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: rgba(0, 0, 0, 0.55);
+          width: 100%;
+          height: 100%;
+          opacity: 0; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -121,6 +121,14 @@ body {
 }
 @media screen and (max-width: 768px) {
     .max768 {max-width: 100%; padding: 0 20px;}
+
+    .fixedBtn {
+        bottom: 50px; right: 25px;
+        //Top 버튼
+        .goUpBtn { width: 44px; height: 44px;}
+        //채팅상담하기 버튼
+        .chattingBtn { padding-top: 2px;width: 112px; height: 44px;}
+    }
 }
 @media screen and (max-width: 414px) {
     
