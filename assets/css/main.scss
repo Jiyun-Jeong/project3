@@ -498,10 +498,6 @@
 
     #cnt2 {
         .newbie {
-            img {
-                @include transform(translateY(11.6%));
-                width: 100%; height: auto; 
-            }
             .newbieTxt {
                 > strong {top: 148px; left: 39px; font-size: 26px;line-height: 32px;}
             }
@@ -510,19 +506,115 @@
                 .newbieDetail {
                     > h3 {
                         font-size: 31px;line-height: 42px;padding-bottom: 25px;margin-top: 57.5px;
-                        &::before {
-                            top: -175px;right: 0; height: 2px;width: 67.1875vw/* 1290px */;
-                        }
+                        &::before {top: -57.5px;width: 514px;}
                     }
                     > p {font-size: 14px;line-height: 19px;padding-bottom: 58.4px;}
                     &:first-child {
-                        h3 {margin-top: 180.5px;}
+                        h3 {margin-top: 58px;}
                     }
-                    &:last-child {
-                        p {padding-bottom: 160px;}
-                    }
+                    &:last-child { p {padding-bottom: 53.3px;}}
                 }
                 
+            }
+        }
+    }
+
+    #cnt3 {
+        .camerasWrap {width: 115%;height:102vh; left: -51px;top: -7px;}
+        .camera {
+            @include transform(skewX(0) skewY(-5deg));
+            width: 100%;height: 33.3333%;
+            &::before {@include filter(blur(2px));}
+            .cameras {
+                /* @include transform(skewX(0) skewY(5deg)); */
+                top: 20%;
+                &.cameraR {
+                    @include transform(skewX(0) skewY(5deg) translateX(-50%)/*  translateX(-80px)*/);
+                }
+                &.cameraL {
+                    @include transform(skewX(0) skewY(5deg) translateX(-50%)/*  translateX(80px) */);
+                }
+                &.cameraD {
+                    @include transform(skewX(0) skewY(5deg) translateX(-50%)/*  translateY(-80px) */);
+                }
+            }
+        }
+        #camera1 {
+            top: -32px; left: -17px; width: 117%;
+            img {width: 238px;height: 238px;left: 454px;}
+        }
+        #camera2 {
+            top: 30.3333%; left:0; height:39%;
+            img {width: 303px;height: 214px;}
+            a {
+                @include transform(skewX(0) skewY(5deg));
+                @include transition(all 0.3s);
+                width: 213px; height: 48px; line-height: 48px; bottom: 30px; left: 38%; font-size: 16px;letter-spacing: 1.68px;
+            }
+        }
+        #camera3 {
+            top: 69%; left: 0; 
+            img {width: 176px;height: 207px;}
+        }
+    }
+
+    #cnt4 {
+        height: 908px;overflow:hidden;
+        .category {
+            width: 100%; height: 100%;background:none;
+            > p {font-size: 13px;padding-bottom: 7px;padding-top: 68px;}
+            > strong {font-size: 26px;}
+            .categoryWrap {
+                position: relative; display: block; float: left; padding-top: 149px;
+                .otherWrap {
+                    padding-right: 25px;position: relative;
+                    a {
+                        display: block; margin-bottom: 7.5px;width: 306px; height :347px;
+                        .hoverImg {
+                            width: 306px; height :347px;margin-bottom: 7.5px;
+                        }
+                    }
+                }
+                h4 {font-size: 27px;padding-bottom: 18.5px;}
+                p {font-size: 18px;line-height: 26px;}
+                &:first-child > div {padding-left : 37px;}
+                &:nth-of-type(2),&:nth-of-type(5) {padding-top: 0;}
+                &:nth-of-type(3),&:nth-of-type(6) {padding-top: 0;}
+                &:nth-of-type(3n) > div {padding-right: 25px;}
+            }
+            
+        }
+    }
+
+    #cnt5 {
+        height: 110vh;
+        .newsWrap {
+            width: 1540px;height: 875px;/* padding-left: 147px; */padding-top: 134px;margin: 0 auto;
+            > strong { font-size: 60px;position: absolute; left: 35px; top: 134px;width: 162px;height: 60px;}
+            > a {
+                position: absolute;  font-size: 18px;top: 177px;right: 134px; width: 48px;height: 18px;text-decoration: underline;
+                &:hover, &:focus {color: $lightblue;}
+            }
+            .newsCntWrap {
+                position: relative; /* border-top: 1px solid #707070; border-bottom: 1px solid #707070;  */width: 1454.5px;height: 746px;text-align: left;color: #333;padding: 85px 40px 0; 
+                ul li{border-top: 1px solid #707070;border-bottom: 1px solid #707070; position: relative;background: #FCFCFC;}
+                ul li a{
+                    @include transition(all 0.5s);
+                    display: block;height: 198px;
+                    &::after{content: "";display: block;clear: both;}
+                    .category{font-size: 22px;color: $lightblue; font-weight: 700;color: $lightblue;padding-bottom: 15px;padding-top: 73.5px;}
+                    h5{float: left;font-size: 32px;padding-bottom: 37px;}
+                    .txt{display: none;}
+                    .date{float: right;}
+                    .img{display:none;}
+                    &.on{
+                        height: 372px;
+                        .txt{display: block;}
+                        .txt{clear: left;font-weight: 300;padding-bottom: 65px;letter-spacing: 1.3125;}
+                        .date{float: left;font-size: 15px;font-weight: 300;padding-bottom: 27px;}
+                        .img {height: 372px;opacity: 1;}
+                    }
+                }
             }
         }
     }
