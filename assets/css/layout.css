@@ -415,9 +415,10 @@
       width: 25px;
       height: 25px; }
     #mHeader .mUtil {
+      display: none;
       position: absolute;
-      top: 17px;
-      right: 16px;
+      top: 0;
+      right: 0;
       width: 360px;
       height: 100%;
       text-align: right;
@@ -435,12 +436,38 @@
         #mHeader .mUtil .mgnb_wrap .bg_white .mShopping {
           width: 25px;
           height: 25px; }
-      #mHeader .mUtil .mgnb_wrap #mGnb ul > li {
-        font-size: 30px;
-        font-weight: 700; }
-        #mHeader .mUtil .mgnb_wrap #mGnb ul > li > ul > li {
-          font-size: 20px;
-          font-weight: 500;
-          background: lightgrey; } }
+      #mHeader .mUtil .mgnb_wrap #mGnb {
+        background: #fff; }
+        #mHeader .mUtil .mgnb_wrap #mGnb > ul > li {
+          font-size: 30px;
+          font-weight: 700; }
+          #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > a {
+            margin: 0 26px 0 0; }
+          #mHeader .mUtil .mgnb_wrap #mGnb > ul > li:first-child {
+            padding-top: 127px; }
+          #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li {
+            display: none;
+            font-size: 20px;
+            font-weight: 500;
+            background: lightgrey;
+            color: #444;
+            padding: 25px 26px 0 0; }
+            #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li:first-child {
+              padding-top: 19px; }
+            #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li:last-child {
+              padding-bottom: 19px; }
+            #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li > a {
+              padding-right: 10px; }
+            #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li:hover > a, #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li.on > a, #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li:focus > a {
+              -webkit-transition: 0.3s;
+              -moz-transition: 0.3s;
+              -o-transition: 0.3s;
+              transition: 0.3s;
+              -webkit-transform: translateY(-100%);
+              -moz-transform: translateY(-100%);
+              -o-transform: translateY(-100%);
+              -ms-transform: translateY(-100%);
+              transform: translateY(-100%);
+              color: #00E4F3; } }
 
 /*# sourceMappingURL=layout.css.map */
