@@ -35,7 +35,7 @@
     #header .util > div {
       float: left; }
     #header .util > div + div {
-      padding-left: 1.45vw; }
+      padding-left: 80px; }
     #header .util .search .search_wrap {
       display: none;
       background: #fff;
@@ -196,7 +196,91 @@
           width: 31px;
           height: 31px; }
 
-@media screen and (max-width: 1770) {
+@media screen and (max-width: 1550) {
+  #header {
+    width: 100%; }
+    #header .logo a {
+      width: 161px;
+      height: 91px;
+      padding-left: 9px; }
+    #header .util {
+      top: 29px;
+      right: 30px;
+      width: 201px;
+      height: 34px;
+      line-height: 34px;
+      /*.bg_white {background: #fff;}  모바일용에서 따로 만들기 잠시 가림 */ }
+      #header .util > div + div {
+        padding-left: 74px; }
+      #header .util .lang > ul {
+        margin-top: 27px; }
+        #header .util .lang > ul li {
+          display: none;
+          width: 80px;
+          height: 44px;
+          line-height: 44px;
+          background: #fff;
+          color: #000;
+          text-align: center;
+          font-weight: 500;
+          border: 1px solid #c2c2c2; }
+          #header .util .lang > ul li:hover, #header .util .lang > ul li:focus {
+            background-color: #00E4F3; }
+    #header #pcGnb {
+      position: relative;
+      text-align: center;
+      z-index: 800; }
+      #header #pcGnb ul li {
+        display: inline-block; }
+      #header #pcGnb > ul > li {
+        font-size: 21px;
+        font-weight: 500 !important; }
+        #header #pcGnb > ul > li:hover > a, #header #pcGnb > ul > li.on > a, #header #pcGnb > ul > li:focus > a {
+          -webkit-transition: 0.3s;
+          -moz-transition: 0.3s;
+          -o-transition: 0.3s;
+          transition: 0.3s;
+          -webkit-transform: translateY(-100%);
+          -moz-transform: translateY(-100%);
+          -o-transform: translateY(-100%);
+          -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+          color: #00E4F3; }
+        #header #pcGnb > ul > li + li {
+          padding-left: 80px; }
+    #header .dep2wrap {
+      position: absolute;
+      bottom: 90px;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      color: #000;
+      height: 70px;
+      line-height: 70px; }
+      #header .dep2wrap > li {
+        float: left;
+        font-size: 17px;
+        font-weight: 700;
+        position: relative; }
+        #header .dep2wrap > li::after {
+          -webkit-transition: all 0.2px;
+          -moz-transition: all 0.2px;
+          -o-transition: all 0.2px;
+          transition: all 0.2px;
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          background-color: #00E4F3;
+          opacity: 0; }
+        #header .dep2wrap > li:hover, #header .dep2wrap > li:focus {
+          opacity: 1; }
+    #header ul li ul li + li {
+      padding-left: 90px; }
+
+  #mHeader {
+    display: none; }
+
   #footer .foot {
     width: 1655px; }
     #footer .foot .brandInfo div.info + div.info {

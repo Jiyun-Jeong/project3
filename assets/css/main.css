@@ -437,6 +437,12 @@
         font-size: 21px;
         line-height: 29px;
         font-weight: 500; }
+        #cnt4 .category .categoryWrap p:first-child {
+          width: 485px; }
+        #cnt4 .category .categoryWrap p:nth-child(2) {
+          width: 445px; }
+        #cnt4 .category .categoryWrap p:nth-child(3) {
+          width: 485px; }
       #cnt4 .category .categoryWrap:first-child > div {
         padding-right: 90px; }
       #cnt4 .category .categoryWrap:nth-of-type(2), #cnt4 .category .categoryWrap:nth-of-type(5) {

@@ -229,6 +229,9 @@
             }
             p {
                 font-size: 21px;line-height: 29px;font-weight: 500;
+                &:first-child {width: 485px;}
+                &:nth-child(2) {width: 445px;}
+                &:nth-child(3) {width: 485px;}
             }
             &:first-child > div {padding-right: 90px;}
             &:nth-of-type(2),&:nth-of-type(5) {padding-top: 196px;}
