@@ -11,10 +11,10 @@
         #videoBg {position: absolute; width: 100%; height: auto; top: 0; left: 0; /* min-width: 100%; */ min-height: auto; z-index: -1; }
         &.slide2 {background-image: url("../img/main/index1_02_1920.png");}
         &.slide3 {background-image: url("../img/main/index1_03_1920.png");}
-        .txtbox{position: absolute;top: 256px;left: 7%;text-align: left;}
-        .txtbox p {font-size: 47px;letter-spacing: 1.27px;font-weight: 500;}
-        .txtbox h3 {font-size: 90px;font-weight: 700;padding-bottom: 68px;}
-        .txtbox p:nth-child(3) {font-size: 47px;font-weight: 300;padding-bottom: 119px;letter-spacing: 0.75px;}
+        .txtbox{position: absolute;top: 300px;left: 7%;text-align: left;}
+        .txtbox p {font-size: 40px;letter-spacing: 1.27px;font-weight: 500;}
+        .txtbox h3 {font-size: 56px;font-weight: 700;padding-bottom: 68px;}
+        .txtbox p:nth-child(3) {font-size: 34px;font-weight: 300;padding-bottom: 119px;letter-spacing: 0.75px;}
         > .txtbox > .linkWrapper > .innerWrapper > a {
             position: relative; font-size: 33px;font-weight: 700;letter-spacing: 0.89px;           
         }
@@ -168,13 +168,11 @@
 }
 
 #cnt2 {
-
-    position: relative; width: 100%;height: 100vh;background: #000;color: #fff; overflow: auto;
+    position: relative; background: #000;color: #fff;
     .newbie {
         position: relative; 
         &::after {content:""; position: absolute; top: 0; bottom: 0; right: 0; left: 0; background-color: rgba(0,0,0,.55);}
         img {
-            @include bgSize(cover);
             @include transform(translateY(11.6%));
             width: 100%; height: auto; position: relative;
         }
@@ -194,16 +192,16 @@
             .newbieDetail {
                 display: block; 
                 > h3 {
-                    position: relative; font-size: 90px; font-weight: 700;line-height: 122px;padding-bottom: 102px;margin-top: 148.5px;
+                    position: relative; font-size: 56px; font-weight: 700;line-height: 122px;padding-bottom: 50px;margin-top: 148.5px;
                     &::before {
-                        content: ""; position: absolute; top: -175px;right: 0; height: 2px;width: 1290px;background-color: #999; 
+                        content: ""; position: absolute; top: -95px;right: 0; height: 2px;width: 1290px;background-color: #999; 
                     }
                 }
                 > p {
                     font-size: 26px;font-weight: 300;line-height: 35px;padding-bottom: 148.5px;
                 }
                 &:first-child {
-                    h3 {margin-top: 180.5px;}
+                    h3 {margin-top: 100px;}
                 }
                 &:last-child {
                     p {padding-bottom: 160px;}
@@ -215,10 +213,9 @@
 }
 
 #cnt3 {
-    position: relative; overflow: hidden; height: 100vh;width: 100vw;
+    position: relative; overflow: hidden; height: 100vh;width: 100%;
     .camerasWrap {
         position: absolute; width: 115%;height:100vh; left: -98px;top: 0; overflow: hidden;
-        
     }
     .camera {
         @include bgSize(cover);
@@ -244,24 +241,24 @@
     }
     #camera1 {
         top: 0; left: 0; background-image: url("../img/main/camera_bg1.jpg");
-        img {width: 469px;height: 469px;left: 50%;}
+        img {width: 340px;height: 340px;left: 50%;}
     }
     #camera2 {
-        top: 0; left: 34.333333vw/* 640px */; background-image: url("../img/main/camera_bg2.jpg");
-        img {width: 578px;height: 408px;left: 50%;}
+        top: 0; left: 35.333333vw/* 640px */; background-image: url("../img/main/camera_bg2.jpg");
+        img {width: 432px;height: 305px;left: 50%;}
         a {
             @include transform(skewX(5deg) translateX(-50%));
             @include border-radius(7px);
             @include transition(all 0.3s);
-            position: absolute;/* 형제요소인 img에 포지션 relative를 줄수는 없는건지.. 크기가 커졌을때 위치가 이상해짐 */bottom: 150px; left: 50%; width: 430px;height: 95px;background-color: $darkgrey;line-height: 95px;font-size: 35px;z-index: 300;
+            position: absolute;bottom: 302px; left: 50%; width: 255px;height: 56px;background-color: $darkgrey;line-height: 56px;font-size: 20px;z-index: 300;
             &:hover, &:focus {
                 @include linearGradient((#12C2E9, #096A8A, #000000));
             }
         }
     }
     #camera3 {
-        top: 0; left: 71.666667vw; background-image: url("../img/main/camera_bg3.jpg");
-        img {width: 370px;height: 435px;left: 50%;}
+        top: 0; left: 72.666667vw; background-image: url("../img/main/camera_bg3.jpg");
+        img {width: 244px;height: 287px;left: 50%;}
     }
 }
 
@@ -307,14 +304,14 @@
 #cnt5 {
     color: #000;background-color: #FCFCFC;height: 110vh;
     .newsWrap {
-        position: relative; font-weight: 700;text-align: center;width: 1540px;height: 875px;/* padding-left: 147px; */padding-top: 134px;margin: 0 auto;
+        position: relative; font-weight: 700;text-align: center;width: 1540px;height: 875px;padding-top: 134px;margin: 0 auto;
         > strong { font-size: 60px;position: absolute; left: 35px; top: 134px;width: 162px;height: 60px;}
         > a {
             position: absolute;  font-size: 18px;top: 177px;right: 134px; width: 48px;height: 18px;text-decoration: underline;
             &:hover, &:focus {color: $lightblue;}
         }
         .newsCntWrap {
-            position: relative; /* border-top: 1px solid #707070; border-bottom: 1px solid #707070;  */width: 1454.5px;height: 746px;text-align: left;color: #333;padding: 85px 40px 0; 
+            position: relative; width: 1454.5px;height: 746px;text-align: left;color: #333;padding: 85px 40px 0; 
             ul li{border-top: 1px solid #707070;border-bottom: 1px solid #707070; position: relative;background: #FCFCFC;}
             ul li a{
                 @include transition(all 0.5s);
@@ -359,18 +356,22 @@
             @include border-radius(63px);
             border: 8px solid #707070;width: 1292px;height: 674px;margin: 0 auto;
             .videoInner {
-                padding-left: 140px;padding-top: 80px;
-                > strong { font-size: 60px;font-weight: 700;padding-right: 39.58333333333333vw/* 760px */;}
-                a {
-                    text-decoration: underline;font-size: 18px;font-weight: 700;
-                    &:hover, &:focus {color: $lightblue;}
-                }
+                position: relative; padding-left: 140px;padding-top: 80px;
+                > strong { font-size: 60px;font-weight: 700;padding-right: 760px;}
                 .iframe {
                     width: 1013px; height: 380px;margin-top: 39px;
                     iframe {
-                        float: left; padding-left: 13px;
-                        &:nth-child(2) {padding-bottom: 25px;}
+                        float: left; padding-left: 15px;border: none;
                     }
+                    .iframeRight {
+                        iframe {
+                            &:last-child {margin-top: 13px;}
+                        }
+                    }
+                }
+                a {
+                    position: absolute; top: 110px; right: 163px; text-decoration: underline;font-size: 18px;font-weight: 700;
+                    &:hover, &:focus {color: $lightblue;}
                 }
             }
 
@@ -380,18 +381,18 @@
 #cnt7 {
     .insta {
         @include linearGradient(#12C2E9, #096A8A, #000000);
-        width: 100%;height: 100vh;padding-top: 134px;margin: 0 auto;
-        strong {font-size: 60px;font-weight: 700;padding-left: 7.65625vw/* 147px */;}
+        /* width: 100%; */height: 100vh;padding-top: 134px;margin: 0 auto;
+        strong {font-size: 60px;font-weight: 700;padding-left: 147px;}
         .instaWrap {
             position:relative;
             a {
-                display: inline-block;padding-top: 59px; padding-right: 38px;position: relative;
-                &:first-child {padding-left: 198.5px;}
+                display: inline-block;padding-top: 43px; padding-right: 43px;position: relative;
+                &:first-child {padding-left: 261px;}
                 &:nth-child(4n) {padding-right: 0;}
-                &:nth-child(5n) {padding-left: 198.5px;}
+                &:nth-child(5n) {padding-left: 261px;}
             }
             img {
-                width: 346px;height: 346px;position: relative;
+                width: 320px;height: 320px;position: relative;
                 &::after {content:""; position: absolute; top: 0; left: 0;background-color: rgba(0,0,0,.55);width: 100%;height: 100%;}
             }
         }
@@ -452,25 +453,6 @@
                 @include border-radius(7px);
                 width: 240px; height: 3px; background-color: #fff; position: absolute; top: 118.5px; left: 180px;
             }
-            @keyframes runningBar {
-                    0% {width: 0;}
-                    6% {width: 6%;}
-                    13% {width: 13%;}
-                    19% {width: 19%;}
-                    25% {width: 25%;}
-                    31% {width: 31%;}
-                    37% {width: 37%;}
-                    43% {width: 43%;}
-                    49% {width: 48%;}
-                    55% {width: 55%;}
-                    61% {width: 60.5%;}
-                    67% {width: 66.5%;}
-                    73% {width: 74%;}
-                    79% {width: 81%;}
-                    85% {width: 87%;}
-                    91% {width: 94%;}
-                    100% {width: 100%;}
-                }
         }
             
     
@@ -574,10 +556,11 @@
                             width: 306px; height :347px;margin-bottom: 7.5px;
                         }
                     }
+                    &:first-child {padding-left: 37px;}
                 }
                 h4 {font-size: 27px;padding-bottom: 18.5px;}
                 p {font-size: 18px;line-height: 26px;}
-                &:first-child > div {padding-left : 37px;}
+                /* &:first-child > div {padding-left : 37px;} */
                 &:nth-of-type(2),&:nth-of-type(5) {padding-top: 0;}
                 &:nth-of-type(3),&:nth-of-type(6) {padding-top: 0;}
                 &:nth-of-type(3n) > div {padding-right: 25px;}
@@ -623,7 +606,7 @@
                 .videoInner {
                     padding-left: 81px;padding-top: 40px;
                     > strong { font-size: 27px;padding-right: 370px;}
-                    a {font-size: 10px;}
+                    a {top: 49px; right: 111px; font-size: 10px;}
                     .iframe {
                         width: 467px; height: 262px;margin-top: 0;
                         iframe {
