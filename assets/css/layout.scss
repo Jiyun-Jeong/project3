@@ -192,7 +192,7 @@
 @media screen and (max-width: 768px) {
     //header
     #header {
-        height: 60px;line-height: 60px;width: 768px;top:0;
+        height: 60px;line-height: 60px;width: 100%;top:0;left: 0;
         .logo {
             width: 73px; padding-top: 8px; left: 8px; height: 54px;
             a {width: 75px; height: 45px;padding-left: 0;}

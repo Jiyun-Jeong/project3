@@ -23,53 +23,6 @@
         .txtbox {
             .linkWrapper {
                 position: relative;
-                /* .innerWrapper {
-                    position: relative;
-                
-                &::before {
-                    @include transform(scaleY(0));
-                    @include transition(transform(0.2s));
-                    content: ""; position: absolute; bottom: 0; left: 0; width: 2px; height: 100%;background-color: $lightblue; transform-origin: bottom left; 
-                }
-                &::after {
-                    @include transform(scaleY(0));
-                    @include transition(transform(0.2s));
-                    content: ""; position: absolute; top: 0; right: 0; width: 2px; height: 100%;background-color: $lightblue; transform-origin: top right; 
-                }
-                .viewBtn {
-                    padding: 5px;
-                    &::before {
-                        @include transform(scaleX(0));
-                        @include transition(transform(0.2s 0.3s));
-                        content:""; position: absolute; top: 0; left: 0; width: 2px; height: 100%;background-color: $lightblue; transform-origin: top left;
-                    }
-                    &::after {
-                        @include transform(scaleX(0));
-                        @include transition(transform(0.2s 0.1s));
-                        content:""; position: absolute; bottom: 0; right: 0; width: 2px; height: 100%;background-color: $lightblue; transform-origin: top left;
-                    }
-                }
-                &:hover {
-                    &:before {
-                        @include transform(scaleY(1));
-                        @include transition(transform(0.2s 0.3s));
-                    }
-                    &:after {
-                        @include transform(scaleY(1));
-                        @include transition(transform(0.2s 0.1s));
-                    }
-                    .viewBtn {
-                        &:before {
-                            @include transform(scaleX(1));
-                            @include transition(transform(0.2s));
-                        }
-                        &:after {
-                            @include transform(scaleX(1));
-                            @include transition(transform(0.2s 0.2s));
-                        }
-                    }
-                }
-            }  */
             }
             
         }
@@ -170,27 +123,16 @@
 #cnt2 {
     position: relative; background: #000;color: #fff;
     .newbie {
-        position: relative; 
-        &::after {content:""; position: absolute; top: 0; bottom: 0; right: 0; left: 0; background-color: rgba(0,0,0,.55);}
-        img {
-            @include transform(translateY(11.6%));
-            width: 100%; height: auto; position: relative;
-        }
+        position: relative; background: url("../img/main/cnt2_newbie_2x.png") no-repeat center;
         .newbieTxt {
             > strong {
                 position: absolute; top: 272px; left: 141px; font-size: 60px;font-weight: 700;line-height: 83px;z-index: 250;
             }
         }
         .detailWrap {
-            &::-webkit-scrollbar{width: 12px;}
-            &::-webkit-scrollbar-track {background-color:#c2c2c2;border-radius: 10px; /* box-shadow: inset 0px 0px 5px #fff; */}
-            &::-webkit-scrollbar-thumb {background-color: #555; border-radius: 10px;background-clip: padding-box; /* border: 2px solid transparent; */}
-            &::-webkit-scrollbar-thumb:hover {
-                background: #00E4F3;
-            }
-            position: absolute; top: 358px; right: 0; width: 1200px;height: auto;overflow: auto; z-index: 200;
+            position: relative; padding-top: 358px; right: 0;height: auto;overflow: auto; z-index: 200;
             .newbieDetail {
-                display: block; 
+                padding-left: 725px;
                 > h3 {
                     position: relative; font-size: 56px; font-weight: 700;line-height: 122px;padding-bottom: 50px;margin-top: 148.5px;
                     &::before {
@@ -199,10 +141,14 @@
                 }
                 > p {
                     font-size: 26px;font-weight: 300;line-height: 35px;padding-bottom: 148.5px;
+                    &:nth-child(1) {width: 765px;}
+                    &:nth-child(2) {width: 792px;}
+                    &:nth-child(3) {width: 843px;}
+                    &:nth-child(4) {width: 754px;}
                 }
                 &:first-child {
                     h3 {margin-top: 100px;}
-                }
+                }  
                 &:last-child {
                     p {padding-bottom: 160px;}
                 }
@@ -394,6 +340,7 @@
             img {
                 width: 320px;height: 320px;position: relative;
                 &::after {content:""; position: absolute; top: 0; left: 0;background-color: rgba(0,0,0,.55);width: 100%;height: 100%;}
+                /* 호버넣기 */
             }
         }
     }
@@ -413,7 +360,7 @@
             #videoBg {width: 100%; height: 100vh; /* min-width: 100%; */}
             &.slide2 {background-image: url("../img/main/index1_02_768_2x.png");}
             &.slide3 {background-image: url("../img/main/index1_03_768_2x.png");}
-            .txtbox{top: 710px;left: 7%;width: 639px;height: 140px;text-align: right;}
+            .txtbox{top: 769px;left: 10%;width: 639px;height: 140px;text-align: right;}
             .txtbox p {font-size: 23px;letter-spacing: 0.62px;line-height: 32px;}
             .txtbox h3 {font-size: 41px;padding-bottom: 35px;line-height: 56px;}
             .txtbox p:nth-child(3) {font-size: 23px;padding-bottom: 60px;letter-spacing: 0.37px;}
@@ -442,7 +389,7 @@
         }
     
         .swiper-pagination{
-            top: 100px; left: 7%; bottom: auto; font-size: 33px;letter-spacing: 0.2rem;font-weight: 700;width: auto; height: auto;
+            top: 100px; left: 12%; bottom: auto; font-size: 33px;letter-spacing: 0.2rem;font-weight: 700;width: auto; height: auto;
         }
         .loadingWrap {
             position: relative; width: 240px;height: 2px; 
@@ -457,7 +404,7 @@
             
     
         .controller {
-            bottom: 335px; left: 55px;width: 204px;height: 47px;
+            bottom: 313px; left: 47px;width: 204px;height: 47px;
             .swiper-button-prev, .swiper-button-next, .play_stop {
                 width: 48px; height: 47px;
             }
@@ -473,24 +420,30 @@
             .pause {background-image: url("../img/icon/pause_768.svg");}
         }
         &.right{
-            .swiper-slide .txtbox {left: auto; right: 7%;text-align: right;}
-            .swiper-pagination{right: 7%;left: auto;}
+            .swiper-slide .txtbox {left: auto; right: 5%;text-align: right;}
+            .swiper-pagination{right: 5%;left: auto;}
         }
     }
 
     #cnt2 {
         .newbie {
+            @include bgSize(cover);
             .newbieTxt {
                 > strong {top: 148px; left: 39px; font-size: 26px;line-height: 32px;}
             }
             .detailWrap {
-                top: 149.5px; width: 516px;
-                .newbieDetail {
+                padding-top: 149.5px;
+                .newbieDetail {padding-left: 290px;
                     > h3 {
                         font-size: 31px;line-height: 42px;padding-bottom: 25px;margin-top: 57.5px;
                         &::before {top: -57.5px;width: 514px;}
                     }
-                    > p {font-size: 14px;line-height: 19px;padding-bottom: 58.4px;}
+                    > p {
+                        font-size: 14px;line-height: 19px;padding-bottom: 58.4px;
+                        &:nth-child(1) {width: 335px;}
+                        &:nth-child(2) {width: 400px;}
+                        &:nth-child(4) {width: 436px;}
+                    }
                     &:first-child {
                         h3 {margin-top: 58px;}
                     }
@@ -502,7 +455,7 @@
     }
 
     #cnt3 {
-        .camerasWrap {width: 115%;height:102vh; left: -51px;top: -7px;}
+        .camerasWrap {height:102vh; left: -51px;top: -7px;}
         .camera {
             @include transform(skewX(0) skewY(-5deg));
             width: 100%;height: 33.3333%;
@@ -523,20 +476,23 @@
         }
         #camera1 {
             top: -32px; left: -17px; width: 117%;
-            img {width: 238px;height: 238px;left: 454px;}
+            img {width: 211px;height: 211px;left: 454px;}
         }
         #camera2 {
             top: 30.3333%; left:0; height:39%;
-            img {width: 303px;height: 214px;}
+            img {
+                @include transform(skewX(0) skewY(5deg));
+                width: 250px;height: 176px;left: 35%;}
             a {
                 @include transform(skewX(0) skewY(5deg));
-                @include transition(all 0.3s);
-                width: 213px; height: 48px; line-height: 48px; bottom: 30px; left: 38%; font-size: 16px;letter-spacing: 1.68px;
+                width: 135px; height: 31px; line-height: 31px; bottom: 98px; left: 366px; font-size: 10px;letter-spacing: 105;
             }
         }
         #camera3 {
             top: 69%; left: 0; 
-            img {width: 176px;height: 207px;}
+            img {
+                @include transform(skewX(0) skewY(5deg));
+                width: 176px;height: 207px;left: 346px;}
         }
     }
 
@@ -547,21 +503,21 @@
             > p {font-size: 13px;padding-bottom: 7px;padding-top: 68px;}
             > strong {font-size: 26px;}
             .categoryWrap {
-                position: relative; display: block; float: left; padding-top: 149px;
+                position: relative; display: block; float: left; padding-top: 149px; width: 50%;
                 .otherWrap {
                     padding-right: 25px;position: relative;
                     a {
                         display: block; margin-bottom: 7.5px;width: 306px; height :347px;
                         .hoverImg {
-                            width: 306px; height :347px;margin-bottom: 7.5px;
+                            width: 306px; height :347px;margin-bottom: 7.5px;left:37px;
                         }
                     }
                     &:first-child {padding-left: 37px;}
                 }
-                h4 {font-size: 27px;padding-bottom: 18.5px;}
+                h4 {font-size: 21px;padding-bottom: 18.5px;}
                 p {font-size: 18px;line-height: 26px;}
                 /* &:first-child > div {padding-left : 37px;} */
-                &:nth-of-type(2),&:nth-of-type(5) {padding-top: 0;}
+                &:nth-of-type(2),&:nth-of-type(5) {padding-top: 148px;}
                 &:nth-of-type(3),&:nth-of-type(6) {padding-top: 0;}
                 &:nth-of-type(3n) > div {padding-right: 25px;}
             }
@@ -570,7 +526,6 @@
     }
 
     #cnt5 {
-        height: 110vh;
         .newsWrap {
             width: 765px;height: 860px;/* padding-left: 41.5px; */padding-top: 145.5px;
             > strong { font-size: 26px;left: 50px; top: 145px;width: 70px;height: 26px;}
@@ -580,7 +535,7 @@
                 ul li a{
                     height: 181px;
                     .category{font-size: 16px;padding-bottom: 12px;padding-top: 48.5px;}
-                    h5{padding-bottom: 34px;}
+                    h5{font-size: 24px;padding-bottom: 34px;}
                     .date{float: right;}
                     .img{display:none;}
                     &.on{
@@ -594,10 +549,10 @@
     }
 
     #cnt6 {
-        height: 85vh;
+        height: 80vh;
         .video {
             .marquee {
-               font-size: 57px;margin-bottom:145px;
+               font-size: 57px;margin-bottom:120px;
               }
               .marquee p:after {padding-right:50px;}
               .marquee p {padding-left:800px;}
@@ -605,15 +560,17 @@
                 border: 6px solid #707070;width:663px;height: 480px;
                 .videoInner {
                     padding-left: 81px;padding-top: 40px;
-                    > strong { font-size: 27px;padding-right: 370px;}
+                    > strong { font-size: 26px;padding-right: 370px;}
                     a {top: 49px; right: 111px; font-size: 10px;}
                     .iframe {
                         width: 467px; height: 262px;margin-top: 0;
                         iframe {
-                            float: left; padding-left: 13px;
+                            padding-left: 13px;
                             &:first-child {width: 467px;}
+                        }
+                        .iframeRight {
+                            &:nth-child(1) {display: none;}
                             &:nth-child(2) {display: none;}
-                            &:nth-child(3) {display: none;}
                         }
                     }
                 }
@@ -623,22 +580,20 @@
     }
 
     #cnt7 {
-        height: 625px;
+        height: 65vh;
         .insta {
             @include linearGradient(#12C2E9, #096A8A, #000000);
             padding-top: 131px;
-            strong {font-size: 27px;padding-left: 40px;}
+            strong {font-size: 26px;padding-left: 40px;}
             .instaWrap {
                 a {
-                    padding-top: 8.9px; padding-right: 16.9px;
-                    &:first-child {padding-left: 53.8px;}
-                    &:nth-child(4n) {padding-right: 0;}
-                    &:nth-child(5n) {padding-left: 53.8px;}
+                    padding-top: 9px; padding-right: 13px;
+                    &:first-child {padding-left: 55.8px;}
+                    &:nth-child(5n) {padding-left: 55.8px;}
                 }
                 img {
-                    width: 154.2px;height: 154.2px;position: relative;
-                    &::after {content:""; position: absolute; top: 0; left: 0;background-color: rgba(0,0,0,.55);width: 100%;height: 100%;opacity: 0;}
-                    
+                    width: 154.2px;height: 154.2px;
+                    /* 호버넣기 */                    
                 }
             }
         }
@@ -654,11 +609,32 @@
             .txtbox{top: 545px;left: 7%;width: 639px;height: 140px;}
             .txtbox p {font-size: 16px;letter-spacing: 0.43px;line-height: 22px;}
             .txtbox h3 {font-size: 26px;padding-bottom: 39px;line-height: 35px;}
-            .txtbox p:nth-child(3) {font-size: 23px;padding-bottom: 60px;letter-spacing: 0.37px;}
+            .txtbox p:nth-child(3) {font-size: 16px;padding-bottom: 60px;letter-spacing: 0.37px;}
         }
+        .slide2 .txtbox h3 {padding-bottom: 13px;}
         .slide3 {
-            .simpleExplan {display: none;}
-            .txtbox h3 {padding-bottom: 118px;}
+            .simpleExplan {
+                left: 45px; top: 186px; width: 322px; height: 43px;font-size: 9px;
+            .simpleWrap {width: 117px;height: 54px;}
+            .cloud {
+                img {width: 36px; height: 25px;}
+                p {margin-top: 7px;width: 84px;}
+            }
+            .discount {
+               margin-left: 42px;
+                img {width: 59px; height: 29px;margin-bottom: 9px;}
+            }
+            .cameraChange {
+                margin-left: 42px;
+                img {
+                    width: 63px;height: 40px;margin-bottom: 5px;
+                }
+            }
+            }
+            .txtbox {
+                left: -255px;
+                h3 {padding-bottom: 118px;}
+            }
         }
     
         .swiper-pagination{

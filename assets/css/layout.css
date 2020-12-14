@@ -285,8 +285,9 @@
   #header {
     height: 60px;
     line-height: 60px;
-    width: 768px;
-    top: 0; }
+    width: 100%;
+    top: 0;
+    left: 0; }
     #header .logo {
       width: 73px;
       padding-top: 8px;
