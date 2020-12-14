@@ -54,44 +54,37 @@
         }
     }
 
+    .pagewrap{
+        position: absolute; top: 100px; left: 7%;width: 20%;height: 33px;z-index: 100;
+    }
+    .swiper-pagination{
+        bottom: 0; font-size: 33px;font-weight: 700; line-height: 1;
+        span{float: left;}
+        span:last-child{float: right;}
+    }
+    //길이나 위치는 제어하세요
+    .swiper-progress-bar {
+        position: absolute;left: 10%;top: 50%;width: 80%;display: block;z-index: 1;height: 2px;
+        .slide_progress-bar {
+          position: absolute;height: 100%;background: #fff;top: 0;left: 0;width: 100%;opacity: 0;
+          &:after {content: "";position: absolute;top: 0;left: 0;background: red;width: 0;height: 100%;}
+        }
+        &.active {
+          .slide_progress-bar {opacity: 1;}
+        }
+        &.animate {
+          .slide_progress-bar:after {width: 100%;transition: width 5s linear;}
+        }
+      }
+
     .swiper-pagination{
         position: absolute; top: 100px; left: 7%; bottom: auto; font-size: 33px;letter-spacing: 0.2rem;font-weight: 700;width: auto; height: auto;
     }
-    .loadingWrap {
-        position: relative; width: 240px;height: 2px; 
-        .loadingBar {
-            width: 240px;height: 1px;background-color: #fff;position: absolute; top: 118.5px; left: 180px;
-        }
-        .runningBar {
-            @include border-radius(7px);
-            width: 240px; height: 3px; background-color: #fff; position: absolute; top: 118.5px; left: 180px;
-        }
-        @keyframes runningBar {
-                0% {width: 0;}
-                6% {width: 6%;}
-                13% {width: 13%;}
-                19% {width: 19%;}
-                25% {width: 25%;}
-                31% {width: 31%;}
-                37% {width: 37%;}
-                43% {width: 43%;}
-                49% {width: 48%;}
-                55% {width: 55%;}
-                61% {width: 60.5%;}
-                67% {width: 66.5%;}
-                73% {width: 74%;}
-                79% {width: 81%;}
-                85% {width: 87%;}
-                91% {width: 94%;}
-                100% {width: 100%;}
-            }
-    }
-        
+       
 
     .controller {
         position: absolute;bottom: 20%; left: 7%; z-index: 500;width: 500px;height: 87px;
         .swiper-button-prev, .swiper-button-next {position: static;}
-
         
         .swiper-button-wrap{position: relative;z-index: 20;background: grey;}
         .swiper-button-prev, .swiper-button-next, .play_stop {
@@ -405,9 +398,7 @@
     
         .controller {
             bottom: 313px; left: 47px;width: 204px;height: 47px;
-            .swiper-button-prev, .swiper-button-next, .play_stop {
-                width: 48px; height: 47px;
-            }
+            .swiper-button-prev, .swiper-button-next, .play_stop {width: 48px; height: 47px;}
             .swiper-button-prev, .swiper-button-next {
                 padding: 3px;border: 2px solid #fff;
             }
@@ -614,21 +605,19 @@
         .slide2 .txtbox h3 {padding-bottom: 13px;}
         .slide3 {
             .simpleExplan {
-                left: 45px; top: 186px; width: 322px; height: 43px;font-size: 9px;
-            .simpleWrap {width: 117px;height: 54px;}
+                left: 45px; top: 194px; width: 348px; height: 43px;font-size: 9px;
+            .simpleWrap {width: 102px;height: 41px;}
             .cloud {
                 img {width: 36px; height: 25px;}
-                p {margin-top: 7px;width: 84px;}
+                p {margin-top: 7px;width: 101px;}
             }
             .discount {
-               margin-left: 42px;
-                img {width: 59px; height: 29px;margin-bottom: 9px;}
+               margin-left: 21px;
+                img {width: 45px; height: 22px;margin-bottom: 10px;}
             }
             .cameraChange {
-                margin-left: 42px;
-                img {
-                    width: 63px;height: 40px;margin-bottom: 5px;
-                }
+                margin-left: 21px;
+                img {width: 43px;height: 30px;margin-bottom: 3px;}
             }
             }
             .txtbox {
@@ -637,11 +626,8 @@
             }
         }
     
-        .swiper-pagination{
-            top: 100px; left: 7%; bottom: auto; font-size: 33px;letter-spacing: 0.2rem;font-weight: 700;width: auto; height: auto;
-        }
+        .swiper-pagination{ left: 7%;}
         .loadingWrap {
-            position: relative; width: 240px;height: 2px; 
             .loadingBar {
                 width: 240px;height: 1px;background-color: #fff;position: absolute; top: 118.5px; left: 180px;
             }
@@ -654,46 +640,117 @@
     
         .controller {
             bottom: 66px; left: 180px;width: 204px;height: 44px;
-            .swiper-button-prev, .swiper-button-next, .play_stop {
-                width: 45px; height: 44px;
-            }
-            .swiper-button-prev, .swiper-button-next {
-                padding: 3px;border: 2px solid #fff;
-            }
+            .swiper-button-prev, .swiper-button-next, .play_stop {width: 45px; height: 44px;}
             .swiper-button-next {margin-left: 101px;}
-            .swiper-button-prev {
-                background-image: url("../img/icon/prev_768.svg");}
-            .swiper-button-next {
-                background-image: url("../img/icon/next_768.svg");}
             .play_stop {right: 80px; }
-            .pause {background-image: url("../img/icon/pause_768.svg");}
         }
         &.right{
             .swiper-slide .txtbox {left: auto; right: 7%;text-align: right;}
             .swiper-pagination{right: 7%;left: auto;}
+            /* js에서 .right 없애기 */
         }
     }
 
     #cnt2 {
         .newbie {
+            @include bgSize(cover);
+            background: url("../img/main/m_cnt2_newbie_1x.png") no-repeat left;
             .newbieTxt {
-                > strong {top: 148px; left: 39px; font-size: 26px;line-height: 32px;}
+                > strong {top: 60px; left: 25px; font-size: 35px;line-height: 32px;}
             }
             .detailWrap {
-                top: 149.5px; width: 516px;
+                padding-top: 155.5px; 
                 .newbieDetail {
+                    padding-left: 66px;
                     > h3 {
-                        font-size: 31px;line-height: 42px;padding-bottom: 25px;margin-top: 57.5px;
-                        &::before {top: -57.5px;width: 514px;}
+                        font-size: 25px;line-height: 26px;padding-bottom: 18px;margin-top: 57.5px;
+                        &::before {top: -57.5px;width: 365px;}
                     }
-                    > p {font-size: 14px;line-height: 19px;padding-bottom: 58.4px;}
+                    > p {
+                        font-size: 13px;line-height: 18px;padding-bottom: 52.6px;
+                        &:nth-child(1) {width:307px;}
+                        &:nth-child(2) {width:317px;}
+                        &:nth-child(3) {width:300px;}
+                        &:nth-child(4) {width:296px;}
+                        &:nth-child(5) {width:323px;}
+                    }
                     &:first-child {
-                        h3 {margin-top: 58px;}
+                        h3 {margin-top: 57.3px;}
                     }
-                    &:last-child { p {padding-bottom: 53.3px;}}
+                    &:last-child { p {padding-bottom: 52.5px;}}
                 }
                 
             }
+        }
+    }
+
+    #cnt3 {
+        .camerasWrap {left: -51px;top: -7px;}
+        .camera {
+            @include transform(skewX(0) skewY(-5deg));
+            width: 100%;height: 34.3333%;
+            &::before {@include filter(blur(1px));}
+            .cameras {
+                top: 28%;
+                &.cameraR {
+                    @include transform(skewX(0) skewY(5deg) translateX(-50%)/*  translateX(-80px)*/);
+                }
+                &.cameraL {
+                    @include transform(skewX(0) skewY(5deg) translateX(-50%)/*  translateX(80px) */);
+                }
+                &.cameraD {
+                    @include transform(skewX(0) skewY(5deg) translateX(-50%)/*  translateY(-80px) */);
+                }
+            }
+        }
+        #camera1 {
+            top: -32px; left: -17px; width: 117%;
+            img {width: 141px;height: 141px;left: 282px;}
+        }
+        #camera2 {
+            top: 29.3333%; left:0; height:41%;
+            img {
+                @include transform(skewX(0) skewY(5deg));
+                width: 189px;height: 134px;left: 36%;}
+            a {
+                @include transform(skewX(0) skewY(5deg));
+                width: 119px; height: 27px; line-height: 27px; bottom: 86px; left: 210px; font-size: 8px;
+            }
+        }
+        #camera3 {
+            top: 70%; left: 0; 
+            img {
+                @include transform(skewX(0) skewY(5deg));
+                width: 118px;height: 139px;left: 199px;}
+        }
+    }
+
+    #cnt4 {
+        height: 908px;overflow:hidden;
+        .category {
+            width: 100%; height: 100%;background:none;
+            > p {font-size: 13px;padding-bottom: 7px;padding-top: 68px;}
+            > strong {font-size: 26px;}
+            .categoryWrap {
+                position: relative; display: block; float: left; padding-top: 149px; width: 50%;
+                .otherWrap {
+                    padding-right: 25px;position: relative;
+                    a {
+                        display: block; margin-bottom: 7.5px;width: 306px; height :347px;
+                        .hoverImg {
+                            width: 306px; height :347px;margin-bottom: 7.5px;left:37px;
+                        }
+                    }
+                    &:first-child {padding-left: 37px;}
+                }
+                h4 {font-size: 21px;padding-bottom: 18.5px;}
+                p {font-size: 18px;line-height: 26px;}
+                /* &:first-child > div {padding-left : 37px;} */
+                &:nth-of-type(2),&:nth-of-type(5) {padding-top: 148px;}
+                &:nth-of-type(3),&:nth-of-type(6) {padding-top: 0;}
+                &:nth-of-type(3n) > div {padding-right: 25px;}
+            }
+            
         }
     }
 }

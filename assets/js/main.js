@@ -37,6 +37,10 @@ $(document).ready(function(){
                 pagination: {
                     el: '.swiper-pagination',
                     type: 'fraction',
+                    renderFraction: function (currentClass, totalClass) {
+                        console.log(currentClass, totalClass);
+                        return '<span class="' + currentClass + '"></span>' + '<span class="' + totalClass + '"></span>';
+                    },
                 },
                 autoplay: {
                     delay: 16000,
@@ -49,13 +53,21 @@ $(document).ready(function(){
                 },
                 //현재 이벤트에 특정 이벤트를 넣고 싶은 경우
                 on: {
+                    init: function () {//로딩바 시작
+                        $(".swiper-progress-bar").removeClass("animate active").addClass("animate active");
+                    },
                     slideChangeTransitionStart: function (swiper) { 
                         //활성화된 슬라이드에 사용자지정속성인 data-swiper-slide-index를 가져와서 오른쪽 위치만 지정한다
                         var tgIdx = $('#cnt1 .swiper-slide-active').data("swiper-slide-index");
                         console.log(tgIdx);  //0,1,2
                         if (tgIdx === 1) $('#cnt1').addClass('right');
                         else $('#cnt1').removeClass('right');
+
+                        $(".swiper-progress-bar").removeClass("animate active").addClass("active");
                     },
+                    slideChangeTransitionEnd: function () {//슬라이더 전환종료 로딩바 제어
+                        $(".swiper-progress-bar").eq(0).addClass("animate");
+                    }
                 },
                 //접근성
                 a11y: {

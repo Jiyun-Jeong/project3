@@ -276,5 +276,22 @@ body {
       padding-top: 2px;
       width: 112px;
       height: 44px; } }
+@media screen and (max-width: 414px) {
+  .max768 {
+    max-width: 100%;
+    padding: 0 20px; }
+
+  .fixedBtn {
+    width: 109px;
+    height: 100px;
+    bottom: 25px;
+    right: 20px; }
+    .fixedBtn .goUpBtn {
+      width: 44px;
+      height: 44px; }
+    .fixedBtn .chattingBtn {
+      padding-top: 2px;
+      width: 112px;
+      height: 44px; } }
 
 /*# sourceMappingURL=common.css.map */
