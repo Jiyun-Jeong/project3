@@ -369,7 +369,34 @@
         }
 
 
-                //footer
-
+        //footer
+        #footer {
+            height: 80%;
+            .foot {
+                width: 100%;height: 100%;
+                > a {padding-bottom: 17px;}
+                .brandInfo {
+                    div.info + div.info {padding-left: 68px;}
+                    &::after {width: 700px; left: -3.5px;}
+                }
+                .brandInfo {padding-left: 17px;padding-top: 40.5px;width: 686px; height: 465px;}
+                .programInfo {padding-top: 45px; top: 187px; right: 66px;}
+                .closest {
+                    padding-left: 0;left: -20px;
+                    img {width: 27px;height: 27px;}
+                }
+                .copyright {left: calc(50% - 124.745px);}
+                .foot_icon {
+                    height: 31px; width: 100px;right: 20px;bottom: 32px;
+                    ul {
+                        button {width: 26.5px;height: 26.5px; }
+                        a {padding-right: 4px;
+                            img {width: 36px; height: 36px;}
+                        }
+                    }
+        
+                }
+            }
+        }
 }
     

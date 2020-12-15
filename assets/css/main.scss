@@ -729,11 +729,14 @@
     }
 
     #cnt4 {
-        height: 908px;overflow:hidden;
+        height: auto;overflow:hidden;
         .category {
             width: 100%; height: 100%;background:none;
             > p {font-size: 13px;padding-bottom: 7px;padding-top: 68px;}
             > strong {font-size: 26px;}
+            .categoryOuterWrap {
+                height: 347px;width: 1961px;
+            }
             .categoryWrap {
                 position: relative; display: block; float: left; padding-top: 149px; width: 50%;
                 .otherWrap {
@@ -764,7 +767,7 @@
             > strong { font-size: 26px;left: 29px; top: 89px;width: 71px;height: 35px;}
             > a {top: 98px;right: 31px; width: 48px;height: 18px;}
             .newsCntWrap {
-                width: 414px;height: 785px;padding: 85px 40px 0; 
+                width: 414px;height: auto;padding: 85px 40px 0; 
                 ul li a{
                     height: 181px;
                     .category{font-size: 14px; padding-bottom: 16.5px;padding-top: 48.5px;}
@@ -784,11 +787,13 @@
     }
 
     #cnt6 {
+        height: 70vh;
         .video {
             .marquee {margin-bottom:85px;}
             .marquee p:after {padding-right:50px;}
             .marquee p {padding-left:450px;}
             .videoWrap {
+                @include border-radius(48px);
                 border: 3px solid #707070;width: 388px;height: 224px;margin: 0 auto;
                 .videoInner {
                     padding-left: 56px;padding-top: 27px;
@@ -799,11 +804,31 @@
                             padding-left: 15px;border: none;
                             &:first-child {width: 273px;height: 152px;}
                     }
-                    a {top: 31px; right: 56px; font-size: 5px;}
+                    a {top: 30px; right: 42px; font-size: 5px;}
                   }
                 }
             }
         }
     }
 
+    #cnt7 {
+        height: 65vh;
+        .insta {
+            padding-top: 59px;
+            strong {font-size: 26px;padding-left: 21px;}
+            .instaOuterWrap {width: 525px;height: 295.2px;/* overflow: hidden; */}
+            .instaWrap {
+                float: left;overflow: auto;
+                a {
+                    padding-top: 9px; padding-right: 13px;
+                    &:first-child {padding-left: 55.8px;}
+                    &:nth-child(5n) {padding-left: 0;}
+                }
+                img {
+                    width: 144.2px;height: 144.2px;
+                    /* 호버넣기 */                    
+                }
+            }
+        }
+    }
 }

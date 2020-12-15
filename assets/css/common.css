@@ -218,8 +218,8 @@ body {
     padding: 0 50px; } }
 @media screen and (max-width: 1440px) {
   .discover_btn {
-    width: 29.5987012987vw;
-    height: 6.6701298701vw; } }
+    width: 55.0507246377vw;
+    height: 12.4057971014vw; } }
 .fixedBtn {
   -webkit-transition: opacity 0.3s;
   -moz-transition: opacity 0.3s;
@@ -261,6 +261,10 @@ body {
   .max1440 {
     max-width: 100%;
     padding: 0 50px; } }
+@media screen and (max-width: 1080px) {
+  .max1440 {
+    max-width: 100%;
+    padding: 0 50px; } }
 @media screen and (max-width: 768px) {
   .max768 {
     max-width: 100%;
@@ -277,6 +281,10 @@ body {
       width: 112px;
       height: 44px; } }
 @media screen and (max-width: 414px) {
+  .max1440 {
+    max-width: auto;
+    padding: 0 0; }
+
   .max768 {
     max-width: 100%;
     padding: 0 20px; }

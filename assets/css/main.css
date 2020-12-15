@@ -1279,7 +1279,7 @@
       left: 199px; }
 
   #cnt4 {
-    height: 908px;
+    height: auto;
     overflow: hidden; }
     #cnt4 .category {
       width: 100%;
@@ -1291,6 +1291,9 @@
         padding-top: 68px; }
       #cnt4 .category > strong {
         font-size: 26px; }
+      #cnt4 .category .categoryOuterWrap {
+        height: 347px;
+        width: 1961px; }
       #cnt4 .category .categoryWrap {
         position: relative;
         display: block;
@@ -1345,7 +1348,7 @@
         height: 18px; }
       #cnt5 .newsWrap .newsCntWrap {
         width: 414px;
-        height: 785px;
+        height: auto;
         padding: 85px 40px 0; }
         #cnt5 .newsWrap .newsCntWrap ul li a {
           height: 181px; }
@@ -1375,36 +1378,67 @@
               font-size: 13px;
               padding-bottom: 42.5px; }
 
-  #cnt6 .video .marquee {
-    margin-bottom: 85px; }
-  #cnt6 .video .marquee p:after {
-    padding-right: 50px; }
-  #cnt6 .video .marquee p {
-    padding-left: 450px; }
-  #cnt6 .video .videoWrap {
-    border: 3px solid #707070;
-    width: 388px;
-    height: 224px;
-    margin: 0 auto; }
-    #cnt6 .video .videoWrap .videoInner {
-      padding-left: 56px;
-      padding-top: 27px; }
-      #cnt6 .video .videoWrap .videoInner > strong {
-        font-size: 16px;
-        padding-right: 215px; }
-      #cnt6 .video .videoWrap .videoInner .iframe {
-        width: 273px;
-        height: 152px;
-        margin-top: 8px; }
-        #cnt6 .video .videoWrap .videoInner .iframe iframe {
-          padding-left: 15px;
-          border: none; }
-          #cnt6 .video .videoWrap .videoInner .iframe iframe:first-child {
-            width: 273px;
-            height: 152px; }
-        #cnt6 .video .videoWrap .videoInner .iframe a {
-          top: 31px;
-          right: 56px;
-          font-size: 5px; } }
+  #cnt6 {
+    height: 70vh; }
+    #cnt6 .video .marquee {
+      margin-bottom: 85px; }
+    #cnt6 .video .marquee p:after {
+      padding-right: 50px; }
+    #cnt6 .video .marquee p {
+      padding-left: 450px; }
+    #cnt6 .video .videoWrap {
+      -webkit-border-radius: 48px;
+      -moz-border-radius: 48px;
+      border-radius: 48px;
+      border: 3px solid #707070;
+      width: 388px;
+      height: 224px;
+      margin: 0 auto; }
+      #cnt6 .video .videoWrap .videoInner {
+        padding-left: 56px;
+        padding-top: 27px; }
+        #cnt6 .video .videoWrap .videoInner > strong {
+          font-size: 16px;
+          padding-right: 215px; }
+        #cnt6 .video .videoWrap .videoInner .iframe {
+          width: 273px;
+          height: 152px;
+          margin-top: 8px; }
+          #cnt6 .video .videoWrap .videoInner .iframe iframe {
+            padding-left: 15px;
+            border: none; }
+            #cnt6 .video .videoWrap .videoInner .iframe iframe:first-child {
+              width: 273px;
+              height: 152px; }
+          #cnt6 .video .videoWrap .videoInner .iframe a {
+            top: 30px;
+            right: 42px;
+            font-size: 5px; }
+
+  #cnt7 {
+    height: 65vh; }
+    #cnt7 .insta {
+      padding-top: 59px; }
+      #cnt7 .insta strong {
+        font-size: 26px;
+        padding-left: 21px; }
+      #cnt7 .insta .instaOuterWrap {
+        width: 525px;
+        height: 295.2px;
+        /* overflow: hidden; */ }
+      #cnt7 .insta .instaWrap {
+        float: left;
+        overflow: auto; }
+        #cnt7 .insta .instaWrap a {
+          padding-top: 9px;
+          padding-right: 13px; }
+          #cnt7 .insta .instaWrap a:first-child {
+            padding-left: 55.8px; }
+          #cnt7 .insta .instaWrap a:nth-child(5n) {
+            padding-left: 0; }
+        #cnt7 .insta .instaWrap img {
+          width: 144.2px;
+          height: 144.2px;
+          /* 호버넣기 */ } }
 
 /*# sourceMappingURL=main.css.map */
