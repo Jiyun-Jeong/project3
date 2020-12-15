@@ -259,7 +259,7 @@
                 @include transition(all 0.5s);
                 display: block;height: 198px;
                 &::after{content: "";display: block;clear: both;}
-                .category{font-size: 22px;color: $lightblue; font-weight: 700;color: $lightblue;padding-bottom: 15px;padding-top: 73.5px;}
+                .category{font-size: 22px;color: $lightblue; font-weight: 700;padding-bottom: 15px;padding-top: 73.5px;}
                 h5{float: left;font-size: 32px;padding-bottom: 37px;}
                 .txt{display: none;}
                 .date{float: right;}
@@ -756,8 +756,54 @@
             
         }
     }
-}
 
-@media screen and (max-width: 360px) {
+    #cnt5 {
+        height: 90vh;
+        .newsWrap {
+            width: 414px;height: 985px;padding-top: 56.5px;
+            > strong { font-size: 26px;left: 29px; top: 89px;width: 71px;height: 35px;}
+            > a {top: 98px;right: 31px; width: 48px;height: 18px;}
+            .newsCntWrap {
+                width: 414px;height: 785px;padding: 85px 40px 0; 
+                ul li a{
+                    height: 181px;
+                    .category{font-size: 14px; padding-bottom: 16.5px;padding-top: 48.5px;}
+                    .txt {width: 333px;font-size: 12px;}
+                    h5{margin-top:44.5px;font-size: 20px;padding-bottom: 26px;}
+                    .date{float: left;font-size: 13px;}
+                    .img{display:none;}
+                    p {display: none;}
+                    &.on{
+                        height: 181px;
+                        .txt{display: none;}
+                        .date{font-size: 13px;padding-bottom: 42.5px;}
+                    }
+                }
+            }
+        }
+    }
+
+    #cnt6 {
+        .video {
+            .marquee {margin-bottom:85px;}
+            .marquee p:after {padding-right:50px;}
+            .marquee p {padding-left:450px;}
+            .videoWrap {
+                border: 3px solid #707070;width: 388px;height: 224px;margin: 0 auto;
+                .videoInner {
+                    padding-left: 56px;padding-top: 27px;
+                    > strong { font-size: 16px;padding-right: 215px;}
+                    .iframe {
+                        width:273px; height: 152px;margin-top: 8px;
+                        iframe {
+                            padding-left: 15px;border: none;
+                            &:first-child {width: 273px;height: 152px;}
+                    }
+                    a {top: 32px; right: 56px; font-size: 5px;}
+                  }
+                }
+            }
+        }
+    }
 
 }
