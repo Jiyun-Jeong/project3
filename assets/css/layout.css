@@ -527,6 +527,7 @@
           height: 7.4305555556vw;
           padding-top: 0.8916666667vw; }
       #mHeader .mUtil .mgnb_wrap #mGnb {
+        display: none;
         background: #fff;
         padding: 36.2611111111vw 0 128.9944444444vw; }
         #mHeader .mUtil .mgnb_wrap #mGnb > ul > li {
@@ -577,8 +578,7 @@
     padding-top: 12.0375vw; }
     #footer .foot {
       width: 100%;
-      height: 100%;
-      /* .programInfo {padding-top: vw-calc(30);} */ }
+      height: 100%; }
       #footer .foot .brandInfo {
         padding: 10.8486111111vw 4.1611111111vw 0 4.1611111111vw;
         width: 109.3777777778vw;

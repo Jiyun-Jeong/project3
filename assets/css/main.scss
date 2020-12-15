@@ -599,7 +599,7 @@
             #videoBg {width: 100%; height: 100vh; /* min-width: 100%; */}
             &.slide2 {background-image: url("../img/main/m_index1_02_414.jpg");}
             &.slide3 {background-image: url("../img/main/m_index1_03_414.jpg");}
-            .txtbox{top: vw-calc(545);left: 7%;width: vw-calc(639);height: vw-calc(140);}
+            .txtbox{top: vw-calc(545);left: 7%;width: vw-calc(400);height: vw-calc(140);}
             .txtbox p {font-size: vw-calc(16);letter-spacing: vw-calc(0.43);line-height: vw-calc(22);}
             .txtbox h3 {font-size: vw-calc(26);padding-bottom: vw-calc(39);line-height: vw-calc(35);}
             .txtbox p:nth-child(3) {font-size: vw-calc(16);padding-bottom: vw-calc(60);letter-spacing: vw-calc(0.37);}
@@ -707,23 +707,24 @@
         }
         #camera1 {
             top: vw-calc(-32); left: vw-calc(-17); width: 117%;
-            img {width: vw-calc(141);height: vw-calc(141);left: vw-calc(282);}
+            img {width: vw-calc(141);height: vw-calc(141);left: 55%;}
         }
         #camera2 {
             top: 29.3333%; left:0; height:41%;
             img {
                 @include transform(skewX(0) skewY(5deg));
-                width: vw-calc(189);height: vw-calc(134);left: 36%;}
+                width: vw-calc(189);height: vw-calc(134);left: 33%;}
             a {
                 @include transform(skewX(0) skewY(5deg));
-                width: vw-calc(119); height: vw-calc(27); line-height: vw-calc(27); bottom: vw-calc(86); left: vw-calc(210); font-size: vw-calc(8);
+                width: vw-calc(119); height: vw-calc(27); line-height: vw-calc(27); bottom: vw-calc(50); left: 43%; font-size: vw-calc(8);
             }
         }
         #camera3 {
+            @include transform(transalteY(vw-calc(-33)));
             top: 70%; left: 0; 
             img {
-                @include transform(skewX(0) skewY(5deg));
-                width: vw-calc(118);height: vw-calc(139);left: vw-calc(199);}
+                @include transform(skewX(0) trskewY(5deg) translateY(vw-calc(-33)));
+                width: vw-calc(118);height: vw-calc(139);left: 44%;}
         }
     }
 
@@ -759,13 +760,14 @@
     }
 
     #cnt5 {
-        height: auto;width: 100%;
+        height: 95vh;width: 100%;
         .newsWrap {
             width: vw-calc(414);height: vw-calc(985);padding-top: vw-calc(56.5);
-            > strong { font-size: vw-calc(26);left: vw-calc(29); top: vw-calc(89);width: vw-calc(71);height: vw-calc(35);}
-            > a {top: vw-calc(98);right: vw-calc(31); width: vw-calc(48);height: vw-calc(18);}
+            > strong { font-size: vw-calc(26);left: vw-calc(29); top: vw-calc(85);width: vw-calc(71);height: vw-calc(35);}
+            > a {top: vw-calc(98);right: vw-calc(100); width: vw-calc(48);height: vw-calc(18);}
             .newsCntWrap {
-                width: vw-calc(414);height: auto;padding: vw-calc(85) vw-calc(40) 0; 
+                width: vw-calc(350);height: auto;padding: vw-calc(85) vw-calc(40) 0; 
+                ul li {height: vw-calc(150);}
                 ul li a{
                     height: vw-calc(181);
                     .category{font-size: vw-calc(14); padding-bottom: vw-calc(16.5);padding-top: vw-calc(48.5);}
@@ -785,25 +787,25 @@
     }
 
     #cnt6 {
-        height: auto;padding-bottom: 100px;
+        height: auto;padding-bottom: vw-calc(100);
         .video {
             
-            .marquee {margin-bottom:85px;}
-            .marquee p:after {padding-right:50px;}
-            .marquee p {padding-left:450px;}
+            .marquee {margin-bottom: vw-calc(85);}
+            .marquee p:after {padding-right: vw-calc(50);}
+            .marquee p {padding-left:vw-calc(450);}
             .videoWrap {
                 @include border-radius(48px);
-                border: 3px solid #707070;width: 388px;height: 224px;margin: 0 auto;
+                border: vw-calc(3) solid #707070;width: vw-calc(300);height: vw-calc(224);margin: 0 auto;
                 .videoInner {
-                    padding-left: 56px;padding-top: 27px;
-                    > strong { font-size: 16px;padding-right: 215px;}
+                    padding-left: vw-calc(56);padding-top: vw-calc(27);
+                    > strong { font-size: vw-calc(16);padding-right: vw-calc(215);}
                     .iframe {
-                        width:273px; height: 152px;margin-top: 8px;
+                        width:vw-calc(273); height: vw-calc(152);margin-top: vw-calc(8);
                         iframe {
-                            padding-left: 15px;border: none;
-                            &:first-child {width: 273px;height: 152px;}
+                            padding-left: vw-calc(15);border: none;
+                            &:first-child {width: vw-calc(273);height: vw-calc(152);}
                     }
-                    a {top: 30px; right: 42px; font-size: 5px;}
+                    a {top: vw-calc(30); right: vw-calc(42); font-size: vw-calc(5);}
                   }
                 }
                 
@@ -814,18 +816,18 @@
     #cnt7 {
         height: auto;/* padding-bottom */
         .insta {
-            padding-top: 59px;height: 100%;
-            strong {font-size: 26px;padding-left: 21px;}
-            .instaOuterWrap {width: 550px;height: 295.2px;overflow-x: auto;}
+            padding-top: vw-calc(59);height: 100%;
+            strong {font-size: vw-calc(26);padding-left: vw-calc(21);}
+            .instaOuterWrap {width: vw-calc(550);height: vw-calc(295.2);overflow-x: auto;}
             .instaWrap {
-                width: 2550px;
+                width: vw-calc(1615);
                 a {
-                    padding-top: 9px; padding-right: 13px;
-                    &:first-child {padding-left: 55.8px;}
+                    padding-top: vw-calc(9); padding-right: vw-calc(13);
+                    &:first-child {padding-left: vw-calc(55.8);}
                     &:nth-child(5n) {padding-left: 0;}
                 }
                 img {
-                    width: 144.2px;height: 144.2px;
+                    width: vw-calc(144.2);height: vw-calc(144.2);
                     /* 호버넣기 */                    
                 }
             }

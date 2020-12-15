@@ -341,7 +341,7 @@
                         .mShopping {width: vw-calc(25); height: vw-calc(25);}
                         .mClose {width: vw-calc(25); height: vw-calc(25);padding-top: vw-calc(3);}
                     }
-                    #mGnb {
+                    #mGnb {display: none;
                         background: #fff;padding: vw-calc(122) 0 vw-calc(434);
                         > ul > li {
                             font-size: vw-calc(30); font-weight: 700;
@@ -392,7 +392,6 @@
                         strong {font-size: vw-calc(11);}
                     }
                 }
-                /* .programInfo {padding-top: vw-calc(30);} */
                 .closest {
                     width: auto;padding-left: 0;left: 0;bottom: vw-calc(-130);
                     img {width: vw-calc(22);height: vw-calc(22);display: none;}
