@@ -35,4 +35,28 @@ $(document).ready(function (){
             if( !$('#pcGnb a').is(':focus') ) _pcGnb.mouseleave();
         }, 10);
     });
+
+    //2) 언어 선택 버튼
+    var _lang = $('#header .lang > button');
+
+    _lang.next().hide();
+    _lang.on('mouseenter click', function () {
+        
+        $(this).next().show();
+        
+        $('.lang').on('mouseleave', function () {
+            console.log(_lang);
+            $(this).children('ul').hide();
+        });
+
+        $('.lang').find('button:first, a:last').on('blur', function () {
+            setTimeout(function () {
+                if( !$('#header .lang a, #header .lang button').is(':focus')) _lang.mouseleave();
+            }, 10);
+        });
+
+    });
+
+
+
 });

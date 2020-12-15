@@ -1,4 +1,3 @@
-@charset "UTF-8";
 #wrap {
   min-width: 20rem; }
 
@@ -31,11 +30,11 @@
     width: 201px;
     height: 34px;
     line-height: 34px;
-    /*.bg_white {background: #fff;}  모바일용에서 따로 만들기 잠시 가림 */ }
+    z-index: 900; }
     #header .util > div {
       float: left; }
     #header .util > div + div {
-      padding-left: 80px; }
+      padding-left: 30px; }
     #header .util .search .search_wrap {
       display: none;
       background: #fff;
@@ -46,9 +45,11 @@
         width: 34px;
         height: 34px; }
     #header .util .lang > ul {
-      margin-top: 27px; }
+      margin-top: 27px;
+      position: absolute;
+      top: 34px;
+      right: 59px; }
       #header .util .lang > ul li {
-        display: none;
         width: 80px;
         height: 44px;
         line-height: 44px;
@@ -116,13 +117,14 @@
 
 #footer {
   background: #000;
-  height: 842px;
+  height: auto;
   width: 100%;
-  padding-top: 80px; }
+  padding-top: 80px;
+  padding-bottom: 25px; }
   #footer .foot {
     position: relative;
-    width: 1697px;
-    height: 667px;
+    width: 88.38541666666667vw;
+    height: 34.73958333333333vw;
     text-align: center; }
     #footer .foot a {
       display: block;
@@ -147,11 +149,11 @@
       float: left;
       text-align: left; }
     #footer .foot .brandInfo {
-      padding-left: 200px;
+      padding-left: 10.4166666667vw;
       position: relative;
       padding-top: 60.5px;
-      width: 1700px;
-      height: 337px;
+      width: 88.5416666667vw;
+      height: 17.5520833333vw;
       margin: 0; }
     #footer .foot .programInfo {
       right: 0;
@@ -208,12 +210,11 @@
       right: 30px;
       width: 201px;
       height: 34px;
-      line-height: 34px;
-      /*.bg_white {background: #fff;}  모바일용에서 따로 만들기 잠시 가림 */ }
-      #header .util > div + div {
-        padding-left: 74px; }
+      line-height: 34px; }
       #header .util .lang > ul {
-        margin-top: 27px; }
+        margin-top: 27px;
+        top: 34px;
+        right: 59px; }
         #header .util .lang > ul li {
           display: none;
           width: 80px;
@@ -281,58 +282,63 @@
   #mHeader {
     display: none; }
 
-  #footer .foot {
-    width: 1655px; }
-    #footer .foot .brandInfo div.info + div.info {
-      padding-left: 190px; }
-    #footer .foot .brandInfo::after {
-      width: 1590px;
-      left: 30.5px; }
-    #footer .foot .brandInfo {
-      padding-left: 170px;
-      width: 1470px;
-      height: 428px; }
-    #footer .foot .closest {
-      padding-left: 28px;
-      bottom: -20px; }
-    #footer .foot .foot_icon {
-      height: 31px;
-      width: 231px;
-      right: 80px; } }
+  #footer {
+    padding-bottom: 25px; }
+    #footer .foot {
+      width: auto; }
+      #footer .foot .brandInfo div.info + div.info {
+        padding-left: 190px; }
+      #footer .foot .brandInfo::after {
+        width: 1590px;
+        left: 30.5px; }
+      #footer .foot .brandInfo {
+        padding-left: 170px;
+        width: 1470px;
+        height: 428px; }
+      #footer .foot .closest {
+        padding-left: 28px;
+        bottom: -20px; }
+      #footer .foot .foot_icon {
+        height: 31px;
+        width: 231px;
+        right: 80px; } }
 @media screen and (max-width: 1520px) {
-  #footer .foot {
-    width: 1403px; }
-    #footer .foot a {
-      padding-bottom: 20px; }
-    #footer .foot .brandInfo div.info + div.info {
-      padding-left: 170px; }
-    #footer .foot .brandInfo::after {
-      width: 1386px;
-      left: 16.5px; }
-    #footer .foot .brandInfo {
-      padding-left: 95px;
-      padding-top: 50.5px;
-      width: 1315px;
-      height: 428px; }
-    #footer .foot .closest {
-      padding-left: 27px;
-      bottom: -18px; }
-    #footer .foot .copyright {
-      left: calc(50% - 124.745px); }
-    #footer .foot .foot_icon {
-      height: 31px;
-      width: 231px;
-      right: 0; }
-      #footer .foot .foot_icon ul button {
-        width: 34px; }
-      #footer .foot .foot_icon ul a {
-        padding-right: 9px; }
-        #footer .foot .foot_icon ul a img {
-          width: 34px;
-          height: 34px; } }
+  #footer {
+    padding-bottom: 25px; }
+    #footer .foot {
+      width: 1403px; }
+      #footer .foot a {
+        padding-bottom: 20px; }
+      #footer .foot .brandInfo div.info + div.info {
+        padding-left: 170px; }
+      #footer .foot .brandInfo::after {
+        width: 1386px;
+        left: 16.5px; }
+      #footer .foot .brandInfo {
+        padding-left: 95px;
+        padding-top: 50.5px;
+        width: auto;
+        height: 428px; }
+      #footer .foot .closest {
+        padding-left: 27px;
+        bottom: -18px; }
+      #footer .foot .copyright {
+        left: calc(50% - 124.745px); }
+      #footer .foot .foot_icon {
+        height: 31px;
+        width: 231px;
+        right: 0; }
+        #footer .foot .foot_icon ul button {
+          width: 34px; }
+        #footer .foot .foot_icon ul a {
+          padding-right: 9px; }
+          #footer .foot .foot_icon ul a img {
+            width: 34px;
+            height: 34px; } }
 @media screen and (max-width: 1440px) {
   #footer {
-    height: 750px; }
+    height: auto;
+    padding-bottom: 25px; }
     #footer .foot {
       width: 1200px;
       height: 650px; }
@@ -370,8 +376,7 @@
     height: 60px;
     line-height: 60px;
     width: 100%;
-    top: 0;
-    left: 0; }
+    top: 0; }
     #header .logo {
       width: 73px;
       padding-top: 8px;
@@ -392,13 +397,9 @@
       #header .util .search button {
         width: 21.5px;
         height: 21.5px; }
-      #header .util .search .search_wrap {
-        display: none;
-        width: 100%;
-        height: 50px; }
-        #header .util .search .search_wrap img {
-          width: 21.5px;
-          height: 21.5px; }
+      #header .util .search .search_wrap img {
+        width: 21.5px;
+        height: 21.5px; }
       #header .util .lang button {
         width: 38.5px; }
       #header .util .lang > ul {
@@ -419,42 +420,36 @@
       bottom: 60px;
       height: 40px;
       line-height: 40px; }
-    #header ul li ul li + li {
-      padding-left: 90px; }
+
+  ul li ul li + li {
+    padding-left: 90px; }
 
   #footer {
-    height: 750px; }
+    padding-bottom: 25px;
+    height: auto; }
     #footer .foot {
-      width: 700px;
-      height: 650px; }
+      width: 91.14583333333333vw; }
       #footer .foot > a {
         padding-bottom: 17px; }
       #footer .foot .brandInfo div.info + div.info {
         padding-left: 68px; }
       #footer .foot .brandInfo::after {
-        width: 700px;
-        left: -3.5px; }
-      #footer .foot .brandInfo {
-        padding-left: 17px;
-        padding-top: 40.5px;
-        width: 686px;
-        height: 465px; }
-      #footer .foot .programInfo {
-        padding-top: 45px;
-        top: 187px;
-        right: 66px; }
+        width: 100%;
+        left: 7px; }
+      #footer .foot .deviceInfo {
+        width: 173px; }
       #footer .foot .closest {
-        padding-left: 0;
+        padding-left: 40px;
         left: -20px; }
         #footer .foot .closest img {
           width: 27px;
           height: 27px; }
       #footer .foot .copyright {
-        left: calc(50% - 124.745px); }
+        left: calc(50% - 16.24283854166667vw/* 124.745px */); }
       #footer .foot .foot_icon {
         height: 31px;
         width: 100px;
-        right: 20px;
+        right: 0;
         bottom: 32px; }
         #footer .foot .foot_icon ul button {
           width: 26.5px;
@@ -473,77 +468,85 @@
     display: block !important;
     top: 0;
     left: 0;
-    height: 50px;
+    height: 14.8611111111vw;
     width: 100%;
     background: #000;
-    line-height: 50px;
+    line-height: 14.8611111111vw;
     text-align: center;
     z-index: 1000; }
     #mHeader .logo {
       position: absolute;
-      left: 9px;
+      left: 2.675vw;
       top: 0;
-      width: 55.6px;
-      height: 31.3px;
-      padding-top: 8.7px; }
+      width: 16.5255555556vw;
+      height: 9.3030555556vw;
+      padding-top: 2.5858333333vw; }
       #mHeader .logo a {
         -webkit-background-size: cover !important;
         -moz-background-size: cover !important;
         background-size: cover !important;
         display: block; }
         #mHeader .logo a img {
-          width: 55.6px;
-          height: 31.3px; }
+          width: 16.5255555556vw;
+          height: 9.3030555556vw; }
     #mHeader button.menu_open {
       position: absolute;
-      right: 16px;
-      top: 15px;
-      width: 25px;
-      height: 25px; }
+      right: 4.7555555556vw;
+      top: 4.4583333333vw;
+      width: 7.4305555556vw;
+      height: 7.4305555556vw; }
     #mHeader .mUtil {
-      display: none;
+      display: block;
       position: absolute;
       top: 0;
       right: 0;
-      width: 360px;
-      height: 100%;
+      width: 107vw;
+      height: auto;
       text-align: right;
       background-color: #fff;
       color: #000; }
       #mHeader .mUtil .mgnb_wrap .bg_white {
-        width: 100px;
-        height: 25px;
         position: absolute;
         top: 0;
-        right: 0; }
+        right: 0;
+        padding: 4.6069444444vw 5.4986111111vw 0 0;
+        width: 44.5833333333vw;
+        height: 14.8611111111vw; }
+        #mHeader .mUtil .mgnb_wrap .bg_white button {
+          padding-right: 2.9722222222vw; }
+          #mHeader .mUtil .mgnb_wrap .bg_white button:last-child {
+            padding-right: 0; }
         #mHeader .mUtil .mgnb_wrap .bg_white .mAccount {
-          width: 25px;
-          height: 25px; }
+          width: 7.4305555556vw;
+          height: 7.4305555556vw; }
         #mHeader .mUtil .mgnb_wrap .bg_white .mShopping {
-          width: 25px;
-          height: 25px; }
+          width: 7.4305555556vw;
+          height: 7.4305555556vw; }
+        #mHeader .mUtil .mgnb_wrap .bg_white .mClose {
+          width: 7.4305555556vw;
+          height: 7.4305555556vw;
+          padding-top: 0.8916666667vw; }
       #mHeader .mUtil .mgnb_wrap #mGnb {
-        background: #fff; }
+        background: #fff;
+        padding: 36.2611111111vw 0 128.9944444444vw; }
         #mHeader .mUtil .mgnb_wrap #mGnb > ul > li {
-          font-size: 30px;
+          font-size: 8.9166666667vw;
           font-weight: 700; }
           #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > a {
-            margin: 0 26px 0 0; }
-          #mHeader .mUtil .mgnb_wrap #mGnb > ul > li:first-child {
-            padding-top: 127px; }
+            margin: 0 7.7277777778vw 0 0; }
           #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li {
             display: none;
-            font-size: 20px;
+            font-size: 5.9444444444vw;
             font-weight: 500;
             background: lightgrey;
             color: #444;
-            padding: 25px 26px 0 0; }
+            padding: 7.4305555556vw 7.7277777778vw 0 0; }
             #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li:first-child {
-              padding-top: 19px; }
+              padding-top: 5.6472222222vw; }
             #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li:last-child {
-              padding-bottom: 19px; }
+              padding-bottom: 5.6472222222vw; }
             #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li > a {
-              padding-right: 10px; }
+              padding-right: 2.9722222222vw; }
             #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li:hover > a, #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li.on > a, #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li:focus > a {
               -webkit-transition: 0.3s;
               -moz-transition: 0.3s;
@@ -555,48 +558,121 @@
               -ms-transform: translateY(-100%);
               transform: translateY(-100%);
               color: #00E4F3; }
+      #mHeader .mUtil .mgnb_wrap .searchLang {
+        width: 100%;
+        height: 29.7222222222vw;
+        float: left;
+        padding-right: 7.7277777778vw; }
+        #mHeader .mUtil .mgnb_wrap .searchLang button {
+          float: right; }
+        #mHeader .mUtil .mgnb_wrap .searchLang .search_wrap {
+          display: none; }
+        #mHeader .mUtil .mgnb_wrap .searchLang .lang {
+          padding-right: 5.1716666667vw; }
+          #mHeader .mUtil .mgnb_wrap .searchLang .lang > ul {
+            display: none; }
 
   #footer {
-    height: 80%; }
+    height: auto;
+    padding-top: 12.0375vw; }
+    #footer .foot {
+      width: 100%;
+      height: 100%;
+      /* .programInfo {padding-top: vw-calc(30);} */ }
+      #footer .foot .brandInfo {
+        padding: 10.8486111111vw 4.1611111111vw 0 4.1611111111vw;
+        width: 109.3777777778vw;
+        height: 138.2083333333vw; }
+        #footer .foot .brandInfo div.info + div.info {
+          padding-left: 13.0777777778vw; }
+        #footer .foot .brandInfo::after {
+          width: 100%;
+          left: -1.0402777778vw; }
+      #footer .foot .info a {
+        font-size: 2.675vw;
+        padding-bottom: 3.5666666667vw; }
+        #footer .foot .info a strong {
+          font-size: 3.2694444444vw; }
+      #footer .foot .closest {
+        width: auto;
+        padding-left: 0;
+        left: 0;
+        bottom: -38.6388888889vw; }
+        #footer .foot .closest img {
+          width: 6.5388888889vw;
+          height: 6.5388888889vw;
+          display: none; }
+        #footer .foot .closest p {
+          font-size: 2.3777777778vw; }
+      #footer .foot .copyright {
+        font-size: 2.3777777778vw;
+        left: 0;
+        bottom: -39.8277777778vw; }
+      #footer .foot .foot_icon {
+        height: 9.2138888889vw;
+        width: 29.7222222222vw;
+        right: -3.8638888889vw;
+        bottom: -31.5055555556vw; }
+        #footer .foot .foot_icon ul button {
+          width: 7.8763888889vw;
+          height: 7.8763888889vw; }
+        #footer .foot .foot_icon ul a {
+          padding-right: 1.1888888889vw; }
+          #footer .foot .foot_icon ul a img {
+            width: 10.7vw;
+            height: 10.7vw; } }
+@media screen and (max-width: 360px) {
+  #header {
+    display: none; }
+
+  #footer {
+    height: 100vh;
+    padding-top: 12.0375vw; }
     #footer .foot {
       width: 100%;
       height: 100%; }
-      #footer .foot > a {
-        padding-bottom: 17px; }
-      #footer .foot .brandInfo div.info + div.info {
-        padding-left: 68px; }
-      #footer .foot .brandInfo::after {
-        width: 700px;
-        left: -3.5px; }
       #footer .foot .brandInfo {
-        padding-left: 17px;
-        padding-top: 40.5px;
-        width: 686px;
-        height: 465px; }
+        padding-left: vw-calc360(14);
+        padding-top: vw-calc360(36.5);
+        width: vw-calc360(320);
+        height: vw-calc360(465); }
+        #footer .foot .brandInfo div.info + div.info {
+          padding-left: vw-calc360(79); }
+        #footer .foot .brandInfo::after {
+          width: 100%;
+          left: vw-calc360(-3.5); }
+      #footer .foot .info a {
+        font-size: vw-calc360(9);
+        padding-bottom: vw-calc360(9); }
+        #footer .foot .info a strong {
+          font-size: vw-calc360(11); }
       #footer .foot .programInfo {
-        padding-top: 45px;
-        top: 187px;
-        right: 66px; }
+        padding: 0; }
       #footer .foot .closest {
         padding-left: 0;
-        left: -20px; }
+        left: 0;
+        bottom: vw-calc360(-88); }
         #footer .foot .closest img {
-          width: 27px;
-          height: 27px; }
+          width: vw-calc360(22);
+          height: vw-calc360(22);
+          display: none; }
+        #footer .foot .closest p {
+          font-size: vw-calc360(8); }
       #footer .foot .copyright {
-        left: calc(50% - 124.745px); }
+        font-size: vw-calc360(7);
+        bottom: vw-calc360(-87); }
       #footer .foot .foot_icon {
-        height: 31px;
-        width: 100px;
-        right: 20px;
-        bottom: 32px; }
+        height: vw-calc360(31);
+        width: vw-calc360(100);
+        right: vw-calc360(-13);
+        bottom: vw-calc360(-54); }
         #footer .foot .foot_icon ul button {
-          width: 26.5px;
-          height: 26.5px; }
+          width: vw-calc360(24);
+          height: vw-calc360(24); }
         #footer .foot .foot_icon ul a {
-          padding-right: 4px; }
+          padding-right: vw-calc360(3); }
           #footer .foot .foot_icon ul a img {
-            width: 36px;
-            height: 36px; } }
+            width: vw-calc360(36);
+            height: vw-calc360(36); } }
 
 /*# sourceMappingURL=layout.css.map */

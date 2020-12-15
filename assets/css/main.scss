@@ -55,25 +55,24 @@
     }
 
     .pagewrap{
-        position: absolute; top: 100px; left: 7%;width: 20%;height: 33px;z-index: 100;
+        position: absolute; top: 100px; right: 6%;width: 20%;height: 4px;z-index: 100;
     }
     .swiper-pagination{
         bottom: 0; font-size: 33px;font-weight: 700; line-height: 1;
         span{float: left;}
         span:last-child{float: right;}
     }
-    //길이나 위치는 제어하세요
     .swiper-progress-bar {
         position: absolute;left: 10%;top: 50%;width: 80%;display: block;z-index: 1;height: 2px;
-        .slide_progress-bar {
+        span.slide_progress-bar {
           position: absolute;height: 100%;background: #fff;top: 0;left: 0;width: 100%;opacity: 0;
-          &:after {content: "";position: absolute;top: 0;left: 0;background: red;width: 0;height: 100%;}
+          &:after {content: "";position: absolute;top: 0;left: 0;background: $lightblue;width: 0;height: 100%;}
         }
         &.active {
           .slide_progress-bar {opacity: 1;}
         }
         &.animate {
-          .slide_progress-bar:after {width: 100%;transition: width 5s linear;}
+          .slide_progress-bar:after {width: 100%;transition: width 16s linear;}
         }
       }
 
@@ -88,7 +87,6 @@
         
         .swiper-button-wrap{position: relative;z-index: 20;background: grey;}
         .swiper-button-prev, .swiper-button-next, .play_stop {
-            /* @include bgSize(cover); */
             background: no-repeat center; display: inline-block;width: 87px; height: 87px;
         }
         .swiper-button-next:after, .swiper-button-prev:after {display: none;}
@@ -116,7 +114,7 @@
 #cnt2 {
     position: relative; background: #000;color: #fff;
     .newbie {
-        position: relative; background: url("../img/main/cnt2_newbie_2x.png") no-repeat center;
+        position: relative; background: url("../img/main/t_cnt2_newbie_2x.png") no-repeat center;
         .newbieTxt {
             > strong {
                 position: absolute; top: 272px; left: 141px; font-size: 60px;font-weight: 700;line-height: 83px;z-index: 250;
@@ -189,7 +187,7 @@
             @include transform(skewX(5deg) translateX(-50%));
             @include border-radius(7px);
             @include transition(all 0.3s);
-            position: absolute;bottom: 302px; left: 50%; width: 255px;height: 56px;background-color: $darkgrey;line-height: 56px;font-size: 20px;z-index: 300;
+            position: absolute;bottom: 15.72916666666667vw/* 302px */; left: 50%; width: 255px;height: 56px;background-color: $darkgrey;line-height: 56px;font-size: 20px;z-index: 300;
             &:hover, &:focus {
                 @include linearGradient((#12C2E9, #096A8A, #000000));
             }
@@ -204,9 +202,10 @@
 #cnt4 {
     color: #000;width: 100%;background-color: #ebebeb;height: 2100px;
     .category {
-        position: relative; width: 1649px; height: 100%;text-align: center; margin: 0 auto; background: url("../img/main/GoProtxt.svg") no-repeat fixed center;background-size: 55.46875vw;
+        position: relative; width: 85.88541666666667vw/* 1649px */; height: auto;text-align: center; margin: 0 auto; background: url("../img/main/GoProtxt.svg") no-repeat fixed center;background-size: 55.46875vw;
         > p {color: #8e8e8e; font-size: 31px;font-weight: 700; padding-bottom: 15px;padding-top: 90px; }
         > strong { display: block; font-size: 60px;font-weight: 700;}
+        .categoryOuterWrap {width: 1649px;height:452px; }
         .categoryWrap {
             position: relative; display: block; float: left; text-align: left; padding-top: 68px;
             .otherWrap {
@@ -246,14 +245,14 @@
 #cnt5 {
     color: #000;background-color: #FCFCFC;height: 110vh;
     .newsWrap {
-        position: relative; font-weight: 700;text-align: center;width: 1540px;height: 875px;padding-top: 134px;margin: 0 auto;
+        position: relative; font-weight: 700;text-align: center;width: 75.75520833333333vw/* 1540px1454.5px */;height: 45.57291666666667/* 875px */;padding-top: 134px;margin: 0 auto;
         > strong { font-size: 60px;position: absolute; left: 35px; top: 134px;width: 162px;height: 60px;}
         > a {
             position: absolute;  font-size: 18px;top: 177px;right: 134px; width: 48px;height: 18px;text-decoration: underline;
             &:hover, &:focus {color: $lightblue;}
         }
         .newsCntWrap {
-            position: relative; width: 1454.5px;height: 746px;text-align: left;color: #333;padding: 85px 40px 0; 
+            position: relative; width: 100%;height: 38.85416666666667vw/* 746px */;text-align: left;color: #333;padding: 85px 40px 0; 
             ul li{border-top: 1px solid #707070;border-bottom: 1px solid #707070; position: relative;background: #FCFCFC;}
             ul li a{
                 @include transition(all 0.5s);
@@ -521,7 +520,7 @@
 
     #cnt5 {
         .newsWrap {
-            width: 765px;height: 860px;/* padding-left: 41.5px; */padding-top: 145.5px;
+            width: 100%;height: auto;/* padding-left: 41.5px; */padding-top: 145.5px;
             > strong { font-size: 26px;left: 50px; top: 145px;width: 70px;height: 26px;}
             > a {top: 140px;right: 70px; width: 48px;height: 18px;}
             .newsCntWrap {
@@ -600,52 +599,292 @@
             #videoBg {width: 100%; height: 100vh; /* min-width: 100%; */}
             &.slide2 {background-image: url("../img/main/m_index1_02_414.jpg");}
             &.slide3 {background-image: url("../img/main/m_index1_03_414.jpg");}
-            .txtbox{top: 545px;left: 7%;width: 639px;height: 140px;}
-            .txtbox p {font-size: 16px;letter-spacing: 0.43px;line-height: 22px;}
-            .txtbox h3 {font-size: 26px;padding-bottom: 39px;line-height: 35px;}
-            .txtbox p:nth-child(3) {font-size: 16px;padding-bottom: 60px;letter-spacing: 0.37px;}
+            .txtbox{top: vw-calc(545);left: 7%;width: vw-calc(639);height: vw-calc(140);}
+            .txtbox p {font-size: vw-calc(16);letter-spacing: vw-calc(0.43);line-height: vw-calc(22);}
+            .txtbox h3 {font-size: vw-calc(26);padding-bottom: vw-calc(39);line-height: vw-calc(35);}
+            .txtbox p:nth-child(3) {font-size: vw-calc(16);padding-bottom: vw-calc(60);letter-spacing: vw-calc(0.37);}
         }
-        .slide2 .txtbox h3 {padding-bottom: 13px;}
+        .slide2 .txtbox h3 {padding-bottom: vw-calc(13);}
         .slide3 {
             .simpleExplan {
-                left: 45px; top: 194px; width: 348px; height: 43px;font-size: 9px;
-            .simpleWrap {width: 102px;height: 41px;}
+                left: vw-calc(45); top: vw-calc(194); width: vw-calc(348); height: vw-calc(43);font-size: vw-calc(9);
+            .simpleWrap {width: vw-calc(102);height: vw-calc(41);}
             .cloud {
-                img {width: 36px; height: 25px;}
-                p {margin-top: 7px;width: 101px;}
+                img {width: vw-calc(36); height: vw-calc(25);}
+                p {margin-top: vw-calc(7);width: vw-calc(101);}
             }
             .discount {
-               margin-left: 21px;
-                img {width: 45px; height: 22px;margin-bottom: 10px;}
+               margin-left: vw-calc(21)x;
+                img {width: vw-calc(45); height: vw-calc(22);margin-bottom: vw-calc(10);}
             }
             .cameraChange {
-                margin-left: 21px;
-                img {width: 43px;height: 30px;margin-bottom: 3px;}
+                margin-left: vw-calc(21);
+                img {width: vw-calc(43);height: vw-calc(30);margin-bottom: vw-calc(3);}
             }
             }
             .txtbox {
-                left: -255px;
-                h3 {padding-bottom: 118px;}
+                left: vw-calc(-255);
+                h3 {padding-bottom: vw-calc(118);}
             }
         }
     
         .swiper-pagination{ left: 7%;}
         .loadingWrap {
             .loadingBar {
-                width: 240px;height: 1px;background-color: #fff;position: absolute; top: 118.5px; left: 180px;
+                width: vw-calc(240);height: vw-calc(1);background-color: #fff;position: absolute; top: vw-calc(118.5); left: vw-calc(180);
             }
             .runningBar {
                 @include border-radius(7px);
-                width: 240px; height: 3px; background-color: #fff; position: absolute; top: 118.5px; left: 180px;
+                width: vw-calc(240); height: vw-calc(3); background-color: #fff; position: absolute; top: vw-calc(118.5); left: vw-calc(180);
             }
         }
             
     
         .controller {
-            bottom: 66px; left: 180px;width: 204px;height: 44px;
-            .swiper-button-prev, .swiper-button-next, .play_stop {width: 45px; height: 44px;}
-            .swiper-button-next {margin-left: 101px;}
-            .play_stop {right: 80px; }
+            bottom: vw-calc(66); left: vw-calc(180);width: vw-calc(204);height: vw-calc(44);
+            .swiper-button-prev, .swiper-button-next, .play_stop {width: vw-calc(45); height: vw-calc(44);}
+            .swiper-button-next {margin-left: vw-calc(101);}
+            .play_stop {right: vw-calc(80); }
+        }
+        &.right{
+            .swiper-slide .txtbox {left: auto; right: 7%;text-align: right;}
+            .swiper-pagination{right: 7%;left: auto;}
+            /* js에서 .right 없애기 */
+        }
+    }
+
+    #cnt2 {
+        .newbie {
+            @include bgSize(cover);
+            background: url("../img/main/m_cnt2_newbie_1x.png") no-repeat left;
+            .newbieTxt {
+                > strong {top: vw-calc(60); left: vw-calc(25); font-size: vw-calc(35);line-height: vw-calc(32);}
+            }
+            .detailWrap {
+                padding-top: vw-calc(155.5); 
+                .newbieDetail {
+                    padding-left: vw-calc(66);
+                    > h3 {
+                        font-size: vw-calc(25);line-height: vw-calc(26);padding-bottom: vw-calc(18);margin-top: vw-calc(57.5);
+                        &::before {top: vw-calc(-57.5);width: vw-calc(365);}
+                    }
+                    > p {
+                        font-size: vw-calc(13);line-height: vw-calc(18);padding-bottom: vw-calc(52.6);
+                        &:nth-child(1) {width:vw-calc(307);}
+                        &:nth-child(2) {width:vw-calc(317);}
+                        &:nth-child(3) {width:vw-calc(300);}
+                        &:nth-child(4) {width:vw-calc(296);}
+                        &:nth-child(5) {width:vw-calc(323);}
+                    }
+                    &:first-child {
+                        h3 {margin-top: vw-calc(57.3);}
+                    }
+                    &:last-child { p {padding-bottom: vw-calc(52.5);}}
+                }
+                
+            }
+        }
+    }
+
+    #cnt3 {
+        .camerasWrap {left: vw-calc(-51);top: vw-calc(-7);}
+        .camera {
+            @include transform(skewX(0) skewY(-5deg));
+            width: 100%;height: 34.3333%;
+            &::before {@include filter(blur(1px));}
+            .cameras {
+                top: 28%;
+                &.cameraR {
+                    @include transform(skewX(0) skewY(5deg) translateX(-50%)/*  translateX(-80px)*/);
+                }
+                &.cameraL {
+                    @include transform(skewX(0) skewY(5deg) translateX(-50%)/*  translateX(80px) */);
+                }
+                &.cameraD {
+                    @include transform(skewX(0) skewY(5deg) translateX(-50%)/*  translateY(-80px) */);
+                }
+            }
+        }
+        #camera1 {
+            top: vw-calc(-32); left: vw-calc(-17); width: 117%;
+            img {width: vw-calc(141);height: vw-calc(141);left: vw-calc(282);}
+        }
+        #camera2 {
+            top: 29.3333%; left:0; height:41%;
+            img {
+                @include transform(skewX(0) skewY(5deg));
+                width: vw-calc(189);height: vw-calc(134);left: 36%;}
+            a {
+                @include transform(skewX(0) skewY(5deg));
+                width: vw-calc(119); height: vw-calc(27); line-height: vw-calc(27); bottom: vw-calc(86); left: vw-calc(210); font-size: vw-calc(8);
+            }
+        }
+        #camera3 {
+            top: 70%; left: 0; 
+            img {
+                @include transform(skewX(0) skewY(5deg));
+                width: vw-calc(118);height: vw-calc(139);left: vw-calc(199);}
+        }
+    }
+
+    #cnt4 {
+        height: auto;overflow:hidden;
+        .category {
+            width: 100%; height: 100%;background:none;
+            > p {font-size: vw-calc(13);padding-bottom: vw-calc(7);padding-top: vw-calc(68);}
+            > strong {font-size: vw-calc(26);}
+            .categoryOuterWrap {
+                height: vw-calc(347);width: vw-calc(768);overflow-x: auto;}
+            .categoryWrap {
+                /* position: relative; */padding-top: 0;width:vw-calc(1500);
+                .otherWrap {
+                    padding-right: vw-calc(25);position: relative;
+                    a {
+                        display: block; margin-bottom: vw-calc(7.5);width: vw-calc(306); height :vw-calc(347);
+                        .hoverImg {
+                            width: vw-calc(306); height :vw-calc(347);margin-bottom: vw-calc(7.5);left:vw-calc(37);
+                        }
+                    }
+                    &:first-child {padding-left: vw-calc(37);}
+                }
+                h4 {font-size: vw-calc(21);padding-bottom: vw-calc(18.5);}
+                p {font-size: vw-calc(18);line-height: vw-calc(26);}
+                /* &:first-child > div {padding-left : 37px;} */
+                &:nth-of-type(2),&:nth-of-type(5) {padding-top: vw-calc(148);}
+                &:nth-of-type(3),&:nth-of-type(6) {padding-top: 0;}
+                &:nth-of-type(3n) > div {padding-right: vw-calc(25);}
+            }
+            
+        }
+    }
+
+    #cnt5 {
+        height: auto;width: 100%;
+        .newsWrap {
+            width: vw-calc(414);height: vw-calc(985);padding-top: vw-calc(56.5);
+            > strong { font-size: vw-calc(26);left: vw-calc(29); top: vw-calc(89);width: vw-calc(71);height: vw-calc(35);}
+            > a {top: vw-calc(98);right: vw-calc(31); width: vw-calc(48);height: vw-calc(18);}
+            .newsCntWrap {
+                width: vw-calc(414);height: auto;padding: vw-calc(85) vw-calc(40) 0; 
+                ul li a{
+                    height: vw-calc(181);
+                    .category{font-size: vw-calc(14); padding-bottom: vw-calc(16.5);padding-top: vw-calc(48.5);}
+                    .txt {width: vw-calc(333);font-size: vw-calc(12);}
+                    h5{margin-top:vw-calc(44.5);font-size: vw-calc(19);padding-bottom: vw-calc(26);}
+                    .date{float: left;font-size: vw-calc(13);}
+                    .img{display:none;}
+                    p {display: none;}
+                    &.on{
+                        height: vw-calc(181);
+                        .txt{display: none;}
+                        .date{font-size: vw-calc(13);padding-bottom: vw-calc(42.5);}
+                    }
+                }
+            }
+        }
+    }
+
+    #cnt6 {
+        height: auto;padding-bottom: 100px;
+        .video {
+            
+            .marquee {margin-bottom:85px;}
+            .marquee p:after {padding-right:50px;}
+            .marquee p {padding-left:450px;}
+            .videoWrap {
+                @include border-radius(48px);
+                border: 3px solid #707070;width: 388px;height: 224px;margin: 0 auto;
+                .videoInner {
+                    padding-left: 56px;padding-top: 27px;
+                    > strong { font-size: 16px;padding-right: 215px;}
+                    .iframe {
+                        width:273px; height: 152px;margin-top: 8px;
+                        iframe {
+                            padding-left: 15px;border: none;
+                            &:first-child {width: 273px;height: 152px;}
+                    }
+                    a {top: 30px; right: 42px; font-size: 5px;}
+                  }
+                }
+                
+            }
+        }
+    }
+
+    #cnt7 {
+        height: auto;/* padding-bottom */
+        .insta {
+            padding-top: 59px;height: 100%;
+            strong {font-size: 26px;padding-left: 21px;}
+            .instaOuterWrap {width: 550px;height: 295.2px;overflow-x: auto;}
+            .instaWrap {
+                width: 2550px;
+                a {
+                    padding-top: 9px; padding-right: 13px;
+                    &:first-child {padding-left: 55.8px;}
+                    &:nth-child(5n) {padding-left: 0;}
+                }
+                img {
+                    width: 144.2px;height: 144.2px;
+                    /* 호버넣기 */                    
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #cnt1 {
+        .swiper-slide {
+            #videoBg {width: 100%; height: 100vh; /* min-width: 100%; */}
+            &.slide2 {background-image: url("../img/main/m_index1_02_414.jpg");}
+            &.slide3 {background-image: url("../img/main/m_index1_03_414.jpg");}
+            .txtbox{top: vw-calc(545);left: 7%;width: vw-calc(639);height: vw-calc(140);}
+            .txtbox p {font-size: vw-calc(16);letter-spacing: vw-calc(0.43);line-height: vw-calc(22);}
+            .txtbox h3 {font-size: vw-calc(26);padding-bottom: vw-calc(39);line-height: vw-calc(35);}
+            .txtbox p:nth-child(3) {font-size: vw-calc(16);padding-bottom: vw-calc(60);letter-spacing: vw-calc(0.37);}
+        }
+        .slide2 .txtbox h3 {padding-bottom: vw-calc(13);}
+        .slide3 {
+            .simpleExplan {
+                left: vw-calc(45); top: vw-calc(194); width: vw-calc(348); height: vw-calc(43);font-size: vw-calc(9);
+            .simpleWrap {width: vw-calc(102);height: vw-calc(41);}
+            .cloud {
+                img {width: vw-calc(36); height: vw-calc(25);}
+                p {margin-top: vw-calc(7);width: vw-calc(101);}
+            }
+            .discount {
+               margin-left: vw-calc(21)x;
+                img {width: vw-calc(45); height: vw-calc(22);margin-bottom: vw-calc(10);}
+            }
+            .cameraChange {
+                margin-left: vw-calc(21);
+                img {width: vw-calc(43);height: vw-calc(30);margin-bottom: vw-calc(3);}
+            }
+            }
+            .txtbox {
+                left: vw-calc(-255);
+                h3 {padding-bottom: vw-calc(118);}
+            }
+        }
+    
+        .swiper-pagination{ left: 7%;}
+        .loadingWrap {
+            .loadingBar {
+                width: vw-calc(240);height: vw-calc(1);background-color: #fff;position: absolute; top: vw-calc(118.5); left: vw-calc(180);
+            }
+            .runningBar {
+                @include border-radius(7px);
+                width: vw-calc(240); height: vw-calc(3); background-color: #fff; position: absolute; top: vw-calc(118.5); left: vw-calc(180);
+            }
+        }
+            
+    
+        .controller {
+            bottom: vw-calc(66); left: vw-calc(180);width: vw-calc(204);height: vw-calc(44);
+            .swiper-button-prev, .swiper-button-next, .play_stop {width: vw-calc(45); height: vw-calc(44);}
+            .swiper-button-next {margin-left: vw-calc(101);}
+            .play_stop {right: vw-calc(80); }
         }
         &.right{
             .swiper-slide .txtbox {left: auto; right: 7%;text-align: right;}
@@ -734,11 +973,9 @@
             width: 100%; height: 100%;background:none;
             > p {font-size: 13px;padding-bottom: 7px;padding-top: 68px;}
             > strong {font-size: 26px;}
-            .categoryOuterWrap {
-                height: 347px;width: 1961px;
-            }
+            .categoryOuterWrap {height: 347px;width: 768px;overflow-x: auto;}
             .categoryWrap {
-                position: relative; display: block; float: left; padding-top: 149px; width: 50%;
+                position: relative;padding-top: 149px;/*  width: 50%; */ width:1000px;
                 .otherWrap {
                     padding-right: 25px;position: relative;
                     a {
@@ -816,7 +1053,7 @@
         .insta {
             padding-top: 59px;
             strong {font-size: 26px;padding-left: 21px;}
-            .instaOuterWrap {width: 525px;height: 295.2px;/* overflow: hidden; */}
+            .instaOuterWrap {width: 550px;height: 295.2px;/* overflow: hidden; */}
             .instaWrap {
                 float: left;overflow: auto;
                 a {

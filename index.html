@@ -56,14 +56,20 @@
                     </div>
                 </div>
                 <div class="lang">
-                    <button type="button">
+                    <button type="button" >
                         <span class="blind-b">언어설정</span>
                         <img src="assets/img/icon/language.svg" alt="언어 설정">
                     </button>
                     <ul>
-                        <li><a href="#" aria-current="page">KOR</a></li>
-                        <li><a href="#">ENG</a></li>
-                        <li><a href="https://gopro.com/ja/jp/">JAP</a></li>
+                        <li>
+                            <a href="#" class="first" aria-current="page">KOR</a>
+                        </li>
+                        <li>
+                            <a href="#">ENG</a>
+                        </li>
+                        <li>
+                            <a href="https://gopro.com/ja/jp/" class="last">JAP</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="account">
@@ -145,12 +151,17 @@
                         <div class="bg_white">
                             <button>
                                 <a href="#" class="first">
-                                    <img class="mAccount" src="assets/img/icon/account.svg" alt="계정 바로가기 아이콘">
+                                    <img class="mAccount" src="assets/img/icon/account_black.svg" alt="계정 바로가기 아이콘">
                                 </a>
                             </button>
                             <button>
                                 <a href="#">
-                                    <img class="mshopping" src="assets/img/icon/shopping-cart.svg" alt="장바구니 아이콘">
+                                    <img class="mshopping" src="assets/img/icon/shopping-cart_black.svg" alt="장바구니 아이콘">
+                                </a>
+                            </button>
+                            <button>
+                                <a href="#">
+                                    <img class="mClose" src="assets/img/icon/close_black.svg" alt="네비게이션 닫기">
                                 </a>
                             </button>
                         </div>
@@ -202,31 +213,34 @@
                                 </li>
                             </ul>
                         </nav>
-                        <button type="button" class="btn_open">
-                            <img src="assets/img/icon/search.svg" alt="검색창 열기">
-                            <span class="blind-b">검색창 열기</span>
-                        </button>
-                        <div class="search_wrap">
-                            <form action="index.html" id="mSearchForm">
-                                <div class="searchBg">
-                                    <label for="mSearchTxt" class="blind-b">검색어</label>
-                                    <input type="text" id="mSearchTxt" name="mSearchTxt" placeholder="검색어를 입력해주세요.">
-                                    <button><img src="" alt="검색"></button>
-                                </div>
-                            </form>
-                            <button type="button" class="btn_close">
-                                <img src="#" alt="검색창 닫기">
+                        <div class="searchLang">
+                            <button type="button" class="btn_open">
+                                <img src="assets/img/icon/search_black.svg" alt="검색창 열기">
+                                <span class="blind-b">검색창 열기</span>
                             </button>
-                        </div>
-                        <div class="lang">
-                            <button type="button">
-                                <span class="blind-b">언어설정</span>
-                            </button>
-                            <ul>
-                                <li><a href="" aria-current="page">KOR</a></li>
-                                <li><a href="">ENG</a></li>
-                                <li><a href="">JAP</a></li>
-                            </ul>
+                            <div class="search_wrap">
+                                <form action="index.html" id="mSearchForm">
+                                    <div class="searchBg">
+                                        <label for="mSearchTxt" class="blind-b">검색어</label>
+                                        <input type="text" id="mSearchTxt" name="mSearchTxt" placeholder="검색어를 입력해주세요.">
+                                        <button><img src="" alt="검색"></button>
+                                    </div>
+                                </form>
+                                <button type="button" class="btn_close">
+                                    <img src="assets/img/icon/close_btn.svg" alt="검색창 닫기">
+                                </button>
+                            </div>
+                            <div class="lang">
+                                <button type="button">
+                                    <img src="assets/img/icon/lang_black.svg" alt="">
+                                    <span class="blind-b">언어설정</span>
+                                </button>
+                                <ul>
+                                    <li><a href="" aria-current="page">KOR</a></li>
+                                    <li><a href="">ENG</a></li>
+                                    <li><a href="">JAP</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

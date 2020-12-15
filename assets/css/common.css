@@ -218,8 +218,8 @@ body {
     padding: 0 50px; } }
 @media screen and (max-width: 1440px) {
   .discover_btn {
-    width: 55.0507246377vw;
-    height: 12.4057971014vw; } }
+    width: 63.3083333333vw;
+    height: 14.2666666667vw; } }
 .fixedBtn {
   -webkit-transition: opacity 0.3s;
   -moz-transition: opacity 0.3s;
@@ -227,7 +227,7 @@ body {
   transition: opacity 0.3s;
   position: fixed;
   bottom: 60px;
-  right: 35px;
+  right: 6.6145833333vw;
   width: 129px;
   height: 100px; }
   .fixedBtn .goUpBtn {
@@ -281,25 +281,26 @@ body {
       width: 112px;
       height: 44px; } }
 @media screen and (max-width: 414px) {
-  .max1440 {
+  .max1920 {
     max-width: auto;
-    padding: 0 0; }
-
-  .max768 {
-    max-width: 100%;
-    padding: 0 20px; }
+    padding: 0 30px; }
 
   .fixedBtn {
-    width: 109px;
+    width: 83px;
     height: 100px;
-    bottom: 25px;
-    right: 20px; }
+    bottom: 117px;
+    right: 137px; }
     .fixedBtn .goUpBtn {
-      width: 44px;
-      height: 44px; }
+      width: 30px;
+      height: 30px; }
     .fixedBtn .chattingBtn {
       padding-top: 2px;
-      width: 112px;
-      height: 44px; } }
+      width: 82px;
+      height: 35px;
+      bottom: 28px; } }
+@media screen and (min-width: 360px) {
+  .max1920 {
+    max-width: auto;
+    padding: 0 20px; } }
 
 /*# sourceMappingURL=common.css.map */

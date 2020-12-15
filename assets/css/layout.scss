@@ -14,10 +14,9 @@
         }
     }
     .util {
-        position: absolute; top: 29px; right: 30px; width: 201px; height: 34px;line-height: 34px;
-        /*.bg_white {background: #fff;}  모바일용에서 따로 만들기 잠시 가림 */
+        position: absolute; top: 29px; right: 30px; width: 201px; height: 34px;line-height: 34px;z-index: 900;
         > div {float: left;}
-        > div + div {padding-left: 80px;}
+        > div + div {padding-left: 30px;}
         .search {
             .search_wrap {
                 display: none; background: #fff; color: #000; width: 100%;height: 50px;
@@ -26,9 +25,9 @@
         }
         .lang {
             > ul {
-                margin-top: 27px;
+                margin-top: 27px;position: absolute; top: 34px; right: 59px; 
                 li {
-                    display: none;width: 80px;height: 44px;line-height: 44px;background: #fff;color: #000;text-align: center;font-weight: 500;border: 1px solid $grey;
+                    width: 80px;height: 44px;line-height: 44px;background: #fff;color: #000;text-align: center;font-weight: 500;border: 1px solid $grey;
                     &:hover, &:focus {
                         background-color: $lightblue;
                     }
@@ -70,9 +69,9 @@
 
 //footer
 #footer {
-    background: #000;height: 842px;width: 100%;padding-top:80px;
+    background: #000;height: auto;width: 100%;padding-top:80px;padding-bottom: 25px;
     .foot {
-        position: relative; width: 1697px;height: 667px;text-align: center;
+        position: relative; width: 88.38541666666667vw;height: 34.73958333333333vw;text-align: center;
         a {display: block;font-size: 14px;padding-bottom: 21px;}
         strong {font-size: 16px;}
         p {text-align: center;}
@@ -84,7 +83,7 @@
         }
         .info {float: left; text-align: left;}
         .brandInfo {
-            padding-left: 200px;position: relative;padding-top: 60.5px;width: 1700px;height: 337px;margin: 0;
+            padding-left: 10.41666666666667vw/* 200px */;position: relative;padding-top: 60.5px;width: 88.54166666666667vw/* 1700px */;height: 17.55208333333333vw/* 337px */;margin: 0;
         }
         .programInfo {
             right: 0; top: 0;
@@ -120,11 +119,9 @@
         }
         .util {
             top: 29px; right: 30px; width: 201px; height: 34px;line-height: 34px;
-            /*.bg_white {background: #fff;}  모바일용에서 따로 만들기 잠시 가림 */
-            > div + div {padding-left: 74px;}
             .lang {
                 > ul {
-                    margin-top: 27px;
+                    margin-top: 27px;top: 34px; right: 59px; 
                     li {
                         display: none;width: 80px;height: 44px;line-height: 44px;background: #fff;color: #000;text-align: center;font-weight: 500;border: 1px solid $grey;
                         &:hover, &:focus {
@@ -133,7 +130,6 @@
                     }
                 }
             }
-    
         }
         #pcGnb {
             position: relative; text-align: center;z-index: 800;
@@ -168,8 +164,9 @@
 
     //footer
     #footer {
+        padding-bottom: 25px;
         .foot {
-            width: 1655px;
+            width: auto;
             .brandInfo {
                 div.info + div.info {padding-left: 190px;}
                 &::after {width: 1590px;left: 30.5px;}
@@ -184,6 +181,7 @@
 @media screen and (max-width: 1520px) {
     //footer
     #footer {
+        padding-bottom: 25px;
         .foot {
             width: 1403px;
             a {padding-bottom: 20px;}
@@ -192,7 +190,7 @@
                 &::after {width: 1386px;left: 16.5px;}
             }
             .brandInfo {
-                padding-left: 95px;padding-top: 50.5px;width: 1315px;height: 428px;
+                padding-left: 95px;padding-top: 50.5px;width: auto;height: 428px;
             }
             .closest {padding-left: 27px; bottom: -18px;}
             .copyright {left: calc(50% - 124.745px);}
@@ -214,7 +212,7 @@
     
     //footer
     #footer {
-        height: 750px;
+        height: auto;padding-bottom: 25px;
         .foot {
             width: 1200px;height: 650px;
             a {padding-bottom: 19px;}
@@ -246,7 +244,7 @@
 @media screen and (max-width: 768px) {
     //header
     #header {
-        height: 60px;line-height: 60px;width: 100%;top:0;left: 0;
+        height: 60px;line-height: 60px;width: 100%;top:0;
         .logo {
             width: 73px; padding-top: 8px; left: 8px; height: 54px;
             a {width: 75px; height: 45px;padding-left: 0;}
@@ -257,7 +255,6 @@
             .search {
                 button {width: 21.5px;height: 21.5px;}
                 .search_wrap {
-                    display: none;width: 100%;height: 50px;
                     img {width: 21.5px; height: 21.5px;}
                 }
             }
@@ -269,7 +266,8 @@
                     }
                 }
             }
-            .account {button {width: 21.5px;}
+            .account {
+                button {width: 21.5px;}
             }
         }
         #pcGnb {
@@ -279,28 +277,28 @@
                 }
             }
             .dep2wrap {bottom: 60px; height: 40px; line-height: 40px;}        
-            ul li ul li + li {padding-left: 90px;}
-    }
-    
+        }
+        ul li ul li + li {padding-left: 90px;}
+
+
     //footer
     #footer {
-        height: 750px;
+        padding-bottom: 25px;height: auto;
         .foot {
-            width: 700px;height: 650px;
+            width: 91.14583333333333vw;
             > a {padding-bottom: 17px;}
             .brandInfo {
                 div.info + div.info {padding-left: 68px;}
-                &::after {width: 700px; left: -3.5px;}
+                &::after {width: 100%; left: 7px;}
             }
-            .brandInfo {padding-left: 17px;padding-top: 40.5px;width: 686px; height: 465px;}
-            .programInfo {padding-top: 45px; top: 187px; right: 66px;}
+            .deviceInfo {width:173px;}
             .closest {
-                padding-left: 0;left: -20px;
+                padding-left: 40px;left: -20px;
                 img {width: 27px;height: 27px;}
             }
-            .copyright {left: calc(50% - 124.745px);}
+            .copyright {left: calc(50% - 16.24283854166667vw/* 124.745px */);}
             .foot_icon {
-                height: 31px; width: 100px;right: 20px;bottom: 32px;
+                height: 31px; width: 100px;right: 0;bottom: 32px;
                 ul {
                     button {width: 26.5px;height: 26.5px; }
                     a {padding-right: 4px;
@@ -313,45 +311,47 @@
     }
 }
 
-//모바일(414-360)
+//모바일(414)
 @media screen and (max-width: 414px) {
         //header
         #header {display: none;}
-
         #mHeader {
-            position: fixed; display: block !important; top: 0; left: 0; height: 50px;width:100%;background: #000;line-height: 50px;text-align: center;z-index: 1000;
+            position: fixed; display: block !important; top: 0; left: 0; height: vw-calc(50);width:100%;background: #000;line-height: vw-calc(50);text-align: center;z-index: 1000;
             .logo {
-                position: absolute; left: 9px; top: 0;width: 55.6px; height: 31.3px;padding-top: 8.7px;
+                position: absolute; left: vw-calc(9); top: 0;width: vw-calc(55.6); height: vw-calc(31.3);padding-top: vw-calc(8.7);
                 a {
                     @include bgSize(cover);
                     display: block;
-                    img {width: 55.6px; height: 31.3px;}
+                    img {width: vw-calc(55.6); height: vw-calc(31.3);}
                 }
             }
-            button.menu_open {position: absolute; right: 16px; top: 15px; width: 25px; height: 25px;}
-            .mUtil {display: none;
-                position: absolute; top: 0; right: 0/* 스타일 고친과 -360px로 변경 */; width: 360px; height: 100%;text-align: right; background-color: #fff;color: #000;
+            button.menu_open {position: absolute; right: vw-calc(16); top: vw-calc(15); width: vw-calc(25); height: vw-calc(25);}
+            .mUtil {
+                display: block;position: absolute; top: 0; right: 0; width: vw-calc(360); height: auto;text-align: right; background-color: #fff;color: #000;
 
                 .mgnb_wrap {
 
                     .bg_white {
-                        width: 100px; height: 25px;position: absolute; top: 0; right: 0;
-                        .mAccount {width: 25px; height: 25px;}
-                        .mShopping {width: 25px; height: 25px;}
+                        position: absolute; top: 0; right: 0;padding: vw-calc(15.5) vw-calc(18.5) 0 0;width: vw-calc(150); height: vw-calc(50);
+                        button {
+                            padding-right: vw-calc(10);
+                            &:last-child {padding-right: 0;}
+                        }
+                        .mAccount {width: vw-calc(25); height: vw-calc(25);}
+                        .mShopping {width: vw-calc(25); height: vw-calc(25);}
+                        .mClose {width: vw-calc(25); height: vw-calc(25);padding-top: vw-calc(3);}
                     }
                     #mGnb {
-                        background: #fff;
+                        background: #fff;padding: vw-calc(122) 0 vw-calc(434);
                         > ul > li {
-                            font-size: 30px; font-weight: 700;
-                            > a {margin: 0 26px 0 0;}
-                            &:first-child {padding-top: 127px;}
-                            
+                            font-size: vw-calc(30); font-weight: 700;
+                            > a {margin: 0 vw-calc(26) 0 0;}
                             > ul > li {
                                 display: none;
-                                font-size: 20px;font-weight: 500;background: lightgrey;color: #444; padding: 25px 26px 0 0;
-                                &:first-child {padding-top: 19px;}
-                                &:last-child {padding-bottom: 19px;}
-                                > a {padding-right: 10px;}
+                                font-size: vw-calc(20);font-weight: 500;background: lightgrey;color: #444; padding: vw-calc(25) vw-calc(26) 0 0;
+                                &:first-child {padding-top: vw-calc(19);}
+                                &:last-child {padding-bottom: vw-calc(19);}
+                                > a {padding-right: vw-calc(10);}
                                 &:hover > a, &.on >a, &:focus > a {
                                     @include transition(0.3s);
                                     @include transform( translateY(-100%) );
@@ -359,8 +359,14 @@
                                     }
                             }
                         }
-                        .btn_open {
-                            
+                    }
+                    .searchLang {
+                        width: 100%;height: vw-calc(100); float: left;padding-right: vw-calc(26);
+                        button {float: right; }
+                        .search_wrap {display: none;}
+                        .lang {
+                            padding-right: vw-calc(17.4);
+                            > ul {display: none;}
                         }
                     }
 
@@ -371,32 +377,81 @@
 
         //footer
         #footer {
-            height: 80%;
+            height: auto;padding-top:vw-calc(40.5);
             .foot {
                 width: 100%;height: 100%;
-                > a {padding-bottom: 17px;}
                 .brandInfo {
-                    div.info + div.info {padding-left: 68px;}
-                    &::after {width: 700px; left: -3.5px;}
+                    padding: vw-calc(36.5) vw-calc(14) 0 vw-calc(14);
+                    width: vw-calc(368); height: vw-calc(465);
+                    div.info + div.info {padding-left: vw-calc(44);}
+                    &::after {width: 100%; left: vw-calc(-3.5);}
                 }
-                .brandInfo {padding-left: 17px;padding-top: 40.5px;width: 686px; height: 465px;}
-                .programInfo {padding-top: 45px; top: 187px; right: 66px;}
+                .info {
+                    a{
+                        font-size: vw-calc(9);padding-bottom: vw-calc(12);
+                        strong {font-size: vw-calc(11);}
+                    }
+                }
+                /* .programInfo {padding-top: vw-calc(30);} */
                 .closest {
-                    padding-left: 0;left: -20px;
-                    img {width: 27px;height: 27px;}
+                    width: auto;padding-left: 0;left: 0;bottom: vw-calc(-130);
+                    img {width: vw-calc(22);height: vw-calc(22);display: none;}
+                    p {font-size: vw-calc(8);}
                 }
-                .copyright {left: calc(50% - 124.745px);}
+                .copyright {font-size: vw-calc(8);left: 0;bottom: vw-calc(-134); }
                 .foot_icon {
-                    height: 31px; width: 100px;right: 20px;bottom: 32px;
+                    height: vw-calc(31); width: vw-calc(100);right: vw-calc(-13);bottom: vw-calc(-106);
                     ul {
-                        button {width: 26.5px;height: 26.5px; }
-                        a {padding-right: 4px;
-                            img {width: 36px; height: 36px;}
+                        button {width: vw-calc(26.5);height: vw-calc(26.5); }
+                        a {padding-right: vw-calc(4);
+                            img {width: vw-calc(36); height: vw-calc(36);}
                         }
                     }
         
                 }
             }
         }
+
+
 }
-    
+//360
+@media screen and (max-width: 360px) {
+    //header
+    #header {display: none;}  
+
+    //footer
+    #footer {
+        height: 100vh;padding-top:vw-calc(40.5);
+        .foot {
+        width: 100%;height: 100%;
+        .brandInfo {
+            padding-left: vw-calc360(14);padding-top: vw-calc360(36.5);width: vw-calc360(320); height: vw-calc360(465);
+            div.info + div.info {padding-left: vw-calc360(79);}
+            &::after {width: 100%; left: vw-calc360(-3.5);}
+        }
+        .info {
+            a{
+                font-size: vw-calc360(9);padding-bottom: vw-calc360(9);
+                strong {font-size: vw-calc360(11);}
+            }
+        }
+        .programInfo {padding: 0;}
+        .closest {padding-left: 0;left: 0;bottom: vw-calc360(-88);
+            img {width: vw-calc360(22);height: vw-calc360(22);display: none;}
+            p {font-size: vw-calc360(8);}
+        }
+        .copyright {font-size: vw-calc360(7);bottom: vw-calc360(-87); }
+        .foot_icon {
+            height: vw-calc360(31); width: vw-calc360(100);right: vw-calc360(-13);bottom: vw-calc360(-54);
+            ul {
+                button {width: vw-calc360(24);height: vw-calc360(24); }
+                a {
+                    padding-right: vw-calc360(3);
+                img {width: vw-calc360(36); height: vw-calc360(36);}
+                }
+            }
+                
+        }
+      }
+    }
+}

@@ -94,7 +94,7 @@ body {
 //고정 버튼
 .fixedBtn {
     @include transition(opacity 0.3s);
-    position: fixed; bottom: 60px; right: 35px;width: 129px;height: 100px;
+    position: fixed; bottom: 60px; right: 6.614583333333333vw/* 127px */;width: 129px;height: 100px;
     
     //Top 버튼
     .goUpBtn {
@@ -129,17 +129,17 @@ body {
     }
 }
 @media screen and (max-width: 414px) {
-    .max1440 {max-width: auto; padding: 0 0;}
-    .max768 {max-width: 100%; padding: 0 20px;}
+    .max1920 {max-width: auto; padding: 0 30px;}
 
     .fixedBtn {
-        width: 109px;height: 100px;
-        bottom: 25px; right: 20px;
-        .goUpBtn { width: 44px; height: 44px;}
-        .chattingBtn { padding-top: 2px;width: 112px; height: 44px;}
+        width: 83px;height: 100px;
+        bottom: 117px; right: 137px;
+        .goUpBtn { width: 30px; height: 30px;}
+        .chattingBtn { padding-top: 2px;width: 82px; height: 35px;bottom: 28px;}
     }
+
 }
 @media screen and (min-width: 360px) {
-
+    .max1920 {max-width: auto; padding: 0 20px;}
 }
 
