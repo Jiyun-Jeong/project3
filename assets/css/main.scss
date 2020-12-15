@@ -111,6 +111,50 @@
     }
 }
 
+@media screen and (max-width: 1440px) and (orientation: landscape) {
+    #cnt1{
+        #videoBg1440{max-width: none;width: auto;height: 100%;}
+        #videoBg1920, #videoBg768, #videoBg414, #videoBg360 {display: none;}
+    }
+}
+@media screen and (max-width: 1440px) and (orientation: portrait) {
+    #cnt1{
+        #videoBg768{display: block;width: 100%;}
+        #videoBg1920, #video1440, #videoBg768, #videoBg414, #videoBg360{display: none;}
+    }
+}
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    #cnt1{
+        #videoBg1440 {display: block;max-width: none;width: 100%;height: auto;}
+        #videoBg1920, #videoBg768, #videoBg414, #videoBg360 {display: none;}
+    }
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    #cnt1{
+        #videoBg768{display: block;width: 100%;}
+        #videoBg1920, #videoBg1440, #videoBg414, #videoBg360{display: none;}
+    }
+}
+/* @media screen and (max-width: 414px) and (orientation: landscape) {
+    #cnt1{
+        #videoBg1440 {display: block;max-width: none;width: 100%;height: auto;}
+        #videoBg1920, #videoBg768, #video414, #video360 {display: none;}
+    }
+} */
+@media screen and (max-width: 474px) and (orientation: portrait) {
+    #cnt1{
+        #videoBg414 {display: block;width: 100%;}
+        #videoBg1920, #videoBg1441, #videoBg768, #videoBg360 {display: none;}
+    }
+}
+@media screen and (max-width: 360px) and (orientation: portrait) {
+    #cnt1{
+        #videoBg360 {display: block;width: 100%;}
+        #videoBg1920, #videoBg1441, #videoBg768, #videoBg414 {display: none;}
+    }
+}
+
+
 #cnt2 {
     position: relative; background: #000;color: #fff;
     .newbie {
@@ -330,7 +374,7 @@
                 display: inline-block;padding-top: 43px; padding-right: 43px;position: relative;
                 &:first-child {padding-left: 261px;}
                 &:nth-child(4n) {padding-right: 0;}
-                &:nth-child(5n) {padding-left: 261px;}
+                /* &:nth-child(5n) {padding-left: 261px;} */
             }
             img {
                 width: 320px;height: 320px;position: relative;
