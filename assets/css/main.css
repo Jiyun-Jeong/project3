@@ -1384,6 +1384,9 @@
         height: 154.2px;
         /* 호버넣기 */ } }
 @media screen and (max-width: 414px) {
+  #wrap {
+    overflow: hidden; }
+
   #cnt1 {
     /* &.right .swiper-pagination {right: -11%;} */ }
     #cnt1 .swiper-slide #videoBg {
@@ -1649,11 +1652,11 @@
         height: 9.0458937198vw; }
       #cnt5 .newsWrap > a {
         top: 25.3285024155vw;
-        right: 25.845410628vw;
+        right: 18.0917874396vw;
         width: 12.4057971014vw;
         height: 4.652173913vw; }
       #cnt5 .newsWrap .newsCntWrap {
-        width: 90.4589371981vw;
+        width: 95.6280193237vw;
         height: auto;
         padding: 21.9685990338vw 10.3381642512vw 0; }
         #cnt5 .newsWrap .newsCntWrap ul li {
@@ -1734,11 +1737,12 @@
         font-size: 6.7198067633vw;
         padding-left: 5.4275362319vw; }
       #cnt7 .insta .instaOuterWrap {
-        width: 90.4589371981vw;
+        width: 107vw;
         height: 76.2956521739vw;
         overflow-x: auto; }
       #cnt7 .insta .instaWrap {
-        width: 516.9082125604vw; }
+        width: 516.9082125604vw;
+        max-width: none; }
         #cnt7 .insta .instaWrap a {
           padding-top: 2.3260869565vw;
           padding-right: 3.3599033816vw; }
@@ -1953,8 +1957,8 @@
       #cnt4 .category > strong {
         font-size: 26px; }
       #cnt4 .category .categoryOuterWrap {
-        height: 347px;
-        width: 768px;
+        height: 406px;
+        width: 360px;
         overflow-x: auto; }
       #cnt4 .category .categoryWrap {
         padding-top: 10px;
@@ -1996,11 +2000,11 @@
         height: 10.4027777778vw; }
       #cnt5 .newsWrap > a {
         top: 29.1277777778vw;
-        right: 9.2138888889vw;
+        right: 17.8333333333vw;
         width: 14.2666666667vw;
         height: 5.35vw; }
       #cnt5 .newsWrap .newsCntWrap {
-        width: 108.4861111111vw;
+        width: 95.1111111111vw;
         height: auto;
         padding: 21.9944444444vw 7.7277777778vw 0; }
         #cnt5 .newsWrap .newsCntWrap ul li a {
@@ -2078,21 +2082,20 @@
         font-size: 26px;
         padding-left: 6.2416666667vw; }
       #cnt7 .insta .instaOuterWrap {
-        width: 100.4611111111vw;
         height: 72.8194444444vw; }
       #cnt7 .insta .instaWrap {
-        float: left;
-        overflow: auto; }
+        max-width: none;
+        overflow: auto;
+        width: 3000px; }
         #cnt7 .insta .instaWrap a {
           padding-top: 2.675vw;
           padding-right: 3.8638888889vw; }
           #cnt7 .insta .instaWrap a:first-child {
-            padding-left: 16.585vw; }
+            padding-left: 0; }
           #cnt7 .insta .instaWrap a:nth-child(5n) {
             padding-left: 0; }
         #cnt7 .insta .instaWrap img {
           width: 69.8472222222vw;
-          height: 69.8472222222vw;
-          /* 호버넣기 */ } }
+          height: 69.8472222222vw; } }
 
 /*# sourceMappingURL=main.css.map */

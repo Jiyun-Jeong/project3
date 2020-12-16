@@ -501,7 +501,7 @@
       display: block;
       position: absolute;
       top: 0;
-      right: -360px;
+      right: -100%;
       width: 93.0434782609vw;
       height: auto;
       text-align: right;
@@ -529,7 +529,6 @@
           height: 6.461352657vw;
           padding-top: 0.7753623188vw; }
       #mHeader .mUtil .mgnb_wrap #mGnb {
-        /* display: none; */
         background: #fff;
         padding: 31.5314009662vw 0 112.1690821256vw; }
         #mHeader .mUtil .mgnb_wrap #mGnb > ul > li {
@@ -538,7 +537,6 @@
           #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > a {
             margin: 0 6.7198067633vw 0 0; }
           #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li {
-            /* display: none; */
             font-size: 5.1690821256vw;
             font-weight: 500;
             background: lightgrey;
@@ -629,8 +627,87 @@
             width: 9.3043478261vw;
             height: 9.3043478261vw; } }
 @media screen and (max-width: 360px) {
-  #header {
-    display: none; }
+  #wrap {
+    overflow: hidden; }
+
+  #mHeader {
+    height: 12.922705314vw;
+    width: 100%;
+    background: #000;
+    line-height: 12.922705314vw; }
+    #mHeader .logo {
+      left: 2.3260869565vw;
+      top: 0;
+      width: 14.3700483092vw;
+      height: 8.0896135266vw;
+      padding-top: 2.2485507246vw; }
+      #mHeader .logo a img {
+        width: 14.3700483092vw;
+        height: 8.0896135266vw; }
+    #mHeader button.menu_open {
+      right: 4.1352657005vw;
+      top: 3.8768115942vw;
+      width: 6.461352657vw;
+      height: 6.461352657vw; }
+    #mHeader .mUtil {
+      width: 93.0434782609vw; }
+      #mHeader .mUtil .mgnb_wrap .bg_white {
+        padding: 4.0060386473vw 4.7814009662vw 0 0;
+        width: 38.768115942vw;
+        height: 12.922705314vw; }
+        #mHeader .mUtil .mgnb_wrap .bg_white button {
+          padding-right: 2.5845410628vw; }
+          #mHeader .mUtil .mgnb_wrap .bg_white button:last-child {
+            padding-right: 0; }
+        #mHeader .mUtil .mgnb_wrap .bg_white .mAccount {
+          width: 6.461352657vw;
+          height: 6.461352657vw; }
+        #mHeader .mUtil .mgnb_wrap .bg_white .mShopping {
+          width: 6.461352657vw;
+          height: 6.461352657vw; }
+        #mHeader .mUtil .mgnb_wrap .bg_white .mClose {
+          width: 6.461352657vw;
+          height: 6.461352657vw;
+          padding-top: 0.7753623188vw; }
+      #mHeader .mUtil .mgnb_wrap #mGnb {
+        padding: 31.5314009662vw 0 112.1690821256vw; }
+        #mHeader .mUtil .mgnb_wrap #mGnb > ul > li {
+          font-size: 7.7536231884vw;
+          font-weight: 700; }
+          #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > a {
+            margin: 0 6.7198067633vw 0 0; }
+          #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li {
+            font-size: 5.1690821256vw;
+            padding: 6.461352657vw 6.7198067633vw 0 0; }
+            #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li:first-child {
+              padding-top: 4.9106280193vw; }
+            #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li:last-child {
+              padding-bottom: 4.9106280193vw; }
+            #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li > a {
+              padding-right: 2.5845410628vw; }
+            #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li:hover > a, #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li.on > a, #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li:focus > a {
+              -webkit-transition: 0.3s;
+              -moz-transition: 0.3s;
+              -o-transition: 0.3s;
+              transition: 0.3s;
+              -webkit-transform: translateY(-100%);
+              -moz-transform: translateY(-100%);
+              -o-transform: translateY(-100%);
+              -ms-transform: translateY(-100%);
+              transform: translateY(-100%); }
+      #mHeader .mUtil .mgnb_wrap .searchLang {
+        width: 100%;
+        height: 25.845410628vw;
+        float: left;
+        padding-right: 6.7198067633vw; }
+        #mHeader .mUtil .mgnb_wrap .searchLang button {
+          float: right; }
+        #mHeader .mUtil .mgnb_wrap .searchLang .search_wrap {
+          display: none; }
+        #mHeader .mUtil .mgnb_wrap .searchLang .lang {
+          padding-right: 4.4971014493vw; }
+          #mHeader .mUtil .mgnb_wrap .searchLang .lang > ul {
+            display: none; }
 
   #footer {
     height: 100vh;

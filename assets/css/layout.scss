@@ -327,7 +327,7 @@
             }
             button.menu_open {position: absolute; right: vw-calc(16); top: vw-calc(15); width: vw-calc(25); height: vw-calc(25);}
             .mUtil {
-                display: block;position: absolute; top: 0; right: -360px; width: vw-calc(360); height: auto;text-align: right; background-color: #fff;color: #000;
+                display: block;position: absolute; top: 0; right: -100%; width: vw-calc(360); height: auto;text-align: right; background-color: #fff;color: #000;
 
                 .mgnb_wrap {
 
@@ -341,13 +341,12 @@
                         .mShopping {width: vw-calc(25); height: vw-calc(25);}
                         .mClose {width: vw-calc(25); height: vw-calc(25);padding-top: vw-calc(3);}
                     }
-                    #mGnb {/* display: none; */
+                    #mGnb {
                         background: #fff;padding: vw-calc(122) 0 vw-calc(434);
                         > ul > li {
                             font-size: vw-calc(30); font-weight: 700;
                             > a {margin: 0 vw-calc(26) 0 0;}
                             > ul > li {
-                                /* display: none; */
                                 font-size: vw-calc(20);font-weight: 500;background: lightgrey;color: #444; padding: vw-calc(25) vw-calc(26) 0 0;
                                 &:first-child {padding-top: vw-calc(19);}
                                 &:last-child {padding-bottom: vw-calc(19);}
@@ -417,8 +416,60 @@
 }
 //360
 @media screen and (max-width: 360px) {
+    #wrap {overflow: hidden;}
     //header
-    #header {display: none;}  
+    #mHeader {
+        height: vw-calc(50);width:100%;background: #000;line-height: vw-calc(50);
+        .logo {
+            left: vw-calc(9); top: 0;width: vw-calc(55.6); height: vw-calc(31.3);padding-top: vw-calc(8.7);
+            a {
+                img {width: vw-calc(55.6); height: vw-calc(31.3);}
+            }
+        }
+        button.menu_open {right: vw-calc(16); top: vw-calc(15); width: vw-calc(25); height: vw-calc(25);}
+        .mUtil {
+            width: vw-calc(360);
+            .mgnb_wrap {
+                .bg_white {
+                    padding: vw-calc(15.5) vw-calc(18.5) 0 0;width: vw-calc(150); height: vw-calc(50);
+                    button {
+                        padding-right: vw-calc(10);
+                        &:last-child {padding-right: 0;}
+                    }
+                    .mAccount {width: vw-calc(25); height: vw-calc(25);}
+                    .mShopping {width: vw-calc(25); height: vw-calc(25);}
+                    .mClose {width: vw-calc(25); height: vw-calc(25);padding-top: vw-calc(3);}
+                }
+                #mGnb {
+                   padding: vw-calc(122) 0 vw-calc(434);
+                    > ul > li {
+                        font-size: vw-calc(30); font-weight: 700;
+                        > a {margin: 0 vw-calc(26) 0 0;}
+                        > ul > li {
+                            font-size: vw-calc(20);padding: vw-calc(25) vw-calc(26) 0 0;
+                            &:first-child {padding-top: vw-calc(19);}
+                            &:last-child {padding-bottom: vw-calc(19);}
+                            > a {padding-right: vw-calc(10);}
+                            &:hover > a, &.on >a, &:focus > a {
+                                @include transition(0.3s);
+                                @include transform( translateY(-100%) );
+                                }
+                        }
+                    }
+                }
+                .searchLang {
+                    width: 100%;height: vw-calc(100); float: left;padding-right: vw-calc(26);
+                    button {float: right; }
+                    .search_wrap {display: none;}
+                    .lang {
+                        padding-right: vw-calc(17.4);
+                        > ul {display: none;}
+                    }
+                }
+
+            }
+        }   
+    }
 
     //footer
     #footer {

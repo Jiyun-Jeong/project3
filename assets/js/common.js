@@ -59,20 +59,19 @@ $(document).ready(function (){
     //모바일 메뉴 열기
         $('#mHeader .menu_open').on('click', function () {
             if($(this).hasClass('active')) {
-                _mGnb.stop().animate({left: '100%'}, 300, function () {
+                _mGnb.stop().animate({right: '100%'}, 300, function () {
                     $(this).css({display: 'none'}).find('ul li.on').removeClass('on').children('ul').stop().slideUp();
                 });
     
             $(this).removeClass('active').find('blind-b').text('메뉴 열기');
             } else {
                 var scrollMove = scrollT;
-                console.log(scrollMove);
     
                 $(this).addClass('active').find('blind-b').text('메뉴 닫기');
-                var $first = _gnb.find('[data-link=first]');
-                var $last = _gnb.find('[data-link=last]');
+                var $first = _mGnb.find('[data-link=first]');
+                var $last = _mGnb.find('[data-link=last]');
     
-                _gnb.css({display: 'block'}).stop().animate({left: 0}, 300, function () {
+                _mGnb.css({display: 'block'}).stop().animate({left: 0}, 300, function () {
                     $first.focus();
                 });
     
@@ -93,7 +92,7 @@ $(document).ready(function (){
             }
     
             //depth1 a click
-            _gnb.find('>ul>li>a').on('click', function () {
+            _mGnb.find('#mGnb>ul>li>a').on('click', function () {
                 if($(this).next().size() === 0) {
                     location.href=$(this).attr('href');
                 } else {
