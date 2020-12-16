@@ -122,12 +122,12 @@ $(document).ready(function(){
 
             if (scrollY === 0 ) {
                 $('#header').css({position: 'fixed', top: 'auto', bottom: 0});
-            } /* else if (scrollY < $(window).height()) {
+            } else if (scrollY < $(window).height()) {
                 $('#header').css({absolute: 'absolute', top: windowH-scrollY, bottom: 'auto'});
                 $('#pcGnb > ul > li > ul').css({bottom: 0, top: 90});
             } else {
                 $('#header').css({absolute: 'fixed', top: 0, bottom: 'auto'});
-            } */
+            }
         }
         //텍스트 marquee 효과
         if (scrollT > $('.marquee').offset().top - 300) {

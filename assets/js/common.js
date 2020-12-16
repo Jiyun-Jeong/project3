@@ -3,6 +3,7 @@ $(document).ready(function (){
     var timer = 0;
 
     var _gnb = $('#gnb')
+    var _mGnb = $('#mGnb') 
 
     $(window).on('scroll', function () {
         clearTimeout(timer);
@@ -55,6 +56,52 @@ $(document).ready(function (){
 
     });
 
-
+    //모바일 메뉴 열기
+        $('#mHeader .menu_open').on('click', function () {
+            if($(this).hasClass('active')) {
+                _mGnb.stop().animate({left: '100%'}, 300, function () {
+                    $(this).css({display: 'none'}).find('ul li.on').removeClass('on').children('ul').stop().slideUp();
+                });
+    
+            $(this).removeClass('active').find('blind-b').text('메뉴 열기');
+            } else {
+                var scrollMove = scrollT;
+                console.log(scrollMove);
+    
+                $(this).addClass('active').find('blind-b').text('메뉴 닫기');
+                var $first = _gnb.find('[data-link=first]');
+                var $last = _gnb.find('[data-link=last]');
+    
+                _gnb.css({display: 'block'}).stop().animate({left: 0}, 300, function () {
+                    $first.focus();
+                });
+    
+                $first.on('keydown', function (e) {
+                    console.log(e.keycode);
+                    if(e.shiftKey && e.keyCode == 9) {
+                        e.preventDefault();
+                        $last.focus();
+                    }
+                });
+    
+                $last.on('keydown', function (e) {
+                    if(!e.shiftKey && e.keyCode == 9) {
+                        e.preventDefault();
+                        $('.btn_menu').focus();
+                    }
+                });
+            }
+    
+            //depth1 a click
+            _gnb.find('>ul>li>a').on('click', function () {
+                if($(this).next().size() === 0) {
+                    location.href=$(this).attr('href');
+                } else {
+                    $(this).parent().siblings().removeClass('on').find('ul').stop().slideUp("fast");
+                    $(this).next().stop().slideToggle("fast").parent().toggleClass('on');
+                }
+                return false;
+            });
+        });
 
 });
