@@ -112,26 +112,26 @@
 }
 
 //video
-@media screen and (max-width: 1439px) and (orientation: landscape) {
+@media screen and (max-width: 1440px) and (orientation: landscape) {
     #cnt1{
         #videoBg1920{max-width: none;width: auto;height: 100%;}
         #videoBg768, #videoBg414{display: none;}
     }
   }
-  @media screen and (max-width: 1439px) and (orientation: portrait) {
+  @media screen and (max-width: 1440px) and (orientation: portrait) {
     #cnt1{
         #videoBg768{display: block;width: 100%;}
         #videoBg1920, #videoBg414{display: none;}
     }
   }
   
-  @media screen and (max-width: 767px) and (orientation: landscape) {
+  @media screen and (max-width: 768px) and (orientation: landscape) {
     #cnt1{
         #videoBg1920{display: block;max-width: none;width: 100%;height: auto;}
         #videoBg768, #videoBg414{display: none;}
     }
   }
-  @media screen and (max-width: 767px) and (orientation: portrait) {
+  @media screen and (max-width: 768px) and (orientation: portrait) {
     #cnt1{
         #videoBg414{display: block;width: 100%;}
         #videoBg1920, #videoBg768{display: none;}
@@ -1086,6 +1086,9 @@
             }
             &.slide2 {
                 background-image: url("../img/main/m_index1_02_360.jpg");
+                .txtbox {
+                    top: vw-calc360(400);
+                }
             }
             &.slide3 {
                 background-image: url("../img/main/m_index1_03_360.jpg");
@@ -1095,7 +1098,7 @@
                 }
             }
             
-            .txtbox{top: vw-calc360(545);left: 7%;width: vw-calc360(639);height: vw-calc360(140);}
+            /* .txtbox{top: vw-calc360(545);left: 7%;width: vw-calc360(639);height: vw-calc360(140);} */
             .txtbox p {font-size: vw-calc360(14);letter-spacing: vw-calc360(0.43);line-height: vw-calc360(22);}
             .txtbox h3 {font-size: vw-calc360(24);padding-bottom: 0;line-height: vw-calc360(35);}
             .txtbox p:nth-child(3) {font-size: vw-calc360(14);padding-bottom: vw-calc360(80);letter-spacing: vw-calc360(0.37);}
