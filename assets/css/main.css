@@ -1084,12 +1084,13 @@
   #cnt1 .swiper-pagination {
     top: -11px;
     left: -9%;
-    width: 184px; }
+    width: 184px;
+    font-size: 4.59765625vw; }
   #cnt1 .controller {
-    bottom: 313px;
-    left: 47px;
-    width: 204px;
-    height: 47px; }
+    bottom: 35.3880208333vw;
+    left: 6.5481770833vw;
+    width: 28.5611979167vw;
+    height: 6.5481770833vw; }
     #cnt1 .controller .swiper-button-prev, #cnt1 .controller .swiper-button-next, #cnt1 .controller .play_stop {
       width: 48px;
       height: 47px; }
@@ -1399,8 +1400,8 @@
     #cnt1 .swiper-slide.slide3 {
       background-image: url("../img/main/m_index1_03_414.jpg"); }
     #cnt1 .swiper-slide .txtbox {
-      top: 140.8574879227vw;
-      left: 7%;
+      top: 129.2270531401vw;
+      left: -9.0458937198vw;
       width: 103.3816425121vw;
       height: 36.1835748792vw; }
     #cnt1 .swiper-slide .txtbox p {
@@ -1409,11 +1410,11 @@
       line-height: 5.6859903382vw; }
     #cnt1 .swiper-slide .txtbox h3 {
       font-size: 6.2028985507vw;
-      padding-bottom: 10.0797101449vw;
+      padding-bottom: 31.0144927536vw;
       line-height: 9.0458937198vw; }
     #cnt1 .swiper-slide .txtbox p:nth-child(3) {
       font-size: 4.1352657005vw;
-      padding-bottom: 21.9685990338vw;
+      padding-bottom: 20.6763285024vw;
       letter-spacing: 0.0956280193vw; }
     #cnt1 .slide2 .txtbox h3 {
       font-size: 6.2028985507vw;

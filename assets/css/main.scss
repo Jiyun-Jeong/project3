@@ -652,12 +652,12 @@
             top: 684px; right: 9%;width: 20%;
         }
         
-        .swiper-pagination{top: -11px; left: -9%; width: 184px;
+        .swiper-pagination{top: -11px; left: -9%; width: 184px;font-size: vw-calc768(33);
         }
             
     
         .controller {
-            bottom: 313px; left: 47px;width: 204px;height: 47px;
+            bottom: vw-calc768(254); left: vw-calc768(47);width: vw-calc768(205);height: vw-calc768(47);
             .swiper-button-prev, .swiper-button-next, .play_stop {width: 48px; height: 47px;}
             .swiper-button-prev, .swiper-button-next {
                 padding: 3px;border: 2px solid #fff;
@@ -857,10 +857,10 @@
                 @include transform (translate-Y(20px));
                 background-image: url("../img/main/m_index1_02_414.jpg");}
             &.slide3 {background-image: url("../img/main/m_index1_03_414.jpg");}
-            .txtbox{top: vw-calc(545);left: 7%;width: vw-calc(400);height: vw-calc(140);}
+            .txtbox{top: vw-calc(500);left: vw-calc(-35);width: vw-calc(400);height: vw-calc(140);}
             .txtbox p {font-size: vw-calc(16);letter-spacing: vw-calc(0.43);line-height: vw-calc(22);}
-            .txtbox h3 {font-size: vw-calc(24);padding-bottom: vw-calc(39);line-height: vw-calc(35);}
-            .txtbox p:nth-child(3) {font-size: vw-calc(16);padding-bottom: vw-calc(85);letter-spacing: vw-calc(0.37);}
+            .txtbox h3 {font-size: vw-calc(24);padding-bottom: vw-calc(120);line-height: vw-calc(35);}
+            .txtbox p:nth-child(3) {font-size: vw-calc(16);padding-bottom: vw-calc(80);letter-spacing: vw-calc(0.37);}
         }
         .slide2 {
             .txtbox h3 {font-size: vw-calc(24);padding-bottom: vw-calc(13);}
