@@ -150,7 +150,7 @@
                 > li {
                     float: left;font-size: 17px;font-weight: 700;position: relative;
                     &::after {
-                        @include transition(all 0.2px);
+                        
                         content:"";position: absolute; width: 100%;height: 1px;background-color: $lightblue;opacity: 0;
                     }
                     &:hover, &:focus {
@@ -381,9 +381,9 @@
                 width: 100%;height: 100%;
                 .brandInfo {
                     padding: vw-calc(36.5) vw-calc(14) 0 vw-calc(14);
-                    width: vw-calc(320); height: vw-calc(465);
-                    div.info + div.info {padding-left: vw-calc(44);}
-                    &::after {width: 96%; left: vw-calc(-3.5);}
+                    width: vw-calc(370); height: vw-calc(465);
+                    div.info + div.info {padding-left: vw-calc(75);}
+                    &::after {width: 96%; left: vw-calc(1.5);}
                 }
                 .info {
                     a{
@@ -492,6 +492,7 @@
             img {width: vw-calc360(22);height: vw-calc360(22);display: none;}
             p {font-size: vw-calc360(8);}
         }
+        .bottomMenu {margin-top: vw-calc(100);}
         .copyright {font-size: vw-calc360(7);bottom: vw-calc360(-87); }
         .foot_icon {
             height: vw-calc360(31); width: vw-calc360(100);right: vw-calc360(-13);bottom: vw-calc360(-54);

@@ -264,10 +264,6 @@
         font-weight: 700;
         position: relative; }
         #header .dep2wrap > li::after {
-          -webkit-transition: all 0.2px;
-          -moz-transition: all 0.2px;
-          -o-transition: all 0.2px;
-          transition: all 0.2px;
           content: "";
           position: absolute;
           width: 100%;
@@ -582,13 +578,13 @@
       height: 100%; }
       #footer .foot .brandInfo {
         padding: 9.4335748792vw 3.6183574879vw 0 3.6183574879vw;
-        width: 82.7053140097vw;
+        width: 95.6280193237vw;
         height: 120.1811594203vw; }
         #footer .foot .brandInfo div.info + div.info {
-          padding-left: 11.3719806763vw; }
+          padding-left: 19.384057971vw; }
         #footer .foot .brandInfo::after {
           width: 96%;
-          left: -0.904589372vw; }
+          left: 0.3876811594vw; }
       #footer .foot .info a {
         font-size: 2.3260869565vw;
         padding-bottom: 3.1014492754vw; }
@@ -742,6 +738,8 @@
           display: none; }
         #footer .foot .closest p {
           font-size: 2.3777777778vw; }
+      #footer .foot .bottomMenu {
+        margin-top: 25.845410628vw; }
       #footer .foot .copyright {
         font-size: 2.0805555556vw;
         bottom: -25.8583333333vw; }

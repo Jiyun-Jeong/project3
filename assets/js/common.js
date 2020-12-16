@@ -3,7 +3,7 @@ $(document).ready(function (){
     var timer = 0;
 
     var _gnb = $('#gnb')
-    var _mGnb = $('#mGnb') 
+
 
     $(window).on('scroll', function () {
         clearTimeout(timer);
@@ -57,10 +57,12 @@ $(document).ready(function (){
     });
 
     //모바일 메뉴 열기
-        $('#mHeader .menu_open').on('click', function () {
+        $('.mUtil .menu_open').on('click', function () {
+            var _mGnb = $('#mGnb') 
+
             if($(this).hasClass('active')) {
-                _mGnb.stop().animate({right: '100%'}, 300, function () {
-                    $(this).css({display: 'none'}).find('ul li.on').removeClass('on').children('ul').stop().slideUp();
+                _mGnb.stop().animate({right: '0'}, 300, function () {
+                    $(this).find('ul>li>a').css({display: 'none'}).find('ul li.on').removeClass('on').children('ul').stop().slideUp();
                 });
     
             $(this).removeClass('active').find('blind-b').text('메뉴 열기');
@@ -92,7 +94,7 @@ $(document).ready(function (){
             }
     
             //depth1 a click
-            _mGnb.find('#mGnb>ul>li>a').on('click', function () {
+            _mGnb.find('ul>li>a').on('click', function () {
                 if($(this).next().size() === 0) {
                     location.href=$(this).attr('href');
                 } else {

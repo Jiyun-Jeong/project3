@@ -301,7 +301,7 @@ body {
 @media screen and (min-width: 360px) {
   .max1920 {
     max-width: auto;
-    padding: 0 10px; }
+    padding: 0 12px; }
 
   .fixedBtn {
     width: 83px;
