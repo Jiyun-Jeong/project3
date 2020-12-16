@@ -218,8 +218,8 @@ body {
     padding: 0 50px; } }
 @media screen and (max-width: 1440px) {
   .discover_btn {
-    width: 63.3083333333vw;
-    height: 14.2666666667vw; } }
+    width: 55.0507246377vw;
+    height: 12.4057971014vw; } }
 .fixedBtn {
   -webkit-transition: opacity 0.3s;
   -moz-transition: opacity 0.3s;
@@ -301,6 +301,20 @@ body {
 @media screen and (min-width: 360px) {
   .max1920 {
     max-width: auto;
-    padding: 0 20px; } }
+    padding: 0 10px; }
+
+  .fixedBtn {
+    width: 83px;
+    height: 100px;
+    bottom: 117px;
+    right: 65px; }
+    .fixedBtn .goUpBtn {
+      width: 30px;
+      height: 30px; }
+    .fixedBtn .chattingBtn {
+      padding-top: 2px;
+      width: 82px;
+      height: 35px;
+      bottom: 28px; } }
 
 /*# sourceMappingURL=common.css.map */

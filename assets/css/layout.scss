@@ -426,8 +426,8 @@
         .foot {
         width: 100%;height: 100%;
         .brandInfo {
-            padding-left: vw-calc360(14);padding-top: vw-calc360(36.5);width: vw-calc360(320); height: vw-calc360(465);
-            div.info + div.info {padding-left: vw-calc360(79);}
+            padding-left: vw-calc360(8);padding-top: vw-calc360(36.5);width: vw-calc360(320); height: vw-calc360(465);
+            div.info + div.info {padding-left: vw-calc360(55);}
             &::after {width: 100%; left: vw-calc360(-3.5);}
         }
         .info {

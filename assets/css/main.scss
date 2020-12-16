@@ -853,38 +853,18 @@
 
 @media screen and (max-width: 360px) {
     #cnt1 {
+        
         .swiper-slide {
-            #videoBg {width: 100%; height: 100vh; /* min-width: 100%; */}
-            &.slide2 {background-image: url("../img/main/m_index1_02_414.jpg");}
-            &.slide3 {background-image: url("../img/main/m_index1_03_414.jpg");}
-            .txtbox{top: vw-calc(545);left: 7%;width: vw-calc(639);height: vw-calc(140);}
-            .txtbox p {font-size: vw-calc(16);letter-spacing: vw-calc(0.43);line-height: vw-calc(22);}
-            .txtbox h3 {font-size: vw-calc(26);padding-bottom: vw-calc(39);line-height: vw-calc(35);}
-            .txtbox p:nth-child(3) {font-size: vw-calc(16);padding-bottom: vw-calc(60);letter-spacing: vw-calc(0.37);}
+            #videoBg360 {position: absolute; width: 100%; height: auto; top: 0; left: 0; /* min-width: 100%; */ min-height: auto; z-index: -1;}
+            &.slide2 {background-image: url("../img/main/m_index1_02_360.jpg");}
+            &.slide3 {background-image: url("../img/main/m_index1_03_360.jpg");}
+            .txtbox{top: vw-calc360(545);left: 7%;width: vw-calc360(639);height: vw-calc360(140);}
+            .txtbox p {font-size: vw-calc360(16);letter-spacing: vw-calc360(0.43);line-height: vw-calc360(22);}
+            .txtbox h3 {font-size: vw-calc360(26);padding-bottom: vw-calc360(39);line-height: vw-calc360(35);}
+            .txtbox p:nth-child(3) {font-size: vw-calc360(16);padding-bottom: vw-calc360(60);letter-spacing: vw-calc360(0.37);}
         }
-        .slide2 .txtbox h3 {padding-bottom: vw-calc(13);}
-        .slide3 {
-            .simpleExplan {
-                left: vw-calc(45); top: vw-calc(194); width: vw-calc(348); height: vw-calc(43);font-size: vw-calc(9);
-            .simpleWrap {width: vw-calc(102);height: vw-calc(41);}
-            .cloud {
-                img {width: vw-calc(36); height: vw-calc(25);}
-                p {margin-top: vw-calc(7);width: vw-calc(101);}
-            }
-            .discount {
-               margin-left: vw-calc(21)x;
-                img {width: vw-calc(45); height: vw-calc(22);margin-bottom: vw-calc(10);}
-            }
-            .cameraChange {
-                margin-left: vw-calc(21);
-                img {width: vw-calc(43);height: vw-calc(30);margin-bottom: vw-calc(3);}
-            }
-            }
-            .txtbox {
-                left: vw-calc(-255);
-                h3 {padding-bottom: vw-calc(118);}
-            }
-        }
+        .slide2 .txtbox h3 {padding-bottom: vw-calc360(13);}
+    
     
         .swiper-pagination{ left: 7%;}
         .loadingWrap {
@@ -965,23 +945,23 @@
         }
         #camera1 {
             top: -32px; left: -17px; width: 117%;
-            img {width: 141px;height: 141px;left: 282px;}
+            img {width: 141px;height: 141px;left: 51%;}
         }
         #camera2 {
             top: 29.3333%; left:0; height:41%;
             img {
                 @include transform(skewX(0) skewY(5deg));
-                width: 189px;height: 134px;left: 36%;}
+                width: 189px;height: 134px;left: 33%;}
             a {
                 @include transform(skewX(0) skewY(5deg));
-                width: 119px; height: 27px; line-height: 27px; bottom: 86px; left: 210px; font-size: 8px;
+                width: 107px; height: 27px; line-height: 27px; bottom: 23px; left: 179px; font-size: 8px;
             }
         }
         #camera3 {
             top: 70%; left: 0; 
             img {
                 @include transform(skewX(0) skewY(5deg));
-                width: 118px;height: 139px;left: 199px;}
+                width: 118px;height: 139px;left: 42%;}
         }
     }
 
@@ -1018,48 +998,50 @@
     #cnt5 {
         height: 90vh;
         .newsWrap {
-            width: 414px;height: 985px;padding-top: 56.5px;
-            > strong { font-size: 26px;left: 29px; top: 89px;width: 71px;height: 35px;}
-            > a {top: 98px;right: 31px; width: 48px;height: 18px;}
+            width: vw-calc360(360);height: vw-calc360(985);padding-top: vw-calc360(56.5);
+            > strong { font-size: vw-calc360(26);left: vw-calc360(29); top: vw-calc360(89);width: vw-calc360(71);height: vw-calc360(35);}
+            > a {top: vw-calc360(98);right: vw-calc360(31); width: vw-calc360(48);height: vw-calc360(18);}
             .newsCntWrap {
-                width: 414px;height: auto;padding: 85px 40px 0; 
+                width: vw-calc360(365);height: auto;padding: vw-calc360(74) vw-calc360(26) 0; 
+                
                 ul li a{
-                    height: 181px;
-                    .category{font-size: 14px; padding-bottom: 16.5px;padding-top: 48.5px;}
-                    .txt {width: 333px;font-size: 12px;}
-                    h5{margin-top:44.5px;font-size: 20px;padding-bottom: 26px;}
-                    .date{float: left;font-size: 13px;}
+                    height: vw-calc360(139);
+                    .category{font-size: vw-calc360(14); padding-bottom: vw-calc360(16.5);padding-top: vw-calc360(48.5);}
+                    .txt {width: vw-calc360(333);font-size: vw-calc360(12);}
+                    h5{margin-top:vw-calc360(44.5);font-size: vw-calc360(20);padding-bottom: vw-calc360(26);}
+                    .date{float: left;font-size: vw-calc360(13);}
                     .img{display:none;}
                     p {display: none;}
                     &.on{
-                        height: 181px;
+                        height: vw-calc360(181);
                         .txt{display: none;}
-                        .date{font-size: 13px;padding-bottom: 42.5px;}
+                        .date{font-size: vw-calc360(13);padding-bottom: vw-calc360(42.5);}
                     }
                 }
             }
+            a {font-size: vw-calc360(14);}
         }
     }
 
     #cnt6 {
         height: 70vh;
         .video {
-            .marquee {margin-bottom:85px;}
-            .marquee p:after {padding-right:50px;}
-            .marquee p {padding-left:450px;}
+            .marquee {margin-bottom: vw-calc(85);}
+            .marquee p:after {padding-right:vw-calc(50);}
+            .marquee p {font-size: vw-calc(48);padding-left:vw-calc(450);}
             .videoWrap {
-                @include border-radius(48px);
-                border: 3px solid #707070;width: 388px;height: 224px;margin: 0 auto;
+                @include border-radius(41px);
+                width: vw-calc(332);height: vw-calc(231);
                 .videoInner {
-                    padding-left: 56px;padding-top: 27px;
-                    > strong { font-size: 16px;padding-right: 215px;}
+                    padding-left: vw-calc(26);padding-top: vw-calc(27);
+                    > strong { font-size: vw-calc(16);padding-right: vw-calc(215);}
                     .iframe {
-                        width:273px; height: 152px;margin-top: 8px;
+                        width:vw-calc(273); height: vw-calc(152);margin-top: vw-calc(8);
                         iframe {
-                            padding-left: 15px;border: none;
-                            &:first-child {width: 273px;height: 152px;}
+                            padding-left: vw-calc(15);border: none;
+                            &:first-child {width: vw-calc(273);height: vw-calc(152);}
                     }
-                    a {top: 30px; right: 42px; font-size: 5px;}
+                    a {top: vw-calc(30); right: vw-calc(42); font-size: vw-calc(5);}
                   }
                 }
             }
@@ -1069,18 +1051,18 @@
     #cnt7 {
         height: 65vh;
         .insta {
-            padding-top: 59px;
-            strong {font-size: 26px;padding-left: 21px;}
-            .instaOuterWrap {width: 550px;height: 295.2px;/* overflow: hidden; */}
+            padding-top: vw-calc360(59);
+            strong {font-size: vw-calc360(26);padding-left: vw-calc360(21);}
+            .instaOuterWrap {width: vw-calc360(338);height: vw-calc360(245);}
             .instaWrap {
                 float: left;overflow: auto;
                 a {
-                    padding-top: 9px; padding-right: 13px;
-                    &:first-child {padding-left: 55.8px;}
+                    padding-top: vw-calc360(9); padding-right: vw-calc360(13);
+                    &:first-child {padding-left: vw-calc360(55.8);}
                     &:nth-child(5n) {padding-left: 0;}
                 }
                 img {
-                    width: 144.2px;height: 144.2px;
+                    width: vw-calc360(235);height: vw-calc360(235);
                     /* 호버넣기 */                    
                 }
             }

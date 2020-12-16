@@ -2,7 +2,7 @@
     $vwSize: $px * $ratio / ($viewport / 100);
     @return #{$vwSize}vw;
 }
-@function vw-calc($px, $ratio: 1.07, $viewport: 360) {
+@function vw-calc360($px, $ratio: 1.07, $viewport: 360) {
     $vwSize: $px * $ratio / ($viewport / 100);
     @return #{$vwSize}vw;
 }

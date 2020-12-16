@@ -140,6 +140,13 @@ body {
 
 }
 @media screen and (min-width: 360px) {
-    .max1920 {max-width: auto; padding: 0 20px;}
+    .max1920 {max-width: auto; padding: 0 10px;}
+
+    .fixedBtn {
+        width: 83px;height: 100px;
+        bottom: 117px; right: 65px;
+        .goUpBtn { width: 30px; height: 30px;}
+        .chattingBtn { padding-top: 2px;width: 82px; height: 35px;bottom: 28px;}
+    }
 }
 

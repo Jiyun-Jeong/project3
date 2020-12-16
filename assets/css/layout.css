@@ -470,39 +470,39 @@
     display: block !important;
     top: 0;
     left: 0;
-    height: 14.8611111111vw;
+    height: 12.922705314vw;
     width: 100%;
     background: #000;
-    line-height: 14.8611111111vw;
+    line-height: 12.922705314vw;
     text-align: center;
     z-index: 1000; }
     #mHeader .logo {
       position: absolute;
-      left: 2.675vw;
+      left: 2.3260869565vw;
       top: 0;
-      width: 16.5255555556vw;
-      height: 9.3030555556vw;
-      padding-top: 2.5858333333vw; }
+      width: 14.3700483092vw;
+      height: 8.0896135266vw;
+      padding-top: 2.2485507246vw; }
       #mHeader .logo a {
         -webkit-background-size: cover !important;
         -moz-background-size: cover !important;
         background-size: cover !important;
         display: block; }
         #mHeader .logo a img {
-          width: 16.5255555556vw;
-          height: 9.3030555556vw; }
+          width: 14.3700483092vw;
+          height: 8.0896135266vw; }
     #mHeader button.menu_open {
       position: absolute;
-      right: 4.7555555556vw;
-      top: 4.4583333333vw;
-      width: 7.4305555556vw;
-      height: 7.4305555556vw; }
+      right: 4.1352657005vw;
+      top: 3.8768115942vw;
+      width: 6.461352657vw;
+      height: 6.461352657vw; }
     #mHeader .mUtil {
       display: block;
       position: absolute;
       top: 0;
       right: -360px;
-      width: 107vw;
+      width: 93.0434782609vw;
       height: auto;
       text-align: right;
       background-color: #fff;
@@ -511,45 +511,45 @@
         position: absolute;
         top: 0;
         right: 0;
-        padding: 4.6069444444vw 5.4986111111vw 0 0;
-        width: 44.5833333333vw;
-        height: 14.8611111111vw; }
+        padding: 4.0060386473vw 4.7814009662vw 0 0;
+        width: 38.768115942vw;
+        height: 12.922705314vw; }
         #mHeader .mUtil .mgnb_wrap .bg_white button {
-          padding-right: 2.9722222222vw; }
+          padding-right: 2.5845410628vw; }
           #mHeader .mUtil .mgnb_wrap .bg_white button:last-child {
             padding-right: 0; }
         #mHeader .mUtil .mgnb_wrap .bg_white .mAccount {
-          width: 7.4305555556vw;
-          height: 7.4305555556vw; }
+          width: 6.461352657vw;
+          height: 6.461352657vw; }
         #mHeader .mUtil .mgnb_wrap .bg_white .mShopping {
-          width: 7.4305555556vw;
-          height: 7.4305555556vw; }
+          width: 6.461352657vw;
+          height: 6.461352657vw; }
         #mHeader .mUtil .mgnb_wrap .bg_white .mClose {
-          width: 7.4305555556vw;
-          height: 7.4305555556vw;
-          padding-top: 0.8916666667vw; }
+          width: 6.461352657vw;
+          height: 6.461352657vw;
+          padding-top: 0.7753623188vw; }
       #mHeader .mUtil .mgnb_wrap #mGnb {
         /* display: none; */
         background: #fff;
-        padding: 36.2611111111vw 0 128.9944444444vw; }
+        padding: 31.5314009662vw 0 112.1690821256vw; }
         #mHeader .mUtil .mgnb_wrap #mGnb > ul > li {
-          font-size: 8.9166666667vw;
+          font-size: 7.7536231884vw;
           font-weight: 700; }
           #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > a {
-            margin: 0 7.7277777778vw 0 0; }
+            margin: 0 6.7198067633vw 0 0; }
           #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li {
             /* display: none; */
-            font-size: 5.9444444444vw;
+            font-size: 5.1690821256vw;
             font-weight: 500;
             background: lightgrey;
             color: #444;
-            padding: 7.4305555556vw 7.7277777778vw 0 0; }
+            padding: 6.461352657vw 6.7198067633vw 0 0; }
             #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li:first-child {
-              padding-top: 5.6472222222vw; }
+              padding-top: 4.9106280193vw; }
             #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li:last-child {
-              padding-bottom: 5.6472222222vw; }
+              padding-bottom: 4.9106280193vw; }
             #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li > a {
-              padding-right: 2.9722222222vw; }
+              padding-right: 2.5845410628vw; }
             #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li:hover > a, #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li.on > a, #mHeader .mUtil .mgnb_wrap #mGnb > ul > li > ul > li:focus > a {
               -webkit-transition: 0.3s;
               -moz-transition: 0.3s;
@@ -563,123 +563,123 @@
               color: #00E4F3; }
       #mHeader .mUtil .mgnb_wrap .searchLang {
         width: 100%;
-        height: 29.7222222222vw;
+        height: 25.845410628vw;
         float: left;
-        padding-right: 7.7277777778vw; }
+        padding-right: 6.7198067633vw; }
         #mHeader .mUtil .mgnb_wrap .searchLang button {
           float: right; }
         #mHeader .mUtil .mgnb_wrap .searchLang .search_wrap {
           display: none; }
         #mHeader .mUtil .mgnb_wrap .searchLang .lang {
-          padding-right: 5.1716666667vw; }
+          padding-right: 4.4971014493vw; }
           #mHeader .mUtil .mgnb_wrap .searchLang .lang > ul {
             display: none; }
 
   #footer {
     height: auto;
-    padding-top: 12.0375vw;
-    padding-bottom: 7.4305555556vw; }
+    padding-top: 10.4673913043vw;
+    padding-bottom: 6.461352657vw; }
     #footer .foot {
       width: 100%;
       height: 100%; }
       #footer .foot .brandInfo {
-        padding: 10.8486111111vw 4.1611111111vw 0 4.1611111111vw;
-        width: 95.1111111111vw;
-        height: 138.2083333333vw; }
+        padding: 9.4335748792vw 3.6183574879vw 0 3.6183574879vw;
+        width: 82.7053140097vw;
+        height: 120.1811594203vw; }
         #footer .foot .brandInfo div.info + div.info {
-          padding-left: 13.0777777778vw; }
+          padding-left: 11.3719806763vw; }
         #footer .foot .brandInfo::after {
           width: 96%;
-          left: -1.0402777778vw; }
+          left: -0.904589372vw; }
       #footer .foot .info a {
-        font-size: 2.675vw;
-        padding-bottom: 3.5666666667vw; }
+        font-size: 2.3260869565vw;
+        padding-bottom: 3.1014492754vw; }
         #footer .foot .info a strong {
-          font-size: 3.2694444444vw; }
+          font-size: 2.8429951691vw; }
       #footer .foot .programInfo {
-        padding-top: 5.9444444444vw; }
+        padding-top: 5.1690821256vw; }
       #footer .foot .closest {
         width: auto;
         padding-left: 0;
         left: 0;
-        bottom: -38.6388888889vw; }
+        bottom: -33.5990338164vw; }
         #footer .foot .closest img {
-          width: 6.5388888889vw;
-          height: 6.5388888889vw;
+          width: 5.6859903382vw;
+          height: 5.6859903382vw;
           display: none; }
         #footer .foot .closest p {
-          font-size: 2.3777777778vw; }
+          font-size: 2.0676328502vw; }
       #footer .foot .bottomMenu {
-        margin-top: 47.5555555556vw; }
+        margin-top: 41.3526570048vw; }
       #footer .foot .copyright {
-        font-size: 2.3777777778vw;
+        font-size: 2.0676328502vw;
         left: 0;
-        bottom: -39.8277777778vw; }
+        bottom: -34.6328502415vw; }
       #footer .foot .foot_icon {
-        height: 9.2138888889vw;
-        width: 29.7222222222vw;
-        right: -3.8638888889vw;
-        bottom: -31.5055555556vw; }
+        height: 8.0120772947vw;
+        width: 25.845410628vw;
+        right: -3.3599033816vw;
+        bottom: -27.3961352657vw; }
         #footer .foot .foot_icon ul button {
-          width: 7.8763888889vw;
-          height: 7.8763888889vw; }
+          width: 6.8490338164vw;
+          height: 6.8490338164vw; }
         #footer .foot .foot_icon ul a {
-          padding-right: 1.1888888889vw; }
+          padding-right: 1.0338164251vw; }
           #footer .foot .foot_icon ul a img {
-            width: 10.7vw;
-            height: 10.7vw; } }
+            width: 9.3043478261vw;
+            height: 9.3043478261vw; } }
 @media screen and (max-width: 360px) {
   #header {
     display: none; }
 
   #footer {
     height: 100vh;
-    padding-top: 12.0375vw; }
+    padding-top: 10.4673913043vw; }
     #footer .foot {
       width: 100%;
       height: 100%; }
       #footer .foot .brandInfo {
-        padding-left: vw-calc360(14);
-        padding-top: vw-calc360(36.5);
-        width: vw-calc360(320);
-        height: vw-calc360(465); }
+        padding-left: 2.3777777778vw;
+        padding-top: 10.8486111111vw;
+        width: 95.1111111111vw;
+        height: 138.2083333333vw; }
         #footer .foot .brandInfo div.info + div.info {
-          padding-left: vw-calc360(79); }
+          padding-left: 16.3472222222vw; }
         #footer .foot .brandInfo::after {
           width: 100%;
-          left: vw-calc360(-3.5); }
+          left: -1.0402777778vw; }
       #footer .foot .info a {
-        font-size: vw-calc360(9);
-        padding-bottom: vw-calc360(9); }
+        font-size: 2.675vw;
+        padding-bottom: 2.675vw; }
         #footer .foot .info a strong {
-          font-size: vw-calc360(11); }
+          font-size: 3.2694444444vw; }
       #footer .foot .programInfo {
         padding: 0; }
       #footer .foot .closest {
         padding-left: 0;
         left: 0;
-        bottom: vw-calc360(-88); }
+        bottom: -26.1555555556vw; }
         #footer .foot .closest img {
-          width: vw-calc360(22);
-          height: vw-calc360(22);
+          width: 6.5388888889vw;
+          height: 6.5388888889vw;
           display: none; }
         #footer .foot .closest p {
-          font-size: vw-calc360(8); }
+          font-size: 2.3777777778vw; }
       #footer .foot .copyright {
-        font-size: vw-calc360(7);
-        bottom: vw-calc360(-87); }
+        font-size: 2.0805555556vw;
+        bottom: -25.8583333333vw; }
       #footer .foot .foot_icon {
-        height: vw-calc360(31);
-        width: vw-calc360(100);
-        right: vw-calc360(-13);
-        bottom: vw-calc360(-54); }
+        height: 9.2138888889vw;
+        width: 29.7222222222vw;
+        right: -3.8638888889vw;
+        bottom: -16.05vw; }
         #footer .foot .foot_icon ul button {
-          width: vw-calc360(24);
-          height: vw-calc360(24); }
+          width: 7.1333333333vw;
+          height: 7.1333333333vw; }
         #footer .foot .foot_icon ul a {
-          padding-right: vw-calc360(3); }
+          padding-right: 0.8916666667vw; }
           #footer .foot .foot_icon ul a img {
-            width: vw-calc360(36);
-            height: vw-calc360(36); } }
+            width: 10.7vw;
+            height: 10.7vw; } }
 
 /*# sourceMappingURL=layout.css.map */
