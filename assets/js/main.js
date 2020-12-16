@@ -42,7 +42,7 @@ $(document).ready(function(){
                     },
                 },
                 autoplay: {
-                    delay: 16000,
+                    delay: 9000,
                 },
     
                 // Navigation arrows
