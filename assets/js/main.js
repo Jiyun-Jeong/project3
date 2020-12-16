@@ -58,8 +58,8 @@ $(document).ready(function(){
                     slideChangeTransitionStart: function (swiper) { 
                         //활성화된 슬라이드에 사용자지정속성인 data-swiper-slide-index를 가져와서 오른쪽 위치만 지정한다
                         var tgIdx = $('#cnt1 .swiper-slide-active').data("swiper-slide-index");
-                        if (tgIdx === 1) $('#cnt1').addClass('right');
-                        else $('#cnt1').removeClass('right');
+                        //if (tgIdx === 1) $('#cnt1').addClass('right');
+                        //else $('#cnt1').removeClass('right');
 
                         $(".swiper-progress-bar").removeClass("animate active").addClass("active");
                     },
