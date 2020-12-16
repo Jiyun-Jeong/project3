@@ -427,7 +427,7 @@
     height: auto;
     text-align: center;
     margin: 0 auto;
-    background: url("../img/main/GoProtxt.svg") no-repeat fixed center;
+    background: url("../img/main/GoProtxt_2x.png") no-repeat fixed center;
     background-size: 55.46875vw; }
     #cnt4 .category > p {
       color: #8e8e8e;
@@ -1150,16 +1150,16 @@
       #cnt1 .slide3 .txtbox h3 {
         padding-bottom: 35.0722222222vw; }
     #cnt1 .pagewrap {
-      top: 590px;
+      top: 133.75vw;
       right: 11%;
       width: 35%; }
     #cnt1 .swiper-pagination {
-      width: 176px;
-      top: -10px;
+      width: 44.5833333333vw;
+      top: -2.9722222222vw;
       left: -11%; }
     #cnt1 .controller {
-      bottom: 13.375vw;
-      left: 53.5vw;
+      bottom: 22.2916666667vw;
+      left: 35.6666666667vw;
       width: 60.6333333333vw;
       height: 13.0777777778vw; }
       #cnt1 .controller .swiper-button-prev, #cnt1 .controller .swiper-button-next, #cnt1 .controller .play_stop {
@@ -1192,7 +1192,7 @@
     #cnt2 .newbie .detailWrap {
       padding-top: 46.2180555556vw; }
       #cnt2 .newbie .detailWrap .newbieDetail {
-        padding-left: 19.6166666667vw; }
+        padding-left: 5.9444444444vw; }
         #cnt2 .newbie .detailWrap .newbieDetail > h3 {
           font-size: 7.4305555556vw;
           line-height: 7.7277777778vw;

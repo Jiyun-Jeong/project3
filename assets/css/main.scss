@@ -246,7 +246,7 @@
 #cnt4 {
     color: #000;width: 100%;background-color: #ebebeb;height: 2100px;
     .category {
-        position: relative; width: 85.88541666666667vw/* 1649px */; height: auto;text-align: center; margin: 0 auto; background: url("../img/main/GoProtxt.svg") no-repeat fixed center;background-size: 55.46875vw;
+        position: relative; width: 85.88541666666667vw/* 1649px */; height: auto;text-align: center; margin: 0 auto; background: url("../img/main/GoProtxt_2x.png") no-repeat fixed center;background-size: 55.46875vw;
         > p {color: #8e8e8e; font-size: 31px;font-weight: 700; padding-bottom: 15px;padding-top: 90px; }
         > strong { display: block; font-size: 60px;font-weight: 700;}
         .categoryOuterWrap {width: 1649px;height:452px; }
@@ -669,12 +669,12 @@
             }
         }
         
-        .pagewrap{top: 590px; right: 11%;width: 35%;}
-        .swiper-pagination{ width: 176px; top: -10px; left: -11%;}
+        .pagewrap{top: vw-calc(450); right: 11%;width: 35%;}
+        .swiper-pagination{ width: vw-calc(150); top: vw-calc(-10); left: -11%;}
         /* &.right .swiper-pagination {right: -11%;} */
     
         .controller {
-            bottom: vw-calc(45); left: vw-calc(180);width: vw-calc(204);height: vw-calc(44);
+            bottom: vw-calc(75); left: vw-calc(120);width: vw-calc(204);height: vw-calc(44);
             .swiper-button-prev, .swiper-button-next, .play_stop {width: vw-calc(45); height: vw-calc(44);}
             .swiper-button-next {margin-left: vw-calc(101);}
             .play_stop {right: vw-calc(80); }
@@ -695,7 +695,7 @@
             .detailWrap {
                 padding-top: vw-calc(155.5); 
                 .newbieDetail {
-                    padding-left: vw-calc(66);
+                    padding-left: vw-calc(20);
                     > h3 {
                         font-size: vw-calc(25);line-height: vw-calc(26);padding-bottom: vw-calc(18);margin-top: vw-calc(57.5);
                         &::before {top: vw-calc(-57.5);width: vw-calc(365);}
