@@ -22,7 +22,6 @@ $(document).ready(function (){
 
     _pcGnb.find('.dep2wrap').hide();
     _pcGnb.find('> li > a').on('mouseenter focus', function () {
-        console.log('_pcGnb');
         _pcGnb.find('>li.on').removeClass('on').children('.dep2wrap').hide();
         $(this).next().show().parent().addClass('on');
     });
@@ -45,7 +44,6 @@ $(document).ready(function (){
         $(this).next().show();
         
         $('.lang').on('mouseleave', function () {
-            console.log(_lang);
             $(this).children('ul').hide();
         });
 

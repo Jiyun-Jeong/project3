@@ -38,7 +38,6 @@ $(document).ready(function(){
                     el: '.swiper-pagination',
                     type: 'fraction',
                     renderFraction: function (currentClass, totalClass) {
-                        console.log(currentClass, totalClass);
                         return '<span class="' + currentClass + '"></span>' + '<span class="' + totalClass + '"></span>';
                     },
                 },
@@ -59,7 +58,6 @@ $(document).ready(function(){
                     slideChangeTransitionStart: function (swiper) { 
                         //활성화된 슬라이드에 사용자지정속성인 data-swiper-slide-index를 가져와서 오른쪽 위치만 지정한다
                         var tgIdx = $('#cnt1 .swiper-slide-active').data("swiper-slide-index");
-                        console.log(tgIdx);  //0,1,2
                         if (tgIdx === 1) $('#cnt1').addClass('right');
                         else $('#cnt1').removeClass('right');
 
@@ -90,7 +88,7 @@ $(document).ready(function(){
             });
 
 
-    //cnt2 마우스, 키보드 제어로 클래스 추가
+    //cnt2 마우스, 키보드 제어
     $('#cnt2 .newbie .newbieTxt > strong').attr('tabIndex', 0);
     $('#cnt2 .newbie .newbieTxt > strong').on({
         'mouseenter focusin': function () {

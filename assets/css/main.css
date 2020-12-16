@@ -772,36 +772,14 @@
         margin-bottom: 5px; }
   #cnt1 .slide3 .txtbox h3 {
     padding-bottom: 118px; }
+  #cnt1 .pagewrap {
+    top: 684px;
+    right: 9%;
+    width: 20%; }
   #cnt1 .swiper-pagination {
-    top: 100px;
-    left: 12%;
-    bottom: auto;
-    font-size: 33px;
-    letter-spacing: 0.2rem;
-    font-weight: 700;
-    width: auto;
-    height: auto; }
-  #cnt1 .loadingWrap {
-    position: relative;
-    width: 240px;
-    height: 2px; }
-    #cnt1 .loadingWrap .loadingBar {
-      width: 240px;
-      height: 1px;
-      background-color: #fff;
-      position: absolute;
-      top: 118.5px;
-      left: 180px; }
-    #cnt1 .loadingWrap .runningBar {
-      -webkit-border-radius: 7px;
-      -moz-border-radius: 7px;
-      border-radius: 7px;
-      width: 240px;
-      height: 3px;
-      background-color: #fff;
-      position: absolute;
-      top: 118.5px;
-      left: 180px; }
+    top: -11px;
+    left: -9%;
+    width: 184px; }
   #cnt1 .controller {
     bottom: 313px;
     left: 47px;
@@ -829,7 +807,7 @@
     right: 5%;
     text-align: right; }
   #cnt1.right .swiper-pagination {
-    right: 5%;
+    right: -11%;
     left: auto; }
 
   #cnt2 .newbie {

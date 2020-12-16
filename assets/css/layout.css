@@ -403,7 +403,9 @@
       #header .util .lang button {
         width: 38.5px; }
       #header .util .lang > ul {
-        margin-top: 7px; }
+        margin-top: 7px;
+        top: 34px;
+        right: 37px; }
         #header .util .lang > ul li {
           display: block;
           font-size: 9px;

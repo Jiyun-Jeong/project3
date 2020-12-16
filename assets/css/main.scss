@@ -426,19 +426,12 @@
             }
             .txtbox h3 {padding-bottom: 118px;}
         }
-    
-        .swiper-pagination{
-            top: 100px; left: 12%; bottom: auto; font-size: 33px;letter-spacing: 0.2rem;font-weight: 700;width: auto; height: auto;
+
+        .pagewrap{
+            top: 684px; right: 9%;width: 20%;
         }
-        .loadingWrap {
-            position: relative; width: 240px;height: 2px; 
-            .loadingBar {
-                width: 240px;height: 1px;background-color: #fff;position: absolute; top: 118.5px; left: 180px;
-            }
-            .runningBar {
-                @include border-radius(7px);
-                width: 240px; height: 3px; background-color: #fff; position: absolute; top: 118.5px; left: 180px;
-            }
+        
+        .swiper-pagination{top: -11px; left: -9%; width: 184px;
         }
             
     
@@ -458,7 +451,7 @@
         }
         &.right{
             .swiper-slide .txtbox {left: auto; right: 5%;text-align: right;}
-            .swiper-pagination{right: 5%;left: auto;}
+            .swiper-pagination{right: -11%;left: auto;}
         }
     }
 
