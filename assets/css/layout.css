@@ -577,24 +577,27 @@
 
   #footer {
     height: auto;
-    padding-top: 12.0375vw; }
+    padding-top: 12.0375vw;
+    padding-bottom: 7.4305555556vw; }
     #footer .foot {
       width: 100%;
       height: 100%; }
       #footer .foot .brandInfo {
         padding: 10.8486111111vw 4.1611111111vw 0 4.1611111111vw;
-        width: 109.3777777778vw;
+        width: 95.1111111111vw;
         height: 138.2083333333vw; }
         #footer .foot .brandInfo div.info + div.info {
           padding-left: 13.0777777778vw; }
         #footer .foot .brandInfo::after {
-          width: 100%;
+          width: 96%;
           left: -1.0402777778vw; }
       #footer .foot .info a {
         font-size: 2.675vw;
         padding-bottom: 3.5666666667vw; }
         #footer .foot .info a strong {
           font-size: 3.2694444444vw; }
+      #footer .foot .programInfo {
+        padding-top: 5.9444444444vw; }
       #footer .foot .closest {
         width: auto;
         padding-left: 0;
@@ -606,6 +609,8 @@
           display: none; }
         #footer .foot .closest p {
           font-size: 2.3777777778vw; }
+      #footer .foot .bottomMenu {
+        margin-top: 47.5555555556vw; }
       #footer .foot .copyright {
         font-size: 2.3777777778vw;
         left: 0;

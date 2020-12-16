@@ -377,14 +377,14 @@
 
         //footer
         #footer {
-            height: auto;padding-top:vw-calc(40.5);
+            height: auto;padding-top:vw-calc(40.5);padding-bottom: vw-calc(25);
             .foot {
                 width: 100%;height: 100%;
                 .brandInfo {
                     padding: vw-calc(36.5) vw-calc(14) 0 vw-calc(14);
-                    width: vw-calc(368); height: vw-calc(465);
+                    width: vw-calc(320); height: vw-calc(465);
                     div.info + div.info {padding-left: vw-calc(44);}
-                    &::after {width: 100%; left: vw-calc(-3.5);}
+                    &::after {width: 96%; left: vw-calc(-3.5);}
                 }
                 .info {
                     a{
@@ -392,11 +392,13 @@
                         strong {font-size: vw-calc(11);}
                     }
                 }
+                .programInfo {padding-top: vw-calc(20);}
                 .closest {
                     width: auto;padding-left: 0;left: 0;bottom: vw-calc(-130);
                     img {width: vw-calc(22);height: vw-calc(22);display: none;}
                     p {font-size: vw-calc(8);}
                 }
+                .bottomMenu {margin-top: vw-calc(160);}
                 .copyright {font-size: vw-calc(8);left: 0;bottom: vw-calc(-134); }
                 .foot_icon {
                     height: vw-calc(31); width: vw-calc(100);right: vw-calc(-13);bottom: vw-calc(-106);

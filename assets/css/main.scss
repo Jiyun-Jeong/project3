@@ -640,29 +640,14 @@
             &.slide3 {background-image: url("../img/main/m_index1_03_414.jpg");}
             .txtbox{top: vw-calc(545);left: 7%;width: vw-calc(400);height: vw-calc(140);}
             .txtbox p {font-size: vw-calc(16);letter-spacing: vw-calc(0.43);line-height: vw-calc(22);}
-            .txtbox h3 {font-size: vw-calc(26);padding-bottom: vw-calc(39);line-height: vw-calc(35);}
-            .txtbox p:nth-child(3) {font-size: vw-calc(16);padding-bottom: vw-calc(60);letter-spacing: vw-calc(0.37);}
+            .txtbox h3 {font-size: vw-calc(24);padding-bottom: vw-calc(39);line-height: vw-calc(35);}
+            .txtbox p:nth-child(3) {font-size: vw-calc(16);padding-bottom: vw-calc(85);letter-spacing: vw-calc(0.37);}
         }
         .slide2 {
-            .txtbox h3 {padding-bottom: vw-calc(13);}
+            .txtbox h3 {font-size: vw-calc(24);padding-bottom: vw-calc(13);}
         } 
         .slide3 {
-            .simpleExplan {
-                left: vw-calc(45); top: vw-calc(194); width: vw-calc(348); height: vw-calc(43);font-size: vw-calc(9);
-            .simpleWrap {width: vw-calc(102);height: vw-calc(41);}
-            .cloud {
-                img {width: vw-calc(36); height: vw-calc(25);}
-                p {margin-top: vw-calc(7);width: vw-calc(101);}
-            }
-            .discount {
-               margin-left: vw-calc(21)x;
-                img {width: vw-calc(45); height: vw-calc(22);margin-bottom: vw-calc(10);}
-            }
-            .cameraChange {
-                margin-left: vw-calc(21);
-                img {width: vw-calc(43);height: vw-calc(30);margin-bottom: vw-calc(3);}
-            }
-            }
+            .simpleExplan {display: none;}
             .txtbox {
                 left: vw-calc(30);width: vw-calc(280);top: vw_calc(500);
                 h3 {padding-bottom: vw-calc(118);}
@@ -767,25 +752,24 @@
             > p {font-size: vw-calc(13);padding-bottom: vw-calc(7);padding-top: vw-calc(68);}
             > strong {font-size: vw-calc(26);}
             .categoryOuterWrap {
-                height: vw-calc(347);width: vw-calc(768);overflow-x: auto;}
+                height: vw-calc(500);width: vw-calc(400);overflow-x: auto;}
             .categoryWrap {
                 /* position: relative; */padding-top: 0;width:vw-calc(1500);
                 .otherWrap {
-                    padding-right: vw-calc(25);position: relative;
+                    padding-right: vw-calc(30);position: relative;padding-top: vw-calc(25);
                     a {
-                        display: block; margin-bottom: vw-calc(7.5);width: vw-calc(306); height :vw-calc(347);
+                        display: block; margin-bottom: vw-calc(7.5);width: vw-calc(250); height :vw-calc(300);
                         .hoverImg {
-                            width: vw-calc(306); height :vw-calc(347);margin-bottom: vw-calc(7.5);left:vw-calc(37);
+                            width: vw-calc(250); height :vw-calc(350);margin-bottom: vw-calc(7.5);left:vw-calc(37);
                         }
                     }
                     &:first-child {padding-left: vw-calc(37);}
+                    h4 {font-size: vw-calc(17);padding-bottom: vw-calc(14.5);}
+                    p {font-size: vw-calc(13);line-height: vw-calc(15);width: vw-calc(260);}
                 }
-                h4 {font-size: vw-calc(21);padding-bottom: vw-calc(18.5);}
-                p {font-size: vw-calc(18);line-height: vw-calc(26);}
-                /* &:first-child > div {padding-left : 37px;} */
-                &:nth-of-type(2),&:nth-of-type(5) {padding-top: vw-calc(148);}
+                &:nth-of-type(2),&:nth-of-type(5) {padding-top: 0;}
                 &:nth-of-type(3),&:nth-of-type(6) {padding-top: 0;}
-                &:nth-of-type(3n) > div {padding-right: vw-calc(25);}
+                &:nth-of-type(3n) > div {padding-right: 0;}
             }
             
         }
@@ -850,16 +834,16 @@
         .insta {
             padding-top: vw-calc(59);height: 100%;
             strong {font-size: vw-calc(26);padding-left: vw-calc(21);}
-            .instaOuterWrap {width: vw-calc(550);height: vw-calc(295.2);overflow-x: auto;}
+            .instaOuterWrap {width: vw-calc(350);height: vw-calc(295.2);overflow-x: auto;}
             .instaWrap {
-                width: vw-calc(1615);
+                width: vw-calc(2000);
                 a {
                     padding-top: vw-calc(9); padding-right: vw-calc(13);
                     &:first-child {padding-left: vw-calc(55.8);}
                     &:nth-child(5n) {padding-left: 0;}
                 }
                 img {
-                    width: vw-calc(144.2);height: vw-calc(144.2);
+                    width: vw-calc(200);height: vw-calc(200);
                     /* 호버넣기 */                    
                 }
             }
