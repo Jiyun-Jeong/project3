@@ -1231,38 +1231,44 @@
       left: 346px; }
 
   #cnt4 {
-    height: 908px;
+    height: auto;
     overflow: hidden; }
     #cnt4 .category {
       width: 100%;
       height: 100%;
       background: none; }
       #cnt4 .category > p {
-        font-size: 13px;
-        padding-bottom: 7px;
-        padding-top: 68px; }
+        font-size: 1.8111979167vw;
+        padding-bottom: 0.9752604167vw;
+        padding-top: 9.4739583333vw; }
       #cnt4 .category > strong {
-        font-size: 26px; }
+        font-size: 3.6223958333vw; }
+      #cnt4 .category .categoryOuterWrap {
+        height: 125.390625vw;
+        width: 100.3125vw;
+        overflow-x: auto; }
+      #cnt4 .category .categoryInnerWrap {
+        width: 306.5104166667vw;
+        height: 91.953125vw;
+        padding-top: 7.7536231884vw; }
       #cnt4 .category .categoryWrap {
-        position: relative;
         display: block;
         float: left;
-        padding-top: 149px;
-        width: 50%;
-        /* &:first-child > div {padding-left : 37px;} */ }
+        padding-top: 0;
+        width: 46.6731770833vw; }
         #cnt4 .category .categoryWrap .otherWrap {
-          padding-right: 25px;
+          padding-right: 1.3932291667vw;
           position: relative; }
           #cnt4 .category .categoryWrap .otherWrap a {
             display: block;
-            margin-bottom: 7.5px;
-            width: 306px;
-            height: 347px; }
+            margin-bottom: 1.044921875vw;
+            width: 42.6328125vw;
+            height: 48.3450520833vw; }
             #cnt4 .category .categoryWrap .otherWrap a .hoverImg {
-              width: 306px;
-              height: 347px;
-              margin-bottom: 7.5px;
-              left: 37px; }
+              width: 42.6328125vw;
+              height: 48.3450520833vw;
+              margin-bottom: 1.044921875vw;
+              left: 4.8763020833vw; }
           #cnt4 .category .categoryWrap .otherWrap:first-child {
             padding-left: 37px; }
         #cnt4 .category .categoryWrap h4 {
@@ -1272,11 +1278,11 @@
           font-size: 18px;
           line-height: 26px; }
         #cnt4 .category .categoryWrap:nth-of-type(2), #cnt4 .category .categoryWrap:nth-of-type(5) {
-          padding-top: 148px; }
+          padding-top: 0; }
         #cnt4 .category .categoryWrap:nth-of-type(3), #cnt4 .category .categoryWrap:nth-of-type(6) {
           padding-top: 0; }
         #cnt4 .category .categoryWrap:nth-of-type(3n) > div {
-          padding-right: 25px; }
+          padding-right: 0; }
 
   #cnt5 .newsWrap {
     width: 100%;

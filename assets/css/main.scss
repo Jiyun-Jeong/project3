@@ -748,31 +748,32 @@
     }
 
     #cnt4 {
-        height: 908px;overflow:hidden;
+        height: auto;overflow:hidden;
         .category {
             width: 100%; height: 100%;background:none;
-            > p {font-size: 13px;padding-bottom: 7px;padding-top: 68px;}
-            > strong {font-size: 26px;}
+            > p {font-size: vw-calc768(13);padding-bottom: vw-calc768(7);padding-top: vw-calc768(68);}
+            > strong {font-size: vw-calc768(26);}
+            .categoryOuterWrap {
+                height: vw-calc768(900);width: vw-calc768(720);overflow-x: auto;}
+            .categoryInnerWrap {width: vw-calc768(2200); height:vw-calc768(660);padding-top: vw-calc(30);}
             .categoryWrap {
-                position: relative; display: block; float: left; padding-top: 149px; width: 50%;
+                display: block; float: left; padding-top: 0; width: vw-calc768(335);
                 .otherWrap {
-                    padding-right: 25px;position: relative;
+                    padding-right: vw-calc768(10);position: relative;
                     a {
-                        display: block; margin-bottom: 7.5px;width: 306px; height :347px;
+                        display: block; margin-bottom: vw-calc768(7.5);width: vw-calc768(306); height :vw-calc768(347);
                         .hoverImg {
-                            width: 306px; height :347px;margin-bottom: 7.5px;left:37px;
+                            width: vw-calc768(306); height :vw-calc768(347);margin-bottom: vw-calc768(7.5);left:vw-calc768(35);
                         }
                     }
                     &:first-child {padding-left: 37px;}
                 }
                 h4 {font-size: 21px;padding-bottom: 18.5px;}
                 p {font-size: 18px;line-height: 26px;}
-                /* &:first-child > div {padding-left : 37px;} */
-                &:nth-of-type(2),&:nth-of-type(5) {padding-top: 148px;}
+                &:nth-of-type(2),&:nth-of-type(5) {padding-top: 0;}
                 &:nth-of-type(3),&:nth-of-type(6) {padding-top: 0;}
-                &:nth-of-type(3n) > div {padding-right: 25px;}
+                &:nth-of-type(3n) > div {padding-right: 0;}
             }
-            
         }
     }
 
