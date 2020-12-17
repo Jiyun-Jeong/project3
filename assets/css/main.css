@@ -1599,6 +1599,9 @@
         height: 129.2270531401vw;
         width: 103.3816425121vw;
         overflow-x: auto; }
+      #cnt4 .category .categoryInnterWrap {
+        width: 3000px;
+        height: 500px; }
       #cnt4 .category .categoryWrap {
         /* position: relative; */
         padding-top: 0;
@@ -1614,9 +1617,10 @@
             height: 77.5362318841vw; }
             #cnt4 .category .categoryWrap .otherWrap a .hoverImg {
               width: 64.61352657vw;
-              height: 90.4589371981vw;
+              height: 73.5301932367vw;
               margin-bottom: 1.9384057971vw;
-              left: 9.5628019324vw; }
+              left: 9.5628019324vw;
+              top: 6.461352657vw; }
           #cnt4 .category .categoryWrap .otherWrap:first-child {
             padding-left: 9.5628019324vw; }
           #cnt4 .category .categoryWrap .otherWrap h4 {
@@ -1952,40 +1956,40 @@
       height: 100%;
       background: none; }
       #cnt4 .category > p {
-        font-size: 13px;
-        padding-bottom: 7px;
-        padding-top: 68px; }
+        font-size: 3.8638888889vw;
+        padding-bottom: 2.0805555556vw;
+        padding-top: 20.2111111111vw; }
       #cnt4 .category > strong {
-        font-size: 26px; }
+        font-size: 7.7277777778vw; }
       #cnt4 .category .categoryOuterWrap {
-        height: 406px;
-        width: 360px;
+        height: 120.6722222222vw;
+        width: 107vw;
         overflow-x: auto; }
       #cnt4 .category .categoryWrap {
-        padding-top: 10px;
-        width: 1000px; }
+        padding-top: 2.9722222222vw;
+        width: 297.2222222222vw; }
         #cnt4 .category .categoryWrap .otherWrap {
-          padding-right: 20px;
+          padding-right: 5.9444444444vw;
           padding-top: 0;
-          /* &:first-child {padding-left: 37px;} */ }
+          /* &:first-child {padding-left: 37);} */ }
           #cnt4 .category .categoryWrap .otherWrap a {
-            margin-bottom: 7.5px;
-            width: 261px;
-            height: 295px; }
+            margin-bottom: 2.2291666667vw;
+            width: 77.575vw;
+            height: 87.6805555556vw; }
             #cnt4 .category .categoryWrap .otherWrap a img:first-child {
-              width: 261px; }
+              width: 77.575vw; }
             #cnt4 .category .categoryWrap .otherWrap a .hoverImg {
-              width: 306px;
-              height: 326px;
-              margin-bottom: 7.5px;
-              left: 34px;
-              top: 20px; }
+              width: 77.575vw;
+              height: 87.8499722222vw;
+              margin-bottom: 2.2291666667vw;
+              left: 10.1055555556vw;
+              top: 0; }
         #cnt4 .category .categoryWrap h4 {
-          font-size: 21px;
-          padding-bottom: 18.5px; }
+          font-size: 6.2416666667vw;
+          padding-bottom: 5.4986111111vw; }
         #cnt4 .category .categoryWrap p {
-          font-size: 18px;
-          line-height: 26px; }
+          font-size: 5.35vw;
+          line-height: 7.7277777778vw; }
 
   #cnt5 {
     height: 90vh; }

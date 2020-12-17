@@ -17,6 +17,21 @@ $(document).ready(function (){
         }, 50);
     });
 
+    //사이즈에 변화가 생길때 마다 pc/mobile 버전을 체크하여 body.pc / body.mobile 이라고 함
+    $(window).on('resize', function () {
+        clearTimeout(resizeTimer);
+    
+        resizeTimer = setTimeout(function () {
+            var winWidth = $(window).width();
+            if (winWidth > 1439) {  //pc일 경우
+                $('body').removeClass('mobile').addClass('pc');
+            } else {    //모바일일 경우
+                $('body').removeClass('pc').addClass('mobile');
+            }
+        }, 100);
+    });
+    $(window).trigger('resize');
+
         //pc
     //1) #pcGnb 네비
     var _pcGnb = $('#pcGnb > ul');
@@ -57,11 +72,12 @@ $(document).ready(function (){
     });
 
     //모바일 메뉴 열기
-        $('.mUtil .menu_open').on('click', function () {
-            var _mGnb = $('#mGnb') 
-
+        $('.menu_open').on('click', function () {
+            var _mGnb = $('.mUtil');
+            alert();
+            
             if($(this).hasClass('active')) {
-                _mGnb.stop().animate({right: '0'}, 300, function () {
+                _mGnb.css('visibility', 'visibile').stop().animate({right: '0'}, 300, function () {
                     $(this).find('ul>li>a').css({display: 'none'}).find('ul li.on').removeClass('on').children('ul').stop().slideUp();
                 });
     

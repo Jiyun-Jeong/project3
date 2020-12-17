@@ -973,6 +973,7 @@
             > strong {font-size: vw-calc(26);}
             .categoryOuterWrap {
                 height: vw-calc(500);width: vw-calc(400);overflow-x: auto;}
+            .categoryInnterWrap {width: 3000px; height:500px;}
             .categoryWrap {
                 /* position: relative; */padding-top: 0;width:vw-calc(1500);
                 .otherWrap {
@@ -980,7 +981,7 @@
                     a {
                         display: block; margin-bottom: vw-calc(7.5);width: vw-calc(250); height :vw-calc(300);
                         .hoverImg {
-                            width: vw-calc(250); height :vw-calc(350);margin-bottom: vw-calc(7.5);left:vw-calc(37);
+                            width: vw-calc(250); height :vw-calc(284.5);margin-bottom: vw-calc(7.5);left:vw-calc(37);top: vw-calc(25);
                         }
                     }
                     &:first-child {padding-left: vw-calc(37);}
@@ -1195,29 +1196,29 @@
         height: auto;/* overflow:hidden; */
         .category {
             width: 100%; height: 100%;background:none;
-            > p {font-size: 13px;padding-bottom: 7px;padding-top: 68px;}
-            > strong {font-size: 26px;}
+            > p {font-size: vw-calc360(13);padding-bottom:  vw-calc360(7);padding-top:  vw-calc360(68);}
+            > strong {font-size:  vw-calc360(26);}
             .categoryOuterWrap {
-                height: 406px;width: 360px;overflow-x: auto;
+                height:  vw-calc360(406);width:  vw-calc360(360);overflow-x: auto;
                 .categoryWrap {
 
                 }
             }
             .categoryWrap {
-                padding-top: 10px;width:1000px;
+                padding-top:  vw-calc360(10);width: vw-calc360(1000);
                 .otherWrap {
-                    padding-right: 20px;padding-top: 0;
+                    padding-right:  vw-calc360(20);padding-top: 0;
                     a {
-                        margin-bottom: 7.5px;width: 261px; height :295px;
-                        img:first-child {width: 261px;}
+                        margin-bottom:  vw-calc360(7.5);width:  vw-calc360(261); height : vw-calc360(295);
+                        img:first-child {width:  vw-calc360(261);}
                         .hoverImg {
-                            width: 306px; height :326px;margin-bottom: 7.5px;left:34px;top: 20px;
+                            width:  vw-calc360(261); height : vw-calc360(295.57);margin-bottom:  vw-calc360(7.5);left: vw-calc360(34);top: 0;
                         }
                     }
-                    /* &:first-child {padding-left: 37px;} */
+                    /* &:first-child {padding-left: 37);} */
                 }
-                h4 {font-size: 21px;padding-bottom: 18.5px;}
-                p {font-size: 18px;line-height: 26px;}
+                h4 {font-size:  vw-calc360(21);padding-bottom:  vw-calc360(18.5);}
+                p {font-size:  vw-calc360(18);line-height:  vw-calc360(26);}
             }
             
         }

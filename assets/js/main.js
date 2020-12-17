@@ -121,12 +121,12 @@ $(document).ready(function(){
         if($(this).width() > 1025) {
 
             if (scrollY === 0 ) {
-                $('#header').css({position: 'fixed', top: 'auto', bottom: 0});
+                $('#header').css({position: 'fixed', top: 'auto', bottom: 0}).removeClass('fix');
             } else if (scrollY < $(window).height()) {
-                $('#header').css({absolute: 'absolute', top: windowH-scrollY, bottom: 'auto'});
+                $('#header').css({absolute: 'absolute', top: windowH-scrollY, bottom: 'auto'}).removeClass('fix');
                 $('#pcGnb > ul > li > ul').css({bottom: 0, top: 90});
             } else {
-                $('#header').css({absolute: 'fixed', top: 0, bottom: 'auto'});
+                $('#header').css({absolute: 'fixed', top: 0, bottom: 'auto'}).addClass('fix');
             }
         }
         //텍스트 marquee 효과

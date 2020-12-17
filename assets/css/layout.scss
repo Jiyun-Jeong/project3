@@ -62,6 +62,9 @@
                     opacity: 1;
                 }
             }
+        }
+        &.fix .dep2wrap  {
+            top: 90px;bottom: auto;
         }        
         ul li ul li + li {padding-left: 90px;}
 }
@@ -315,6 +318,7 @@
 @media screen and (max-width: 414px) {
         //header
         #header {display: none;}
+        
         #mHeader {
             position: fixed; display: block !important; top: 0; left: 0; height: vw-calc(50);width:100%;background: #000;line-height: vw-calc(50);text-align: center;z-index: 1000;
             .logo {
@@ -327,7 +331,7 @@
             }
             button.menu_open {position: absolute; right: vw-calc(16); top: vw-calc(15); width: vw-calc(25); height: vw-calc(25);}
             .mUtil {
-                display: block;position: absolute; top: 0; right: -100%; width: vw-calc(360); height: auto;text-align: right; background-color: #fff;color: #000;
+                visibility: hidden;position: absolute; top: 0; right: -100%; width: vw-calc(360); height: auto;text-align: right; background-color: #fff;color: #000;
 
                 .mgnb_wrap {
 

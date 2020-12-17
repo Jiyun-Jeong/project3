@@ -109,6 +109,9 @@
         opacity: 0; }
       #header .dep2wrap > li:hover, #header .dep2wrap > li:focus {
         opacity: 1; }
+  #header.fix .dep2wrap {
+    top: 90px;
+    bottom: auto; }
   #header ul li ul li + li {
     padding-left: 90px; }
 
