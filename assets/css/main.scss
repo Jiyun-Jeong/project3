@@ -973,9 +973,9 @@
             > strong {font-size: vw-calc(26);}
             .categoryOuterWrap {
                 height: vw-calc(500);width: vw-calc(400);overflow-x: auto;}
-            .categoryInnterWrap {width: 3000px; height:500px;}
+            .categoryInnerWrap {width: vw-calc(1925); height:vw-calc(500);}
             .categoryWrap {
-                /* position: relative; */padding-top: 0;width:vw-calc(1500);
+                padding-top: 0;width:vw-calc(290);
                 .otherWrap {
                     padding-right: vw-calc(30);position: relative;padding-top: vw-calc(25);
                     a {
@@ -1200,16 +1200,13 @@
             > strong {font-size:  vw-calc360(26);}
             .categoryOuterWrap {
                 height:  vw-calc360(406);width:  vw-calc360(360);overflow-x: auto;
-                .categoryWrap {
-
-                }
-            }
+            .categoryInnerWrap {width: vw-calc(2000); height:vw-calc(450);}
             .categoryWrap {
-                padding-top:  vw-calc360(10);width: vw-calc360(1000);
+                padding-top:  vw-calc360(10);width: vw-calc360(280);
                 .otherWrap {
                     padding-right:  vw-calc360(20);padding-top: 0;
                     a {
-                        margin-bottom:  vw-calc360(7.5);width:  vw-calc360(261); height : vw-calc360(295);
+                        margin-bottom:  vw-calc360(7.5);width:  vw-calc360(250); height : vw-calc360(295);
                         img:first-child {width:  vw-calc360(261);}
                         .hoverImg {
                             width:  vw-calc360(261); height : vw-calc360(295.57);margin-bottom:  vw-calc360(7.5);left: vw-calc360(34);top: 0;
@@ -1217,8 +1214,8 @@
                     }
                     /* &:first-child {padding-left: 37);} */
                 }
-                h4 {font-size:  vw-calc360(21);padding-bottom:  vw-calc360(18.5);}
-                p {font-size:  vw-calc360(18);line-height:  vw-calc360(26);}
+                h4 {font-size:  vw-calc360(18);padding-bottom:  vw-calc360(15);}
+                p {font-size:  vw-calc360(13);line-height:  vw-calc360(18);}
             }
             
         }
@@ -1295,4 +1292,5 @@
             }
         }
     }
+}
 }
