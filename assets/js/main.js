@@ -1,34 +1,4 @@
 $(document).ready(function(){
-    /* 
-            var timer = 0;
-            $(window).on('resize', function () {
-                clearTimeout(timer);
-
-                timer = setTimeout(function () {
-                    if($(this).width() > 1024) createFullpage();
-                    else fullpage_api.destory('all');
-                }, 50);
-            });
-
-            $(window).trigger('resize');
-
-            function createFullpage() {
-                $('#fullpage').fullpage({
-                    navigation: true,
-                    navigationPosition: 'left',
-                    navigationTooltips: ['GoPro 소개', '신제품 소개', '카메라 비교', '카테고리', '뉴스', '동영상', '인스타그램'],
-                    afterRender: function() {
-                        $('#fp-nav .fp-tooltip').attr('aria-hidden', true);
-                    },
-                    onLeave: function(origin, destination, direction) {
-                        if (origin.index === 1 && destination.index === 0 && direction === 'up') {
-                            $('#pcHeader').removeClass('on active');
-                        } else {
-                            $('#pcHeader').addClass('on active');
-                        }
-                    }
-                });
-            } */
 
             var cnt1Swiper = new Swiper('#cnt1 .swiper-container', {
                 // Optional parameters
