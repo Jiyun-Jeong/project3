@@ -331,19 +331,18 @@
             }
             button.menu_open {position: absolute; right: vw-calc(16); top: vw-calc(15); width: vw-calc(25); height: vw-calc(25);}
             .mUtil {
-                visibility: hidden;position: absolute; top: 0; right: -100%; width: vw-calc(360); height: auto;text-align: right; background-color: #fff;color: #000;
+                visibility: hidden;position: absolute; top: 0; right: -100%; width: vw-calc(360); overflow-y: auto;text-align: right; background-color: #fff;color: #000;
 
                 .mgnb_wrap {
 
                     .bg_white {
-                        position: absolute; top: 0; right: 0;padding: vw-calc(15.5) vw-calc(18.5) 0 0;width: vw-calc(150); height: vw-calc(50);
+                        position: absolute; top: 0; right: 0;padding: vw-calc(15.5) vw-calc(43) 0 0;width: vw-calc(150); height: vw-calc(50);
                         button {
                             padding-right: vw-calc(10);
                             &:last-child {padding-right: 0;}
                         }
                         .mAccount {width: vw-calc(25); height: vw-calc(25);}
                         .mShopping {width: vw-calc(25); height: vw-calc(25);}
-                        .mClose {width: vw-calc(25); height: vw-calc(25);padding-top: vw-calc(3);}
                     }
                     #mGnb {
                         background: #fff;padding: vw-calc(122) 0 vw-calc(434);
@@ -372,7 +371,7 @@
                             > ul {display: none;}
                         }
                     }
-
+                    .mClose {position: absolute;top: 4.0060386473vw;right: 4.0060386473vw;width: vw-calc(25); height: vw-calc(25);padding-top: vw-calc(3);}
                 }
             }   
         }
