@@ -54,10 +54,6 @@ header, nav, section, footer {display: block;}
     //커지기
     &.smaller {@include transform(scale(1.5));}
     &.bigger {@include transform(scale(0.7));}
-
-    &.cameraR {@include transform(translateX(-80px));}
-    &.cameraL {@include transform(translateX(80px));}
-    &.cameraD {@include transform(translateY(-80px));}
     &.moreBigger {@include transform(scale(0.5));}
 }
 .fade.on {
@@ -78,8 +74,8 @@ body {
 
 //skip
 #skip a {
-    position: absolute; top: 0; left: -9999px; z-index: 1000; 
-    a:focus {left: 0; width: 100%;  background: $lightblue; text-align: center; font-weight: 500;font-size: 26px;height: 50px;line-height: 50px;}
+    position: absolute; top: 0; left: -9999px; z-index: 1200; 
+    &:focus {left: 0; width: 100%; color: #000; background: $lightblue; text-align: center; font-weight: 500;font-size: 26px;height: 50px;line-height: 50px;}
 }
 
 @media screen and (max-width: 1520px) {

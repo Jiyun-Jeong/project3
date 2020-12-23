@@ -330,25 +330,8 @@
       transform: skewX(5deg) translateX(-50%);
       position: absolute;
       top: 30%;
-      width: 100%; }
-      #cnt3 .camera .cameras.cameraR {
-        -webkit-transform: skewX(5deg) translateX(-50%);
-        -moz-transform: skewX(5deg) translateX(-50%);
-        -o-transform: skewX(5deg) translateX(-50%);
-        -ms-transform: skewX(5deg) translateX(-50%);
-        transform: skewX(5deg) translateX(-50%); }
-      #cnt3 .camera .cameras.cameraL {
-        -webkit-transform: skewX(5deg) translateX(-50%);
-        -moz-transform: skewX(5deg) translateX(-50%);
-        -o-transform: skewX(5deg) translateX(-50%);
-        -ms-transform: skewX(5deg) translateX(-50%);
-        transform: skewX(5deg) translateX(-50%); }
-      #cnt3 .camera .cameras.cameraD {
-        -webkit-transform: skewX(5deg) translateX(-50%);
-        -moz-transform: skewX(5deg) translateX(-50%);
-        -o-transform: skewX(5deg) translateX(-50%);
-        -ms-transform: skewX(5deg) translateX(-50%);
-        transform: skewX(5deg) translateX(-50%); }
+      width: 100%;
+      opacity: 0; }
   #cnt3 #camera1 {
     top: 0;
     left: 0;
@@ -356,7 +339,7 @@
     #cnt3 #camera1 img {
       width: 340px;
       height: 340px;
-      left: 50%; }
+      left: 20%; }
   #cnt3 #camera2 {
     top: 0;
     left: 35.333333vw;
@@ -364,7 +347,8 @@
     #cnt3 #camera2 img {
       width: 432px;
       height: 305px;
-      left: 50%; }
+      left: 50%;
+      top: 50%; }
     #cnt3 #camera2 a {
       -webkit-transform: skewX(5deg) translateX(-50%);
       -moz-transform: skewX(5deg) translateX(-50%);
@@ -379,7 +363,7 @@
       -o-transition: all 0.3s;
       transition: all 0.3s;
       position: absolute;
-      bottom: 15.7291666667vw;
+      bottom: 10%;
       left: 50%;
       width: 255px;
       height: 56px;
@@ -400,7 +384,7 @@
     #cnt3 #camera3 img {
       width: 244px;
       height: 287px;
-      left: 50%; }
+      left: 80%; }
 
 #cnt4 {
   color: #000;
@@ -488,7 +472,7 @@
 #cnt5 {
   color: #000;
   background-color: #FCFCFC;
-  height: 110vh; }
+  height: 115vh; }
   #cnt5 .newsWrap {
     position: relative;
     font-weight: 700;

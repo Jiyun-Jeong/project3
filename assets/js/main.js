@@ -80,12 +80,7 @@ $(document).ready(function(){
         }
     });
 
-    //cnt5
-    $('#cnt5 .newsCntWrap ul li a').on('mouseenter focus', function () {
-        $(this).addClass('on').parent().siblings().children().removeClass('on');
-    });
-
-    //header
+    //header와 cnt3
     var windowH = $(window).height();
     $(window).on('scroll', function () {
         var scrollT = $(this).scrollTop();
@@ -101,9 +96,26 @@ $(document).ready(function(){
                 $('#header').css({absolute: 'fixed', top: 0, bottom: 'auto'}).addClass('fix');
             }
         }
+
+        //cnt3
+        if(scrollT > $("#cnt3").offset().top - 350){
+            console.log($(window).scrollTop());
+            TweenMax.to($("#cnt3 #camera1 img"), 2, {delay:0, left:'50%', opacity:1, ease:Power3.easeOut});
+            TweenMax.to($("#cnt3 #camera2 img"), 2, {delay:0, top:'30%', opacity:1, ease:Power3.easeOut});
+            TweenMax.to($("#cnt3 #camera2 a"), 2, {delay:0, bottom:'30%', opacity:1, ease:Power3.easeOut});
+            TweenMax.to($("#cnt3 #camera3 img"), 2, {delay:0, left:'50%', opacity:1, ease:Power3.easeOut});
+          };
+
+
         //텍스트 marquee 효과
         if (scrollT > $('.marquee').offset().top - 300) {
             $('.marquee').animate().attr({left: -500});
         }
+    });
+
+
+    //cnt5
+    $('#cnt5 .newsCntWrap ul li a').on('mouseenter focus', function () {
+        $(this).addClass('on').parent().siblings().children().removeClass('on');
     });
 }); 

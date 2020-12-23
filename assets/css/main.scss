@@ -185,37 +185,28 @@
     .camera {
         @include bgSize(cover);
         @include transform(skewX(-5deg));
-        position: absolute; background: no-repeat center; height: 100vh; width: 39.0625vw/* 750px */;
+        position: absolute; background: no-repeat center; height: 100vh; width: 39.0625vw;
         &::before {
             @include filter(blur(3px));
             content: ""; position: absolute; top: 0; left: 0; bottom: 0; right: 0;background: inherit;
         }
         .cameras {
             @include transform(skewX(5deg) translateX(-50%));
-            position: absolute; top: 30%; width: 100%;
-            &.cameraR {
-                @include transform(skewX(5deg) translateX(-50%)/*  translateX(-80px)*/);
-            }
-            &.cameraL {
-                @include transform(skewX(5deg) translateX(-50%)/*  translateX(80px) */);
-            }
-            &.cameraD {
-                @include transform(skewX(5deg) translateX(-50%)/*  translateY(-80px) */);
-            }
+            position: absolute; top: 30%; width: 100%; opacity: 0;
         }
     }
     #camera1 {
         top: 0; left: 0; background-image: url("../img/main/camera_bg1.jpg");
-        img {width: 340px;height: 340px;left: 50%;}
+        img {width: 340px;height: 340px;left: 20%;}
     }
     #camera2 {
         top: 0; left: 35.333333vw/* 640px */; background-image: url("../img/main/camera_bg2.jpg");
-        img {width: 432px;height: 305px;left: 50%;}
+        img {width: 432px;height: 305px;left: 50%;top: 50%;}
         a {
             @include transform(skewX(5deg) translateX(-50%));
             @include border-radius(7px);
             @include transition(all 0.3s);
-            position: absolute;bottom: 15.72916666666667vw/* 302px */; left: 50%; width: 255px;height: 56px;background-color: $darkgrey;line-height: 56px;font-size: 20px;z-index: 300;
+            position: absolute;bottom: 10%; left: 50%; width: 255px;height: 56px;background-color: $darkgrey;line-height: 56px;font-size: 20px;z-index: 300;
             &:hover, &:focus {
                 @include linearGradient((#12C2E9, #096A8A, #000000));
             }
@@ -223,7 +214,7 @@
     }
     #camera3 {
         top: 0; left: 72.666667vw; background-image: url("../img/main/camera_bg3.jpg");
-        img {width: 244px;height: 287px;left: 50%;}
+        img {width: 244px;height: 287px;left: 80%;}
     }
 }
 
@@ -271,7 +262,7 @@
 }
 
 #cnt5 {
-    color: #000;background-color: #FCFCFC;height: 110vh;
+    color: #000;background-color: #FCFCFC;height: 115vh;
     .newsWrap {
         position: relative; font-weight: 700;text-align: center;width: 75.75520833333333vw/* 1540px1454.5px */;height: 45.57291666666667vw;padding-top: 134px;margin: 0 auto;
         > strong { font-size: 60px;position: absolute; left: 35px; top: 134px;width: 162px;height: 60px;}
