@@ -1164,23 +1164,26 @@
         }
         #camera1 {
             top: vw-calc360(-32); left: vw-calc360(-17); width: 117%;
-            img {width: vw-calc360(141);height: vw-calc360(141);left: 51%;}
+            img {
+                @include transform(skewY(5deg) translateX(-50%));
+                width: vw-calc360(141);height: vw-calc360(141);left: 53%;top: 36%;
+            }
         }
         #camera2 {
             top: 29.3333%; left:0; height:41%;
             img {
                 @include transform(skewX(0) skewY(5deg));
-                width: vw-calc360(165);height: vw-calc360(117);left: 36%;top: 17%;}
+                width: vw-calc360(165);height: vw-calc360(117);left: 36%;top: 18%;}
             a {
                 @include transform(skewX(0) skewY(5deg));
-                width: vw-calc360(107); height: vw-calc360(27); line-height: vw-calc360(27); bottom: vw-calc360(48); left: vw-calc360(172); font-size: vw-calc360(8);
+                width: vw-calc360(107); height: vw-calc360(27); line-height: vw-calc360(27); bottom: 20%; left: vw-calc360(172); font-size: vw-calc360(8);
             }
         }
         #camera3 {
             top: 70%; left: 0; 
             img {
                 @include transform(skewX(0) skewY(5deg));
-                width: vw-calc360(101);height: vw-calc360(119);left: 44%;top: 15%;}
+                width: vw-calc360(101);height: vw-calc360(119);left: 45%;top: 15%;}
         }
     }
 
