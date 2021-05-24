@@ -16,7 +16,7 @@
     height: auto;
     top: 0;
     left: 0;
-    /* min-width: 100%; */
+    min-width: 100%;
     min-height: auto;
     z-index: -1; }
   #cnt1 .swiper-slide.slide2 {
@@ -41,17 +41,20 @@
     font-weight: 300;
     padding-bottom: 119px;
     letter-spacing: 0.75px; }
-  #cnt1 .swiper-slide > .txtbox > .linkWrapper > .innerWrapper > a {
+  #cnt1 .swiper-slide > .txtbox > .linkWrapper > .innerWrapper > a.viewBtn {
     position: relative;
     font-size: 33px;
     font-weight: 700;
-    letter-spacing: 0.89px; }
+    letter-spacing: 0.89px;
+    /* :hover::before {
+        content:""; position:absolute; height:1px; width:100%; top:0; left:0;
+    }    */ }
 #cnt1 .slide1 .txtbox .linkWrapper {
   position: relative; }
 #cnt1 .slide3 .simpleExplan {
   position: absolute;
-  bottom: 222px;
-  right: 167px;
+  bottom: 20%;
+  right: 7%;
   width: 615px;
   height: 106px;
   font-size: 18px;
@@ -642,7 +645,6 @@
   -o-background: linear-gradient(#12C2E9, #096A8A, #000000);
   -ms-background: linear-gradient(#12C2E9, #096A8A, #000000);
   background: linear-gradient(#12C2E9, #096A8A, #000000);
-  /* width: 100%; */
   height: 100vh;
   padding-top: 134px;
   margin: 0 auto; }
@@ -654,12 +656,11 @@
     position: relative; }
     #cnt7 .insta .instaWrap a {
       display: inline-block;
-      padding-top: 43px;
-      padding-right: 43px;
-      position: relative;
-      /* &:nth-child(5n) {padding-left: 261px;} */ }
+      margin-top: 43px;
+      margin-right: 43px;
+      position: relative; }
       #cnt7 .insta .instaWrap a:nth-child(4n) {
-        padding-right: 0; }
+        margin-right: 0; }
     #cnt7 .insta .instaWrap img {
       width: 320px;
       height: 320px;
@@ -791,7 +792,7 @@
 
   #cnt2 .newbie .newbieTxt > strong {
     top: 14.2361111111vw;
-    left: 10.0694444444vw;
+    left: 6%;
     font-size: 3.75vw;
     line-height: 4.1666666667vw; }
   #cnt2 .newbie .detailWrap {
@@ -822,7 +823,7 @@
 
   #cnt3 .camerasWrap {
     width: 115%;
-    height: 100vh;
+    height: 50vh;
     left: -6.8055555556vw; }
   #cnt3 .camera {
     width: 39.0625vw; }
@@ -993,8 +994,8 @@
       font-size: 3.75vw;
       padding-left: 5.5555555556vw; }
     #cnt7 .insta .instaWrap a {
-      padding-top: 2.9861111111vw;
-      padding-right: 2.9861111111vw; }
+      margin-top: 2.9861111111vw;
+      margin-right: 2.9861111111vw; }
       #cnt7 .insta .instaWrap a:nth-child(4n) {
         padding-right: 0; }
     #cnt7 .insta .instaWrap img {
@@ -1172,11 +1173,16 @@
     left: -17px;
     width: 117%; }
     #cnt3 #camera1 img {
+      -webkit-transform: skewX(0) skewY(5deg);
+      -moz-transform: skewX(0) skewY(5deg);
+      -o-transform: skewX(0) skewY(5deg);
+      -ms-transform: skewX(0) skewY(5deg);
+      transform: skewX(0) skewY(5deg);
       width: 211px;
       height: 211px;
-      left: 454px; }
+      left: 34% !important; }
   #cnt3 #camera2 {
-    top: 30.3333%;
+    top: 30.3%;
     left: 0;
     height: 39%; }
     #cnt3 #camera2 img {
@@ -1197,7 +1203,7 @@
       width: 135px;
       height: 31px;
       line-height: 31px;
-      bottom: 98px;
+      bottom: 13% !important;
       left: 366px;
       font-size: 10px;
       letter-spacing: 1.05; }
@@ -1212,7 +1218,7 @@
       transform: skewX(0) skewY(5deg);
       width: 176px;
       height: 207px;
-      left: 346px; }
+      left: 39% !important; }
 
   #cnt4 {
     height: auto;
@@ -1228,7 +1234,7 @@
       #cnt4 .category > strong {
         font-size: 3.6223958333vw; }
       #cnt4 .category .categoryOuterWrap {
-        height: 125.390625vw;
+        height: 68vh;
         width: 100.3125vw;
         overflow-x: auto; }
       #cnt4 .category .categoryInnerWrap {
@@ -1268,56 +1274,58 @@
         #cnt4 .category .categoryWrap:nth-of-type(3n) > div {
           padding-right: 0; }
 
-  #cnt5 .newsWrap {
-    width: 100%;
-    height: auto;
-    /* padding-left: 41.5px; */
-    padding-top: 145.5px; }
-    #cnt5 .newsWrap > strong {
-      font-size: 26px;
-      left: 50px;
-      top: 145px;
-      width: 70px;
-      height: 26px; }
-    #cnt5 .newsWrap > a {
-      top: 140px;
-      right: 70px;
-      width: 48px;
-      height: 18px; }
-    #cnt5 .newsWrap .newsCntWrap {
-      position: relative;
-      /* border-top: 1px solid #707070; border-bottom: 1px solid #707070;  */
-      width: 750px;
-      height: 785px;
-      padding: 85px 40px 0; }
-      #cnt5 .newsWrap .newsCntWrap ul li a {
-        height: 181px; }
-        #cnt5 .newsWrap .newsCntWrap ul li a .category {
-          font-size: 16px;
-          padding-bottom: 12px;
-          padding-top: 48.5px; }
-        #cnt5 .newsWrap .newsCntWrap ul li a h5 {
-          font-size: 24px;
-          padding-bottom: 34px; }
-        #cnt5 .newsWrap .newsCntWrap ul li a .date {
-          float: right; }
-        #cnt5 .newsWrap .newsCntWrap ul li a .img {
-          display: none; }
-        #cnt5 .newsWrap .newsCntWrap ul li a.on {
-          height: 328px; }
-          #cnt5 .newsWrap .newsCntWrap ul li a.on .txt {
-            padding-bottom: 64px;
-            line-height: 25px;
-            width: 643px; }
-          #cnt5 .newsWrap .newsCntWrap ul li a.on .date {
-            font-size: 13px;
-            padding-bottom: 42.5px; }
+  #cnt5 {
+    height: 100vh; }
+    #cnt5 .newsWrap {
+      width: 100%;
+      height: auto;
+      /* padding-left: 41.5px; */
+      padding-top: 145.5px; }
+      #cnt5 .newsWrap > strong {
+        font-size: 26px;
+        left: 50px;
+        top: 145px;
+        width: 70px;
+        height: 26px; }
+      #cnt5 .newsWrap > a {
+        top: 140px;
+        right: 70px;
+        width: 48px;
+        height: 18px; }
+      #cnt5 .newsWrap .newsCntWrap {
+        position: relative;
+        /* border-top: 1px solid #707070; border-bottom: 1px solid #707070;  */
+        width: 750px;
+        height: 785px;
+        padding: 85px 40px 0; }
+        #cnt5 .newsWrap .newsCntWrap ul li a {
+          height: 181px; }
+          #cnt5 .newsWrap .newsCntWrap ul li a .category {
+            font-size: 16px;
+            padding-bottom: 12px;
+            padding-top: 48.5px; }
+          #cnt5 .newsWrap .newsCntWrap ul li a h5 {
+            font-size: 24px;
+            padding-bottom: 34px; }
+          #cnt5 .newsWrap .newsCntWrap ul li a .date {
+            float: right; }
+          #cnt5 .newsWrap .newsCntWrap ul li a .img {
+            display: none; }
+          #cnt5 .newsWrap .newsCntWrap ul li a.on {
+            height: 328px; }
+            #cnt5 .newsWrap .newsCntWrap ul li a.on .txt {
+              padding-bottom: 64px;
+              line-height: 25px;
+              width: 643px; }
+            #cnt5 .newsWrap .newsCntWrap ul li a.on .date {
+              font-size: 13px;
+              padding-bottom: 42.5px; }
 
   #cnt6 {
-    height: 80vh; }
+    height: 55vh; }
     #cnt6 .video .marquee {
       font-size: 57px;
-      margin-bottom: 120px; }
+      margin-bottom: 20px; }
     #cnt6 .video .marquee p:after {
       padding-right: 50px; }
     #cnt6 .video .marquee p {
@@ -1325,7 +1333,7 @@
     #cnt6 .video .videoWrap {
       border: 6px solid #707070;
       width: 663px;
-      height: 480px; }
+      height: 375px; }
       #cnt6 .video .videoWrap .videoInner {
         padding-left: 81px;
         padding-top: 40px; }
@@ -1362,12 +1370,11 @@
         font-size: 26px;
         padding-left: 40px; }
       #cnt7 .insta .instaWrap a {
-        padding-top: 9px;
-        padding-right: 13px; }
+        margin-top: 9px;
+        margin-right: 13px; }
       #cnt7 .insta .instaWrap img {
         width: 154.2px;
-        height: 154.2px;
-        /* 호버넣기 */ } }
+        height: 154.2px; } }
 @media screen and (max-width: 414px) {
   #wrap {
     overflow: hidden; }
